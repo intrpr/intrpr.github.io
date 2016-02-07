@@ -1,0 +1,6 @@
+AuthUserFile /home/content/w/b/s/wbstringham/html/doug/uvuasl/deiu/.htpasswd
+AuthGroupFile /dev/null
+AuthName EnterPassword
+AuthType Basic
+
+require user guest

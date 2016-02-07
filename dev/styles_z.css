@@ -1,0 +1,535 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:		XXXX styles
+Version:		1.0
+Last change:	XX XXX 2008
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+1.0 Reset styles
+-------------------------------------------------------------------*/
+
+/* Don't forget to set a foreground and background color on the 'html' or 'body' element! */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-style: inherit; font-size: 100.01% /* for opera and ie/win6+ */; line-height: inherit; font-family: inherit; text-align: left; vertical-align: baseline /* affects wrapping of inline images */; word-wrap: break-word; }
+	
+:focus { outline: 0; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+select, input, textarea { font-size: 99%; } /* for Safari 2+ */
+
+ol, ul { list-style: none; } /* affects the bullet placement; make sure to apply "vertical-align: baseline;" to local li styles */
+
+hr { border: 0; height: 1px; background: #ccc; color: #ccc; margin: .7em 0 .6em 0; clear: both; }
+*html hr { border: 0; height: 1px; background: #ccc; color: #ccc; margin: .5em 0 .3em 0; clear: both; } /* for IE6 */
+*+ html hr { border: 0; height: 1px; background: #ccc; color: #ccc; margin: .6em 0 .2em 0; clear: both; } /* for IE7 */
+
+caption, th, td { text-align: left; font-weight: normal; }
+
+q:before, q:after, blockquote:before, blockquote:after { content: ""; }
+
+blockquote, q { quotes: "" ""; }
+
+button { padding: 0; width: auto; overflow: visible; }
+
+em { font-style: italic; line-height: inherit; }
+strong { font-weight: bold; vertical-align: baseline; line-height: inherit; }
+.right { float: right; font: inherit; }
+.clear { clear: both; }
+small { font-size: .65em; vertical-align: baseline; }
+
+img { behavior: url(scr/iepngfix.htc); vertical-align: baseline; } /* for .png visualization in IE6+; ensure that the .htc script sits inside an 'scr' folder inside the tree structure, and that 'spacer.gif' sits inside an 'img' folder */
+
+a { text-decoration: none; line-height: inherit; }
+a:hover { text-decoration: underline; }
+a:visited { color: #00c; }
+
+wbr { display: inline-block; }
+
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=- Composition Styles =-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+* { margin: 0; padding: 0; border: 0; }
+
+body { 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding: 0; 
+	margin: 0; 
+	border: 0; 
+	background: #ffffff url(../img/lixnes.gif); 
+	}
+
+#masthead { 
+	width: 100%; 
+	height: 12em; 
+	padding: 0; 
+	margin-bottom: 2em; 
+	/* background: #646769 url(../img/space.jpg) 0 -50px; */
+	/* background: #646769 url(../img/camilla.jpg) center 50%; */
+	background: #646769 url(../img/cloud.jpg) 50% 50%;
+	/* background: #646769 url(../img/background.jpg) 15% top; */
+	}
+	
+	.id_main, .id_3310, .id_3330, .id_3350, .id_3360 { height: .8em; background-color: #333; }
+		
+#navright { 
+	float: right; 
+	padding-top: 2.3em;
+	}
+	
+.topcontainer { 
+	width: 51em; 
+	margin: 0 auto; 
+	}
+	
+.container { 
+	width: 51em; 
+	margin: 0 auto; 
+	}
+	
+.leftcol { 
+	width: 23.95em; 
+	padding-right: 1.5em; 
+	margin: 0; 
+	float: left; 
+	}
+	
+	.news_new {
+		background: #ffe url(../img/comment.gif) .7em 1.4em no-repeat;
+		padding: 1em 1em 1em 2em;
+		font-size: .82em;
+		line-height: 1.5;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		}
+
+	.news_old {
+		background: url(../img/comment.gif) .7em .9em no-repeat;
+		padding: .5em 1em .5em 2em;
+		font-size: .78em;
+		line-height: 1.5;
+		color: #666;
+		}
+		
+.rightcol { 
+	width: 23.95em; 
+	padding: 0 0 0 1.5em; 
+	margin: 0;
+	float: left; 
+	border-left: 1px dotted #d6d6d6; 
+}
+
+	p.courses {
+		font-size: .8em;
+		line-height: 1.5;
+		margin: -.5em 0 1em 0 !important;
+	}
+		
+.footer { 
+	width: 51em; 
+	float: left; 
+	border-top: 4px solid #999; 
+	margin: 3em 0 1.5em 0; 
+	padding-top: 1em; 
+	}
+	
+.footer img { float: left; }
+	
+.footerleft { 
+	width: 20em; 
+	padding: 0; 
+	float: left; 
+	}
+	
+.footerright { 
+	width: 30em; 
+	padding-left: 1em; 
+	float: left; 
+	}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=- IE warning Styles =-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+#iewarning { 
+	width: 100%; 
+	background: #444; 
+	padding: 1.4em 0 1.2em 0; 
+	display: none; }
+		
+	#iewarning p { 
+		font-family: "Lucida Sans", "Lucida Grande", Tahoma, sans-serif;
+		text-align: center; 
+		font-size: 13px;
+		letter-spacing: -.015em;
+		line-height: 135%; 
+		padding: 0 17%; 
+		color: #cdcdcd;
+		font-weight: lighter; }
+		
+	#iewarning p.start { font-size: 16px; color: #eee; }
+		
+	#iewarning a { color: #fff; text-decoration: underline; } 
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=- CPC Styles =-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.cpc_leftcol { 
+	width: 12.5em; 
+	padding-right: 1.5em; 
+	margin: 0; 
+	float: left; 
+	}
+
+.cpc_rightcol { 
+	width: 35.3em; 
+	padding: 0 0 0 1.5em; 
+	margin: 0;
+	float: left; 
+	border-left: 1px dotted #d6d6d6; 
+	}
+
+	
+/* =-=-=-=-=-=-=-=-=-=-=-=-=- Typographical Styles =-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+p, ol, li, blockquote { 
+	margin: 0 auto .5em 0; 
+	font-family: Georgia, "Times New Roman", Times, serif; 
+	color: #333; 
+	font-size: .95em; 
+	line-height: 150%; 
+	vertical-align: baseline;
+	}
+	
+li { font-size: .95em; line-height: 150%; }
+
+p.tenet { 
+	margin: 0 auto .5em 0; 
+	font-family: Georgia, "Times New Roman", Times, serif;
+	fontxx-style: italic;
+	color: #000; 
+	font-size: .92em; 
+	line-height: 135%; 
+	}
+	
+p.smalltext { 
+	margin: 0 auto .5em 0; 
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #333; 
+	font-size: .76em; 
+	line-height: 150%; 
+	}
+
+p.backtotop { 
+	margin: 0 auto .5em 0; 
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #333; 
+	font-size: .76em; 
+	line-height: 150%; 
+	}
+p.spacer { line-height: 30%; }
+	
+ul { list-style: outside disc; margin-left: 1em; vertical-align: baseline; }
+	
+ol { list-style: decimal; margin-left: 1.5em; vertican-align: baseline; }
+
+
+ul p, ol p { 
+	font-size: .82em; 
+	line-height: 150%; 
+	vertical-align: baseline;
+	}
+
+h1 { 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-weight: bold; 
+	padding-top: 1.3em; 
+	font-size: 1.8em; 
+	line-height: 100%;
+	color: #fff; 
+	width: 11em;
+	display: block;
+	letter-spacing: -.02em;
+	}
+	
+*+ html h1, *html h1 { margin: -2.3em 0 0 0 !important; } /* for IE */
+	
+h1 a { color: #fff;
+	text-decoration: none; 
+	}
+h1 a:hover { 
+	color: #fff; 
+	text-decoration: none; 
+	background-image: url(../img/20p.png); 
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../img/20p.png", sizingMethod="scale"); 
+}
+
+h2 { 
+	font-weight: normal; 
+	margin: 0 auto .5em auto; 
+	font-size: 1.8em; 
+	font-family: Georgia, "Times New Roman", Times, serif; 
+	color: #666; 
+	clear: left; 
+	}
+	
+.rightcol h2 {
+	font-size: 1.05em; padding-bottom: .5em; line-height: 135%; font-weight: normal; }
+
+h3 a, h4 a, h6 a { 
+	text-decoration: none; 
+	font-weight: bold; 
+	}
+
+h2 a:hover, h3 a:hover, h4 a:hover, h6 a:hover { 
+	text-decoration: underline; 
+	background: #ffc; 
+	}
+	
+h3 { 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	color: #222; 
+	margin: 1.1em auto .5em auto; 
+	font-size: 1.15em; 
+	line-height: 130%; 
+	border-top: 5px solid #999; 
+	padding: .5em 0;
+	letter-spacing: -.01em;
+	letter-spacing: -1px\9; /* IE8 hack */
+	}
+	
+*+ html h3, * html h3 { letter-spacing: -1px; }  /* IE7, 6 hack */
+
+h3.smalltext { 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	color: #222; 
+	margin: 1.3em auto .5em auto; 
+	font-size: .826em; 
+	line-height: 130%; 
+	border-top: 2px solid #888; 
+	padding: .4em 0; 
+	}
+
+h4 { 
+	font-size: 1.19em; 
+	line-height: 120%; 
+	font-weight: normal; 
+	}
+
+h5 { 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-size: .9em; 
+	line-height: 135%; 
+	font-weight: normal;
+	margin: 0 0 .3em 0; 
+	color: #666; }
+
+.topcontainer h5 { 
+	color: #fff; 
+	margin-top: .3em;
+	}
+
+h6 { 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-size: .68em; 
+	line-height: 145%; 
+	margin: 0 auto 1em 0; 
+	font-weight: normal; }
+
+table h6 { 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-size: .85em; 
+	line-height: 135%; 
+	font-weight: inherit; 
+	}
+
+.firstline { 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-size: .95em; 
+	font-weight: bold; 
+	color: #000; 
+	font-style: normal; 
+	}
+	
+.smallcaps { 
+	text-transform: uppercase; 
+	font-size: .92em; 
+	line-height: normal;  
+	letter-spacing: .03em; 
+	vertical-align: baseline;
+	}
+
+.hilite { 
+	background-color: #ffd;	}
+	
+.new {
+	color: #C30;
+	font-weight: bold;
+	font-size: 1em;
+	letter-spacing: 1px;
+	}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=- a/link Styles =-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+a { color: #4974D9; text-decoration: underline; }
+/* a:visited, h5 a.bookmark:visited, h5 a.download:visited { color: #7B9AE3; } */
+
+.container a:hover { text-decoration: underline; background: #ffd; }
+
+.topcontainer a:hover { text-decoration: underline; }
+.topcontainer a:visited { color: #fff; }
+
+a.home { color: #fff; text-decoration: none; padding: .4em; margin-left: -.4em; }
+
+a.home:hover { 
+	border-bottom: 2px solid #fff; 
+	text-decoration: none; 
+	background-image: url(../img/20p.png); 
+	}
+
+*html a.home:hover { 
+	border-bottom: 2px solid #fff; 
+	text-decoration: none; 
+	background-image: url(../img/20p.png); 
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../img/20p.png", sizingMethod="scale"); 
+	}
+
+a.downloadthis { 
+	display: block; 
+	padding: .7em 0 .7em .7em; 
+	background: #ffe; 
+	border-top: 1px solid #e5e5e5; 
+	border-bottom: 1px solid #e5e5e5; 
+	width: auto; 
+	color: #4974D9; 
+	font-weight: normal; 
+	margin: .8em 0; 
+	}
+	
+a.downloadthis:hover { 
+	background: #ffc; 
+	}
+	
+h5 a.bookmark { color: #4974D9; background: url(../img/bookmark.gif) no-repeat left 50%; padding: 0 0 0 14px; }
+h5 a.bookmark:hover { color: #4974D9; text-decoration: none; background: #ffe url(../img/bookmark.gif) no-repeat left 50%; padding: 0 0 0 14px; }
+
+h5 a.download { color: #4974D9; background: url(../img/printer.gif) no-repeat left 50%; padding: 0 0 0 14px; }
+h5 a.download:hover { color: #4974D9; text-decoration: none; background: #ffe url(../img/printer.gif) no-repeat left 50%; padding: 0 0 0 14px; }
+
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=- Image Styles =-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+img.home { 
+	border: 1px solid #ddd;
+	padding: .1em; 
+	margin: 0 0 .5em 0; 
+	}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=- Table Styles =-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+table { 
+	border-collapse: collapse; 
+	width: 100%; 
+	margin: 1em 0; 
+	font-size: .92em; 
+	}
+	
+th, td { 
+	padding: .8em .7em; 
+	text-align: left; 
+	vertical-align: top;
+	border-top: 1px dotted #ccc; 
+	font-family: Georgia, "Times New Roman", Times, serif; 
+	color: #222; 
+	font-size: .94em; 
+	line-height: 130%; 
+	}
+	
+th { border-top: 2px solid #999; font-weight: bold; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: -.015em; }
+
+td.exam { 
+	background-color: #ffe; 
+	padding: .7em; }
+
+td.noclass { 
+	background-color: #f5f5f5; 
+	color: #999; }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=- Navigation Styles =-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+#nav, #nav li {
+	display: inline;
+}
+
+#nav li a {
+	padding: .3em .6em; 
+	display: block;
+	float: left;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1em;
+	letter-spacing: -.02em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+*html #nav li a {
+	padding: .2em .4em; 
+	display: block;
+	float: left;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1em;
+	letter-spacing: -.02em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+	
+#nav li a:hover {
+	border-bottom: 2px solid #fff;
+	text-decoration:none;
+	background-image: url(../img/20p.png);
+}
+
+*html #nav li a:hover {
+	border-bottom: 2px solid #fff;
+	text-decoration:none;
+	background-image: url(../img/20p.png);
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../img/20p.png", sizingMethod="scale");
+}
+
+#nav li a.selected {
+	border-bottom: 2px solid #fff;
+	text-decoration: none;
+	background-image: url(../img/20p.png);
+}
+
+*html #nav li a.selected {
+	border-bottom: 2px solid #fff;
+	text-decoration: none;
+	background-image: url(../img/20p.png);
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../img/20p.png", sizingMethod="scale");
+}
+
+/* Calendar Styles */
+
+.calendarkey { margin: 0; font-size: 1em; line-height: 145%; margin: 0 auto 1em 0; font-weight: normal; }
+
+.calendarwrap { margin: 0; }
+dl { width: 158px; heixght: 188px; margin: 0 6px 0 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; float: left; }
+	.key { font-size: .6em; width: 148px; padding: 0 0 0 .6em; margin: 0 1em 0 0; }
+dt { font-size: .52em; text-transform: uppercase; font-weight: bold; letter-spacing: 1px; background: #333; color: #ccc; padding: 5px 7px; margin: 0 0 .6em 0; width: 140px; }
+dd { border: 1px solid #f6f6f6; background: #f6f6f6; color: #ccc; width: 12px; height: 12px; text-align: center; padding: .25em; font-size: .56em; margin: 0 4px 4px 0; float: left; }
+	.start_mon { margin-left: 23px; }
+	.start_tue { margin-left: 45px; }
+	.start_wed { margin-left: 68px; }
+	.start_thu { margin-left: 90px; }
+	.start_fri { margin-left: 113px; }
+	.start_sat { margin-left: 135px; }
+	.nortmargin { margin-right: 0; }
+	.day { background: none; padding: 0 .25em .9em .25em; border: 1px solid #fff; color: #aaa; font-weight: bold; }
+	.unit { background: #ccc; border: 1px solid #ccc; color: #222; }
+	.off { background: #aaa; border: 1px solid #aaa; color: #ccc; }
+	.lab { background: #C90; border: 1px solid #c90; color: #222; }
+	.exam { background: #ffb; border: 1px solid #ffb; border-width: 1px 0; color: #222; }
+	.due { background: #9CB3EA; border: 1px solid #9CB3EA; color: #222; }
+	.nothing { background: none; border: 1px solid #fff; color: #eee; }

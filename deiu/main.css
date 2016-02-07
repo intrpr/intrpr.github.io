@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* CSS Document */
+
+	body { margin: 3em 6em 2em 6em; background: #f2f2f2; padding: 0; }
+
+	section, article, header, footer, nav, aside { display: block; }
+
+	section { max-width: 760px; min-width: 320px; margin: 0 auto; }
+	article { }
+	header { max-width: 760px; min-width: 320px; margin: 0 auto; }
+
+	nav { display: none; position: fixed; width: 100%; heiqqght: auto; top: 0; left: 0; background: #444; box-shadow: 0 30px 10px rgba(240,240,240,1); -webkit-box-shadow: 0 30px 10px rgba(240,240,240,1); }
+		nav ul { list-style: none; margin: 0 0 0 -3.3em; clear: both; }
+		nav li a { float: left; padding: .5em 1em; margin: 0; font-size: .9em; text-shadow: none; color: rgba(255,255,255,.5); text-decoration: none; }
+		nav li a:hover { background: #666; }
+		.dropdown { float: right; margin: 0; padding: .4em; width: auto; }
+
+	aside { width: auto; margin: 1.5em 0 1.5em -1em !important; border: 1px dotted #aaa; border-width: 3px 1px 1px 1px; padding: 1.2em 1.5em 1em 1.5em; background: #eee; }
+		aside h1 { font-family: 'Satisfy', 'Courier New', Courier, monospace; font-size: 1.65em; line-height: 135%; font-weight: bold; letter-spacing: .02em; }
+		aside h2 { font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, Helvetica, sans-serif; font-size: 1.3em; line-height: 135%; font-weight: bold; letter-spacing: -.02em; margin: 0 0 1em 0; padding: 0 0 .2em 0; border: 1px dotted #aaa; border-width: 0 0 1px 0; }
+		aside p { font-family: 'Courier New', Courier, monospace; font-size: .9em; line-height: 135%; margin: 0 0 .5em 0; }
+		aside ul, aside li, aside ol { font-family: 'Courier New', Courier, monospace; font-size: 95%; line-height: 135%; margin: 0 0 .2em 0; }
+		aside ul, aside ol { margin: 0 0 1em 0; }
+
+	.ednote { background: #ffe; border: 1px solid #ffa; padding: 1em; margin: 1em 0; }
+
+	.clearfix { clear: both; }
+	.left { float: left; }
+	.right { float: right; }
+	select { margin: 0; padding: .2em; margin: 0 0 0 1em; }
+	.hide { display: none; }
+	.allcaps { text-transform: uppercase; font-size: 98%; letter-spacing: .1em; }
+
+	footer { clear: both; max-width: 760px; margin: 2em auto 0 auto; padding: 1em 0; border: 1px dotted #aaa; border-width: 1px 0 0 0; }
+		footer h6 { font-size: .7em; }
+
+	h1, h2, h3, h4, h5, h6, p, li, blockquote { margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, Helvetica, sans-serif; font-weight: normal; text-shadow: 1px 1px 0 rgba(255,255,255,1); }
+	h1 { font-size: 2em; line-height: 120%; font-weight: bold; margin: 0 0 .5em 0; font-family: 'Arvo', 'Helvetica Neue', Helvetica, Verdana, Arial, Helvetica, sans-serif; width: 90%; }
+	h2 { font-size: 1.6em; line-height: 110%; font-weight: bold; margin: 1.5em 0 .5em 0; padding: .8em 0 0 0; border: 1px dotted #aaa; border-width: 1px 0 0 0; letter-spacing: -.02em; }
+		h1, h2 {  }
+		h2 span { font-size: 50%; float: right; font-weight: normal; vertical-align: baseline; }
+	h3 { font-size: 1.05em; line-height: 130%; font-weight: bold; margin: 1em 0 .3em 0; }
+	h4 { font-size: .95em; line-height: 130%; font-weight: bold; margin: 1em 0 .3em 0; color: #444; font-style: italic; }
+	h5 { font-size: .8em; line-height: 150%; font-weight: normal; margin: 0; color: #444; }
+	h6 { font-size: .7em; line-height: 150%; font-weight: normal; margin: 0; color: #999; }
+	p, li, blockquote { font-size: .95em; line-height: 153%; font-weight: normal; margin: 0 0 .7em 0; color: #444; }
+	ul, ol { margin-left: -1.1em; }
+	li { margin: 0 0 .1em 0; }
+	ol ol { margin-left: -.5em; }
+
+	blockquote { margin: 0 4em 1em 3em; font-size: 92%; }
+
+	section a { color: #00f; text-shadow: none; }
+	section a:hover { background: #dedede; text-decoration: none;}
+	section a:visited { color: #06f; }
+
+	.pagenav { display: block; margin: 2em 0 0 0; padding: 1em 0; border: 1px dotted #aaa; border-width: 1px 0 0 0; }
+		.pagenav p { font-size: 80%; }
+
+	.revtag { font-family: monospace; font-size: 95%; background: #fff; padding: .5em .6em .4em .6em; border: 1px solid #ddd; margin: 0 0 0 .5em; border-radius: 3px; color: #999; text-shadow: 1px 1px 0 rgba(255,255,255,1); }
+
+	ul.references { list-style: none; text-indent: -1.3em; }
+	.references li { margin: 0 0 .5em 0; line-height: 145%; }
