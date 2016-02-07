@@ -1,0 +1,224 @@
+/*!
+ * Bootstrap v3.0.0
+ *
+ * Copyright 2013 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world by @mdo and @fat.
+ */
+
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+
+/*! Fontstack */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700);
+
+html {
+  fonqqt-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.428571429;
+  color: #444;
+  background-color: #ffffff;
+  margin: 0;
+}
+
+header { 
+	color: rgba(255,255,255,.8);
+	padding: 2em 0 0 0;
+	background: rgba(52, 73, 94,1.0); }
+
+header a { color: #fff; }
+
+.navbar-brand { font-weight: bold; }
+
+
+.test { border: 1px dotted red; }
+
+hr { margin: 25px 0; border: 0; border-top: 1px solid #eeeeee; }
+
+
+.classindex { heiqqght: 27em; }
+
+h1, h2, h3, h4, h5, h6, p, li, dt, dd, td,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+h1, h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4, h5, h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1, .h1 {
+  font-size: 38px;
+  line-height: 1.1;
+}
+
+h2, .h2 {
+  font-size: 32px; padding: 0; margin: 0 0 .5em 0; line-height: 1.1;
+}
+
+h3, .h3 {
+  font-size: 22px; line-height: 1.15; font-weight: 600; 
+}
+
+header h3 { font-weight: normal; padding: 0; margin: .5em 0; }
+article h3 { padding: 0; margin: 1em 0 .5em 0; }
+section h3 { padding: 0; margin: 0; }
+
+h4, .h4 {
+  font-size: 20px; line-height: 130%;
+}
+article h4 { margin-bottom: .1em; }
+
+h5, .h5 {
+  font-size: 15px; font-weight: bold;
+}
+
+h6, .h6 {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.alert { margin: 1em 0; }
+
+p, li, dt, dd, td { font-size: 16px; line-height: 1.45; color: #666; }
+
+article { margin: 2em 0; }
+article p { margin: 0 0 1em 0; }
+article a { text-decoration: underline; }
+article li { margin: 0 0 .5em 0; }
+
+.lead { font-size: 150%; color: #888; margin: 0 0 1em 0; padqqding: 0 0 1em 0; borqqder: 1px solid #eee; borqqder-width: 0 0 1px 0; }
+.well { padding: 1rem 2rem; margin: 3rem 0;}
+.img-thumbnail { float: right; margin: 0 .8em; }
+.hilite { background: #ffc; }
+.panel { padding: .5em 1.3em .3em 1.3em; margin: .8em 0; background: #f9f9f9; }
+.panel h3 { padding: 0 0 .5em 0; margin-bottom: .5em; border: 1px double #ddd; border-width: 0 0 3px 0; }
+
+img { margin: 1em 0 .5em 0;}
+
+.alert-success { background: rgba(46,204,113,.2); }
+.alert-danger { background: rgba(192,57,43,.2); }
+.alert-info { background: rgba(52,152,219,.2); }
+.alert-warning { background: rgba(241,196,15,.2); }
+
+.header-3310 { height: 140px; background: url(http://www.therapidian.org/sites/default/files/article_images/signlanguage.jpg) center 50%; background-size: 100%; }
+.header-3330 { height: 140px; background: url(http://www.therapidian.org/sites/default/files/article_images/signlanguage.jpg) center 50%; background-size: 100%; }
+.header-3350 { height: 140px; background: url(http://www.therapidian.org/sites/default/files/article_images/signlanguage.jpg) center 50%; background-size: 100%; }
+.header-33360 { height: 140px; background: url(http://www.therapidian.org/sites/default/files/article_images/signlanguage.jpg) center 50%; background-size: 100%; }
+
+/* Footer */
+
+footer { background: rgba(236,240,241,1); borqqder-top: 12px solid #ccc; padding: 3em 0; }
+footer p { margin: 0 0 1em 0; }
+footer h5 { margin: 0 0 .4em 0; }
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (max-width: 400px) {
+}
+
+@media (min-width: 319px) and (max-width: 768px) {
+	body { padding: 0 1.5em 1.5em 1.5em; }
+	.list-group { width: 100%; }
+}
+
+@media (min-width: 992px) {
+}
+
+@media print {
+  * {
+    color: #000 !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+	display: none;
+  }
+  @page  {
+    margin: 2cm .5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .navbar {
+    display: none;
+  }
+  .table td,
+  .table th {
+    background-color: #fff !important;
+  }
+  .btn > .caret,
+  .dropup > .btn > .caret {
+    border-top-color: #000 !important;
+  }
+  .label {
+    border: 1px solid #000;
+  }
+  .table {
+    border-collapse: collapse !important;
+  }
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #ddd !important;
+  }
+}

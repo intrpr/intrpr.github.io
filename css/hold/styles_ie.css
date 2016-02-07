@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:		XXXX styles
+Version:		1.0
+Last change:	XX XXX 2008
+-------------------------------------------------------------------*/
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=- IE warning Styles =-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+#iewarning { 
+	width: 100%; 
+	background: #444; 
+	padding: 1.4em 0 1.2em 0; 
+	display: block; }
+		
+	#iewarning p { 
+		font-family: "Lucida Sans", "Lucida Grande", Tahoma, sans-serif;
+		text-align: center; 
+		font-size: 13px;
+		letter-spacing: -.015em;
+		line-height: 135%; 
+		padding: 0 17%; 
+		color: #cdcdcd;
+		font-weight: lighter; }
+		
+	#iewarning p.start { font-size: 16px; color: #eee; }
+		
+	#iewarning a { color: #fff; text-decoration: underline; }

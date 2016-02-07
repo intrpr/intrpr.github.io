@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/* CSS Document */
+	
+/* Don't forget to set a foreground and background color on the 'html' or 'body' element! */
+li, ol, ul { margin: 0; padding: 0; border: 0; outline: 0; font-weight: normal; font-style: inherit; font-size: 100.01% /* for opera and ie/win6+ */; line-height: 1; font-family: inherit; text-align: left; vertical-align: baseline; }
+	
+:focus { outline: 0; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+select, input, textarea { font-size: 99%; } /* for Safari 2+ */
+
+ol, ul { list-style: disc; list-style-position: outside; margin: 0 0 0 1em; }
+
+:focus { outline: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; }
+
+q:before, q:after, blockquote:before, blockquote:after { content: ""; }
+
+blockquote, q { quotes: "" ""; }
+
+button { padding: 0; width: auto; overflow: visible; }
+
+em { font-style: italic; line-height: inherit; }
+strong { font-weight: bold; line-height: inherit; }
+.smallcaps { font-size: .88em; letter-spacing: 1px; text-transform: capitalize; }
+small { font-size: .85em; }
+img { behavior: url(scr/iepngfix.htc); }
+
+/* ---------------- Composition Styles ---------------- */
+	
+
+.c { clear: left; }
+.right { float: right; font-size: inherit; line-height: inherit; }
+.rule1 { border-bottom: 1px solid #e6e6e6; margin: 1em 0 1.1em 0; }
+.rule2 { border-bottom: 3px double #e6e6e6; margin: 1.1em 0 1.3em 0; }
+.rule3 { border-bottom: 1px dashed #b6b6b6; margin: .8em 0 1em 0; }
+.rule4 { border-bottom: 1px dashed #e6e6e6; margin: .5em 0; }
+.rule4 { border-bottom: 1px dashed #e6e6e6; margin: .9em 0 0 0; }
+
+/* ---------------- Typographic Styles ---------------- */
+
+h1 { font-family: Georgia, "Times New Roman", Times, serif; font-size: 2.1em; line-height: 103%; font-weight: normal; color: #222222; margin: 0 0 9px 0; letter-spacing: -.1px; }
+	h1 small { font-size: .35em; color: #666; letter-spacing: 0; }
+h2 { font-family: Georgia, "Times New Roman", Times, serif; font-size: 1.85em; line-height: 115%; font-weight: normal; color: #333333; margin: 0 0 10px 0; padding: 0; }
+h3 { font-family: Helvetica, Arial, sans-serif; font-size: 1.4em; line-height: 115%; font-weight: bold; color: #800000; margin: 0; padding: 0; letter-spacing: -.01em; }
+h4 { font-family: Helvetica, Arial, sans-serif; font-size: .96em; line-height: 128%; color: #222; margin: 4px 0 2px 0; font-weight: bold; }
+	.sidebar { border-top: 0px #f6f6f6 dashed; padding: .5em 0 0 0; margin: .5em 0 0 0; }
+	.faq { border-top: 1px #e6e6e6 solid; padding: .9em 0 0 0; margin: .9em 0 0 0; }
+	.terms h4 { font-size: .86em; margin: 1em 0 .5em 0; }
+h5 { font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: .93em; line-height: 135%; color: #222; padding: 0; margin: 0 0 4px 0; }
+h6 { font-family: Arial, Helvetica, sans-serif; font-weight: normal; font-size: .9em; line-height: 135%; color: #000; margin: 0 0 9px 0; padding: 0; }
+
+
+/* ---------------- Table Styles ---------------- */
+
+.regform table { margin: 0; }
+.regform th { background: #FFFCF5 url(signtest/img/stars_sidebar.gif) center top no-repeat; }
+.regform td { vertical-align: top; font-family: Helvetica, Arial, sans-serif; font-size: 12px; line-height: 125%; coxlor: #222222; padding: 5px 12px 0 0; }
+	.greytype { color: #999999; font-size: 10px; margin: 0 0 0 4px; }
+	.errortype { color: #a00; font-weight: bold; }
+
+.kitcontents table { margin: 0; }
+.kitcontents td { vertical-align: top; font-family: Helvetica, Arial, sans-serif; padding: 0 12px 0 0; }
+	.kitcontents ul { margin: 0 0 0 1em; }
+	.kitcontents li { list-style: disc; font-size: 12px; line-height: 125%; color: #333333; }
+
+
+/* ---------------- Form, Field, and Registration Styles ---------------- */
+
+input.radio { padding: 0; margin: 0 3px 0 -2px !important; vertical-align: middle; }
+input.checkbox { padding: 0; margin: 0 5px 0 -1px !important; vertical-align: middle; }
+input.button { font-size: 12px; margin: 6px 0 6px 0; padding: 3px 6px; border-top: 1px solid #eee; border-right: 1px solid #aaa; border-left: 1px solid #eee; border-bottom: 1px solid #aaa; overflow: visible; }
+.field { font-size: 12px; padding: 5px; color: #555; border: 1px solid #ddd; background: #fdfdfd; margin: .2em 0; }
+.fielda { width: 230px; font-size: 12px; padding: 5px; color: #444; border: 1px solid #ddd; background: #fdfdfd; margin: .1em 0; }
+.field { width: auto; font-family: Helvetica, Arial, sans-serif; font-size: 12px; padding: 5px; margin: -3px 0 5px 0 !important; border-top: 1px solid #ccc; border-right: 1px solid #eee; border-bottom: 1px solid #eee; border-left: 1px solid #ccc; color: #333333; }
+.field2 { width: 40%; font-family: Helvetica, Arial, sans-serif; font-size: 12px; padding: 5px; margin: -3px 0 5px 0 !important; border-top: 1px solid #ccc; border-right: 1px solid #eee; border-bottom: 1px solid #eee; border-left: 1px solid #ccc; color: #333333; }
+.field3 { width: 90%; font-family: Helvetica, Arial, sans-serif; font-size: 12px; padding: 5px; margin: -3px 0 5px 0 !important; border-top: 1px solid #ccc; border-right: 1px solid #eee; border-bottom: 1px solid #eee; border-left: 1px solid #ccc; color: #333333; }
+.field3a { width: 90%; font-family: Helvetica, Arial, sans-serif; font-size: 12px; padding: 5px; margin: 3px 0 5px 0 !important; border-top: 1px solid #ccc; border-right: 1px solid #eee; border-bottom: 1px solid #eee; border-left: 1px solid #ccc; color: #333333; }
+.errorfield { border: 1px solid #c00; background: #FCF7F7; }
+.errorbox { display: block; background: #E8D1D1; padding: 13px 13px 9px 13px; margin: 10px 0; -moz-border-radius: 6px; border-radius: 6px; }
+	.errorbox p, li { font-family: Helvetica, Arial, sans-serif; font-size: 12px; line-height: 120%; color: #222222; margin: 0 0 3px 0; padding: 0; }
+	.errorbox li { margin: 0 0 3px 2px; }
