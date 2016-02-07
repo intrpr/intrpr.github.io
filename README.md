@@ -1,2 +1,2 @@
 # intrpr.github.io
-This is supposed to be the hub/source for my interpreting class sites.
+Hub/source for Utah Valley University interpreting class sites (6 February 2016).
