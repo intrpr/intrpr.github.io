@@ -136,6 +136,26 @@ header.main-header {
 	padding: 2em 0;
 }
 
+@media ( min-width: 768px ) {
+    .grid-divider {
+        position: relative;
+        padding: 0;
+    }
+    .grid-divider>[class*='col-'] {
+        position: static;
+    }
+    .grid-divider>[class*='col-']:nth-child(n+2):before {
+        content: "";
+        border-left: 1px solid #DDD;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+    .col-padding {
+        padding: 0 15px;
+    }
+}
+
 /* Well note style */
 .note { padding: 1em; }
 .note h4, .note p, .note li { font-size: 100%; }
