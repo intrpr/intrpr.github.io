@@ -6,6 +6,7 @@
 /*! Fontstack */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:900);
+@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash);
 
 html {
 	fonqqt-size: 62.5%;
@@ -61,14 +62,14 @@ h1, .h1 {
 	font-size: 56px;
 	line-height: .95;
 	font-weight: 900;
-	font-family: "Playfair Display", serif;
+	font-family: "Berkshire Swash", "Playfair Display", serif;
 }
 @media (max-width: 470px) {
 	h1, .h1 { font-size: 40px; }
 }
 
 h2, .h2 {
-	font-size: 30px; padding: 0; margin: .2em 0 .7em 0; line-height: 1.1; font-weight: 900; font-family: "Playfair Display",  serif;
+	font-size: 30px; padding: 0; margin: .2em 0 .7em 0; line-height: 1.1; font-weight: 900; font-family: "Berkshire Swash", "Playfair Display", serif;
 }
 
 h3, .h3 {
