@@ -217,6 +217,17 @@ header h2 { margin: 1.5rem 0 2.5rem -1rem; }
 .header-3370 { background: #7FB800; }
 .header-3380 { background: #c377e0; }
 .header-439R { background: #0079bf; }
+.header-uvuasl {
+	background: rgba(0,65,122,1);
+	/* Old Browsers */background: -moz-linear-gradient(-45deg, rgba(0,65,122,1) 0%, rgba(20,89,169,1) 70%, rgba(20,89,169,1) 100%);
+	 /* FF3.6+ */background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,65,122,1)), color-stop(70%, rgba(20,89,169,1)), color-stop(100%, rgba(20,89,169,1)));
+	/* Chrome, Safari4+ */background: -webkit-linear-gradient(-45deg, rgba(0,65,122,1) 0%, rgba(20,89,169,1) 70%, rgba(20,89,169,1) 100%);
+	 /* Chrome10+,Safari5.1+ */background: -o-linear-gradient(-45deg, rgba(0,65,122,1) 0%, rgba(20,89,169,1) 70%, rgba(20,89,169,1) 100%);
+	 /* Opera 11.10+ */background: -ms-linear-gradient(-45deg, rgba(0,65,122,1) 0%, rgba(20,89,169,1) 70%, rgba(20,89,169,1) 100%);
+	 /* IE 10+ */background: linear-gradient(135deg, rgba(0,65,122,1) 0%, rgba(20,89,169,1) 70%, rgba(20,89,169,1) 100%);
+	/* W3C */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00417a', endColorstr='#1459a9', GradientType=1 );
+	/* IE6-9 fallback on horizontal gradient */
+}
 
 /*
 
