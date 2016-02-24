@@ -291,7 +291,11 @@ header h2 { margin: 1.5rem 0 2.5rem -1rem; }
 }
 
 /* Make the global nav just a hair smaller */
-.navbar li { font-size: 100% !important; }
+.navbar-inverse {
+    background-color: #222;
+    border-color: none; }
+
+	.navbar li { font-size: 100% !important; }
 .navbar li li { font-size: 120% !important; }
 
 .schedule-unit { padding: 2em 0 1em 0; border: 1px solid #eee; border-width: 1px 0 0 0; }
