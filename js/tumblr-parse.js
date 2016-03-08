@@ -6,7 +6,7 @@ function getPosts() {
 	// Post parser for Tumblr blogs.
 	// Change "blog_url" to pull in a new feed.
 
-	var blog_name   = 'uvuaslinterpret',
+	var blog_name   = 'intrpr',
 		 tumblr_feed = 'http://' + blog_name + '.tumblr.com/api/read/json?callback=?';
 
 	$.getJSON(tumblr_feed, function(data) {
