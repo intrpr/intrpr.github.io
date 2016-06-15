@@ -6,6 +6,7 @@
 /*! Fontstack */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:900);
+@import 'https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,800';
 
 html {
 	fonqqt-size: 62.5%;
@@ -13,7 +14,7 @@ html {
 }
 
 body {
-	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Libre Franklin", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 1.428571429;
 	color: #666;
@@ -37,7 +38,7 @@ div { margin: 0; padding: 0; border: 1px dashed red; }
 /* Typography */
 h1, h2, h3, h4, h5, h6, p, li, dt, dd, td,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Libre Franklin", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	margin: 0;
 	padding: 0;
@@ -72,7 +73,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	font-size: 26px; line-height: 1.2; font-weight: 600; font-family: "Source Sans Pro", sans-serif;
+	font-size: 26px; line-height: 1.2; font-weight: 600; font-family: "Libre Franklin", "Source Sans Pro", sans-serif;
 }
 header h3 { font-weight: 300; padding: 0; margin: .5em 0 1em 0; }
 article h3 { padding: 0; margin: .85em 0 .25em 0; }
