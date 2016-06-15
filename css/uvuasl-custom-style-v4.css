@@ -20,7 +20,7 @@ body {
 	color: #666;
 	background-color: #fff;
 	margin: 0;
-	letter-spacing: .03em; /* for Libre Franklin; looks nicer */
+	letter-spacing: .02em; /* for Libre Franklin; looks nicer */
 }
 
 	.container { padding: 0 4rem; }
@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6, p, li, dt, dd, td,
 	padding: 0;
 	color: inherit;
 	word-wrap: break-word;
-	letter-spacing: .03em; /* for Libre Franklin; looks nicer */
+	letter-spacing: .02em; /* for Libre Franklin; looks nicer */
 }
 
 .navbar-inverse .strong { font-weight: bold; color: rgba(255,255,255,1); }
@@ -75,7 +75,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	font-size: 26px; line-height: 1.2; font-weight: 600; font-family: "Libre Franklin", "Source Sans Pro", sans-serif; letter-spacing: .03em; /* for Libre Franklin; looks nicer */
+	font-size: 26px; line-height: 1.2; font-weight: 600; font-family: "Libre Franklin", "Source Sans Pro", sans-serif; letter-spacing: .02em; /* for Libre Franklin; looks nicer */
 }
 header h3 { font-weight: 300; padding: 0; margin: .5em 0 1em 0; }
 article h3 { padding: 0; margin: .85em 0 .25em 0; }
