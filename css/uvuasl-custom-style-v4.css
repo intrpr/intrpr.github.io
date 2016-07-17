@@ -4,9 +4,7 @@
  */
 
 /*! Fontstack */
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic);
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display:900);
-@import 'https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,800';
+@import 'https://fonts.googleapis.com/css?family=Libre+Franklin:100,300,600,700';
 
 html {
 	fonqqt-size: 62.5%;
@@ -14,9 +12,9 @@ html {
 }
 
 body {
-	font-family: "Libre Franklin", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 16px;
-	line-height: 1.6;
+	line-height: 1.55;
 	color: #666;
 	background-color: #fff;
 	margin: 0;
@@ -39,8 +37,8 @@ div { margin: 0; padding: 0; border: 1px dashed red; }
 /* Typography */
 h1, h2, h3, h4, h5, h6, p, li, dt, dd, td,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-	font-family: "Libre Franklin", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 400;
+	font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
 	margin: 0;
 	padding: 0;
 	color: inherit;
@@ -61,21 +59,22 @@ h4, h5, h6 {
 }
 
 h1, .h1 {
-	font-size: 56px;
-	line-height: .95;
-	font-weight: 900;
-	font-family: "Playfair Display", serif;
+	font-size: 6rem;
+	line-height: 1;
+	font-weight: 100;
+	font-family: "Libre Franklin", "Playfair Display", serif;
+	letter-spacing: -.03em;
 }
 @media (max-width: 470px) {
 	h1, .h1 { font-size: 40px; }
 }
 
 h2, .h2 {
-	font-size: 30px; padding: 0; margin: .2em 0 .7em 0; line-height: 1.1; font-weight: 900; font-family: "Playfair Display",  serif;
+	font-size: 30px; padding: 0; margin: .2em 0 .7em 0; line-height: 1.1; font-weight: 700; font-family: "Libre Franklin", "Playfair Display",  serif;
 }
 
 h3, .h3 {
-	font-size: 26px; line-height: 1.2; font-weight: 600; font-family: "Libre Franklin", "Source Sans Pro", sans-serif; letter-spacing: .02em; /* for Libre Franklin; looks nicer */
+	font-size: 26px; line-height: 1.3; font-weight: 700; font-family: "Libre Franklin", "Source Sans Pro", sans-serif; letter-spacing: .02em; /* for Libre Franklin; looks nicer */
 }
 header h3 { font-weight: 300; padding: 0; margin: .5em 0 1em 0; }
 article h3 { padding: 0; margin: .85em 0 .25em 0; }
@@ -100,21 +99,21 @@ h6, .h6 {
 	font-size: 14px;
 	line-height: 1.45;
 }
-.lead { font-weight: 400; }
-.alert { margin: 1em 0; }
+.lead { font-weight: 300; line-height: 1.5; }
+.alert { margin: 1em 0 2em 0; }
 
-p, li, dt, dd, td { font-size: 18px; line-height: 1.45; color: #666; }
+p, li, dt, dd, td { font-size: 18px; line-height: 1.6; color: #666; }
 /* p, li, dt, dd, td { font-family: "Merriweather"; font-size: 1em; line-height: 1.6; color: #666; } */
 
 dt { font-weight: 700; }
 p, dd { margin: 0 0 1em 0; }
 article li { margin: 0 0 .3em 0; }
 del { color: #ccc; }
-i { background: #ffb; padding: 0 .1em; font-weight: normal; font-style: normal; }
+i { background: #ffb; padding: 0 .1em; font-weight: inherit; font-style: normal; }
 s { opacity: .4; }
 
 .uvuasl-ds-library dl { }
-.uvuasl-ds-library dt { font-weight: 400; }
+.uvuasl-ds-library dt { font-weight: 300; }
 .uvuasl-ds-library dt:first-qqchild { padding: 0; margin: 0; border: 0; }
 .uvuasl-ds-library dd { font-size: .95em; padding: 0 0 1em 0; margin: 0 0 1em 0; border: 1px dotted #ddd; border-width: 0 0 1px 0; }
 
@@ -291,6 +290,7 @@ header h2 { margin: 1.5rem 0 2.5rem -1rem; }
 	line-height: 1.428571429;
 	vertical-align: top;
 	border-top: 1px solid #eeeeee;
+	font-size: 1em;
 }
 
 /* Make the global nav just a hair smaller */
@@ -381,7 +381,7 @@ footer {
 		background-color: rgba(0,0,0,.2);
 	}
 	article { margin: 1.5rem 0; }
-	h2, .h2 { font-size: 33px; padding: 0; margin: .2em 0 .7em 0; line-height: 1.1; font-weight: 900; font-family: "Playfair Display", serif; }
+	h2, .h2 { font-size: 170%; padding: 0; margin: .2em 0 .7em 0; line-height: 1.1; font-weight: 700; font-family: "Libre Franklin", serif; }
 	footer h5 { text-transform: uppercase; letter-spacing: .2rem; font-size: 82%; margin: 2rem 0 0 0; }
 
 }
@@ -395,7 +395,7 @@ footer {
 			p { font-size: .8em; }
 			li { font-size: .8em; }
 			.lead { font-size: 1em; }
-			.tooltip-inner { margin: 1em 0 0 .2em; font-size: 1.1em; font-weight: 900; }
+			.tooltip-inner { margin: 1em 0 0 .2em; font-size: 1.1em; font-weight: 700; }
 			.label, .nav-pills, .tab-pane h5 { display: none; }
 			#tab01, #tab02, #tab03, #tab04, #tab05, #tab06, #tab07, #tab08, #tab09, #tab10 { display: block; }
 		}

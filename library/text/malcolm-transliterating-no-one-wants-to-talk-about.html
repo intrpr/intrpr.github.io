@@ -7,19 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <style type="text/css">
 
-  @import url(http://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic);
+  @import 'https://fonts.googleapis.com/css?family=Libre+Franklin:300,300i,700,700i';
 
   /* Barebones typesetting, based on APA6 */
 
-  body { font-size: 108%; line-height: 175%; color: #444; font-family: 'Merriweather', Times New Roman, serif; font-weight: normal; }
+  body { font-size: 120%; line-height: 160%; color: #444; font-family: 'Libre Franklin', Times New Roman, serif; font-weight: 300; }
   .container { padding: 3rem; max-width: 48em; margin: 0 auto; }
 
-  h1 { font-weight: bold; text-align: left; font-size: 160%; line-height: 145%; margin: 0 0 .5rem 0; }
+  h1 { font-weight: bold; text-align: left; font-size: 150%; line-height: 135%; margin: 0 0 .5rem 0; }
   h2 { font-weight: normal; font-style: italic; text-align: left; font-size: 102%; line-height: 155%; margin: .5rem 0 0 0; }
   h3 { font-weight: bold; text-align: left; font-size: 102%; margin: 1.5rem 0 0 0; }
   h4 { font-weight: bold; text-align: center; font-size: 105%; margin: 1rem 0; }
   h5 { font-weight: bold; font-size: 95%; line-height: 160%; margin: 0; }
-  h6 { font-weight: normal; font-size: 70%; line-height: 160%; margin: 2rem 0 0 0; color: #666; padding: 1rem 0 0 0; border: 1px solid #eee; border-width: 1px 0 0 0; }
+  h6 { font-weight: normal; font-size: 75%; line-height: 160%; margin: 2rem 0 0 0; color: #666; padding: 1rem 0 0 0; border: 1px solid #eee; border-width: 1px 0 0 0; }
   sup { font-size: 100%; line-height: 0; vertical-align: superscript; }
   sup:before { content: ’[’; }
   sup:after { content: ’]’; margin: 0 .2rem 0 0; }
@@ -38,7 +38,7 @@
   blockquote { margin: 1rem 2rem 1rem 1.5rem; padding: 0 0 0 .5rem; border-left: 4px solid #eee; font-size: 90%; }
   hr { border: 0; height: 1px; background: #ddd; color: #ddd; margin: 2em 0; clear: both; }
 
-  .hilite { color: #f00; background-color: #ffe; padding: 1rem; font-weight: normal; }
+  i { color: #000; background-color: #ffe; padding: 1rem; font-weight: normal; font-style: normal; }
 
   .alert { font-family: Helvetica, Arial, sans-serif; padding: 1.5em; border-radius: .4em; color: #3a87ad; background: #d9edf7; border: 1px solid #bce8f1; }
 
@@ -46,11 +46,11 @@
 
   /* Print Styles */
   @media print {
-	* { color: #000 !important; text-shadow: none !important; background: transparent !important; box-shadow: none !important; }
-	body { padding: 2rem; }
-	.container { padding: 0; }
-	.alert { padding: 1rem; border: 1px dotted #000; font-size: 60%; }
-	a, a:visited { text-decoration: underline; }
+   * { color: #000 !important; text-shadow: none !important; background: transparent !important; box-shadow: none !important; }
+   body { padding: 2rem; }
+   .container { padding: 0; }
+   .alert { padding: 1rem; border: 1px dotted #000; font-size: 60%; }
+   a, a:visited { text-decoration: underline; }
   }
 
   </style>
