@@ -392,7 +392,7 @@ footer {
 		@media print {
 			* { color: #000 !important; text-shadow: none !important; background: transparent !important; box-shadow: none !important; }
 			body { margin: 0 .2cm; }
-			nav, header, footer, .alert, .tooltip-arrow { visibility: hidden; display: none; }
+			nav, header, footer, iframe, .alert, .tooltip-arrow { visibility: hidden; display: none; }
 			h1 { line-height: .7; font-size: 30px; margin: -1.5em 0 1em 0 !important; }
 			h3 { font-size: 1.2em; }
 			h4 { font-size: 1em; }
