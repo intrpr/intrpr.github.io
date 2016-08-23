@@ -390,7 +390,7 @@ footer {
 }
 
 		@media print {
-			* { color: #000 !important; text-shadow: none !important; background: transparent !important; box-shadow: none !important; }
+			* { color: #000 !important; text-shadow: none !important; background: transparent !important; box-shadow: none !important;  }
 			body { margin: 0 .2cm; }
 			nav, header, footer, iframe, .alert, .tooltip-arrow { visibility: hidden; display: none; }
 			h1 { line-height: .7; font-size: 30px; margin: -1.5em 0 1em 0 !important; }
@@ -399,6 +399,7 @@ footer {
 			p { font-size: .8em; }
 			li { font-size: .8em; }
 			a { text-decoration: underline; }
+			.label-success, .label-danger, .label-info, .label-warning, .label-default { display: currentColor; color: #000; }
 			.lead { font-size: 1em; }
 			.tooltip-inner { margin: 1em 0 0 .2em; font-size: 1.1em; font-weight: 700; }
 			.label, .nav-pills, .tab-pane h5 { display: none; }
@@ -406,6 +407,8 @@ footer {
 			a[href]:after { content: none; }
 			abbr[title]:after { content: none; }
 			.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: none; }
+			h1 { color: #000; }
+			h5, h6, p, td, dd, dt, li, .note, .well { font-size: 1.3rem; }
 		}
 /*
 
