@@ -122,7 +122,7 @@ s { opacity: .4; }
 
 /* Top Navigation Bar */
 body { padding-top: 50px; }
-.navbar-brand { font-weight: 700; }
+.navbar-brand { font-weight: 700; font-size: 17px; }
 
 /* Images */
 img { margin: 1em 0; }
