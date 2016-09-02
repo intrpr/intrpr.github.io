@@ -389,6 +389,10 @@ footer {
 
 }
 
+@media (min-width: 360px) {
+	.navbar-brand { font-size: 90%; }
+}
+
 		@media print {
 			* { color: #000 !important; text-shadow: none !important; background: transparent !important; box-shadow: none !important;  }
 			body { margin: 0 .2cm; }
