@@ -389,7 +389,7 @@ footer {
 
 }
 
-@media (min-width: 360px) {
+@media (min-width: 400px) {
 	.navbar-brand { font-size: 90%; }
 }
 
