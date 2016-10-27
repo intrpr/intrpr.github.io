@@ -66,7 +66,7 @@ h1, .h1 {
 	letter-spacing: -.03em;
 }
 @media (max-width: 470px) {
-	h1, .h1 { font-size: 40px; }
+	h1, .h1 { font-size: 48px; line-height: 1.1; }
 }
 
 h2, .h2 {
@@ -75,6 +75,9 @@ h2, .h2 {
 
 h3, .h3 {
 	font-size: 1.35em; line-height: 1.3; font-weight: 700; fontqq-family: "Libre Franklin", sans-serif; letter-spacing: .02em; /* for Libre Franklin; looks nicer */
+}
+@media (max-width: 470px) {
+	h3.looking-for { display: none; }
 }
 header h3 { font-weight: 300; padding: 0; margin: .5em 0 1em 0; }
 article h3 { padding: 0; margin: .85em 0 .25em 0; }
@@ -160,14 +163,17 @@ header.main-header {
     }
     .grid-divider>[class*='col-']:nth-child(n+2):before {
         content: "";
-        border-left: 1px solid #DDD;
+        border-left: 1px solid rgba(255,255,255,.2);
         position: absolute;
         top: 0;
         bottom: 0;
     }
-    .col-padding {
-        padding: 0 15px;
-    }
+	.grid-divider a { color: rgba(255,255,255,.5); }
+
+    .col-padding { padding: 0 10%; }
+	.grid-divider p { font-size: 105%; line-height: 1.5; }
+
+	.page-header { border-bottom: 1px solid rgba(255,255,255,.2); }
 }
 
 /* Well note style */
@@ -386,6 +392,21 @@ footer {
 	article { margin: 1.5rem 0; }
 	h2, .h2 { font-size: 170%; padding: 0; margin: .2em 0 .7em 0; line-height: 1.1; font-weight: 700; font-family: "Libre Franklin", serif; }
 	footer h5 { text-transform: uppercase; letter-spacing: .2rem; font-size: 82%; margin: 2rem 0 0 0; }
+
+	.grid-divider {
+        position: relative;
+        padding: 0; margin: 0;
+    }
+    .grid-divider>[class*='col-'] {
+        position: static;
+    }
+
+	.grid-divider a { color: rgba(255,255,255,.5); }
+
+    .col-padding { padding: 1.5em 0 0 0; border-bottom: 1px solid rgba(255,255,255,.2); }
+	.grid-divider p { font-size: 105%; line-height: 1.5; }
+
+	.page-header { border: none; margin: 40px 0 0 0; }
 
 }
 
