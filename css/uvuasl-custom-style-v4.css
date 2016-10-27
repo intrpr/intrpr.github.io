@@ -42,9 +42,10 @@ h1, h2, h3, h4, h5, h6, p, li, dt, dd, td,
 	margin: 0;
 	padding: 0;
 	color: inherit;
-	word-wrap: break-word;
+	/*word-wrap: break-word;*/
 	letter-spacing: .02em; /* for Libre Franklin; looks nicer */
 }
+p.looking-for { color: rgba(255,255,255,.6); margin: 1.5em 0 .8em 0; }
 
 .navbar-inverse .strong { font-weight: 700; color: rgba(255,255,255,1); }
 
@@ -77,7 +78,7 @@ h3, .h3 {
 	font-size: 1.35em; line-height: 1.3; font-weight: 700; fontqq-family: "Libre Franklin", sans-serif; letter-spacing: .02em; /* for Libre Franklin; looks nicer */
 }
 @media (max-width: 470px) {
-	h3.looking-for { display: none; }
+	p.looking-for { display: none; }
 }
 header h3 { font-weight: 300; padding: 0; margin: .5em 0 1em 0; }
 article h3 { padding: 0; margin: .85em 0 .25em 0; }
@@ -125,7 +126,7 @@ s { opacity: .4; }
 
 /* Top Navigation Bar */
 body { padding-top: 50px; }
-.navbar-brand { font-weight: 700; font-size: 17px; }
+.navbar-brand { font-weight: 700; font-size: 102%; }
 
 /* Images */
 img { margin: 1em 0; }
@@ -152,6 +153,7 @@ header.main-header {
 	/* W3C */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#113c61', endColorstr='#1f5087', GradientType=1 );
 	/* IE6-9 fallback on horizontal gradient */
 }
+.filter-1 { filter: brightness(.1) contrast(1) grayscale(1) hue-rotate(20deg) opacity(1); }
 
 @media ( min-width: 768px ) {
     .grid-divider {
@@ -168,12 +170,13 @@ header.main-header {
         top: 0;
         bottom: 0;
     }
-	.grid-divider a { color: rgba(255,255,255,.5); }
+	.grid-divider a { color: rgba(255,255,255,.6); }
 
-    .col-padding { padding: 0 10%; }
+    .col-padding { padding: 0 0 0 1.2em; margin: 0 -15px 0 0 !important; }
+	.col-padding:nth-child(1) { margin: 0 -15px 0 0 !important; }
 	.grid-divider p { font-size: 105%; line-height: 1.5; }
-
-	.page-header { border-bottom: 1px solid rgba(255,255,255,.2); }
+	.page-header { margin: 0 0 20px 0; border-bottom: 1px solid rgba(255,255,255,.2); }
+	.navbar-brand { font-size: 90%; }
 }
 
 /* Well note style */
@@ -376,14 +379,13 @@ footer {
 
 @media (max-width: 767px) {
 
-	.container { padding: 0 4rem; }
+	.container { padqqding: 0 4rem; }
 	.container > .navbar-header, .container > .navbar-collapse { marqqgin: 0; }
 	.row { marqqgin: 0; }
 	header h2 { margin: 1rem 0; text-indent: -1rem; }
 	header.class-header { padding: 1.8rem 0 2rem 0; }
 	.nav-tabs.nav-justified > li > a { text-align: left; margin: 0 0 0 -1rem; }
 	.lead { font-size: 2rem; }
-
 	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
 		color: #fff;
 		cursor: default;
@@ -406,7 +408,7 @@ footer {
     .col-padding { padding: 1.5em 0 0 0; border-bottom: 1px solid rgba(255,255,255,.2); }
 	.grid-divider p { font-size: 105%; line-height: 1.5; }
 
-	.page-header { border: none; margin: 40px 0 0 0; }
+	.page-header { border: none; margin: 0; }
 
 }
 
@@ -436,200 +438,3 @@ footer {
 			h5, h6, p, td, dd, dt, li, .note, .well { font-size: 1.3rem; }
 		}
 /*
-
-
-hr { margin: 25px 0; border: 0; border-top: 1px solid #eeeeee; }
-
-
-
-
-
-
-
-
-
-header.main-page-header {
-	coqqlor: rgba(255,255,255,.8);
-	padqqding: 2em 0 0 0;
-	backqqground: rgba(0,0,255,1); }
-
-heaqqder a { color: #fff; }
-
-/* main-page-header
-header.page-header {
-	coqqlor: rgba(255,255,255,.8);
-	padqqding: 2em 0 0 0;
-	}
-
-.header-3310 {
-	backqqground: rgba(160,160,160,1);
-	}
-
-
-h1, h2 {
-	margin-top: 20px;
-	margin-bottom: 10px;
-}
-
-h4, h5, h6 {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-h1, .h1 {
-	font-size: 38px;
-	line-height: 1.1;
-}
-
-h2, .h2 {
-	font-size: 32px; padding: 0; margin: 0 0 .5em 0; line-height: 1.1;
-}
-
-h3, .h3 {
-	font-size: 22px; line-height: 1.15; font-weight: 600;
-}
-
-header h3 { font-weight: normal; padding: 0; margin: .5em 0; }
-article h3 { padding: 0; margin: 1em 0 .5em 0; }
-section h3 { padding: 0; margin: 0; }
-
-h4, .h4 {
-	font-size: 20px; line-height: 130%;
-}
-article h4 { margin-bottom: .1em; }
-
-h5, .h5 {
-	font-size: 15px; font-weight: bold;
-}
-
-h6, .h6 {
-	font-size: 12px;
-	line-height: 1.45;
-}
-
-.alert { margin: 1em 0; }
-
-p, li, dt, dd, td { font-size: 16px; line-height: 1.45; color: #666; }
-
-article { margin: 2em 0; }
-article p { margin: 0 0 1em 0; }
-article a { text-decoration: underline; }
-article li { margin: 0 0 .5em 0; }
-
-.lead { font-size: 150%; color: #888; margin: 0 0 1em 0; padqqding: 0 0 1em 0; borqqder: 1px solid #eee; borqqder-width: 0 0 1px 0; }
-.well { padding: 1rem 2rem; margin: 3rem 0;}
-.img-thumbnail { float: right; margin: 0 .8em; }
-.hilite { background: #ffc; }
-.panel { padding: .5em 1.3em .3em 1.3em; margin: .8em 0; background: #f9f9f9; }
-.panel h3 { padding: 0 0 .5em 0; margin-bottom: .5em; border: 1px double #ddd; border-width: 0 0 3px 0; }
-
-
-.alert-success { background: rgba(46,204,113,.2); }
-.alert-danger { background: rgba(192,57,43,.2); }
-.alert-info { background: rgba(52,152,219,.2); }
-.alert-warning { background: rgba(241,196,15,.2); }
-
-.header-3310 { height: 140px; background: url(http://www.therapidian.org/sites/default/files/article_images/signlanguage.jpg) center 50%; background-size: 100%; }
-.header-3330 { height: 140px; background: url(http://www.therapidian.org/sites/default/files/article_images/signlanguage.jpg) center 50%; background-size: 100%; }
-.header-3350 { height: 140px; background: url(http://www.therapidian.org/sites/default/files/article_images/signlanguage.jpg) center 50%; background-size: 100%; }
-.header-3360 { height: 140px; background: url(http://www.therapidian.org/sites/default/files/article_images/signlanguage.jpg) center 50%; background-size: 100%; }
-
-/* Footer
-
-footer { background: rgba(236,240,241,1); borqqder-top: 12px solid #ccc; padding: 3em 0; }
-footer p { margin: 0 0 1em 0; }
-footer h5 { margin: 0 0 .4em 0; }
-
-@media (min-width: 1200px) {
-}
-
-@media (min-width: 768px) {
-}
-
-@media screen and (min-width: 768px) {
-}
-
-@media screen and (max-width: 400px) {
-}
-
-@media (min-width: 319px) and (max-width: 768px) {
-	body { padding: 0 1.5em 1.5em 1.5em; }
-	.list-group { width: 100%; }
-}
-
-@media (min-width: 992px) {
-}
-
-@media print {
-	* {
-		color: #000 !important;
-		text-shadow: none !important;
-		background: transparent !important;
-		box-shadow: none !important;
-	}
-	a,
-	a:visited {
-		text-decoration: underline;
-	}
-	a[href]:after {
-		content: " (" attr(href) ")";
-	}
-	abbr[title]:after {
-		content: " (" attr(title) ")";
-	}
-	.ir a:after,
-	a[href^="javascript:"]:after,
-	a[href^="#"]:after {
-		content: "";
-	}
-	pre,
-	blockquote {
-		border: 1px solid #999;
-		page-break-inside: avoid;
-	}
-	thead {
-		display: table-header-group;
-	}
-	tr,
-	img {
-		page-break-inside: avoid;
-	}
-	img {
-		max-width: 100% !important;
-	display: none;
-	}
-	@page	{
-		margin: 2cm .5cm;
-	}
-	p,
-	h2,
-	h3 {
-		orphans: 3;
-		widows: 3;
-	}
-	h2,
-	h3 {
-		page-break-after: avoid;
-	}
-	.navbar {
-		display: none;
-	}
-	.table td,
-	.table th {
-		background-color: #fff !important;
-	}
-	.btn > .caret,
-	.dropup > .btn > .caret {
-		border-top-color: #000 !important;
-	}
-	.label {
-		border: 1px solid #000;
-	}
-	.table {
-		border-collapse: collapse !important;
-	}
-	.table-bordered th,
-	.table-bordered td {
-		border: 1px solid #ddd !important;
-	}
-}
