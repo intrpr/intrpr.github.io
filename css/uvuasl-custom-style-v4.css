@@ -19,8 +19,6 @@ body {
 	background-color: #fff;
 	margin: 0;
 	letter-spacing: .02em; /* for Libre Franklin; looks nicer */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 	.container { padding: 0 4rem; }
