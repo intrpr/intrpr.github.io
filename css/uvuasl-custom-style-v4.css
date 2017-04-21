@@ -5,6 +5,7 @@
 
 /*! Fontstack */
 @import 'https://fonts.googleapis.com/css?family=Libre+Franklin:100,300,600,700';
+@import 'https://fonts.googleapis.com/css?family=Montserrat:900';
 
 html {
 	fonqqt-size: 62.5%;
@@ -63,7 +64,7 @@ h1, .h1 {
 	font-size: 6rem;
 	line-height: 1;
 	font-weight: 100;
-	fontqq-family: "Libre Franklin", serif;
+	font-family: "Montserrat", "Libre Franklin", serif;
 	letter-spacing: -.03em;
 }
 @media (max-width: 470px) {
