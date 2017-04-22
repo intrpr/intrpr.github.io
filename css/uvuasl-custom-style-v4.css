@@ -29,6 +29,7 @@ article a {
 	text-decqqoration: underline; word-wrap: break-word;
 }
 
+.hide { visibility: hidden; display: none; }
 
 /* Testing
 header, section, article, aside, footer { margin: 0; padding: 0; border: 1px dashed blue; }
