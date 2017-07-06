@@ -6,6 +6,8 @@
 /*! Fontstack */
 @import 'https://fonts.googleapis.com/css?family=Libre+Franklin:100,300,600,700';
 @import 'https://fonts.googleapis.com/css?family=Montserrat:800';
+@import 'https://fonts.googleapis.com/css?family=Rubik:400,700,900';
+
 
 html {
 	fonqqt-size: 62.5%;
@@ -13,7 +15,7 @@ html {
 }
 
 body {
-	font-family: "Libre Franklin", sans-serif;
+	font-family: "Rubik", "Libre Franklin", sans-serif;
 	font-size: 16px;
 	line-height: 1.55;
 	color: #666;
@@ -39,7 +41,7 @@ div { margin: 0; padding: 0; border: 1px dashed red; }
 /* Typography */
 h1, h2, h3, h4, h5, h6, p, li, dt, dd, td,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-	font-family: "Libre Franklin", sans-serif;
+	font-family: "Rubik", "Libre Franklin", sans-serif;
 	font-weight: 300;
 	margin: 0;
 	padding: 0;
@@ -83,8 +85,8 @@ h3, .h3 {
 @media (max-width: 470px) {
 	p.looking-for { display: none; }
 }
-header h3 { font-family: "Libre Franklin"; font-weight: 300; padding: 0; margin: .5em 0 1em 0; }
-article h3 { font-family: "Libre Franklin"; padding: 0; margin: .85em 0 .25em 0; letter-spacing: 0; /* for Libre Franklin; looks nicer */ }
+header h3 { font-family: "Rubik", "Libre Franklin"; font-weight: 300; padding: 0; margin: .5em 0 1em 0; }
+article h3 { font-family: "Rubik", "Libre Franklin"; padding: 0; margin: .85em 0 .25em 0; letter-spacing: 0; /* for Libre Franklin; looks nicer */ }
 section h3 { padding: 0; margin: 0; }
 h3 small { font-weight: inherit; color: inherit; }
 p small { font-size: 80%; }
