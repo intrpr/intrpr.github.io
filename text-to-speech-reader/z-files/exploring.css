@@ -1,0 +1,341 @@
+.topTabs{
+	min-height: 70px;
+	text-align: center;
+	overflow: hidden;
+}
+.topTabs a{
+	display: inline-block;
+	color: #2E2D49;
+	font-size: 20px;
+	line-height: 50px;
+	margin: 10px 5px;
+	padding: 0 15px;
+	text-align: center;
+	text-decoration: none;
+}
+.topTabs a.active, .topTabs a:hover{
+	border-radius: 50px;
+	background-color: #D3CEE3;
+}
+.tabsPanel{
+	display: none;
+}
+.tabsPanel.active{
+	display: block;
+}
+.tabsPanel h1:first-child{
+	margin: 30px 0 40px 0;
+}
+.tabsPanel .tabsDialog{
+	display: none;
+}
+.tabsPanel .tabsDialog.active{
+	display: block;
+}
+.dialogWrap .tabsInfo:nth-child(n+6){
+	
+}
+.leftInfo{
+	width: 150px;
+	float: left;
+	text-align: center;
+}
+.leftInfo h5, .leftInfo .address{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.leftInfo h5{
+	margin: 6px 0 2px 0;
+	font-weight: bold;	
+}
+.leftInfo .address{
+	color: #666;
+	font-size: 14px;
+}
+.tabsInfo{
+	clear: both;
+	margin-bottom: 50px;
+}
+.tabsInfo:after{
+	content: '';
+}
+.dialogInfo{
+	position: relative;
+	margin-left: 160px;
+}
+.dialogInfo .arrow{
+	position: absolute;
+	width: 15px;
+	height: 22px;
+	left: 1px;
+	top: 30px;
+	background: url("../images/dialog_arrow.png") 0 0 no-repeat;
+}
+@media (max-width: 600px){
+	.leftInfo{
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+	.dialogInfo{
+		margin-left: 0px;
+		margin-top: 20px;
+	}
+	.dialogInfo .arrow{
+		width: 24px;
+		height: 15px;
+		left: 48%;
+		top: -14px;
+		background: url("../images/dialog_arrowT.png") 0 0 no-repeat;
+	}
+}
+.dialogInfo .dialogTxt{
+	font-style: italic;
+	color: #666;
+	margin-left: 15px;
+	padding: 20px 30px;
+	min-height: 140px;
+	border: 1px solid #E8E8E8;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0,0,0,.15);
+}
+
+.onlineTTS .topInfo{
+	margin-bottom: 40px;
+}
+.onlineTTS .topInfo span{
+	float: left;
+	line-height: 45px;
+}
+.onlineTTS .topInfo .explain{
+	color: #555;
+	padding-top: -30px;
+}
+.onlineTTS .btnLogin, .onlineTTS .arrowLogin{
+	display: inline-block;
+	width: 108px;
+	height: 45px;
+}
+.onlineTTS .btnLogin{
+	cursor: pointer;
+	background: url("../images/login2_normal.png") 0 0 no-repeat;
+}
+.onlineTTS .btnLogin:hover{
+	background: url("../images/login2_hover.png") 0 0 no-repeat;
+}
+.onlineTTS .arrowLogin{
+	background: url("../images/login_arrow.png") 0 0 no-repeat;
+}
+/* .leftMulu{
+	width: 250px;
+	height: 650px;
+	border-radius: 10px;
+	background-color: #313131;
+} */
+
+.package{
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+	border: 1px solid #ccc;
+}
+.package .topTxt{
+	height: 60px;
+	line-height: 60px;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 30px;
+	background-color: #F4F4F4;
+}
+.package .nameInfo{
+	font-size: 16px;
+	font-weight: bold;
+	margin: 20px 0 40px 0;
+}
+.package  .onlyMoney{
+	color: #f00;
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+.package .saveMoney{
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.package  .btnCart img{
+	cursor: pointer;
+}
+
+.aboutusInfo{
+	margin-bottom: 50px;
+	font-size: 16px;
+}
+.aboutusInfo h2{
+	padding-left: 70px;
+	line-height: 60px;
+}
+.naturalReader h2{
+	background: url("../images/e_a1.png") 0 center no-repeat;
+}
+.news h2{
+	background: url("../images/e_a2.png") 0 center no-repeat;
+}
+.contactus h2{
+	background: url("../images/e_a3.png") 0 center no-repeat;
+}
+.news .newsTxt{
+	display: inline-block;
+	width: 240px;
+}
+
+
+#loginSignupPanel{
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	padding: 50px 100px 20px;
+	width: 500px;
+	background-color: #fff;
+}
+@media (max-width: 600px){
+	#loginSignupPanel{
+		padding: 50px 20px 20px;
+		width: 340px;
+	}
+}
+#loginSignupPanel.active{
+	display: block;
+}
+#loginSignupPanel .btnCloseDialog{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	cursor: pointer;
+	background: url("../images/close.png") 0 0 no-repeat;
+}
+#loginSignupPanel .titName{
+	margin: 0 0 20px 0;
+	font-size: 18px;
+	font-weight: bold;
+	color: #000;
+}
+#loginSignupPanel .btnLoginFacebook, #loginSignupPanel .btnSignupFacebook, #loginSignupPanel .btnLogin, #loginSignupPanel .btnSignup{
+	display: block;
+	width: 300px;
+	height: 50px;
+	cursor: pointer;
+}
+#loginSignupPanel .btnLoginFacebook{
+	background: url("../images/login_normal.png") 0 0 no-repeat;
+}
+#loginSignupPanel .btnLoginFacebook:hover{
+	background: url("../images/login_hover.png") 0 0 no-repeat;
+}
+#loginSignupPanel .btnSignupFacebook{
+	background: url("../images/sign_up_normal.png") 0 0 no-repeat;
+}
+#loginSignupPanel .btnSignupFacebook:hover{
+	background: url("../images/sign_up_hover.png") 0 0 no-repeat;
+}
+#loginSignupPanel .btnLogin{
+	margin-top: 20px;
+	background: url("../images/login1_normal.png") 0 0 no-repeat;
+}
+#loginSignupPanel .btnLogin:hover{
+	background: url("../images/login1_hover.png") 0 0 no-repeat;
+}
+#loginSignupPanel .btnSignup{
+	margin-top: 20px;
+	background: url("../images/sign_normal.png") 0 0 no-repeat;
+}
+#loginSignupPanel .btnSignup:hover{
+	background: url("../images/sign_hover.png") 0 0 no-repeat;
+}
+#loginSignupPanel input{
+	width: 300px;
+	height: 50px;
+	font-size: 16px;
+	padding: 10px;
+	border: 1px solid #999;
+}
+#loginSignupPanel .checkboxAgree{
+	margin-top: 20px;
+	overflow: hidden;
+}
+#loginSignupPanel .checkboxAgree span{
+	display: inline-block;
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	cursor: pointer;
+	background: url("../images/checkbox_unchecked.png") 0 0 no-repeat;
+}
+#loginSignupPanel .checkboxAgree span.active{
+	background: url("../images/checkbox_checked.png") 0 0 no-repeat;
+}
+#loginSignupPanel .forgotPWD{
+	margin-bottom: 20px;
+}
+#loginSignupPanel .forgotPWD a{
+	font-size: 14px;
+	color: #999;
+}
+#loginSignupPanel .bottomTxt{
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: -10px;
+}
+#loginSignupPanel .bottomTxt a{
+	color: #f60;
+}
+#signupPanel{
+	display: none;
+}
+
+.subTabs{
+	text-align: center;
+	margin: 40px 0;
+}
+.subTabs a{
+	display: inline-block;
+	width: 190px;
+	height: 58px;
+	color: #37314c;
+	font-size: 20px;
+	line-height: 58px;
+	border: 1px solid #b5b4cf;
+	border-right: none;
+	text-decoration: none;
+}
+.subTabs a:first-child{
+	border-radius: 6px 0 0 6px;
+}
+.subTabs a:last-child{
+	border-right: 1px solid #b5b4cf;
+	border-radius: 0 6px 6px 0;
+}
+.subTabs a.active{
+	color: #fff;
+	border: 1px solid #43425b;
+	background-color: #43425b;
+}
+@media (max-width: 699px){
+	.subTabs a{
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		border: 1px solid #b5b4cf;
+		border-bottom: none;
+	}
+	.subTabs a:first-child{
+		border-radius: 6px 6px 0 0;
+	}
+	.subTabs a:last-child{
+		border-radius: 0 0 6px 6px;
+		border-bottom: 1px solid #b5b4cf;
+	}
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+
+<meta http-equiv="Cache-Control" content="max-age=604800" />
+
+<title>Free text to speech with Naturally Sounding Voices Online Demo — Free NaturalReader</title>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="css/audioIndex.css"/>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name=description content="text to speech with naturally sounding voices. Let your computer read PDF, word, ebooks, webpages and other documents with online naturally sounding voices and convert text to MP3, or text to WAV files, text to audio files, read text aloud, download free text to speech software now text readers, computer reader, Reader, online reader, talking text, voice text. naturally sounding voices, TTS, learning disability, reading disability, visual impaired, low vision, text to speech solutions, text to MP3, Optical Character Recognition (OCR), Screen Reader, Dyslexia Software, Dyslexia."
+>
+<meta property="og:image" content="https://www.naturalreaders.com/images/share_preview2.jpg" />
+<!-- Google web fonts -->
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
+
+		<!-- The main CSS file -->
+		<link href="css/style.css" rel="stylesheet" />
+</head>
+<body style="font-family:Helvetica Neue,Helvetica,Arial,sans-serif">
+<!--
+<link rel="shortcut icon" href="https://c.csdnimg.cn/public/favicon.ico" />
+-->
+<audio id="s1" src="" preload="load"></audio>
+<audio id="s2" src="" preload="load" ></audio>
+    <div class="container">
+        <div class="topAD">
+        		<img src="images/logo_white.png" class="topLogo" height="50" width="50">
+            <span>Want to listen to ANY webpage instantly? Drag NaturalReader icon to your Bookmarks!</span>
+            <span><a class="bookmarkletLink"><img src="images/drag.png" alt="NaturalReader"></a></span>
+            <span><a href="webreader.html" class="howto">How?</a></span>
+            <span class="btnClose"><img src="images/btn-close.png"></span>
+        </div>
+        <div class="mainHeader">
+            <div class="logo">
+                <img src="images/logo_index.png">
+
+            </div>
+            <div class="navbar">
+                <a href="index.html#%23%23" class="active">Home</a>
+                <a href="priceorder.html">Price & Order</a>
+                <a href="howto.html">How to</a>
+                <a href="features.html">Features</a>
+                <a href="exploring.html">Exploring</a>
+                <a href="download.html" class="download">Download</a>
+            </div>
+            <div id="downloadBtn" style="background-color:#3980DA;color:white;position:relative;float:right;height:40px;line-height:40px;padding:0 10px;top:8px;margin-right:10px;cursor:pointer;border:1px solid #dcdada;">Download</div>
+        </div>
+        <div class="mainContent clearfix">
+            <!--<div class="leftContent">
+                <ul>
+                    <li class="sharetoTxt">Share to</li>
+                    <li><div class="reader_sharebtn2 showmouse"><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.naturalreaders.com%2F&layout=button_count&size=large&mobile_iframe=true&width=105&height=28" width="105" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div></li>
+                    <li><div class="reader_sharebtn2 showmouse"><iframe src="https://platform.twitter.com/widgets/tweet_button.html?size=l&url=https%3A%2F%2Fwww.naturalreaders.com%2F&via=twitterdev&related=twitterapi%2Ctwitter&text=custom%20share%20text&hashtags=example%2Cdemo" width="120" height="40" title="Twitter Tweet Button" style="border: 0; overflow: hidden;"></iframe></div></li>
+					<li><div class="g-plus" data-action="share" data-annotation="bubble" data-height="24" data-href="https://www.naturalreaders.com/"></div></li>
+                    <li><div class="reader_sharebtn2 showmouse" width="120" height="40"><a href="https://www.reddit.com/submit?url=https%3A%2F%2Fwww.naturalreaders.com%2F" target="_blank"> <img src="https://www.redditstatic.com/spreddit7.gif" alt="submit to reddit" border="0" /></a></div></li>
+                </ul>
+            </div>-->
+
+            <div class="centerContent">
+                <div class="headerInfo clearfix">
+                		<!--<div id="addTip" style="margin-left: 0px;">
+                			<img src="images/add_document.png"/><img id="confirmAdd" src="images/oktop.png" style="margin-left: -57px;margin-bottom: 10px;"/>
+                		</div>-->
+                    <div class="selectWrap">
+                        <ul class="clearfix">
+                        		<!--<li id="documentsBtn"><img src="images/menu_docs.png" /></li>-->
+                        		<li id="addDocument"><img src="images/menu_adddoc.png" /></li>
+                            <li class="btnPlayStop" id="play"></li>
+                            <li class="select selectReader">
+                                <div class="selectHead">
+                                    <i class="icon-flag"><img id="speakerImg" src="images/bt1.png"></i>
+                                    <span class="readerName" id="speakerName">Mike</span>
+                                </div>
+                                <div class="selectInfo hide" id="speaker">
+                                    <dl>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt1.png"></i>
+                                            US,<span class="readerName">Mike</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt1.png"></i>
+                                            US,<span class="readerName">Crystal</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt1.png"></i>
+                                            US,<span class="readerName">Ray</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt1.png"></i>
+                                            US,<span class="readerName">Lauren</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt1.png"></i>
+                                            US,<span class="readerName">Rich</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt1.png"></i>
+                                            US,<span class="readerName">Julia</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt1.png"></i>
+                                            US,<span class="readerName">Mel</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt1.png"></i>
+                                            US,<span class="readerName">Claire</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt1.png"></i>
+                                            US,<span class="readerName">Ryan</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt1.png"></i>
+                                            US,<span class="readerName">Heather</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt1.png"></i>
+                                            US,<span class="readerName">Laura</span>
+                                        </dd>
+
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt2.png"></i>
+                                            UK,<span class="readerName">Charles</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt2.png"></i>
+                                            UK,<span class="readerName">Audrey</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt2.png"></i>
+                                            UK,<span class="readerName">Peter</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt2.png"></i>
+                                            UK,<span class="readerName">Rachel</span>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt2.png"></i>
+                                            UK,<span class="readerName">Graham</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt2.png"></i>
+                                            UK,<span class="readerName">Lucy</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt2.png"></i>
+                                            UK,<span class="readerName">Anjali</span>
+                                        </dd>
+
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt3.png"></i>
+                                            French,<span class="readerName">Alain</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt3.png"></i>
+                                            French,<span class="readerName">Juliette</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt3.png"></i>
+                                            French,<span class="readerName">Bruno</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt3.png"></i>
+                                            French,<span class="readerName">Alice</span>
+                                        </dd>
+
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt4.png"></i>
+                                            German,<span class="readerName">Reiner</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt4.png"></i>
+                                            German,<span class="readerName">Klara</span>
+                                        </dd>
+
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt6.png"></i>
+                                            Spanish,<span class="readerName">Rosa</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt6.png"></i>
+                                            Spanish,<span class="readerName">Alberto</span>
+                                        </dd>
+
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt5.png"></i>
+                                            Italian,<span class="readerName">Giovanni</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt5.png"></i>
+                                            Italian,<span class="readerName">Francesca</span>
+                                        </dd>
+
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt7.png"></i>
+                                            Arabic,<span class="readerName">Salma</span>
+                                        </dd>
+                                        <dd>
+                                            <i class="icon-flag"><img src="images/bt7.png"></i>
+                                            Arabic,<span class="readerName">Mehdi</span>
+                                        </dd>
+                                    </dl>
+                                    <div class="btnVoicePortfolio clearfix"><a href="voicelist.html">Voice Portfolio</a></div>
+                                </div>
+                            </li>
+                            <li class="select selectSpeed">
+                                <div class="selectHead">
+                                    Speed<span class="speed">1</span>
+                                </div>
+                                <div class="selectInfo hide" id="speedList">
+                                    <dl>
+                                    	<dd>-4</dd>
+                                        <dd>-3</dd>
+                                        <dd>-2</dd>
+                                        <dd>-1</dd>
+                                        <dd>0</dd>
+                                        <dd>1</dd>
+                                        <dd>2</dd>
+                                        <dd>3</dd>
+                                        <dd>4</dd>
+                                        <dd>5</dd>
+                                        <dd>6</dd>
+                                        <dd>7</dd>
+                                        <dd>8</dd>
+                                        <dd>9</dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <!--
+                             <li id="edit">Edit</li>
+
+                             <li id="checkLi">	Online	<input type="checkbox" id="onlineCheck" checked="true"/></li>
+                             -->
+                             <!--<li id="downloadBtn" style="color:blue;">Download</li>-->
+                             <!--<li id="loadingText"></li>-->
+                             <li id="pre" style="border: 0;bottom: 3px;"><img src="images/prev.png" /></li>
+                             <li id="next" style="border: 0;bottom: 3px;"><img src="images/next_new.png" /></li>
+                             <li style="border: 0;top: 10px;" id="shareLi">
+                             	<div class="sharebtn"><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.naturalreaders.com%2F&amp;layout=button_count&amp;size=large&amp;mobile_iframe=true&amp;width=105&amp;height=28" width="105" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div>
+                             </li>
+                        </ul>
+                    </div>
+
+                    <div class="pagination">
+                  		<!--<div id="downloadBtn" style="background-color:#3980DA;color:white;position:relative;float:left;height:40px;line-height:40px;padding:0 10px;margin-right:10px;cursor:pointer;border:1px solid #dcdada;">Download</div>-->
+                        <!--<div class="btnPagination btnPrev" id="pre"></div>
+                        <div class="btnPagination btnNext" id="next"></div>-->
+                    </div>
+                </div>
+
+                <div class="contentInfo">
+                    <div class="btnClose"></div>
+                    <!--<div class="btnExchange" id="exchangeBtn"></div>-->
+                    <div id="iframeDiv"></div>
+                    <!--<div class="info centerBolder" id="iframeTextDiv" style="word-wrap:break-word;"></div>-->
+                    <div class="info centerBolder" id="content" contenteditable="true">
+                        <p>You can copy, paste and edit text here. You can also upload your own Word and PDF documents. </p>
+<p>Natural Reader is a professional text to speech program that converts any written text into spoken words. </p>
+<p>The paid versions of Natural Reader have many more features. </p>
+</br>
+</br>
+</br>
+</br>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="explainList">
+                <ul>
+                    <li>
+                        <h3>Download Free Version:</h3>
+                        <dl>
+                            <dd><span></span>Free to download and free to use</dd>
+                            <dd><span></span>Compatible with PDF, Word, webpages & more</dd>
+                            <dd><span></span>More offline voices</dd>
+                        </dl>
+                        <div class="btnWrap">
+                            <div class="btn btnDownload active downloadDiv"><a href="download.html">Download</a></div>
+                            <div class="btn btnWatchVideo videoDiv"><a href="javascript:showMainVideo();">Watch Video</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>More features about Paid Versions:</h3>
+                        <dl>
+                            <dd><span></span>Convert to Audio files</dd>
+                            <dd><span></span>Sync with iOS and Android apps</dd>
+                            <dd><span></span>Use OCR with Kindle, Adobe, iBooks & more</dd>
+                            <dd><span></span><a href="features.html">More...</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <h3>What can NaturalReader do for you?</h3>
+                        <dl>
+                            <dd><span></span>Help people with dyslexia.</dd>
+                            <dd><span></span>Allow students to listen to textbooks</dd>
+                            <dd><span></span>Allow multi-tasking</dd>
+                            <dd><span></span>Make proof-reading effective</dd>
+                            <dd><span></span>Learn English or other languages</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="mainFooter">
+        		<a id="loadingText" style="float:left;margin-left: 10px;font-size: 20px;"></a>
+        		<a href="webreader.html">Web reader</a>
+            <a href="howto-info=faq.html">FAQ</a>
+            <a href="exploring-index=3&amp;info=refundPopcies.html">Policies</a>
+            <a href="exploring-index=2&amp;info=aboutus.html">Contact us</a>
+            <a href="myaccount.html">Login</a>
+        </div>
+   </div>
+
+
+    <div class="contentLayer downloadLayer hide">
+        <div class="title">
+            Download Free Desktop Version <span class="btnClose wordLimit"></span><span class="downloadTimeCount">3s left</span>
+        </div>
+        <div class="info">
+            <ul>
+                <li>Listen to PDF, Word, eBook, and webpages.</li>
+                <li>20 languages and 50 voices</li>
+                <li>Turn printed books & eBooks into speech with OCR</li>
+            </ul>
+        </div>
+        <div class="btnWrap">
+            <div class="btn btnDownload active downloadDiv"><a href="download.html">Download</a></div>
+            <div class="btn btnWatchVideo videoDiv"><a href="video.html">Watch Video</a></div>
+        </div>
+    </div>
+
+    <div class="contentLayer buyLayer hide">
+        <div class="title">
+            We need your support! <span class="btnClose wordLimit"></span><span class="downloadTimeCount">3s left</span>
+        </div>
+        <div class="info">
+            <p>Please upgrade to Paid Versions for unlimited use</p>
+            <p>Save your eyes, save your time</p>
+        </div>
+        <div class="btn"><a href="priceorder.html">Buy Now</a></div>
+        <div class="explain">Daily limit reached, Please come back tomorrow!</div>
+    </div>
+
+    <div class="contentLayer waitingFileOpenLayer hide">
+        <div class="title">
+            Waiting <span class="btnClose"></span>
+        </div>
+        <div class="info">
+            <p style="font-size: large;position: absolute;top: 120px;padding: 20px;">Downloading Html file from the server,please wait a moment.</p>
+        </div>
+    </div>
+
+
+    <div class="contentLayer uploadLayer hide" >
+        <div class="title">
+            Upload your file <span class="btnClose"></span>
+        </div>
+        <div class="info">
+        	<form id="upload" method="post" action="https://api.naturalreaders.com/v4/files/up?apikey=b98x9xlfs54ws4k0wc0o8g4gwc0w8ss&amp;action=tohtml" enctype="multipart/form-data">
+			<div id="drop">
+				Drop Here
+
+				<a style="margin-left: 20px;">Browse</a>
+				<input type="file" name="upl" accept="application/msword,application/pdf,application/rtf,text/plain,text/rtf,application/vnd.openxmlformats-officedocument.wordprocessingml.document" multiple />
+			</br></br>
+				<p style="color:gray;font-size: 15px;">（File formats：TXT, Doc, Docx, PDF)</p>
+			</div>
+			<p id="fileSizeLimit" style="margin-top: -20px;margin-bottom: 10px;color: red;"></p>
+			<ul id="uploadUl">
+				<!-- The file uploads will be shown here -->
+			</ul>
+
+		</form>
+        </div>
+    </div>
+
+    <div class="contentLayer documentsLayer hide">
+        <div class="title">
+            Your cloud documents. <span class="btnClose"></span>
+        </div>
+        <div class="info">
+            <ul id="documentList">
+            </ul>
+        </div>
+    </div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<!--<script type="text/javascript" src="js/jquery-1.8.0.js"></script>-->
+<script src="z-files/js/jquery.cookie.js"></script>
+<script src="z-files/js/duee.core.1.0.js"></script>
+<script src="z-files/js/splitsen_txt.js"></script>
+<script src="js/nasdk.js"></script>
+<script type="text/javascript" src="js/duee.core.1.0.js"></script>
+<script type="text/javascript" src="js/nasdk.js"></script>
+<script type="text/javascript" src="js/audioIndex.js"></script>
+<script type="text/javascript" src="z-files/js/bookmark.js"></script>
+<script src="js/jquery.knob.js"></script>
+
+<!-- jQuery File Upload Dependencies -->
+<script src="z-files/js/jquery.ui.widget.js"></script>
+<script src="z-files/js/jquery.iframe-transport.js"></script>
+<script src="z-files/js/jquery.fileupload.js"></script>
+
+<!-- Our main JS file -->
+<script src="z-files/js/script.js"></script>
+<!-- Only used for the demos. Please ignore and remove. -->
+<!--<script src="https://cdn.tutorialzine.com/misc/enhance/v1.js" async></script>-->
+
+<link rel="stylesheet" type="text/css" href="z-files/css/jquery-fallr-2.0.1.css" />
+<script type="text/javascript" src="z-files/js/jquery-fallr-2.0.1.js"></script>
+<script>
+function showMainVideo(){
+    $.fallr.show({
+		content: '<p>Video Help</p><iframe src="https://player.vimeo.com/video/129171371" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+		width: 860 + 100, // 100 = padding width
+		position: 'center',
+		buttons: {
+			button1: { text: 'Close' }
+		}
+	});
+}
+</script>
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-466667-1', 'naturalreaders.com');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>

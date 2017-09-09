@@ -1,0 +1,65 @@
+.topTabs{
+	min-height: 70px;
+	text-align: center;
+	overflow: hidden;
+}
+.topTabs a{
+	display: inline-block;
+	color: #2E2D49;
+	font-size: 20px;
+	line-height: 50px;
+	margin: 10px 5px;
+	padding: 0 15px;
+	text-align: center;
+	text-decoration: none;
+}
+.topTabs a.active, .topTabs a:hover{
+	border-radius: 50px;
+	background-color: #D3CEE3;
+}
+.tabsInfo{
+	display: none;
+	margin-top: 50px;
+}
+.tabsInfo.active{
+	display: block;
+}
+.videosWrap video{
+	margin: 0 auto;
+	display: block;
+}
+.videoTit{
+	text-align: center;
+	padding: 20px 0;
+}
+.showVideosWrap video{
+	display: none;
+}
+.showVideosWrap img{
+	width: 100%;
+	cursor: pointer;
+}
+.videoExplain{
+	margin: 10px 0 40px;
+	overflow: hidden;
+}
+.videoExplain .videoTime{
+	display: inline-block;
+	float: right;
+	color: #f60;
+	padding: 3px 6px;
+	border: 1px solid #f60;
+	border-radius: 5px;
+	background-color: #FFF;
+}
+.videoExplain  h3{
+	margin: 0;
+}
+.videoExplain .explain{
+	font-size: 13px;
+	clear: both;
+	margin: 5px 0 0 0;
+}
+.videoTabsInfo .col-sm-4 > p{
+	margin-bottom: 50px;
+}

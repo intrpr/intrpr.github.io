@@ -1,0 +1,117 @@
+.bigTxtWrap{
+	/* padding: 0px 20px 0px; */
+}
+.bigTxtWrap .tit{
+	color: #000;
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.bigTxtWrap .pcTagImg{
+	position: absolute;
+	top: -45px;
+}
+.bigTxtWrap .img-responsive{
+	margin: 50px auto 0;
+	/* margin-right: auto;
+	box-shadow: 0 4px 6px rgba(0,0,0,.2); */
+}
+.bigTxtWrap .row{
+	padding-left: 18px;
+}
+.btnFreeDownload{
+	width: 412px;
+	height: 72px;
+	margin-left: auto;
+	margin-right: auto;
+	background: url("../images/free_download_lg_normal.png") 0 0 no-repeat;
+}
+.btnFreeDownload:hover{
+	background: url("../images/free_download_lg_hover.png") 0 0 no-repeat;
+}
+@media (max-width: 500px){
+	.btnFreeDownload{
+		width: 300px;
+		height: 52px;
+		background-size: 300px 53px;
+	}
+	.btnFreeDownload:hover{
+		background-size: 300px 53px;
+	}
+}
+.bigTxtWrap h2{
+	margin: 0 0 10px;
+	font-size: 22px;
+	font-weight: bold;
+}
+.bigTxtWrap ul{
+	padding-left: 18px;
+	margin-bottom: 20px;
+}
+.bigTxtWrap ul li{
+	padding-left: 10px;
+	margin-bottom: 8px;
+	font-size: 16px;
+}
+.bigTxtWrap .btn{
+	color: #000;
+	width: 140px;
+	line-height: 38px;
+	font-size: 18px;
+	border-radius: 50px;
+	margin: 10px 0 0;
+	padding: 0;
+}
+.bigTxtWrap .imgShow{
+	margin-bottom: 40px;
+}
+.freeNaturalReade14 {
+    border-right: 1px solid #ccc;
+}
+
+.pt-30{
+	padding-top: 30px;
+}
+.pt-80{
+	padding-top: 80px;
+}
+.mainfeature{
+	/* width: 400px;
+	margin: 30px auto 0; */
+}
+@media (max-width: 991px) {
+	.freeNaturalReade14 {
+		border-right: none;
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 80px;
+	}
+}
+
+.bigTxtWrap div.text-center a{
+	display: inline-block;
+	margin: 0 2px 5px;
+}
+.bigTxtWrap p.text-center{
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+.bigTxtWrap .btnFreedownload{
+	display: inline-block;
+	width: 200px;
+	height: 62px;
+	cursor: pointer;
+}
+.bigTxtWrap .btnFreedownload_WIN{	
+	background: url("../images/windows_on-2.png") 0 0/200px 62px no-repeat;
+}
+.bigTxtWrap .btnFreedownload_WIN:hover {
+	background-image: url("../images/windows_hover-2.png");
+}
+.bigTxtWrap .btnFreedownload_MAC{
+	background: url("../images/mac_on-2.png") 0 0/200px 62px no-repeat;
+}
+.bigTxtWrap .btnFreedownload_MAC:hover{
+	background-image: url("../images/mac_hover-2.png");
+}
+
+

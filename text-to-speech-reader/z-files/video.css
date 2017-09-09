@@ -1,0 +1,38 @@
+
+.videosWrap video{
+	margin: 0 auto;
+	display: block;
+}
+.videoTit{
+	text-align: center;
+	padding: 20px 0;
+}
+.showVideosWrap video{
+	display: none;
+}
+.showVideosWrap img{
+	width: 100%;
+	cursor: pointer;
+}
+.videoExplain{
+	margin: 10px 0 40px;
+	overflow: hidden;
+}
+.videoExplain .videoTime{
+	display: inline-block;
+	float: right;
+	color: #f60;
+	padding: 3px 6px;
+	border: 1px solid #f60;
+	border-radius: 5px;
+	background-color: #FFF;
+}
+.videoExplain  h3{
+	margin: 0;
+}
+.videoExplain .explain{
+	font-size: 13px;
+	clear: both;
+	margin: 5px 0 0 0;
+}
+

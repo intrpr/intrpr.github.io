@@ -1,0 +1,90 @@
+
+.naturalReaderEexplain{
+	padding: 40px 0;
+	color: #fff;
+}
+.naturalReaderEexplain .tit{
+	font-size: 48px;
+}
+.naturalReaderEexplain .info{
+	font-size: 18px;
+}
+.bg-4D455F{
+	background-color: #4D455F;
+}
+.bg-4D455F .jumbotron{
+	color: #fff;
+	margin-bottom: 0;
+	background: none;
+}
+@media (min-width: 992px){
+	.perVoicesTit, .webpages{
+		margin-top: 180px;
+	}
+	.soundFilesTit, .floatingBar, .documents, .converter, .conversation{
+		margin-top: 100px;
+	}
+	.documentsPic{
+		margin-top: 50px;
+	}
+	.soundFilesTxt{
+		margin-left: 50px;
+	}
+}
+@media (max-width: 992px){
+	.perVoicesTit{
+		margin-top: 50px;
+	}
+	
+}
+.perVoices{
+	margin-top: 50px;
+}
+.perVoices h4{
+	min-height: 60px;
+}
+
+.soundFiles img.img-responsive{
+	box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.sample, .education{
+	padding-bottom: 20px;
+	margin-bottom: 50px;
+	border:1px solid #ccc;
+}
+.sample .topTxt{
+	padding: 20px 10px;
+	margin-bottom: 20px;
+	font-size: 16px;
+	background:#EAEAEA
+}
+.sample img{
+	cursor: pointer;
+}
+.education{
+	max-width: 360px;
+	min-height: 560px;
+	margin-left: auto;
+    margin-right: auto;
+}
+.education .txtInfo{
+	padding: 0px 20px 0;
+}
+@media (max-width: 1200px) and (min-width: 992px){
+	.education{
+		min-height: 610px;
+	}
+}
+.ocrebooks .iconImg{
+	height: 100px;
+	line-height: 100px;
+}
+.ocrebooks div{
+	margin-bottom: 20px;
+}
+hr{
+	margin: 50px 0;
+}
+
+

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta http-equiv="Cache-Control" content="max-age=604800" />
+<title>Text to Speech</title>
+
+	<link rel="stylesheet" href="assets/css/stqqyle.css"> <!-- use for add/upload text !-->
+	<link rel="stylesheet" href="css/audioIndex.css">
+	<style>
+		body { font-family: 'Consolas', 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Bitstream Vera Sans Mono', 'Nimbus Mono L', Monaco, 'Courier New', 'Courier', monospace; padding: 6em; }
+		div { boqqrder: 1px dotted #f00; }
+		.container { padding: 0; margin: 0; list-style: none; display: flex; flqqex-flow: row nowrap; flex-direction: column; juqqstify-content: space-between; align-items: stretch; width: 100%; borqqder: 1px dotted red; }
+
+		.topnav { margin: 0 0 1em 0; }
+		.topnav li { background: rgba(153,204,255,1); width: 20%; border-right: 5px solid rgba(255,255,255,1); padding: 1.15em 1em .8em 1.2em; height: 70px; float: left; justify-content: center; align-items: center; cursor: pointer; }
+		.topnav li:hover { background: rgba(153,204,255,.7); }
+
+		.sidenav { margin: 0 1em 0 0; float: left; }
+		.sidenav li { background: rgba(153,204,255,1); width: 20%; border-bottom: 5px solid rgba(255,255,255,1); padding: 1.15em 1em .8em 1.2em; height: 70px; justify-content: center; align-items: center; cursor: pointer; }
+		.sidenav li:hover { background: rgba(153,204,255,.7); }
+
+		.rightContent { width: 75%; float: right; }
+		.centerBolder { padding: 1.5em; border: 1px solid grey; line-height: 145%; z-index: 1; }
+
+		.selectInfo { z-index: 99999999; width: 100%; padding: 1em; background: #fff; border: 1px solid #ddd; }
+		.selectInfo dl { float: left; width: 50%; }
+		.selectInfo dd { line-height: 155%; display: block; }
+	</style>
+</head>
+
+<body>
+
+	<audio id="s1" src="" preload="load"></audio>
+	<audio id="s2" src="" preload="load" ></audio>
+
+	<div class="container">
+
+		<div class="topnav">
+			<ul>
+				<li class="btnPlayStop" id="play">&#9654; Play/Stop</li>
+				<li id="pre"><span style="font-size: 1em;">&#9665;&#9665;</span> Previous</li>
+				<li id="next"><span style="font-size: 1em;">&#9654;&#9654;</span> Next</li>
+				<li class="select selectReader" style="padding: 1.25em 1em 1em 1em !important; z-index: 99999999 !important;">
+					<div class="selectHead">
+						<i class="icon-flag"><img id="speakerImg" src="images/bt1.png"></i>
+						<span class="readerName" id="speakerName">Mike</span>
+					</div>
+					<div class="selectInfo hqqide" id="speaker" style="z-index: 99999999 !important;">
+						<dl>
+							<dd>
+								<i class="icon-flag"><img src="images/bt1.png"></i> US/<span class="readerName">Mike</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt1.png"></i> US/<span class="readerName">Crystal</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt1.png"></i> US/<span class="readerName">Ray</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt1.png"></i> US/<span class="readerName">Lauren</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt1.png"></i> US/<span class="readerName">Rich</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt1.png"></i> US/<span class="readerName">Julia</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt1.png"></i> US/<span class="readerName">Mel</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt1.png"></i> US/<span class="readerName">Claire</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt1.png"></i> US/<span class="readerName">Ryan</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt1.png"></i> US/<span class="readerName">Heather</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt1.png"></i> US/<span class="readerName">Laura</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt2.png"></i> UK/<span class="readerName">Charles</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt2.png"></i> UK/<span class="readerName">Audrey</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt2.png"></i> UK/<span class="readerName">Peter</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt2.png"></i> UK/<span class="readerName">Rachel</span>
+							</dd>
+						</dl>
+						<dl>
+							<dd>
+								<i class="icon-flag"><img src="images/bt2.png"></i> UK/<span class="readerName">Graham</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt2.png"></i> UK/<span class="readerName">Lucy</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt2.png"></i> UK/<span class="readerName">Anjali</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt3.png"></i> French/<span class="readerName">Alain</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt3.png"></i> French/<span class="readerName">Juliette</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt3.png"></i> French/<span class="readerName">Bruno</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt3.png"></i> French/<span class="readerName">Alice</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt4.png"></i> German/<span class="readerName">Reiner</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt4.png"></i> German/<span class="readerName">Klara</span>
+							</dd>
+
+							<dd>
+								<i class="icon-flag"><img src="images/bt6.png"></i> Spanish/<span class="readerName">Rosa</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt6.png"></i> Spanish/<span class="readerName">Alberto</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt5.png"></i> Italian/<span class="readerName">Giovanni</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt5.png"></i> Italian/<span class="readerName">Francesca</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt7.png"></i> Arabic/<span class="readerName">Salma</span>
+							</dd>
+							<dd>
+								<i class="icon-flag"><img src="images/bt7.png"></i> Arabic/<span class="readerName">Mehdi</span>
+							</dd>
+						</dl>
+					</div>
+				</li>
+				<li class="select selectSpeed" style="padding: 1.25em 1em 1em 1em !important">
+					<div class="selectHead">
+						Speed = <span class="speed">1</span>
+					</div>
+					<div class="selectInfo hide" id="speedList">
+						<dl>
+							<dd>-4</dd>
+							<dd>-3</dd>
+							<dd>-2</dd>
+							<dd>-1</dd>
+							<dd>0</dd>
+							<dd>1</dd>
+							<dd>2</dd>
+							<dd>3</dd>
+							<dd>4</dd>
+							<dd>5</dd>
+							<dd>6</dd>
+							<dd>7</dd>
+							<dd>8</dd>
+							<dd>9</dd>
+						</dl>
+					</div>
+				</li>
+				<!--
+				<li id="addDocument" style="padding: 1.25em 1em 1em 1em !important">+ Add text</li>
+				!-->
+			</ul>
+
+		</div>
+
+        <div class="contentInfo">
+            <div class="info centerBolder" id="content" contenteditable="true" style="z-index: -100000 !important;">
+                <p>There's a promise that I ask everyone who works here to make. Never doubt that a small group of thoughtful and committed citizens can change the world. You know why? It's the only thing that ever has.</p>
+				<!--
+				<p>Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.</p>
+				<p>We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.</p>
+				!-->
+            </div>
+        	</div>
+    	</div>
+
+	</div>
+
+    <div class="contentLayer waitingFileOpenLayer hide">
+        <div class="title">
+            Waiting <span class="btnClose"></span>
+        </div>
+        <div class="info">
+            <p style="font-size: large;position: absolute;top: 120px;padding: 20px;">Downloading Html file from the server,please wait a moment.</p>
+        </div>
+    </div>
+    <div class="contentLayer uploadLayer hide">
+        <div class="title">
+            Upload your file <span class="btnClose"></span>
+        </div>
+        <div class="info">
+        	<form id="upload" method="post" action="https://api.naturalreaders.com/v4/files/up?apikey=b98x9xlfs54ws4k0wc0o8g4gwc0w8ss&amp;action=tohtml" enctype="multipart/form-data">
+			<div id="drop">
+				Drop Here
+				<a style="margin-left: 20px;">Browse</a>
+				<input type="file" name="upl" accept="application/msword,application/pdf,application/rtf,text/plain,text/rtf,application/vnd.openxmlformats-officedocument.wordprocessingml.document" multiple />
+			</br></br>
+				<p style="color:gray;font-size: 15px;">（File formats：TXT, Doc, Docx, PDF)</p>
+			</div>
+			<p id="fileSizeLimit" style="margin-top: -20px;margin-bottom: 10px;color: red;"></p>
+			<ul id="uploadUl">
+				<!-- The file uploads will be shown here -->
+			</ul>
+
+		</form>
+        </div>
+    </div>
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/duee.core.1.0.js"></script>
+<script src="js/nasdk.js"></script>
+<script src="js/audioIndex.js"></script>
+
+
+</body>
+</html>

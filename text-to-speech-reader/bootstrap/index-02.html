@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Navbar Template for Bootstrap</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/navbar.css" rel="stylesheet">
+        <style>
+            body { font-family: 'Consolas', 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Bitstream Vera Sans Mono', 'Nimbus Mono L', Monaco, 'Courier New', 'Courier', monospace; padding: 5em; }
+            .topnav li { font-size: 1.15em; list-style: none; background: rgba(153,204,255,1); padding: 1em 1em 15px 1.2em; margin: 0 0 1em 0; cursor: pointer; border-right: .5em solid #fff; }
+            .topnav li:hover { background: rgba(153,204,255,.7); }
+            .jumbotron { margin: 0; padding: 0; }
+            .centerBolder { background: rgba(255,255,255,.4); padding: 1em; border: 1px solid #ccc; font-size: 1.5em; line-height: 155%; borqqder-radius: .25em; }
+            .row [class*='col-']:not(:first-child):not(:last-child) { padding: 0; } /* remove spacing between middle columns */
+            .row [class*='col-']:first-child { padding-right: 0; } /* remove right padding from first column */
+            .row [class*='col-']:last-child { padding: 0 .5em 0 0; } /* remove left padding from first column */
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container-fluid">
+            <div class="row align-items-end">
+                <div class="col"><h1>Text-to-Speech</h1></div>
+                <div class="col-2"><h6 class="text-muted">For ASL classes</h6></div>
+            </div>
+            <div class="row">
+                <div class="topnav col-sm-2">
+                    <li>&#9654; Play/Stop</li>
+                </div>
+                <div class="topnav col-sm-2">
+                    <li>&#9665;&#9665;</span> Previous</li>
+                </div>
+                <div class="topnav col-sm-2">
+                    <li>&#9654;&#9654;</span> Next</li>
+                </div>
+                <div class="topnav col-sm-2">
+                    <li class="select selectSpeed" style="padding: 1em 1em .8em 1em !important">
+                        Mike &#9654;
+                    </li>
+                </div>
+                <div class="topnav col-sm-2">
+                    <li>Speed = 0</li>
+                </div>
+                <div class="topnav col-sm-2">
+                    <li>+ Add text</li>
+                </div>
+            </div>
+
+            <div class="jumbotron">
+                <div class="info centerBolder" id="content" contenteditable="true" style="z-index: -100000 !important;">
+                    <p>There's a promise that I ask everyone who works here to make. Never doubt that a small group of thoughtful and committed citizens can change the world. You know why? It's the only thing that ever has.</p>
+        			<!--
+        			<p>Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.</p>
+        			<p>We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.</p>
+        			!-->
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

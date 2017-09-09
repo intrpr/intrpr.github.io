@@ -1,0 +1,273 @@
+/*-------------------------
+    Simple reset
+--------------------------*/
+
+
+*{
+    margin:0;
+    padding:0;
+}
+
+
+/*-------------------------
+    General Styles
+--------------------------*/
+
+
+html{
+    /*background-color:#ebebec;
+
+    background-image:-webkit-radial-gradient(center, #ebebec, #b4b4b4);
+    background-image:-moz-radial-gradient(center, #ebebec, #b4b4b4);
+    background-image:radial-gradient(center, #ebebec, #b4b4b4);*/
+
+    min-height:900px;
+}
+
+
+a, a:visited {
+    outline:none;
+    color:#389dc1;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+section, footer, header, aside{
+    display: block;
+}
+
+
+/*----------------------------
+    The file upload form
+-----------------------------*/
+
+
+#upload{
+    font-family:'PT Sans Narrow', sans-serif;
+    width:400px;
+    padding:0px;
+    /*border-radius:2px;*/
+
+    margin:0px auto 0px;
+    /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);*/
+}
+
+#drop{
+    background-color: #ececec;
+    padding: 40px 50px;
+    margin-bottom: 30px;
+    border: 20px solid ;
+    /*border-radius: 3px;*/
+    border-image: url('../img/box.png') 25 repeat;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-size:16px;
+    font-weight:bold;
+    color:black;
+}
+
+#drop a{
+    background-color:dodgerblue;
+    padding:12px 26px;
+    color:#fff;
+    font-size:14px;
+    border-radius:2px;
+    cursor:pointer;
+    display:inline-block;
+    margin-top:12px;
+    line-height:1;
+}
+
+#drop a:hover{
+    background-color:#0986a3;
+}
+
+#drop input{
+    display:none;
+}
+
+#upload ul{
+    list-style:none;
+    margin:0 0px;
+}
+
+#upload ul li{
+
+    background-color:#FFFFFF;
+
+    border-top:2px solid #F0F0F0;
+    border-bottom:2px solid #F0F0F0;
+    padding:0px;
+    height: 52px;
+
+    position: relative;
+}
+
+#upload ul li input{
+    display: none;
+}
+
+#upload ul li p{
+    width: 280px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+#upload ul li.working p{
+	/*left: 100px;*/
+	top: 5px;
+}
+#upload ul li p a{ 
+	color: black;
+	}
+
+#upload ul li i{
+    font-weight: normal;
+    font-style:normal;
+    color:#7f7f7f;
+    display:block;
+}
+
+#upload ul li canvas{
+    top: 5px;
+    right: 40px;
+    position: absolute;
+}
+
+/*#upload ul li span{
+    width: 15px;
+    height: 12px;
+    background: url('../img/icons.png') no-repeat;
+    position: absolute;
+    top: 34px;
+    right: 33px;
+    cursor:pointer;
+}
+
+#upload ul li.working span{
+    height: 16px;
+    background-position: 0 -12px;
+}*/
+#upload ul li span{
+	width: 80px;
+    height: 30px;
+    background: url('../img/open.png') no-repeat;
+    position: absolute;
+    top: 8px;
+    right: 30px;
+    cursor:pointer;
+}
+
+#upload ul li.working span{
+    /*background-position: 0 -12px;*/
+   /*right: 310px;*/
+    background: url('../img/waiting.png') no-repeat;
+}
+
+
+#upload ul li.error p{
+    color:red;
+}
+
+
+/*----------------------------
+    The Demo Footer
+-----------------------------*/
+
+
+footer{
+    background-color: #080808;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0,0,0,0.4);
+    height: 40px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100000;
+}
+
+footer h2{
+    font-size: 14px;
+    font-weight: normal;
+    position: absolute;
+    top:0;
+    left: 50%;
+    bottom:0;
+    margin-left: -420px;
+    padding:13px 20px 0;
+    border:1px solid #000;
+    border-width:0 1px;
+    background-color:rgba(0,0,0,0.6);
+    box-shadow:0 0 5px #000 inset;
+    line-height: 1;
+    margin-top: 0;
+}
+
+footer h2 a{
+    color: #EEEEEE !important;
+    text-decoration:none !important;
+}
+
+footer h2 i{
+    font-style:normal;
+    color:#888;
+}
+
+#tzine-download{
+    opacity:0.9;
+    background-color:#257691;
+    font-size:11px;
+    text-align:center;
+    text-transform:uppercase;
+    width:150px;
+    height:28px;
+    line-height:28px;
+    text-decoration:none !important;
+
+    display: inline-block;
+    border-radius: 2px;
+    color: #fff !Important;
+    font-weight: bold;
+    box-shadow: 0 -1px 2px #1e5e74 inset;
+
+    border-top:1px solid #26849c;
+
+    text-shadow:1px 1px 1px #1e6176;
+    margin-top:6px;
+}
+
+#tzine-download:hover{
+    opacity:1;
+}
+
+#tzine-actions{
+    position:absolute;
+    top:0;
+    width:500px;
+    right:50%;
+    margin-right:-420px;
+    text-align:right;
+}
+
+#tzine-actions iframe{
+    display: inline-block;
+    height: 21px;
+    width: 95px;
+    position: relative;
+    float: left;
+    margin-top: 11px;
+}
+
+@media (max-width:479px){
+	#upload{width: 300px;}
+	#upload ul li span{right: 10px;}
+	#upload ul li canvas{right: 25px;}
+}
