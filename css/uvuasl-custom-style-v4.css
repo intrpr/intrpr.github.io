@@ -5,8 +5,8 @@
 
 /*! Fontstack */
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,300,500,700');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:800');
 @import url('https://fonts.googleapis.com/css?family=Corben:700');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 html {
 	fonqqt-size: 62.5%;
@@ -137,6 +137,10 @@ s { opacity: .4; }
 .uvuasl-ds-library dt { font-weight: 300; }
 .uvuasl-ds-library dt:first-qqchild { padding: 0; margin: 0; border: 0; }
 .uvuasl-ds-library dd { font-size: .95em; padding: 0 0 1em 0; margin: 0 0 1em 0; border: 1px dotted #ddd; border-width: 0 0 1px 0; }
+
+/* Sample texts */
+.sample-text { padding: 1em 0 0 0; margin: 3em 0 0 0; border: 1px solid #eee; border-width: 1px 0 0 0; }
+.sample-text p { font-family: 'Source Code Pro', monospace; font-size: 150%; line-height: 1.5; }
 
 /* Top Navigation Bar */
 body { padding-top: 50px; }
