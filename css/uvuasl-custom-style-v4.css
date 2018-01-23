@@ -140,8 +140,8 @@ s { opacity: .4; }
 
 /* Sample texts : ReadSpeaker */
 .sample-text { padding: 1em 0 0 0; margin: 3em 0 0 0; border: 1px solid #eee; border-width: 1px 0 0 0; }
-.sample-text p { font-family: 'Source Code Pro', monospace; font-size: 160%; line-height: 1.5; }
-.rsbtn { margin: 0 0 2em 0; }
+.sample-text p, .sample-text textarea { font-family: 'Source Code Pro', monospace; font-size: 160%; line-height: 1.5; }
+.sample-text h2 { text-align: left; }
 
 /* Top Navigation Bar */
 body { padding-top: 50px; }
