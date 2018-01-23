@@ -138,9 +138,10 @@ s { opacity: .4; }
 .uvuasl-ds-library dt:first-qqchild { padding: 0; margin: 0; border: 0; }
 .uvuasl-ds-library dd { font-size: .95em; padding: 0 0 1em 0; margin: 0 0 1em 0; border: 1px dotted #ddd; border-width: 0 0 1px 0; }
 
-/* Sample texts */
+/* Sample texts : ReadSpeaker */
 .sample-text { padding: 1em 0 0 0; margin: 3em 0 0 0; border: 1px solid #eee; border-width: 1px 0 0 0; }
-.sample-text p { font-family: 'Source Code Pro', monospace; font-size: 150%; line-height: 1.5; }
+.sample-text p { font-family: 'Source Code Pro', monospace; font-size: 160%; line-height: 1.5; }
+.rsbtn { margin: 0 0 2em 0; }
 
 /* Top Navigation Bar */
 body { padding-top: 50px; }
