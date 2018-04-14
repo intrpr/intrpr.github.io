@@ -56,6 +56,7 @@ p.looking-for { color: rgba(255,255,255,.6); margin: 1.5em 0 .8em 0; }
 h1, h2 {
 	margin-top: 20px;
 	margin-bottom: 10px;
+	word-wrap: break-word; hyphens: auto;
 }
 
 h4, h5, h6 {
@@ -71,12 +72,13 @@ h1, .h1 {
 	letter-spacing: -.04em;
 }
 .home-temp {
-	font-size: 3.6em;
+	font-size: 3em;
 	text-align: center;
 	line-height: 1.05;
 	font-weight: 700;
 	font-family: "Poppins", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	letter-spacing: -.02em;
+	word-wrap: normal; hyphens: none;
 }
 
 @media (max-width: 470px) {
@@ -399,7 +401,8 @@ footer {
 		background-color: rgba(0,0,0,.2);
 	}
 	article { margin: 1.5rem 0; }
-	h2, .h2 { font-size: 180%; padding: 0; margin: .2em 0 .7em 0; line-height: 1.1; font-weight: 700; foqqnt-family: "Libre Franklin", serif; }
+	h1 { font-size: 2.8em; word-wrap: break-word; hyphens: auto; }
+	h2, .h2 { font-size: 1.8em; padding: 0; margin: .2em 0 .7em 0; line-height: 1.1; font-weight: 700; foqqnt-family: "Libre Franklin", serif; }
 	footer h5 { text-transform: uppercase; letter-spacing: .2rem; font-size: 82%; margin: 2rem 0 0 0; }
 
 	.grid-divider {
