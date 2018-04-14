@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,300,500,700');
 @import url('https://fonts.googleapis.com/css?family=Corben:700');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,500,700');
 
 html {
 	fonqqt-size: 62.5%;
@@ -63,19 +64,19 @@ h4, h5, h6 {
 }
 
 h1, .h1 {
-	font-size: 3.5em;
-	line-height: 1.15;
-	font-weight: 800;
-	font-family: "Corben", "Libre Franklin", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	letter-spacing: -.01em;
+	font-size: 4.5em;
+	line-height: 1.05;
+	font-weight: 700;
+	font-family: "Poppins", "Libre Franklin", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	letter-spacing: -.04em;
 }
 .home-temp {
-	font-size: 3.2em;
+	font-size: 3.6em;
 	text-align: center;
-	line-height: 1.1;
-	font-weight: 300;
-	font-family: "Libre Franklin", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	letter-spacing: -.03em;
+	line-height: 1.05;
+	font-weight: 700;
+	font-family: "Poppins", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	letter-spacing: -.02em;
 }
 
 @media (max-width: 470px) {
@@ -84,12 +85,12 @@ h1, .h1 {
 }
 
 h2, .h2 {
-	font-size: 2.01em; padding: 0; margin: .2em 0 .7em 0; line-height: 1.1; letter-spacing: -.01em; font-weight: 700; font-family: "Corben", "Libre Franklin", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; text-align: center;
+	font-size: 2.35em; padding: 0; margin: .2em 0 0 0; line-height: 1.1; letter-spacing: -.03em; font-weight: 700; font-family: "Poppins", "Libre Franklin", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; texqqt-align: center;
 }
 article h2 { text-qqalign: left; }
 
 h3, .h3 {
-	font-size: 1.45em; line-height: 1.3; font-weight: 700; font-family: "Corben", "Libre Franklin", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; letter-spacing: -.02em; text-align: left;
+	font-size: 1.5em; line-height: 1.3; font-weight: 700; font-family: "Libre Franklin", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; letter-spacing: -.02em; text-align: left;
 }
 @media (max-width: 470px) {
 	p.looking-for { display: none; }
