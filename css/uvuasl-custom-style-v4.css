@@ -360,7 +360,7 @@ footer {
 .hide-3330 { visibility: hidden; display: none; }
 .hide-3350 { visibility: block; display: block; }
 .hide-3370 { visibility: hidden; display: none; }
-.hide-3380 { visibility: hidden; display: none; }
+.hide-3380 { visibility: block; display: block; }
 .hide-439r { visibility: hidden; display: none; }
 
 /* Tabs */
