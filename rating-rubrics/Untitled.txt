@@ -1,0 +1,98 @@
+Delivers the signed/spoken message clearly and fluently/audibly and understandably
+Delivers a signed/spoken message which is equivalent to the spoken message
+Speaks in grammatically correct English
+Conveys the signer's/speaker's mood and intent
+Uses appropriate transitions and discourse markers to allow for a smooth flow of communication
+Applies specific terminology used by the signer/speaker
+Handles questions and responses in a culturally appropriate manner
+Uses facial grammar and non-manual markers appropriately
+
+
+v > s
+Uses space and classifiers to convey meaning
+Produces signs accurately
+Uses appropriate fingerspelling for linguistic purposes
+Delivers the interpretation clearly and fluently
+Applies semantic range appropriately and effectively
+Is comfortable and professional
+Contextualizes culturally bound concepts accurately
+Uses a register range appropriate for the speaker and setting
+Conveys speaker intent and mood
+Signs in grammatically correct ASL
+Delivers the message in a cohesive manner
+Delivers a message equivalent to the source message
+Delivers a message comprehensible to the Deaf viewer
+
+
+s > v
+Enunciates clearly and audibly
+Speaks at an appropriate rate
+Applies semantic range appropriately and effectively
+Conveys speaker intent and mood
+Is comfortable and professional
+Uses a register range appropriate for the speaker and setting
+Unfolds culturally bound information and contextualizations accurately
+Speaks in grammatically correct English
+Delivers the message in a cohesive manner
+Delivers a message equivalent to the source message 
+
+
+Use voice (  O)
+Use voice for VRS calls ( O) disabled until 'Use voice' is enabled.
+
+
+tL V > S
+Uses space effectively to establish spatial relationships.
+The transliterator uses space to establish pronoun referents, locatives, directional verbs, and some cohesion features.
+Produces signs accurately.
+The transliterator produces individual signs consistent with the four parameters of signs: 1) location, 2) handshape, 3) movement, and 4) orientation.
+Fingerspells technical terms and proper nouns clearly.
+The transliterator uses fingerspelling to introduce technical terms and proper nouns that are context specific, do not have a specific sign equivalent, or would not be used within the semantic range of transliteration. Fingerspelling is clear and at a readable rate.
+Delivers the transliteration clearly and fluently.
+The transliterator delivers a readable message that reflects language proficiency. The signing rate is consistent with native users. The transliterator effectively retrieves signs and shows a sufficient degree of mastery of the transliteration process.
+Applies semantic range appropriately and effectively.
+The transliterator’s sign choices are consistent with the English meaning of the word(s) within the given context.
+Behaviors and appearance reflect professional standards.
+The transliterator has no distracting factors (i.e., dress, jewelry, fingernail polish, facial hair, etc.) or behaviors which impede receiving the message. The manner, style, and appearance of the transliterator are comfortable to observe and reflect professional standards.
+Uses a register range appropriate for the speaker and setting.
+The transliterator uses a level of formality—in both the form of the message and its delivery— which is consistent with the speaker and the setting.
+Conveys speaker intent and mood.
+The transliterator maintains the speaker’s overall intent, or range of intent. Additionally, the speaker’s style, mood of delivery, and affect are evident within the transliteration.
+Follows English word order.
+The general word order and form of the message follow the syntax of English and retain as
+much English form as is appropriate for the consumer the transliterator has been asked to address.
+Mouths English words clearly.
+The English words of the speaker are silently rendered by the transliterator in a clear manner which facilitates speech reading.
+Delivers the message in a cohesive manner.
+The transliterator appropriately uses cohesive devices such as topic shifts, transition markers, and relational markers to create a visually cohesive message.
+Delivers a message equivalent to the source message.
+The message given by the transliterator conveys the same meaning as was given in the source language. The message would be understood by most Deaf persons who use English-based signing to communicate.
+
+xform/structure
+xmouthing
+xpronunciation
+xsign/semantic choice
+xfingerspelling/numbers
+xclarity/fluency
+xspace
+xprosody/register
+xintent/mood
+xprofessional behaviors
+xcohesion
+xequivalence
+
+tL S > V
+Applies semantic range appropriately and effectively.
+The transliterator’s word choices are consistent with the meaning of the sign(s) within the given context. Vocabulary choices are consistent with the native English usage of the word.
+Conveys speaker intent and mood.
+The transliterator maintains the speaker’s overall intent, or range of intent. Additionally, the speaker’s style, mood of delivery, and affect are evident within the transliteration.
+Behaviors and appearance reflect professional standards.
+The transliterator has no distracting factors (i.e. stuttering, unnecessary fillers, intonation, etc.) or behaviors which impede receiving the message. The manner, style, and voice of the transliterator are comfortable to listen to and reflect professional standards.
+Uses a register range appropriate for both the speaker and the setting.
+The transliterator uses a level of formality—in both the form of the message and its delivery—which is consistent with the speaker and the setting.
+Delivers the message in a cohesive manner.
+The transliterator appropriately uses cohesive devices such as topic shifts, transition words and phrases, and appropriate pronouns to create an auditorially cohesive message.
+Unfolds culturally-bound information and contextualizations accurately.
+The transliterator conveys information related to the “Deaf experience” in a manner that would be understood by someone who is unfamiliar with the life experiences of Deaf persons.
+Delivers a message which is equivalent to the source message.
+The message given by the transliterator conveys the same meaning as the source language. The message would be understood by most persons who use spoken English.
