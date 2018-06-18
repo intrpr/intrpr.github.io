@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FT.com with CSS Grid Layout</title>
+        <link rel="stylesheet" href="ft-com-grid-layout.css">
+        <script>document.addEventListener('DOMContentLoaded', function () {
+                var support = window.CSS && CSS.supports('display', 'grid')
+
+                if (!support) {
+                    var p = document.createElement('p')
+                    p.className = 'Demo-warning'
+                    p.innerHTML = '<strong>Your browser does not appear to support grid layout. You may need <a href="https://igalia.github.io/css-grid-layout/enable.html">to enable it</a>.</strong>'
+                    document.body.insertBefore(p, document.body.firstChild)
+                }
+            })
+        </script>
+    </head>
+
+    <body class="Demo">
+        <div class="Demo-header"></div>
+        <main class="Demo-container">
+            <section class="Grid Grid--headlines headlinetop">
+                <h1 class="Grid-title">Headlines</h1>
+                <article class="Story Story--technology">
+                    <div class="Story-cover">
+                        <img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=11=dabf5f54-a4d9-4c78-bf16-94abfb5ce7ec" alt="" role="presentation">
+                    </div>
+                    <span class="Story-tag">Technology</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/dabf5f54-a4d9-4c78-bf16-94abfb5ce7ec">Bezos takes world’s richest man title from Gates</a></h2>
+                        <p class="Story-summary">Online retail company founder worth $90.6bn after surge in company value beyond $500bn</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                    <ul class="Story-related">
+                        <li class="Story-relatedItem"><a class="Story-relatedLink" href="/content/399fdfe3-f2a6-4860-88f7-bdcefc23be31">Twitter tumbles with no signs of a Trump bump</a></li>
+                        <li class="Story-relatedItem"><a class="Story-relatedLink" href="/content/9412a65a-a9c1-4bc1-9e99-a9f54e422363">Facebook: the Mark of greatness</a></li>
+                        <li class="Story-relatedItem"><a class="Story-relatedLink" href="/content/f321f767-da86-4194-8311-4f8f35debff8">Funding identifies Callsign as cyber security leader</a></li>
+                    </ul>
+                </article>
+                <article class="Story Story--picture">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=1=b3c3a5e1-a9bc-4653-a307-bdd058197fcd" alt="" role="presentation"></div><span class="Story-tag">Technology</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/b3c3a5e1-a9bc-4653-a307-bdd058197fcd">Tech boom's hidden bonus for West Coast workers</a></h2>
+                        <p class="Story-summary">Aliquip ea aute quis velit consectetur. Pariatur minim non ipsum esse ullamco.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--aerospace2 &amp; defence">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=2=3df8683f-a5c0-40c2-9cd5-e2e64a33377f" alt="" role="presentation"></div><span class="Story-tag">Aerospace2 &amp; Defence</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/3df8683f-a5c0-40c2-9cd5-e2e64a33377f">Future of A380 in doubt after Airbus cuts production</a></h2>
+                        <p class="Story-summary">Franco-German aerospace group struggles to win new orders for passenger jet</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--currencies">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=3=9fdf807d-c449-4da3-a1d6-1c985d7ba8a0" alt="" role="presentation"></div><span class="Story-tag">Currencies</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/9fdf807d-c449-4da3-a1d6-1c985d7ba8a0">Dollar picks up from lows as Fed sell-off slows</a></h2>
+                        <p class="Story-summary">Investors weigh imminent balance sheet shrinking against softer inflation outlook</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--libor scandal">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=4=0f7f6732-ca02-45c3-8f2d-85903677b9c1" alt="" role="presentation"></div><span class="Story-tag">Libor scandal</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/0f7f6732-ca02-45c3-8f2d-85903677b9c1">UK regulator calls on banks to replace Libor by 2022</a></h2>
+                        <p class="Story-summary">Financial Conduct Authority says scandal-tainted rate benchmark no longer fit for purpose</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--analysis capital markets">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=5=1e6044da-e7ab-4fdf-9f69-442ef731187c" alt="" role="presentation"></div><span class="Story-tag">Analysis Capital Markets</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/1e6044da-e7ab-4fdf-9f69-442ef731187c">The European link to Canada’s house price boom</a></h2>
+                        <p class="Story-summary">Canadian banks have turned to Europe’s covered bond market for mortgage funding</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--the big read">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=6=3d697f10-af6a-4a40-bf80-856746ffd74c" alt="" role="presentation"></div><span class="Story-tag">The Big Read</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/3d697f10-af6a-4a40-bf80-856746ffd74c">Democrats struggle to take on Trump</a></h2>
+                        <p class="Story-summary">Culpa qui qui eiusmod velit deserunt dolor. Velit est excepteur irure elit ex magna.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--financial services">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=7=253f19c4-6fa8-4ddf-a213-9f3c03474262" alt="" role="presentation"></div><span class="Story-tag">Financial Services</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/253f19c4-6fa8-4ddf-a213-9f3c03474262">‘Relax, Scaramucci isn’t touching your money’</a></h2>
+                        <p class="Story-summary">Trump’s PR man was the marketer, not investor, at industry-bucking hedge fund business</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--asia-pacific companies">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=8=7867d752-cf28-4099-b95e-28269fc7d043" alt="" role="presentation"></div><span class="Story-tag">Asia-Pacific Companies</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/7867d752-cf28-4099-b95e-28269fc7d043">China’s HNA to be held by little-known charities</a></h2>
+                        <p class="Story-summary">Non-profit Hainan Cihang to control billions in assets after share transfer — in theory</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--ftfm">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=9=bc585179-a31e-402d-8d57-2d10d90756f0" alt="" role="presentation"></div><span class="Story-tag">FTfm</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/bc585179-a31e-402d-8d57-2d10d90756f0">Private equity’s dirty finance secret</a></h2>
+                        <p class="Story-summary">Industry body claims subscription lines used to flatter returns and trigger bonuses</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--commodities">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=10=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Commodities</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Noble share price down almost 50% after loss warning</a></h2>
+                        <p class="Story-summary">Commodity trader to sell most of its operations outside Asia as it scrambles to pay down debt</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--uk immigration">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=11=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">UK immigration</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Rudd promises to keep door open for EU workers</a></h2>
+                        <p class="Story-summary">UK home secretary breaks silence on migration as part of drive to soften exit terms</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--analysis middle east &amp; north africa">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=12=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Analysis Middle East &amp; North Africa</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Saudi youth anxious to see progress on reform plan</a></h2>
+                        <p class="Story-summary">Mohammed bin Salman yet to convince he can deliver on lofty promises</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--banks">
+                        <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=13=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Banks</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Deutsche Bank Q2 revenues disappoint </a></h2>
+                        <p class="Story-summary">Profits ‘fall short’ of long-term aspirations, says chief John Cryan</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--opinion">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=14=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Yolanda Wheeler</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Liten nyhet #4</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+            </section>
+
+            <section class="Grid Grid--headlines">
+                <section class="Grid Grid--headlines europe">
+                    <h2 class="Grid-heading">Europe News</h2>
+                    <article class="Story Story--europe">
+                        <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=15=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Europe</span>
+                        <div class="Story-content">
+                            <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Swedish PM gambles on reshuffle to avert election</a></h2>
+                            <p class="Story-summary">Stefan Löfven drops two ministers implicated in IT outsourcing scandal</p>
+                            <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                        </div>
+                    </article>
+                    <article class="Story Story--commercial property">
+                        <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=16=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Commercial Property</span>
+                        <div class="Story-content">
+                            <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">London’s ‘Walkie-Talkie’ skyscraper sold for £1.3bn</a></h2>
+                            <p class="Story-summary">Building is the latest in City to be bought with capital from China and Hong Kong</p>
+                            <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                        </div>
+                    </article>
+                    <article class="Story Story--europe">
+                        <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=17=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Europe</span>
+                        <div class="Story-content">
+                            <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Poland’s deputy leader defends judicial reforms</a></h2>
+                            <p class="Story-summary">Morawiecki insists that judiciary is inefficient and has not purged after communism</p>
+                            <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                        </div>
+                    </article>
+                    <article class="Story Story--oil &amp; gas">
+                        <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=18=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Oil &amp; Gas</span>
+                        <div class="Story-content">
+                            <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Total ready to make acquisitions and investments</a></h2>
+                            <p class="Story-summary">French oil and gas group reports forecast-beating earnings and a ‘strong balance sheet’</p>
+                            <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                        </div>
+                    </article>
+                </section>
+                <section class="Grid Grid--headlines eumostread">
+                    <h2 class="Grid-heading">Most Read</h2>
+                    <article class="Story Story--edward luce">
+                        <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=19=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Edward Luce</span>
+                        <div class="Story-content">
+                            <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">America’s looming constitutional crisis</a></h2>
+                            <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                            <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                        </div>
+                    </article>
+                    <article class="Story Story--">
+                        <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=20=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag"></span>
+                        <div class="Story-content">
+                            <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">New petrol and diesel cars face UK ban by 2040</a></h2>
+                            <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                            <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                        </div>
+                    </article>
+                    <article class="Story Story--">
+                        <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=21=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag"></span>
+                        <div class="Story-content">
+                            <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">US House votes overwhelmingly for Russia sanctions</a></h2>
+                            <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                            <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                        </div>
+                    </article>
+                    <article class="Story Story--the big read">
+                        <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=22=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">The Big Read</span>
+                        <div class="Story-content">
+                            <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Democrats struggle to take on Trump</a></h2>
+                            <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                            <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                        </div>
+                    </article>
+                    <article class="Story Story--">
+                        <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=23=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag"></span>
+                        <div class="Story-content">
+                            <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Rudd promises to keep door open for EU workers</a></h2>
+                            <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                            <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                        </div>
+                    </article>
+                </section>
+            </section>
+
+            <section class="Grid Grid--headlines opinion">
+                <h2 class="Grid-heading">Opinion</h2>
+                <article class="Story Story--philip stephens">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=25=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Philip Stephens</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">A Brexit transition is only half an answer</a></h2>
+                        <p class="Story-summary">The mantra that the UK wants a ‘deep and special’ relationship with the EU is empty</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--david pilling">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://i.pravatar.cc/300=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">David Pilling</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Clean electric cars are built on pollution in Congo</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--anders fogh rasmussen"><span class="Story-tag">Anders Fogh Rasmussen</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Risk from transatlantic row on Russian sanctions</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--smart money john authers">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://i.pravatar.cc/300=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Smart Money John Authers</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">US profit prowess leaves European groups in shade</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--lex">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=29=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Lex</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Facebook: the Mark of greatness</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--edward luce">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=30=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Edward Luce</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">America’s looming constitutional crisis</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--ft view">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=31=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">FT View</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">The digital divide over consumer data widens</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--brooke masters">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=32=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Brooke Masters</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">The diesel scandal echoes bankers’ woes</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--leslie hook">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=33=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Leslie Hook</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">A deserted coast evokes the 1967 Summer of Love</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+            </section>
+
+            <section class="Grid Grid--headlines video">
+                <h2 class="Grid-heading">Video</h2>
+                <article class="Story Story--video">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=34=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Video</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Video</a></h2>
+                        <p class="Story-summary">Play Video</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--life &amp; arts">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=35=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Life &amp; Arts</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Oil vs fish: a fight for Norway's Soul</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--ft world">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=36=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">FT World</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">UK's anti-pollution push</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--janan ganesh">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=37=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Janan Ganesh</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Brexit: product of a benign period</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--ft world">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=38=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">FT World</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Macron's popularity plumments</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+            </section>
+
+            <section class="Grid Grid--headlines leadership">
+                <h2 class="Grid-heading">Highlights</h2>
+                <article class="Story Story--leadership">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=39=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Leadership</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">The teenage summer jobs that shaped leaders</a></h2>
+                        <p class="Story-summary">From office drudgery to lawn-mowing, early work is tough — but it changes us forever</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--oil">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=40=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Oil</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">‘Big Oil’ fights back</a></h2>
+                        <p class="Story-summary">Threat from lower cost shale and renewables sees conventional majors cut costs and improve production</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--women in business">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=41=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Women in Business</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Women at work — from lab coats to space suits</a></h2>
+                        <p class="Story-summary">How a photography exhibition is helping to break sartorial stereotypes</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--expats">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=42=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Expats</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">FT correspondent on life in ‘relaxed’ Madrid</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--aime williams">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=43=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Aime Williams</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Can an electric shock help curb your spending? </a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--the big read">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=44=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">The Big Read</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Merkel is forced to take centre stage</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+            </section>
+
+            <section class="Grid Grid--headlines myFT">
+                <h2 class="Grid-heading2"></h2>
+                <article class="Story Story--news">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=45=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">News</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Liten nyhet #4</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                    <ul class="Story-related">
+                        <li class="Story-relatedItem"><a class="Story-relatedLink" href="/content/399fdfe3-f2a6-4860-88f7-bdcefc23be31">Victoria and Albert Museum explores golden age of ocean travel </a></li>
+                        <li class="Story-relatedItem"><a class="Story-relatedLink" href="/content/9412a65a-a9c1-4bc1-9e99-a9f54e422363">Bank of England names Dave Ramsden as new deputy governor </a></li>
+                        <li class="Story-relatedItem"><a class="Story-relatedLink" href="/content/f321f767-da86-4194-8311-4f8f35debff8">Amazon’s Bezos takes world’s richest man title from Gates </a></li>
+                        <li class="Story-relatedItem"><a class="Story-relatedLink" href="/content/f321f767-da86-4194-8311-4f8f35debff8">Wily operator Saakashvili undone by taste of his own medicine</a></li>
+                    </ul>
+                </article>
+                <article class="Story Story--company">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=46=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Company</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Liten nyhet #4</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                    <ul class="Story-related">
+                        <li class="Story-relatedItem"><a class="Story-relatedLink" href="/content/399fdfe3-f2a6-4860-88f7-bdcefc23be31">Volkswagen shrugs off scandals as it posts profits </a></li>
+                        <li class="Story-relatedItem"><a class="Story-relatedLink" href="/content/9412a65a-a9c1-4bc1-9e99-a9f54e422363">Fed banking watchdog nominee plans more ‘transparency’ in stress tests </a></li>
+                        <li class="Story-relatedItem"><a class="Story-relatedLink" href="/content/f321f767-da86-4194-8311-4f8f35debff8">Deutsche Bank: torque it up Premium</a></li>
+                        <li class="Story-relatedItem"><a class="Story-relatedLink" href="/content/f321f767-da86-4194-8311-4f8f35debff8">Successor rates stand ready to replace Libor</a></li>
+                    </ul>
+                </article>
+                <article class="Story Story--woorld">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=47=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Woorld</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Liten nyhet #4</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                    <ul class="Story-related">
+                        <li class="Story-relatedItem"><a class="Story-relatedLink" href="/content/399fdfe3-f2a6-4860-88f7-bdcefc23be31">The US Democrats’ struggle for relevance Premium</a></li>
+                        <li class="Story-relatedItem"><a class="Story-relatedLink" href="/content/9412a65a-a9c1-4bc1-9e99-a9f54e422363">Exit of Japan opposition leader Renho relieves pressure on Abe</a></li>
+                        <li class="Story-relatedItem"><a class="Story-relatedLink" href="/content/f321f767-da86-4194-8311-4f8f35debff8">Scaramucci shakes up White House relations with unusual phone-in</a></li>
+                        <li class="Story-relatedItem"><a class="Story-relatedLink" href="/content/f321f767-da86-4194-8311-4f8f35debff8">Scaramucci shakes up relations in White House and abroad</a></li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="Grid Grid--headlines markets">
+                <h2 class="Grid-heading">Markets News ></h2>
+                <article class="Story Story--currencies">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=48=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Currencies</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Dollar picks up from lows as Fed sell-off slows</a></h2>
+                        <p class="Story-summary">Investors weigh imminent balance sheet shrinking against softer inflation outlook</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--global market overview">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=49=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Global Market Overview</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">US equities at record high as dollar settles lower</a></h2>
+                        <p class="Story-summary">Xetra Dax underperforms as financial and export stocks fall</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--capital markets">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=50=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Capital Markets</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Iraq eyes first independent bond sale in a decade</a></h2>
+                        <p class="Story-summary">Oil rich but war-ravaged nation looks to tap investor demand for yield</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--analysis india business &amp; finance">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=51=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Analysis India Business &amp; Finance</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Foreign investors tuck into India’s masala bonds</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--corporate bonds">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=52=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Corporate bonds</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">MarketAxess defends corporate bond trading status</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--us economy">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=53=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">US Economy</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">What did we learn from the latest Fed statement?</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+            </section>
+
+            <section class="Grid Grid--headlines technology">
+                <h2 class="Grid-heading">Technology ></h2>
+                <article class="Story Story--technology">
+                    <div class="Story-cover">
+                        <img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=54=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation">
+                    </div>
+                    <span class="Story-tag">Technology</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Bezos takes world’s richest man title from Gates</a></h2>
+                        <p class="Story-summary">Online retail company founder worth $90.6bn after surge in company value beyond $500bn</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--technology">
+                    <div class="Story-cover">
+                        <img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=55=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation">
+                    </div>
+                    <span class="Story-tag">Technology</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Twitter tumbles with no signs of a Trump bump</a></h2>
+                        <p class="Story-summary">Social media company disappoints investors as user growth grinds to a halt at 328m</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--lex">
+                    <div class="Story-cover">
+                        <img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=56=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation">
+                    </div>
+                    <span class="Story-tag">Lex</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Facebook: the Mark of greatness</a></h2>
+                        <p class="Story-summary">Growth at the social networking group has picked up steam</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--cyber security">
+                    <div class="Story-cover">
+                        <img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=57=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation">
+                    </div>
+                    <span class="Story-tag">Cyber Security</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Funding identifies Callsign as security leader</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--fastft">
+                    <div class="Story-cover">
+                        <img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=58=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation">
+                    </div>
+                    <span class="Story-tag">fastFT</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Canon revises 2017 targets upwards on printer demand</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--technology">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=59=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Technology</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Devialet and Sky join forces in sound system deal</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+            </section>
+
+            <section class="Grid Grid--headlines life">
+                <h2 class="Grid-heading">Life & Arts</h2>
+                <article class="Story Story--fashion designer profiles">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=60=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Fashion designer profiles</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">Meet the women with their own social network</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--review film">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=61=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Review Film</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">The Big Sick — funny, clever and generous-hearted</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--at home with the ft">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=62=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">At Home with the FT</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">New York restaurateur Michael White</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--your questions">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=63=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Your Questions</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">What’s the best way to save for private school fees?</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+                <article class="Story Story--fashion">
+                    <div class="Story-cover"><img class="Story-coverImage" src="http://loremflickr.com/640/360/world?random=64=e44741cc-24d6-45fd-b95b-1d12e5a7acb8" alt="" role="presentation"></div><span class="Story-tag">Fashion</span>
+                    <div class="Story-content">
+                        <h2 class="Story-title"><a class="Story-link" href="/content/e44741cc-24d6-45fd-b95b-1d12e5a7acb8">The return of the male jumpsuit</a></h2>
+                        <p class="Story-summary">Aute nisi duis velit adipisicing laboris proident ex reprehenderit voluptate elit veniam.</p>
+                        <!--time.Story-date(datetime=item.date)= new Date(item.date).toLocaleString()-->
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <nav>
+                <div class="footer-item">
+                    <div class="footer-title">Support</div>
+                    <div class="footer-content">
+                        <a>View Site tips</a>
+                        <a>Feedback</a>
+                        <a>Help Centre</a>
+                        <a>About Us</a>
+                        <a>Accessbility</a>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-title">Legal & Privacy</div>
+                    <div class="footer-content">
+                        <a>Terms & Conditions</a>
+                        <a>Privacy</a>
+                        <a>Cookies</a>
+                        <a>Copyright</a>
+                        <a>Slavery Statements & Policies</a>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <label for="toggle-1">Services</label>
+                    <input type="checkbox" id="toggle-1">
+                    <div class="footer-content">
+                        <a>FT Live</a>
+                        <a>Share News Tips Securely</a>
+                        <a>Individal Subscriptions</a>
+                        <a>Republishing</a>
+                        <a>Contracts & Tenders</a>
+                        <a>Analysts Research</a>
+                        <a>Executive Job Search</a>
+                        <a>Advertise with the FT</a>
+                        <a>FT Transact</a>
+                        <a>UK Secondary Schools</a>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <label for="toggle-2">Tools</label>
+                    <input type="checkbox" id="toggle-2">
+                    <div class="footer-content">
+                        <a>Portfolio</a>
+                        <a>Today's Newspaper (ePaper)</a>
+                        <a>Alerts Hub</a>
+                        <a>Lexicon</a>
+                        <a>MBA Rankings</a>
+                        <a>Economic Calendar</a>
+                        <a>News Feed</a>
+                        <a>Newsletters</a>
+                        <a>Currency Converter</a>
+                    </div>
+                </div>
+            </nav>
+            <hr>
+            <div class="footer-middle">
+                <p>More from the FT Group</p>
+            </div>
+            <hr>
+            <div class="footer-middle">
+                <p class="middle-long-text">Markets data delayed by at least 15 minutes. © THE FINANCIAL TIMES LTD 2017. FT and ‘Financial Times’ are trademarks of The Financial Times Ltd. The Financial Times and its journalism are subject to a self-regulation regime under the FT Editorial Code of Practice.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>A Nikkei Company</p>
+            </div>
+        </footer>
+    </body>
+</html>
