@@ -15,6 +15,23 @@
 		<!-- Custom styles for this template -->
 		<link href="../../css/uvuasl-custom-style-v4.css" rel="stylesheet">
 
+		<style>
+		/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+		@media (min-width: 768px) {
+			.card-columns {column-count: 2;}
+		}
+
+		/* Large devices (desktops, 992px and up) */
+		@media (min-width: 992px) {
+			.card-columns {column-count: 3;}
+		}
+
+		/* Extra large devices (large desktops, 1200px and up) */
+		@media (min-width: 1200px) {
+			.card-columns {column-count: 4;}
+		}
+		</style>
+
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -45,12 +62,160 @@
 				<hr>
 
 				<p>Introductory text</p>
-				<h3>Deaf School Records</h3>
-				<p>Links will go here.</p>
+				<h3>United States Deaf School Records</h3>
+				<h6>(This presentation is mostly U.S.-centric, but research principles can be applied to other countries with school records.)
+				<p>American Deaf school records are very effective in triangulating/confirming and adding sources. They can help <b>re-create stories</b> instead of just gathering additional facts.</p>
 
 				<h3>Subhead</h3>
 				<p>Federal and Special Census Records</p>
 				<p>Links will go here.</p>
+
+				<!-- Masonry/Card layout for links, images, etc. !-->
+				<div class="card-columns">
+
+				    <div class="card">
+				        <img class="card-img-top img-fluid" src="https://dummyimage.com/400x200/563d7c/ffffff&text=.card-img-topfff&text=.card-img-top" alt="Card image cap">
+				        <div class="card-body">
+				            <h4 class="card-title">.card-title</h4>
+				            <p class="card-text">.card-text</p>
+				            <a href="#" class="btn btn-primary">.btn-primary</a>
+				        </div>
+				    </div>
+
+				    <div class="card p-3 card-outline-primary">
+				        <blockquote class="card-block card-blockquote">
+				            .card-block .card-blockquote
+				            <footer>
+				                <small class="text-muted">.text-muted</small>
+				            </footer>
+				        </blockquote>
+				    </div>
+
+				    <div class="card text-center">
+				        <div class="card-header">
+				            Featured
+				        </div>
+				        <div class="card-body">
+				            <h4 class="card-title">.card-title</h4>
+				            <p class="card-text">.card-text</p>
+				            <a href="#" class="btn btn-primary">.btn-primary</a>
+				        </div>
+				        <div class="card-footer text-muted">
+				            2 days ago
+				        </div>
+				    </div>
+
+				    <div class="card">
+				        <div class="card-header">
+				            Quote
+				        </div>
+				        <div class="card-body">
+				            <blockquote class="card-blockquote">
+				                .card-blockquote
+				                <footer>
+				                    Someone famous in <cite title="Source Title">Source Title</cite>
+				                </footer>
+				            </blockquote>
+				        </div>
+				    </div>
+
+				    <div class="card">
+				        <ul class="list-group list-group-flush">
+				            <li class="list-group-item">.list-group-item</li>
+				            <li class="list-group-item">.list-group-item</li>
+				            <li class="list-group-item">.list-group-item</li>
+				        </ul>
+				    </div>
+
+				    <div class="card">
+				        <div class="card-body">
+				            <h4 class="card-title">.card-title</h4>
+				            <p class="card-text">.card-text</p>
+				        </div>
+				        <img class="card-img-bottom img-fluid" src="https://dummyimage.com/400x200/563d7c/ffffff&text=.card-img-topfff&text=.card-img-bottom" alt="Card image cap">
+				    </div>
+
+				    <div class="card card-inverse">
+				        <a href="">
+				            <img class="card-img img-fluid" src="https://bootstrapcreative.com/wp-bc/wp-content/uploads/2017/02/project-files-zip.jpg" alt="Card image">
+				            <div class="card-img-overlay">
+				                <h4 class="card-title">.card-title</h4>
+				            </div>
+				        </a>
+				    </div>
+
+				    <div class="card card-inverse" style="background-color: #333; border-color: #333;">
+				        <div class="card-body">
+				            <h3 class="card-title">.card-title</h3>
+				            <p class="card-text">.card-text</p>
+				            <a href="#" class="btn btn-primary">.btn-primary</a>
+				        </div>
+				    </div>
+
+				    <div class="card text-center bg-faded">
+				        <div class="card-header">
+				            <ul class="nav nav-tabs card-header-tabs">
+				                <li class="nav-item">
+				                    <a class="nav-link active" href="#tab1" data-toggle="tab">.nav-link <span class="badge badge-default">1</span></a>
+				                </li>
+				                <li class="nav-item">
+				                    <a class="nav-link" href="#tab2" data-toggle="tab">.nav-link <span class="badge badge-default">2</span></a>
+				                </li>
+				            </ul>
+				        </div>
+
+
+				        <div class="card-body">
+
+				            <div class="tab-content">
+				                <div class="tab-pane active" id="tab1" role="tabpanel">
+				                    <h4 class="card-title">.card-title <span class="badge badge-default">1</span></h4>
+				                </div>
+				                <div class="tab-pane" id="tab2" role="tabpanel">
+				                    <h4 class="card-title">.card-title <span class="badge badge-default">2</span></h4>
+				                </div>
+				            </div>
+
+				        </div>
+				    </div>
+
+				    <div class="card card-inverse card-primary p-3 text-center">
+				        <blockquote class="card-blockquote">
+				            .card-blockquote
+				            <footer>
+				                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+				            </footer>
+				        </blockquote>
+				    </div>
+
+				    <div class="card text-center">
+				        <div class="card-body">
+				            <h4 class="card-title">.card-title</h4>
+				            <p class="card-text">.card-text</p>
+				        </div>
+				    </div>
+
+				    <div class="card">
+				        <img class="card-img img-fluid" src="https://dummyimage.com/400x200/563d7c/ffffff&text=.card-img-topfff&text=.card-img" alt="Card image">
+				    </div>
+
+				    <div class="card p-3 text-right">
+				        <blockquote class="card-blockquote">
+				            .card-blockquote
+				            <footer>
+				                <small class="text-muted">.text-muted</small>
+				            </footer>
+				        </blockquote>
+				    </div>
+
+				    <div class="card">
+				        <div class="card-body">
+				            <h4 class="card-title">.card-title</h4>
+				            <p class="card-text">.card-text</p>
+				        </div>
+				    </div>
+
+				</div>
 
 				<h6>Thanks to all of the staff and participants at the 2018 Deaf Family History Workshop.<h6>
 			</div>
