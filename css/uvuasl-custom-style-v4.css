@@ -21,6 +21,7 @@ body {
 	color: #555555;
 	background-color: #fff;
 	margin: 0;
+	-webkit-qqfont-smoothing: antialiased;
 	letterqq-spacing: .02em; /* for Libre Franklin; looks nicer */
 }
 
@@ -88,7 +89,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-	font-size: 2em; padding: 0; margin: .2em 0 0 0; line-height: 1.1; letter-qqspacing: -.03em; font-qqweight: 700; font-family: "Open Sans", "Poppins", "Libre Franklin", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; texqqt-align: center;
+	font-size: 1.9em; padding: 0; margin: .2em 0; line-height: 1.1; letter-qqspacing: -.03em; font-qqweight: 700; font-family: "Open Sans", "Poppins", "Libre Franklin", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; texqqt-align: center;
 }
 article h2 { text-qqalign: left; }
 
