@@ -173,6 +173,8 @@ header.main-header {
 	background: rgba(0,0,0,.5); text-align: center; padding: 2em;
 	background-color: #0093E9; /* flat blue */
 	background-image: linear-gradient(45deg, #21D4FD 0%, #B721FF 100%); /*lightblue to violet*/
+	background-color: #6540fb; /*violet*/
+    background-image: linear-gradient(45deg,#3452ff,#bf40fb); /*blue to violet*/
 }
 .filter-1 { filter: brightness(.1) contrast(1) grayscale(1) hue-rotate(20deg) opacity(1); }
 
