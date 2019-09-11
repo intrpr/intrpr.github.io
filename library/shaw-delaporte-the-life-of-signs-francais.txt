@@ -1,0 +1,103 @@
+La Vie des Signes
+De l’abbé de l’Épée à la langue des signes américaine : les tribulations du signe SEXE
+par Emily Shaw et Yves Delaporte
+S’il est bien connu que le lexique de la langue des signes américaine doit beaucoup aux signes français en raison du rôle joué par le sourd parisien Laurent Clerc (1785-1869) dans l’éducation des enfants sourds américains, cette influence n’a jamais été analysée de manière rigoureuse. Certains emprunts sont évidents, mais beaucoup d’autres sont dissimulés par l’évolution des formes et des sens. On ne saurait donc se contenter de comparer les états actuels des deux langues : il est nécessaire de procéder à la reconstruction minutieuse de l’histoire de chacune d’elles, programme de recherche qui n’a pas même été ébauché dans le cas du versant américain, malgré l’abondance des travaux linguistiques depuis une quarantaine d’années.
+Par ailleurs, cette recherche devra prendre en considération les signes de la province française, qui gardent souvent la trace d’anciens signes parisiens depuis longtemps disparus dans la capitale mais qui ont pu être importés par Laurent Clerc sur le continent américain. C’est ainsi que l’on a pu apporter la preuve qu’un signe qui paraissait aussi spécifique- ment autochtone que FATHER « père », est issu de la France rurale du XVIIIe siècle (Delaporte 2006).
+Le travail que nous poursuivons dans cette direction est de longue haleine. Le champ de recherche est immense, et tout reste à faire. Nous ne présenterons donc ici qu’un seul exemple de la persistance, dans la langue des signes américaine d’aujourd’hui, de signes remontant aussi loin qu’à l’enseignement de l’abbé de l’Épée (1712-1789).
+L’exemple que nous avons choisi est le signe SEX « sexe », dont le sens premier est « genre masculin ou féminin » mais dont les emplois
+s’étendent au domaine de la sexualité. L’index en crochet touche le haut puis le bas de la joue (fig. 1). Présent dans plusieurs recueils contempo- rains (Costello 1994, Sternberg 1994, Tennant et Gluzak Brown 2002), ce signe est absent de tous les recueils anciens (Brown 1856, Long 1918, Higgins 1923, Michaels 1923). De même qu’en France avant les années 1980, ces recueils sont toujours limités à quelques centaines de signes parmi les plus courants. Cela suffit à expliquer cette absence, bien que l’on puisse également soupçonner que le signe a été écarté en raison de ses liens avec la sexualité.
+halshs-00169358
+halshs-00169358
+                       Fig. 1. SEX. Tennant et Gluzak Brown 2002
+Fig. 2. GARÇON
+à St-Laurent-en-Royans
+Fig. 3. Localités où GARÇON se fait avec l’index en crochet
+Devant tout signe américain dont la motivation est obscure, une première étape de la recherche consiste à se tourner vers la langue des signes française. Si aucun signe du dialecte parisien parlé aujourd’hui ne comporte la configuration en crochet sur le visage, on peut repérer dans plusieurs localités de province un signe formé par cette configuration portée à la tempe ou au front : au Puy, à Poitiers, à Saint-Laurent-en- Royans, c’est le signe GARÇON, dont le lien sémantique avec la notion « masculin » retient l’attention (fig. 2).
+Dans la dernière localité citée, GARÇON entre également dans les signes composés MONSIEUR (le second composant est le signe JABOT, étymon de l’actuel signe parisien MONSIEUR) et FRERE (le second composant est le signe MEME). L’étendue de l’aire de répartition de ce signe GARÇON suggère qu’il ne s’agit pas d’un artefact local, mais d’un signe archaïsant peut-être autrefois répandu sur une grande partie du territoire français (fig. 3).
+- 18 -
+Cette hypothèse se trouve confirmée par la présence de ce signe à Paris même au XIXe siècle, lorsqu’une seconde étape de la recherche conduit à explorer les sources anciennes : avec le sens de « homme », il figure dans le recueil de signes publié par Pierre Pélissier (1856), professeur sourd-muet à l’institut de la rue Saint-Jacques (fig. 4). Commenté « signe de tirer le chapeau », il entrait alors en concurrence avec deux autres signes HOMME qui, également placés au niveau de la tête, en différaient par la configuration. L’un, avec la main en faisceau (fig. 5), est commenté « faire l’action de prendre son chapeau pour saluer » par Joséphine Brouland (1855). L’autre, avec la main en clé (fig. 6), est commenté « signe de lever et remettre le chapeau sur sa tête » par l’abbé Lambert (1865).
+crochet de GARÇON et HOMME doit donc nécessairement trouver une autre explication.
+C’est une troisième et ultime étape qui nous la fournira. Il faut cette fois relire les classiques, en l’occurrence La véritable manière d’instruire les sourds et muets, par l’abbé de l’Épée (1784). Dans la section intitulée « Sur les articles et les signes qui leur conviennent », où l’abbé explique comment il a créé des signes méthodiques pour les articles masculin et féminin, on peut lire ceci :
+« Nous faisons observer au Sourd et Muet les jointures de nos doigts, de nos mains, du poignet, du coude, etc. etc., et nous les appelons articles ou jointures. Nous écrivons ensuite sur la table, que le, la, les, de, du, des, joignent les mots, comme nos articles joignent nos os ; [...] dès lors, le mouvement de l’index droit, qui s’étend et se replie plusieurs fois en forme de crochet, devient le signe raisonné1 que nous donnons à tout article. Nous en exprimons le genre en portant la main au chapeau, pour l’article masculin le, et à l’oreille, où se termine la coiffure d’une personne du sexe2, pour l’article féminin la. »
+L’abbé de l’Épée met à profit le double sens que article avait au XVIIIe siècle : en premier lieu « mot qui, placé devant un substantif, en indique le genre et le nombre » ; en second lieu « articulation d’un organe » (ici, les doigts). Avec ce second sens, le mot a disparu de la langue française contemporaine, à l’exception du vocabulaire technique de la zoologie.
+Plus loin dans le même ouvrage, la phrase « les deux genres se différencient en portant la main au chapeau ou à la cornette, comme nous l’avons dit ci-dessus » prouve que les deux signes en question étaient employés au sens plus général de « masculin » et « féminin », permettant de disposer d’un signe méthodique utilisable pour toutes les catégories du discours, et pas seulement pour les articles.
+1 « Signe raisonné » : signe « méthodique », i.e. signe inventé de toutes pièces par l’abbé de l’Épée. Ces signes injectent dans la langue des signes naturelle des catégories grammaticales de la langue française.
+2 « Personne du sexe » : expression vieillie pour « personne de sexe féminin ». - 20 -
+halshs-00169358
+halshs-00169358
+   Fig. 4. HOMME Pélissier 1856
+Fig. 5. HOMME Brouland 1855
+Fig. 6. HOMME Lambert 1865
+En langue des signes française, la configuration en faisceau stylise souvent la tenue, concrète ou métaphorique, d’un objet, comme dans les signes METTRE, AJOUTER, COPIER, SOUPLE ou Y COMPRIS. Quant à la configuration en clé, elle stylise toujours la tenue d’un objet mince et souple : tenue des rênes du cocher dans DIRIGER, tenue d’un fouet dans EDUCATION, tenue d’un aiguillon dans FORCER, tenue d’une épée dans CONVAINCRE. Si ces deux configurations sont donc parfaitement adaptées à la tenue du bord d’un chapeau que l’on soulève pour saluer, il n’en va pas du tout de même pour l’index en crochet qui ne saurait en aucun cas représenter la saisie d’un objet. Et parmi les nombreux changements de forme des configurations au cours de l’histoire, aucun cas d’évolution du faisceau ou de la clé vers le crochet n’a été observé. La configuration en
+- 19 -
+ 
+Si la configuration en crochet a été introduite par l’abbé de l’Épée pour les motifs que l’on vient de voir, les emplacements empruntent certainement aux signes spontanés H O M M E et F E M M E qu’il pouvait observer chez les sourds venant à ses leçons. Pour ce qui est du signe HOMME, nous disposons du témoignage de l’abbé Ferrand (vers 1785), contemporain de l’abbé de l’Épée : « porter la main au chapeau ». Du signe FEMME, nous ne disposons que de témoignages postérieurs à l’abbé de l’Épée : l’index ou le pouce glissent le long de la joue pour styliser « la garniture du bonnet » (Puybonnieux 1846) ou « le ruban de la coiffe » (Lambert 1865). Ce signe s’est maintenu inchangé jusqu’aujour- d’hui (fig. 7).
+jusqu’aujourd’hui en différents endroits de la province française en prenant le sens de « garçon », par apocope de JEUNE dans un composé GARÇON décrit par l’abbé Lambert, HOMME suivi de JEUNE.
+Le signe FEMININ, lui, ne s’est pas maintenu. La différence de forme entre l’index en crochet du signe méthodique et l’index tendu du signe naturel FEMME est si ténue que la première configuration a dû être très tôt assimilée par la seconde. On peut cependant observer que sur un dessin de Pélissier, l’index de FEMME est légèrement recourbé (fig. 9).
+Parti en Amérique en 1816 pour y fonder avec Thomas Gallaudet la première institution pour enfants sourds, Laurent Clerc y a introduit les signes MASCULIN et FEMININ. Condensés en un signe unique, l’index en crochet venant se poser successivement sur le haut et le bas du visage, ils ont produit SEX, GENDER au sens de « masculin ou féminin » (fig. 1). Il est très probable que ce signe synthétique a été construit par l’abbé de l’Épée lui-même, conformément à l’article « sexe » de son Dictionnaire des sourds-muets (1787) : « Il y a deux sexes, masculin et féminin ».
+Au cours des deux siècles qui ont suivi, les emplacements se sont abaissés, sous la pression d’une économie gestuelle dont l’histoire des langues signées offre des centaines d’autres exemples, en Amérique (Frishberg 1975) comme en France (Delaporte 2004).
+Un jeu de mots de l’abbé de l’Épée, fondé sur le double sens de article, a franchi un océan dans les mains de Laurent Clerc et s’est perpétué jusqu’aujourd’hui sur le Nouveau Continent. La motivation initiale s’est entièrement obscurcie : Sternberg (1994) interprète l’index en crochet de SEX comme la lettre manuelle X. C’est une étymologie qui n’avait a priori rien d’absurde, puisque cette lettre est couramment utilisée comme un signe passe-partout permettant de traduire tous les mots comportant la lettre x, y compris le mot sexe (Delaporte 2003). Étymologie plausible donc, mais fausse.
+halshs-00169358
+halshs-00169358
+   Fig. 7. FEMME Ivt 1986
+Fig. 8. « La coiffe » Chazottes 1864, Méthode pour l’instruction des sourds-muets
+Fig. 9. FEMME Pélissier 1856
+Récapitulons. Au XVIIIe siècle, l’abbé de l’Épée crée un signe MASCULIN, index en crochet porté à la tête, et un signe FEMININ, index en crochet porté à l’oreille. Ultérieurement, les sourds ont abandonné ces signes méthodiques et n’ont retenu que les éléments iconiques qui leur préexistaient, c’est-à-dire les configurations des signes HOMME et FEMME adaptées à la représentation de la saisie d’un chapeau et à la forme de la bride des coiffures féminines (fig. 8). Aussi tard qu’en 1855, Joséphine Brouland note cependant que ces signes iconiques HOMME et FEMME peuvent être employés au sens de « masculin » et « féminin ».
+Le signe méthodique MASCULIN n’a pas pour autant disparu. Présent en 1856 chez Pélissier avec le sens de « homme », il s’est maintenu
+- 21 -
+- 22 -
+halshs-00169358 Sources
+Brouland (Joséphine), 1855, Spécimen d’un dictionnaire des signes, accompagné d’une Explication du tableau spécimen d’un dictionnaire des signes du langage mimique. Paris, Institution impériale des sourds-muets. Les dessins de signes ont été réédités dans Renard (Marc) et Delaporte (Yves), Aux origines de la langue des signes française. Brouland, Pélissier, Lambert, les premiers illustrateurs (1855-1865), Paris, Langue des Signes Éditions, 2002.
+Brown (J. S.), 1856, A Vocabulary of Mute Signs. Baton Rouge, Morning Comet Office.
+Chazottes (abbé), 1864, Méthode de Toulouse pour l’instruction des sourds- muets. Premiers éléments de la langue. Poitiers, Henri Oudin.
+Costello (Elaine), 1994, American Sign Language Dictionary. New York, Random House.
+Delaporte (Yves), 2003, « Le signe RESSEMBLER », Patrimoine Sourd, 5.
+— 2004, « Deux siècles d’histoire de la langue des signes française : les tendances évolutives », Silexicales, 4. Linguistique de la Lsf : recherches
+actuelles. Actes du colloque de Villeneuve d’Ascq.
+— 2006, « Les signes FATHER et MOTHER revisités. Une famille lexicale franco-
+américaine », in Daigle, D. et A.-M. Parisot (éds.), Surdité et société : perspectives psychosociale, didactique et linguistique, Collection Santé et société. Sainte-Foy, Presses de l’Université du Québec.
+Ferrand (abbé Jean), vers 1785, Dictionnaire des sourds-muets. Manuscrit édité par J.A.A. Rattel, Collection ancienne et moderne d’otologie, 7. Laval, 1896.
+Frishberg (Nancy), 1975, « Arbitrariness and Iconicity : Historical Change in American Sign Language », Language, 51.
+Groupe de recherche sur le langage gestuel, 1982, Les mains qui parlent : Eléments de vocabulaire de la langue des signes. Poitiers, Nouvelles impressions graphiques.
+Higgins (Dan D.), 1923, How to Talk to the Deaf. Chicago, Paluch.
+Institut médico-pédagogique pour déficients auditifs La Providence, 1979,
+Langage gestuel. Saint-Laurent-en-Royans.
+Lambert (abbé Louis Marie), 1865, Le langage de la physionomie et du geste
+mis à la portée de tous. Paris, Lecoffre. Les dessins de signes ont été réédités dans Renard (Marc) et Delaporte (Yves), Aux origines de la langue des signes française. Brouland, Pélissier, Lambert, les premiers illustrateurs (1855-1865), Paris, Langue des Signes Éditions, 2002. L’ouvrage a été réédité intégralement sous le titre Dictionnaire de la langue des signes
+halshs-00169358
+d’autrefois (présenté par Y. Delaporte), Paris, Éditions du Comité des
+travaux historiques et scientifiques, 2005.
+L’Épée (abbé de), 1784, La véritable manière d’instruire les sourds et muets.
+Réédition Fayard, « Corpus des œuvres de philosophie en langue française »,
+1984.
+— 1787, Dictionnaire des sourds-muets. Manuscrit édité par J.A.A. Rattel,
+Collection ancienne et moderne d’otologie, 9. Laval, 1896.
+Long (J. Schuyler), 1918, The Sign Language. A Manual of Signs. Iowa City,
+Athens Press.
+Michaels (B. Ped.), 1923, A Handbook of the Sign Language of the Deaf.
+Atlanta, Home Mission Board Southern Baptist Convention.
+Moody (Bill) et al., 1986, La langue des signes, tome 2 : Dictionnaire bilingue
+élémentaire. Vincennes, Editions Ivt.
+Page (Marie-Jo) et Ravent (Annie), 1984, Des mains pour le dire. Répertoire de
+vocabulaire de signes gestuels. Institut médico-pédagogique pour jeunes
+sourds, Le Puy.
+Pélissier (Pierre), 1856, Iconographie des signes faisant partie de l’enseigne-
+ment des sourds-muets. Paris, Paul Dupont. Les dessins de signes ont été réédités dans Renard (Marc) et Delaporte (Yves), Aux origines de la langue des signes française. Brouland, Pélissier, Lambert, les premiers illustrateurs (1855-1865), Paris, Langue des Signes Éditions, 2002.
+Puybonnieux (Jean-Baptiste), 1846, Mutisme et surdité. Paris, Baillière. Sternberg (Martin L.A.), 1994, American Sign Language Dictionary. New
+York, Harper Collins Publishers.
+Tennant (Richard A.) and Gluzak Brown (Marianne), 2002, The American Sign
+Language Handshape Dictionary. Washington, Gallaudet University Press.
+- 23 -
+- – 24 –
+2006, « La Vie des Signes. De l’abbé de l’Épée à la langue des signes américaine : les tribulations du signe SEXE », Patrimoine sourd 17, pp. 17-24 [ISSN 1636-6638]
+Emily Shaw* et Yves Delaporte**
+* Doctorante en linguistique Université de Georgetown emilyshaw[at]sprint.blackberry.net
+** Directeur de recherche CNRS
+Laboratoire d’anthropologie urbaine – CNRS UPR34 Ivry-sur-Seine
+delaporteyv[at]wanadoo.fr
+Maquette éditeur, avec l’aimable autorisation de la revue
+Résumé
+L'étymologie du signe "sexe" en usage chez les sourds américains était jusqu'ici inconnue. Les auteurs démontrent qu'il provient de deux anciens signes construits sur un jeu de mots par l'abbé de l'Epée, puis transmis aux USA par le sourd-muet Laurent Clerc.
+Mots-clefs
+sourds, langue des signes américaine (ASL), langue des signes française (LSF), étymologie, sexe.
+halshs-00169358, version 1 http://halshs.archives-ouvertes.fr/halshs-00169358/fr/ oai:halshs.archives-ouvertes.fr:halshs-00169358_v1
