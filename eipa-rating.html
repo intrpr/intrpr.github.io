@@ -13,43 +13,32 @@
 	<meta name="theme-color" content="#fafafa">
 
 <style>
-	body { padding: 5em; font-family: "Open Sans", Helvetica, Arial, sans-serif;  }
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+	body { padding: 5em; font-family: "Inter", Helvetica, Arial, sans-serif; color: #222; }
+	section { margin: 3em auto; border: 0; border-top: 1px dashed #aaa; }
 	h1, h2, h3, h4 { line-height: 1.2; }
-	h4 { margin: 0; }
-	p, li, dd { line-height: 1.5; }
+	h4 { margin: 0; line-height: 1; }
+	p, li, dd, td { line-height: 1.5; }
 	tr { vertical-align: top; }
 	sup { font-size: 55%; }
-	hr { margin: 3em auto; border: 0; border-bottom: 1px dashed #999; }
 	dt { font-weight: bold; float: left; width: 20%; }
-	dd { margin: 0 0 1em 20%; width: auto; }
+	dd { margin: 0 0 1em 25%; width: auto; }
 	dd ul { margin: 0 0 0 -1em; }
 	.recommendation { font-weight: bold; color: #f00; }
-
-	table {
-		border: 1px solid #000000; border: none; 
-		border-collapse: collapse;
-		margin: 0 auto 2em auto;
-		padding: 0px;
-		table-layout: fixed;
-		min-width: 100%;
-	}
-	table th {
-		text-align: left;
-		padding: .75em;
-		border: 1px solid #000000; border: none; 
-		background: #666;
-		color: #ffffff;
-		font-weight: bold;
-		text-align: left;
-	}
-	table td {
-		padding: .6em;
-		border: 1px solid #000000; border: none; 
-	}
-	.task { width: 65%; }
-	.ranking { width: 5%; }
-	table tr {
-		color: #000000;
+	table { border: none; border-collapse: collapse; margin: 0 auto 2em auto; min-width: 100%; }
+	table th { text-align: left; padding: .75em; border: none; background: #999; color: #fff; font-weight: bold; }
+	table td { padding: .5em; border: none; }
+	.task { width: 72%; }
+	.ranking { width: 4%; }
+	@media print {
+		@page { margin: .75in; }
+		body { padding: 0; }
+		section { page-break-before: always; border: none; margin: 1em auto; }
+		h1, h2, h3, h4 { font-size: 1.3em; color: #222; }
+		h4 { font-size: 1em; color: #222; margin: 0; }
+		table th, table td { padding: .5em 0; }
+		dl { color: #222; font-size: .62em; }
+		.recommendation { color: #222; }
 	}
 </style>
 
@@ -64,12 +53,13 @@
 	<li>Overall abilities: Ability to represent a sense of the entire message, use appropriate discourse structures, and represent who is speaking</li>
 </ol>
 <p>Evaluators use a Likert Scale to assess specific skills. Scores for each skill range from 0 (no skills demonstrated) to 5 (advanced native-like skills). The scores from all three evaluators are averaged for each skill area, each domain, as well as the overall test score. An individual’s EIPA score is the summary total score. For example, an interpreter could report her/his score as EIPA Secondary PSE 4.2, which represents the grade level, the language modality, and the total summary EIPA score.</p>
+<p><small>See also <a href="https://www.classroominterpreting.org/EIPA/performance/rating.asp">https://www.classroominterpreting.org/EIPA/performance/rating.asp</a></small></p>
 
-<hr>
 
 <h2>EIPA Rating Form</h2>
 <p>The following are domains of skills and specific skills evaluated by the EIPA.</p>
 
+<section>
 <h3>I. Interpreter Product: Spoken English to Sign</h3>
 <div id="#interpreterproduct-s-se">
 	<table id="prosodicinformation">
@@ -216,9 +206,9 @@
 		</tr>
 	</table>
 </div>
+</section>
 
-<hr>
-
+<section>
 <h3>II. Interpreter Product (i.e., fluency/pacing, clarity of speech, volume of speech): Sign to Spoken English</h3>
 <div id="#interpreterproduct-se-s">
 	<table id="canreadconveysigner">
@@ -345,9 +335,9 @@
 		</tr>
 	</table>
 </div>
+</section>
 
-<hr>
-
+<section>
 <h3>III. Vocabulary</h3>
 <div id="#vocabulary">
 	<table id="signs">
@@ -452,9 +442,9 @@
 		</tr>
 	</table>
 </div>
+</section>
 
-<hr>
-
+<section>
 <h3>IV. Overall Factors</h3>
 <div id="#overallfactors">
 	<table id="messageprocessing">
@@ -545,8 +535,9 @@
 		</tr>
 	</table>
 </div>
-<hr>
+</section>
 
+<section>
 <h2>Descriptions of each EIPA Level</h2>
 <dl>
 	<dt>Level 1: Beginner</dt>
@@ -566,7 +557,7 @@
 	<dd>
 		<ul>
 			<li>Demonstrates only basic sign vocabulary and these limitations interfere with communication.</li>
-			<li>lack of fluency and sign production errors are typical and often interfere with communication.</li>
+			<li>Lack of fluency and sign production errors are typical and often interfere with communication.</li>
 			<li>The interpreter often hesitates in signing, as if searching for vocabulary.</li>
 			<li>Frequent errors in grammar are apparent, although basic signed sentences appear intact.</li>
 			<li>More complex grammatical structures are typically difficult.</li>
@@ -616,6 +607,7 @@
 		</ul>
 	</dd>
 </dl>
+</section>
 
 </body>
 
