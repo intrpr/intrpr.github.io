@@ -13,11 +13,12 @@
 	<meta name="theme-color" content="#fafafa">
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
-	body { padding: 5em; font-family: "Inter", Helvetica, Arial, sans-serif; color: #222; }
-	section { margin: 3em auto; border: 0; border-top: 1px dashed #aaa; }
+	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,600&display=swap');
+	body { padding: 5em; font-family: "Open Sans", Helvetica, Arial, sans-serif; color: #222; }
+	section { }
 	h1, h2, h3, h4 { line-height: 1.2; }
 	h4 { margin: 0; line-qqheight: 1; }
+	h2, h3 { margin: 1.5em 0 0 0; padding: 1.5em 0 0 0; border: 0; border-top: 1px solid rgba(0,0,0,.1); }
 	p, li, dd, td { line-height: 1.5; }
 	tr { vertical-align: top; }
 	sup { font-size: 55%; }
@@ -30,6 +31,9 @@
 	table td { padding: .5em; border: none; }
 	.task { width: 72%; }
 	.ranking { width: 4%; }
+	.contents { column-count: 2; column-gap: 2em; }
+		.contents ul { font-size: 90%; list-style: none; margin: 0 0 0 -2.6em; }
+
 	@media print {
 		@page { margin: .75in; }
 		body { padding: 0; }
@@ -39,53 +43,80 @@
 		table th, table td { padding: .5em 0; }
 		dl { color: #222; font-size: 1em; }
 		.recommendation { color: #222; }
+		.contents { display: none; }
 	}
 </style>
 
 <body>
 
 	<h1>NAD-RID Code of Professional Conduct</h1>
+	<p id="contents"><strong>Contents</strong></p>
+	<div class="contents">
+		<ul>
+			<li><a href="#applicability">Applicability</a></li>
+			<li><a href="#definitions">Definitions</a></li>
+			<li><a href="#scope">Scope</a></li>
+			<li><a href="#philosophy">Philosophy</a></li>
+			<li><a href="#voting">Voting Protocol</a></li>
+			<li><a href="#adoption">Adoption of this Code of Professional Conduct</a></li>
+			<li><a href="#tenetsguidingprinciples">Tenets and Guiding Principles</a></li>
+			<li><a href="#1confidentiality">1.0 Confidentiality</a></li>
+			<li><a href="#2professionalism">2.0 Professionalism</a></li>
+			<li><a href="#3conduct">3.0 Conduct</a></li>
+			<li><a href="#4respectconsumers">4.0 Respect for Consumers</a></li>
+			<li><a href="#5respectcolleagues">5.0 Respect for Colleagues</a></li>
+			<li><a href="#6businesspractices">6.0 Business Practices</a></li>
+			<li><a href="#7professionaldevelopement">7.0 Professional Development</a></li>
+		</ul>
+	</div>
 	<p></p>
 	
-	<h2>Applicability</h2>
+	<h2 id="applicability">Applicability</h2>
 	<ul>
 		<li>This Code of Professional Conduct applies to certified and associate members of the Registry of Interpreters for the Deaf, Inc., Certified members of the National Association of the Deaf, interns, and students of the profession.</li>
 		<li>Federal, state or other statutes or regulations may supersede this Code of Professional Conduct. When there is a conflict between this code and local, state, or federal laws and regulations, the interpreter obeys the rule of law.</li>
-		<li>his Code of Professional Conduct applies to interpreted situations that are performed either face-to-face or remotely.</li>
+		<li>This Code of Professional Conduct applies to interpreted situations that are performed either face-to-face or remotely.</li>
 	</ul>
+	<p>&#8593; <a href="#contents">return to contents</a></p>
 	
-	<h2>Definitions</h2>
+	<h2 id="definitions">Definitions</h2>
 	<p>For the purpose of this document, the following terms are used:</p>
 	<ul>
 		<li>Colleagues: Other interpreters.</li>
 		<li>Conflict of Interest: A conflict between the private interests (personal, financial, or professional) and the official or professional responsibilities of an interpreter in a position of trust, whether actual or perceived, deriving from a specific interpreting situation.</li>
 		<li>Consumers: Individuals and entities who are part of the interpreted situation. This includes individuals who are deaf, deaf-blind, hard of hearing, and hearing.</li>
 	</ul>
-	
-	<h2>Scope</h2>
+	<p>&#8593; <a href="#contents">return to contents</a></p>
+
+	<h2 id="scope">Scope</h2>
 	<p>The National Association of the Deaf (NAD) and the Registry of Interpreters for the Deaf, Inc. (RID) uphold high standards of professionalism and ethical conduct for interpreters. Embodied in this Code of Professional Conduct (formerly known as the Code of Ethics) are seven tenets setting forth guiding principles, followed by illustrative behaviors.</p>
 	<p>A code of professional conduct is a necessary component to any profession to maintain standards for the individuals within that profession to adhere. It brings about accountability, responsibility and trust to the individuals that the profession serves. The tenets of this Code of Professional Conduct are to be viewed holistically and as a guide to professional behavior. This document provides assistance in complying with the code. The guiding principles offer the basis upon which the tenets are articulated. The illustrative behaviors are not exhaustive, but are indicative of the conduct that may either conform to or violate a specific tenet or the code as a whole.</p>
 	<p>When in doubt, the reader should refer to the explicit language of the tenet. If further clarification is needed, questions may be directed to the national office of the Registry of Interpreters for the Deaf, Inc.</p>
 	<p>This Code of Professional Conduct is sufficient to encompass interpreter roles and responsibilities in every type of situation (e.g., educational, legal, medical). A separate code for each area of interpreting is neither necessary nor advisable.</p>
-	
-	<h2>Philosophy</h2>
-	<p>The American Deaf community represents a cultural and linguistic group having the inalienable right to full and equal communication and to participation in all aspects of society. Members of the American Deaf community have the right to informed choice and the highest quality interpreting services. Recognition of the communication rights of America’s women, men, and children who are deaf is the foundation of the tenets, principles, and behaviors set forth in this Code of Professional Conduct.</p>
-	
-	<h2>Voting Protocol</h2>
-	<p>This Code of Professional Conduct was presented through mail referendum to certified interpreters who are members in good standing with the Registry of Interpreters for the Deaf, Inc. and the National Association of the Deaf. The vote was to adopt or to reject.</p>
+	<p>&#8593; <a href="#contents">return to contents</a></p>
 
-	<h2>Adoption of this Code of Professional Conduct</h2>
+	<h2 id="philosophy">Philosophy</h2>
+	<p>The American Deaf community represents a cultural and linguistic group having the inalienable right to full and equal communication and to participation in all aspects of society. Members of the American Deaf community have the right to informed choice and the highest quality interpreting services. Recognition of the communication rights of America’s women, men, and children who are deaf is the foundation of the tenets, principles, and behaviors set forth in this Code of Professional Conduct.</p>
+	<p>&#8593; <a href="#contents">return to contents</a></p>
+
+	<h2 id="voting">Voting Protocol</h2>
+	<p>This Code of Professional Conduct was presented through mail referendum to certified interpreters who are members in good standing with the Registry of Interpreters for the Deaf, Inc. and the National Association of the Deaf. The vote was to adopt or to reject.</p>
+	<p>&#8593; <a href="#contents">return to contents</a></p>
+
+	<h2 id="adoption">Adoption of this Code of Professional Conduct</h2>
 	<p>Interpreters who are members in good standing with the Registry of Interpreters for the Deaf, Inc. and the National Association of the Deaf voted to adopt this Code of Professional Conduct, effective July 1, 2005. This Code of Professional Conduct is a working document that is expected to change over time. The aforementioned members may be called upon to vote, as may be needed from time to time, on the tenets of the code.</p>
 	<p>The guiding principles and the illustrative behaviors may change periodically to meet the needs and requirements of the RID Ethical Practices System. These sections of the Code of Professional Conduct will not require a vote of the members. However, members are encouraged to recommend changes for future updates.</p>
-	
-	<h2>Tenets and Guiding Principles</h2>
+	<p>&#8593; <a href="#contents">return to contents</a></p>
+
+	<h2 id="tenetsguidingprinciples">Tenets and Guiding Principles</h2>
 	<h3>Function of the Guiding Principles</h3>
 	<p>It is the obligation of every interpreter to exercise judgment, employ critical thinking, apply the benefits of practical experience, and reflect on past actions in the practice of their profession. The guiding principles in this document represent the concepts of confidentiality, linguistic and professional competence, impartiality, professional growth and development, ethical business practices, and the rights of participants in interpreted situations to informed choice. The driving force behind the guiding principles is the notion that the interpreter will do no harm.</p>
 	<p>When applying these principles to their conduct, interpreters remember that their choices are governed by a “reasonable interpreter” standard. This standard represents the hypothetical interpreter who is appropriately educated, informed, capable, aware of professional standards, and fair-minded.</p>
-	
+	<p>&#8593; <a href="#contents">return to contents</a></p>
+
 
 	<section>
-		<h3>1.0 Confidentiality</h3>
+		<h3 id="1confidentiality">1.0 Confidentiality</h3>
 		<dl>
 			<dt>Tenet:</dt>
 			<h4><dd>Interpreters adhere to standards of confidential communication.</dd></h4>
@@ -99,11 +130,12 @@
 					<li>Manage data, invoices, records, or other situational or consumer-specific information in a manner consistent with maintaining consumer confidentiality (e.g., shredding, locked files).</li>
 					<li>Inform consumers when federal or state mandates require disclosure of confidential information.</li>
 				</ul>
+				<p>&#8593; <a href="#contents">return to contents</a></p>
 			</dd>
 		</dl>
 	</section>
 
-	<section>
+	<section id="2professionalism">
 		<h3>2.0 Professionalism</h3>
 		<dl>
 			<dt>Tenet:</dt>
@@ -121,11 +153,12 @@
 					<li>Refrain from providing counsel, advice, or personal opinions.</li>
 					<li>Judiciously provide information or referral regarding available interpreting or community resources without infringing upon consumers’ rights.</li>
 				</ul>
+				<p>&#8593; <a href="#contents">return to contents</a></p>
 			</dd>
 		</dl>
 	</section>
 
-	<section>
+	<section id="3conduct">
 		<h3>3.0 Conduct</h3>
 		<dl>
 			<dt>Tenet:</dt>
@@ -146,11 +179,12 @@
 					<li>Refrain from using confidential interpreted information for personal, monetary, or professional gain.</li>
 					<li>Refrain from using confidential interpreted information for the benefit of personal or professional affiliations or entities.</li>
 				</ul>
+				<p>&#8593; <a href="#contents">return to contents</a></p>
 			</dd>
 		</dl>
 	</section>
 
-	<section>
+	<section id="4respectconsumers">
 		<h3>4.0 Respect for Consumers</h3>
 		<dl>
 			<dt>Tenet:</dt>
@@ -165,11 +199,12 @@
 					<li>Obtain the consent of consumers before bringing an intern to an assignment.</li>
 					<li>Facilitate communication access and equality, and support the full interaction and independence of consumers.</li>
 				</ul>
+				<p>&#8593; <a href="#contents">return to contents</a></p>
 			</dd>
 		</dl>
 	</section>
 
-	<section>
+	<section id="5respectcolleagues">
 		<h3>5.0 Respect for Colleagues</h3>
 		<dl>
 			<dt>Tenet:</dt>
@@ -185,12 +220,13 @@
 					<li>Assist and encourage colleagues by sharing information and serving as mentors when appropriate.</li>
 					<li>Obtain the consent of colleagues before bringing an intern to an assignment.</li>
 				</ul>
+				<p>&#8593; <a href="#contents">return to contents</a></p>
 			</dd>
 		</dl>
 	</section>
 
 	<section>
-		<h3>6.0 Business Practices</h3>
+		<h3 id="6businesspractices">6.0 Business Practices</h3>
 		<dl>
 			<dt>Tenet:</dt>
 			<h4><dd>Interpreters maintain ethical business practices.</dd></h4>
@@ -208,11 +244,12 @@
 					<li>Render pro bono services in a fair and reasonable manner.</li>
 					<li>Charge fair and reasonable fees for the performance of interpreting services and arrange for payment in a professional and judicious manner.</li>
 				</ul>
+				<p>&#8593; <a href="#contents">return to contents</a></p>
 			</dd>
 		</dl>
 	</section>
 
-	<section>
+	<section id="7professionaldevelopement">
 		<h3>7.0 Professional Development</h3>
 		<dl>
 			<dt>Tenet:</dt>
@@ -233,6 +270,7 @@
 					</li>
 					<li>Keep abreast of laws, policies, rules, and regulations that affect the profession.</li>
 				</ul>
+				<p>&#8593; <a href="#contents">return to contents</a></p>
 			</dd>
 		</dl>
 	</section>
