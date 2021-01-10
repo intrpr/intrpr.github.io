@@ -17,10 +17,22 @@
 	body { padding: 5em; font-family: "Open Sans", Helvetica, Arial, sans-serif; color: #222; }
 	html { scroll-behavior: smooth; }
 	section { }
+
+	/* https://www.codingnepalweb.com/2020/05/responsive-navigation-menu-bar-using-css-flexbox.html */
+	nav { padding: 1em; margin: 0 -1em 4em -1em; background: rgba(0,0,0,.05); }
+	nav ul { list-style: none; display: flex; flex-wrap: wrap; align-items: right; justify-content: center;padding: 0; margin: 0; }
+	nav ul li { margin: 0 .5em; }
+	nav ul li.title { flex: 1; }
+
+	@media all and (max-width: 800px) {
+		nav { padding: 1em; }
+		nav ul li { display: block; width: 100%; padding: 1em; margin: 1em 0 0 0; text-align: center; background: rgba(0,0,0,.05); }
+		nav ul li.title { background: none; padding: 0; margin: .5em 0; }
+	}
 	h1, h2, h3, h4 { line-height: 1.2; }
 	h4 { margin: 0; }
 	h2, h3 { margin: 1.5em 0 0 0; padding: 1.5em 0 0 0; border: 0; border-top: 1px solid rgba(0,0,0,.1); }
-	p, li, dd, td { line-height: 1.5; }
+	p, li, dd, td { line-height: 1.55; margin: 0 0 .5em 0; }
 	tr { vertical-align: top; }
 	sup { font-size: 55%; }
 	dt { font-weight: bold; float: left; width: 20%; }
@@ -47,12 +59,23 @@
 		dl { color: #222; font-size: 1em; }
 		.recommendation { color: #222; }
 		.contents { display: none; }
+		nav { display: none; }
 	}
 </style>
 
 <body>
 
-	<h1>NAD-RID Code of Professional Conduct</h1>
+	<nav>
+		<ul>
+			<li class="title">Interpreter Codes of Conduct</li>
+			<li><a href="rid-cpc.html">CPC (2005)</a></li>
+			<li><a href="rid-coe-1979.html">CoE (1979)</a></li>
+			<li><a href="rid-coe-1965.html">CoE (1965)</a></li>
+			<li><a href="rid-coe-1964.html">CoE (1964)</a></li>
+		</ul>
+	</nav>
+
+	<h1>NAD-RID Code of Professional Conduct (2005)</h1>
 	<p id="contents"><strong>Contents</strong></p>
 	<div class="contents">
 		<ul>
