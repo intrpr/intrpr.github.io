@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Comparative ASL / English Language Continuum</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,600&display=swap');
+
+			body { padding: 2em 5em; font-family: "Open Sans", Helvetica, Arial, sans-serif; color: #222; }
+			html { scroll-behavior: smooth; }
+			section { }
+
+			/* https://www.codingnepalweb.com/2020/05/responsive-navigation-menu-bar-using-css-flexbox.html */
+			nav { padding: 1em; margin: 0 -1em 4em -1em; background: rgba(0,0,0,.05); }
+			nav ul { list-style: none; display: flex; flex-wrap: wrap; align-items: right; justify-content: center;padding: 0; margin: 0; }
+			nav ul li { margin: 0 .5em; }
+			nav ul li.title { flex: 1; }
+			@media all and (max-width: 800px) {
+				nav { padding: 1em; }
+				nav ul li { display: block; width: 100%; padding: 1em; margin: 1em 0 0 0; text-align: center; background: rgba(0,0,0,.05); }
+				nav ul li.title { background: none; padding: 0; margin: .5em 0; }
+			}
+
+			ul { margin: .5em 0 .5em -1em; }
+			dfn { font-style: normal; }
+			p, li { line-height: 1.55; margin: 0 0 .25em 0; word-break: break-word; }
+			.circle-number { font-weight: 700; font-size: 1.1rem; text-align: center; color: rgba(255,255,255,1); width: 1.6em; height: 1.6em; padding: 1em 0 0 -1em; margin: 0 0 .5em 0; background-color: rgba(0,0,0,1); border-radius: 100em; letter-spacing: -.05rem; }
+			.developed { font-size: .9rem; margin: .5em 0 0 0; color: rgba(0,0,0,.5); display: inline-block; }
+			sup::before {content: "["; } 
+			sup::after {content: "]"; }
+			sup, sub { font-weight: 600; text-decoration: none; }
+			sup { font-size: .9rem; font-weight: 400; }
+			h1 { margin: 0 0 .3em 0; }
+			h2 { font-size: 1.7rem; line-height: 1.2; margin: 0 0 .3em 0; }
+			h3 { font-size: 1.4rem; margin: 0 0 1em 0; }
+			h4 { }
+			
+			dt { font-weight: bold; float: left; width: 20%; }
+			dd { margin: 0 0 .25em 25%; width: auto; }
+			dd ol, dd ul { margin: 0 0 0 -1em; }
+
+			.header { margin: 0 0 2em 0; }
+				.header p { margin: 0 0 1em 0; }
+
+			.definitions { margin: 1em 0; padding: 0; }
+				.definitions p { margin: 0; padding: 0; }
+
+			.spectrum-container { height: 28em; width: 100%; padding: 1em 0; margin: 0 0 2em 0; }
+			.spectrum-container {
+				background-image: 
+				linear-gradient(
+					to right,
+					rgba(102,102,255,1), 
+					rgba(255,102,204,1)
+				);
+			}
+
+			/* counters */
+			#refs:target, #refs li:target, .note:target { background:lightblue; }
+			.container { counter-reset: footnote; }
+			.note { vertical-align: super; font-size: .9rem; line-height: 0; }
+			.note:before { 
+				counter-increment: footnote; 
+				content: "[" counter(footnote); }
+			.note:after { content: "]"; }
+			.back { text-decoration: none; font-weight: bold;}
+
+
+			.spectrum-container div { display: inline-block; }
+				.spectrum { position: relative; z-index: 1199; }
+					/* arrow left shaping; removed to put gradient at end
+					.spectrum::before { 
+						content:"";
+						position: absolute;
+						right: 100%;
+						top: calc(1% - 1vh);
+						border-top: 21.5vh solid transparent;
+						border-right: 2vw solid rgba(102,102,255,1);
+						border-bottom: 21.5vh solid transparent;
+						border-radius: .5em;
+					}
+					*/
+					.spectrum::before {
+						content: "";
+						position: absolute;
+						right: 100%;
+						height: 28em;
+						top: -1em;
+						border-left: 5em solid transparent;
+						border-image-source: linear-gradient(to left, rgba(102,102,255,1), rgba(102,102,255,0));
+						border-image-slice: 200;
+					}
+					/* arrow right shaping; removed to put gradient at end
+					.spectrum::after { 
+						content:"";
+						position: absolute;
+						left: 100%;
+						top: calc(1% - 1vh);
+						border-top: 21.5vh solid transparent;
+						border-left: 2vw solid rgba(255,102,204,1);
+						border-bottom: 21.5vh solid transparent;
+						border-radius: .5em;
+					}
+					*/
+					.spectrum::after {
+						content: "";
+						position: absolute;
+						left: 100%;
+						height: 28em;
+						top: -1em;
+						border-left: 5em solid transparent;
+						border-image-source: linear-gradient(to right, rgba(255,102,204,1), rgba(255,102,204,0));
+						border-image-slice: 200;
+					}
+				
+					.approach-left, .approach-right {
+						position: absolute; 
+						z-index: 1200;
+						background: rgba(255,255,255,.4); 
+						padding: 1.5em; 
+						border-radius: .5em;
+					}
+					.approach-left { margin: 1em calc(19% + 1em); transform: translateX(-19%); box-shadow: 1em 1em 1em rgba(0,0,0,.1); }
+					.approach-right { margin: 5em calc(81% + 1em); transform: translateX(-81%); box-shadow: -1em 1em 1em rgba(0,0,0,.1); }
+					.approach-left:before {
+						content:"";
+						position: absolute;
+						right: 100%;
+						top: calc(7% - 1vh);
+						border-top: 6.5em solid transparent;
+						border-right: 2em solid rgba(255,255,255,.4);
+						border-bottom: 6.5em solid transparent;
+					}
+					.approach-right:after {
+						content:"";
+						position: absolute;
+						left: 100%;
+						top: calc(8% - 1vh);
+						border-top: 5.5em solid transparent;
+						border-left: 2em solid rgba(255,255,255,.4);
+						border-bottom: 5.5em solid transparent;
+					}
+					.more-like { position: relative; width: 95%; z-index: 1201; bottom: 0; margin: 3.5em auto .5em auto; padding: 1em 0; background: rgba(0,0,0,.2); color: rgba(255,255,255,1); border-radius: .5em; }
+						.more-like a { color: rgba(255,255,255,1); }
+						.more-like::before { 
+							content:"";
+							position: absolute;
+							right: 100%;
+							top: calc(17% - 1vh);
+							border-top: 2.5em solid transparent;
+							border-right: 1em solid rgba(0,0,0,.2);
+							border-bottom: 2.5em solid transparent;
+						}
+						.more-like::after { 
+							content:"";
+							position: absolute;
+							left: 100%;
+							top: calc(17% - 1vh);
+							border-top: 2.5em solid transparent;
+							border-left: 1em solid rgba(0,0,0,.2);
+							border-bottom: 2.5em solid transparent;
+						}
+			.controls { display: none; padding: 1em; margin: 0 0 2em 0 !important; }
+			.mces { margin: 0 0; }
+				.mces-video { margin: 1em 0; }
+				.mces .col-md-6 { margin: 1em 0; }
+			.other-mces { padding: 1em 0 0 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; margin: 2em 0 0 0; }
+
+			.references { padding: 1em 0 0 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; margin: 2em 0 0 0; }
+				.references ol { column-count: 2; column-gap: 4em; }
+				.references li { margin: 0 0 .5em 0;}
+
+			.endmatter { font-size: 85%; padding: 1em 0 0 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; margin: 2em 0 0 0; }
+				.endmatter p { margin: 0 0 1em 0; }
+
+
+			@media (max-width: 768px) {
+				body { padding: 2em; }
+				.spectrum { background-image: linear-gradient(to bottom, #6666ff, #ff66cc); height: 30em; }
+				.circle-number { margin: 1em 0 .5em 0; }
+				.references ol { column-count: 1; column-gap: 0; }
+			}
+
+			/* print styles* */
+			@media print {
+				@page { margin: .75in; }
+				body { padding: 0; }
+				section { page-break-before: always; border: none; margin: 1em auto; }
+				h1, h2, h3, h4 { font-size: 1.3em; color: #222; }
+				h4 { font-size: 1em; color: #222; margin: 0; }
+				table th, table td { padding: .5em 0; }
+				dl { color: #222; font-size: 1em; }
+				.recommendation { color: #222; }
+				.contents { display: none; }
+				nav { display: none; }
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+	<main class="pt-5 container">
+
+		<div class="row header">
+			<h1>Comparative ASL / English Language Continuum</h1>
+			<p>This is a comparative bilingual continuum for use with Deaf and Interpreting Studies students that identifies representative relationships of artificial manual codes of English (MCEs) between American Sign Language (ASL) and English. (Although the content is at least the same as the printed version, this code is still in development)</p>
+			<p>This HTML/hypertext version (<script>document.write(new Date().getFullYear())</script>) derives from the popular<a href="#refs" class="note"></a> printed<a href="#refs" class="note"></a> version in that 1) it is quickly updated/distributed and 2) allows for additional footnoted and documented hypertexted media (research/text, video, etc.). This version also supercedes the version printed in Humphrey<sub>H</sub>, J., Clark<sub>H</sub>, L., Featherstone<sub>D</sub>, J., and Ross III<sub>H</sub>, W. F. (2020). You want to be an interpreter (5th edition). Vancouver, WA: H&H Publishing.</p> 
+			<p>All implied relationships are relative; overlapping approaches drawn for distinction and not for accuracy. (Subscripts on names (e.g., <sub>D</sub> or <sub>H</sub>) identify that an author, researcher, or creator is Deaf or hearing.)</p>
+		</div>
+
+		<div class="row definitions">
+			<div class="col">
+				<p><strong>&#8672; American Sign Language</strong></p>
+				<p><small>(principle is operational for other SLs)</small></p>
+			</div>
+			<div class="col-auto mr-auto">
+				<p><strong>English &#8674;</strong></p>
+				<p><small>(principle is operational for other SpLs)</small></p>
+			</div>
+		</div>
+
+		<div class="row col-12 spectrum-container">
+			<div class="spectrum">
+				<div class="col-5 col-3-xxl offset-md-1 approach-left">
+					<p class="text-black-50 text-uppercase">&#8672; MCE approach</p>
+					<h2 style="width: 85%">Conceptually Accurate Signed English (CASE)</h2>
+					<p style="width: 85%">Popular alternative to Signed English, sometimes called PSE (Pidgin Signed English). Combines ASL signs and semantics in an MCE form. <strong>Not a language.</strong></p>
+				</div>
+				<div class="col-5 col-3-xxl offset-md-4 approach-right">
+					<p class="text-black-50 text-uppercase">MCE approach &#8674;</p>
+					<h2>Sign Supported Speech <attr>(SSS)</attr></h2>
+					<p style="width: 100%">Voicing spoken English and signing an MCE. Sometimes called Simultaneous Communication (SimCom) or Total Communication (TC). <strong>Not a language.</strong></p>
+				</div>
+			</div>
+			<div class="col-12">
+				<div class="col-1"><p class="circle-number">1</p></div>
+				<div class="col-1 offset-md-7">
+					<p class="circle-number">2</p>
+				</div>
+				<div class="col-1 offset-md-8">
+					<p class="circle-number">4</p>
+				</div>
+				<div class="col-1 offset-md-9">
+					<p class="circle-number">3</p>
+					<p class="circle-number">5</p>
+				</div>
+				<div class="col-1 offset-md-11">
+					<p class="circle-number">6</p>
+					<p class="circle-number">7</p>
+					<p class="circle-number">8</p>
+				</div>
+			</div>
+
+			<div class="more-like">
+				<div class="col-12 text-center d-flex justify-content-between">
+					<div class="col-2 text-right">&#8672; more like ASL</div>
+					<div class="col-7"><strong>Contact signs and Manual Codes of English</strong><br>(Cokely<sub>H</sub>, 1983<a href="#refs" class="note"></a>; Lucas<sub>D</sub> & Valli<sub>D</sub>, 1989<a href="#refs" class="note"></a>; Woodward<sub>H</sub>, 1973<a href="#refs" class="note"></a>)</div>
+					<div class="col-2 text-left">more like English &#8674;</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row controls">
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked01" checked>
+				<label class="form-check-label" for="flexSwitchCheckChecked">Relative MCE placements</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked02" checked>
+				<label class="form-check-label" for="flexSwitchCheckChecked">MCE approaches</label>
+			</div>
+		</div>
+
+		<div class="row mces">	
+			<div class="col-md-6 col-xl-3">
+				<p class="circle-number">1</p>
+				<h2>American Sign Language <attr class="initialism">(ASL)</attr></h2>
+				<p>Visio-gestural, preferred, and connate language of Deaf people of the United States and Canada. Etymology and roots in:
+					<ul>
+						<li>Indigenous<a href="#refs" class="note"></a>
+							<a href="#refs" class="note"></a>
+							<a href="#refs" class="note"></a>, 
+							regional<a href="#refs" class="note"></a>
+							<a href="#refs" class="note"></a>,
+							unrecorded<a href="#refs" class="note"></a>, 
+							and unknown<a href="#refs" class="note"></a> <abbr title="Sign language variants">SLV</abbr>s
+							</li>
+						<li>Native American SLVs (Davis<sub>D</sub>, 2011<a href="#refs" class="note"></a>; )</li>
+						<li>Black SLVs (McCaskill<sub>D</sub>, Hill<sub>D</sub>, 2011<a href="#refs" class="note"></a>; )</li>
+						<li>British<a href="#refs" class="note"></a>/
+							Kentish<a href="#refs" class="note"></a>/
+							Vineyard<a href="#refs" class="note"></a>
+							SLVs (Groce<sub>H</sub>, 1985<a href="#refs" class="note"></a>; )</li>
+						<li>Mexican SLVs (Quinto-Pozos<sub>H</sub>, 2008<a href="#refs" class="note"></a>; )</li>
+						<li>French SLVs (Pelissier<sub>D</sub>, 1856<a href="#refs" class="note"></a>; Lane<sub>H</sub>, 1984<a href="#refs" class="note"></a>; )</li>
+					</ul>
+					First documented in Brown<sub>H</sub>, 1856<a href="#refs" class="note"></a> and 1860<a href="#refs" class="note"></a> (Stringham<sub>H</sub>, 2019<a href="#refs" class="note"></a>). Topic-comment grammatical structure and approach (cf. Baker<sub>H</sub> & Cokely<sub>H</sub>, 1980)<a href="#refs" class="note"></a>; utilizes code-borrowing from majority spoken language. Also called ‘the sign language’ (Veditz<sub>D</sub>, 1913)<a href="#refs" class="note"></a> and ‘Ameslan’ (Fant<sub>H</sub>, 1972)<a href="#refs" class="note"></a>.</p>
+			</div>
+			<div class="col-md-6 col-xl-3">
+				<p class="circle-number">2</p>
+				<h2>Signed English <attr class="initialism">(SE)</attr></h2>
+				<p>Simplified English-based code; only fourteen added grammatical markers.</p>
+				<p class="developed">(Developed mid-1970s, Dr Harry Bornstein<sub>D</sub>, Gallaudet College; 1983, Bornstein, Saulnier, & Hamilton)</p>
+			</div>
+			<div class="col-md-6 col-xl-3">
+				<p class="circle-number">3</p>
+				<h2>Seeing Essential English <attr class="initialism">(SEE<sub>1</sub>)</attr></h2>
+				<p>(Formerly ‘SEE<sub>1</sub>’); intended to reinforce basic English morphemic structure:
+					<ul>
+						<li>compound words are formed with separate signs (‘butter’+‘fly’)</li>
+						<li>same/one sign used for homonyms (‘bear’ and ‘bare’)</li>
+						<li>heavy use of initialization (haVe)</li>
+						<li>affixes, articles, and ‘to be’ (copula) verb added </li>
+					</ul>
+					<p class="developed">(Developed 1966<a href="#refs" class="note"></a>, David Anthony<sub>D</sub>, Gallaudet College)</p>
+				</p>
+			</div>
+			<div class="col-md-6 col-xl-3">
+				<p class="circle-number">4</p>
+				<h2>Signing Exact English <attr class="initialism">(SEE<sub>2</sub>)</attr></h2>
+				<p>(Formerly ‘SEE<sub>2</sub>’); similar to SEE<sub>1</sub> but:
+					<ul>
+						<li>compound words are conceptually accurate (‘butterfly,’ not ‘butter’+ ‘fly’)</li>
+						<li>more ASL signs (one sounded word = one sign)</li>
+						<li>at least seventy artificial and invented signs and affixes added to this system </li>
+					</ul>
+					<p class="developed">(Developed 1972<a href="#refs" class="note"></a>, Dr Gerilee Gustason<sub>D</sub>)</p>
+				</p>
+			</div>
+			<div class="col-md-6 col-xl-3">
+				<p class="circle-number">5</p>
+				<h2>Linguistics of Visual English <attr class="initialism">(LOVE)</attr></h2>
+				<p>Visual recording system based on Seeing Essential English (SEE<sub>1</sub>)<a href="#refs" class="note"></a>. Used Stokoe Notation System (tab-dez-sig; Stokoe, 1960<a href="#refs" class="note"></a>; Stokoe<sub>H</sub>, Casterline<sub>D</sub>, & Croneberg<sub>D</sub>, 1965)<a href="#refs" class="note"></a> to codify. Defunct.</p>
+					<ul>
+						<li></li>
+						<li></li>
+					</ul>
+					<p class="developed">(Developed 1972, Dennis Wampler<sub>D</sub>)</p>
+				</div>
+			<div class="col-md-6 col-xl-3">
+				<p class="circle-number">6</p>
+				<h2>Rochester Method</h2>
+				<p>Each lexical unit produced using the manual alphabet.<a href="#refs" class="note"></a> Extensively used in schools for the deaf in the late 19th century. Sometimes used in tactile/deaf-blind signing situations; some Deaf adults still use this method. Parodied in deaf literature and narratives<a href="#refs" class="note"></a>.</p>
+				<p class="developed">(Developed 1878, Zenas Westervelt<sub>D</sub>, Western New York Institute for Deaf-Mutes, later Rochester School for the Deaf)</p>
+			</div>
+			<div class="col-md-6 col-xl-3">
+				<p class="circle-number">7</p>
+				<h2>Written English</h2>
+				<p></p>
+			</div>
+			<div class="col-md-6 col-xl-3">
+				<p class="circle-number">8</p>
+				<h2>Spoken English</h2>
+				<p></p>
+			</div>
+		</div>
+
+		<div class="row other-mces">
+			<h3>Other/Historical Manual Codes for English</h3>
+			<div class="row">
+				<div class="col-md-6 col-xl-3">
+					<p class="circle-number">9</p>
+					<h2>Cued Speech <attr class="initialism">(CS)</attr></h2>
+					<p><strong>Not a signed language.</strong> Combines eight arbitrary handshapes and four locations to visually and phonetically represent English.</p>
+					<p class="developed">(Developed 1966<a href="#refs" class="note"></a>, Dr Robert Cornett<sub>H</sub>, Gallaudet College)</p>
+				</div>
+				<div class="col-md-6 col-xl-3">
+					<p class="circle-number">10</p>
+					<h2>Paget-Gorman Signed Speech <attr class="initialism">(PGSS)</attr></h2>
+					<p><strong>Not a signed language.</strong> British-based pantomimic, morphological based manual system. First experimental teaching of the system in 1964 with a group of deaf adults; PGSS first conceptualized in Britain in 1934 as a systematic pantomimic sign language whereby each word would have its own sign, with the signs presented in the same sequence as the words in the phrases or sentences to be signed. Now used primarily with people who have aphasias and speech disabilities.</p>
+					<p class="developed">(Developed 1934<a href="#refs" class="note"></a>, Sir Richard Paget<sub>H</sub>)</p>
+				</div>
+				<div class="col-md-6 col-xl-3">
+					<p class="circle-number">11</p>
+					<h2>Makaton</h2>
+					<p><strong>Not a signed language.</strong> </p>
+					<p class="developed">(Developed XXXX<a href="#refs" class="note"></a>, Dr. XXXX, Institution</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row references">
+			<h3>References</h3>
+			<ol id="refs">
+				<li><a class="back" href="#">^</a> Stringham<sub>H</sub>, D. (2019). <a href="https://www.academia.edu/40262938/Comparative_American_Sign_Language_English_Continuum_2019_">Comparative American Sign Language/English Continuum</a>. https://www.academia.edu/40262938/Comparative_American_Sign_Language_English_Continuum_2019_</li>
+				<li><a class="back" href="#">^</a> <a href="http://intrpr.info/library/stringham-asl-english-continuum.pdf">http://intrpr.info/library/stringham-asl-english-continuum.pdf</a>. Also printed in Humphrey<sub>H</sub>, J., Clark<sub>H</sub>, L., Featherstone<sub>D</sub>, J., and Ross III<sub>H</sub>, W. F. (2020). <a href="https://www.amazon.com/So-You-Want-Interpreter-5th/dp/097043555X">You want to be an interpreter (5th edition)</a>. Vancouver, WA: H&H Publishing.</li>
+				<li><a class="back" href="#">^</a> Cokley<sub>H</sub>, D. (1983). <a href="http://intrpr.github.io/library/cokely-when-is-a-pidgin-not-a-pidgin.pdf">When is a pidgin not a pidgin? An alternate analysis of the ASL-English contact situation</a>. Sign Language Studies, 38 (Spring 1983)</a>, pp. 1–24. (<a href="https://doi.org/10.1353/sls.1983.0017">doi: 10.1353/sls.1983.0017</a>) </a></li>
+				<li>Lucas<sub>H</sub>, C. and Valli<sub>D</sub>, C. (1989)</li>
+				<li>Woodward<sub>H</sub>, J. (1973)</li>
+				<li>Clark, William Philo<sub>H</sub> (1885). <a href="https://archive.org/details/cu31924028770570">The Indian sign language, with brief explanatory notes of the gestures taught deaf-mutes in our institutions for their instruction and a description of some of the peculiar laws, customs, myths, superstitions, ways of living, code of peace and war signals of our aborigines</a>. Philadelphia: L. R. Hamersly & Co.</li>
+				<li>Robinson<sub>D</sub>, O. (2019). "The 1817 Origins Myth," 30 Nov 2019; <a href="https://www.youtube.com/watch?v=8M40MarjY0c">https://www.youtube.com/watch?v=8M40MarjY0c</a></li>
+				<li>Davis<sub>D</sub>, 2011</li>
+				<li>Akamatsu<sub>H</sub>, T. (2001). Two Handed alphabet</li>
+				<li>Henniker Sign Language. Lane<sub>H</sub>, H., Pillard<sub>H</sub>, R. C., & Hedberg<sub>D</sub>, M. (2011). The people of the eye: Deaf ethnicity and ancestry. Oxford: Oxford University Press.</li>
+				<li></li>
+				<li></li>
+				<li><a class="back" href="#">^</a> Mallery<sub>H</sub>, G. (1880). <a href="">Introduction to the study of sign language among the North American Indians: as illustrating the gesture speech of mankind</a>. Washington, D.C.: Government Printing Office.</li>
+				<li></li>
+				<li>Black SLs McCaskill, Hill, Lucas</li>
+				<li>Kitzel<sub>H</sub>, M. E. (2013). Chasing ancestors: Searching for the roots of American Sign Language in the Kentish Weald, 1620–1851. Unpublilshed thesis. University of Sussex.</li>
+				<li>Lane<sub>H</sub>, H., Pillard<sub>H</sub>, R., & French<sub>H</sub>, M. (2000). Origins of the American Deaf-World: Assimilating and differentiating societies and their relation to genetic patterning. Sign Language Studies, 1(1), pp 17-44.</li>
+				<li>Groce<sub>H</sub>, N. E. (1985). Everyone here spoke sign language: Hereditary deafness on Martha's Vineyard. Cambridge, MA: Harvard University Press.</li>
+				<li></li>
+				<li>Pelissier<sub>D</sub>, P. (1856). Iconographie des signs faisant partie de l'enseignement primaire des sourds-muets. Paris: Chez L'Auteur.</li>
+				<li>Lane, H<sub>H</sub>. (1989). When the mind hears: A history of the deaf. New York: Vintage.</li>
+				<li>Brown<sub>H</sub>, J. S. (1856). <a href="http://intrpr.github.io/library/history/1856-brown-a-vocabulary-of-mute-signs.pdf">A vocabulary of mute signs</a>. Baton Rouge, LA: Daily Gazette and Morning Comet.</li>
+				<li>Brown<sub>H</sub>, J. S. (1860). <a href="http://intrpr.github.io/library/history/1860-brown-dictionary-of-signs-the-language-of-action.pdf">A dictionary of signs and of the language of action, for the use of Deaf-Mutes, their instructors and friends; and, also, designed to facilitate to members of the bar, clergymen, political speakers, lecturers, and to the pupils of schools, academies, and colleges, the acquisition of a natural, graceful, distinctive and life-like gesticulation</a>. Baton Rouge, LA: Louisiana Institution for the Deaf and Dumb and the Blind.</li>
+				<li>Stringham<sub>H</sub>, D. (2019). <a href="https://www.academia.edu/39153693/_A_Language_of_Action_James_Smedley_Brown_and_the_First_American_Dictionary_of_Sign_Language">"A Language of Action": James Smedley Brown and the First American Dictionary of Sign Language</a>. In B. Eldredge<sub>H</sub>, D. Stringham<sub>H</sub>, and B. Jarashow<sub>D</sub>. Waypoints: Proceedings of the Sixth Deaf Studies Today! Conference. Utah Valley University: Orem, Utah.</li>
+				<li></li>
+				<li>Veditz, G. (1913). Preservations of the sign language. Film. The National Association of the Deaf</li>
+				<li></li>
+				<li>Luetke-Stahlman, B. & Milburn, W. O. (1996). <a href="http://intrpr.github.io/library/luetke-stahlman-history-of-see-1.pdf">A History of Seeing Essential English (SEE I)</a>. American Annals of the Deaf, 141(1), 29–33.</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li>"Billy Kelman<sub>D</sub>," 27 Aug 2008; <a href="https://www.youtube.com/watch?v=fYAVL1Dxokk">https://www.youtube.com/watch?v=fYAVL1Dxokk</a></li>
+				<li></li>
+				<li></li>
+				<li><a href="https://en.wikipedia.org/wiki/Sir_Richard_Paget,_2nd_Baronet">Sir Richard Paget</a></li>
+				<li></li>
+			</ol>
+		</div>
+
+		<div class="row endmatter">
+			<p>All relationships relative; overlapping approaches drawn for distinction and not for accuracy.</p>
+			<p>This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 United States License. This license grants you permission to share (copy, distribute, and transmit the website) and remix (to adapt this work) under certain conditions and understandings. This license does not apply, however, to work claimed by other authors and producers. Additionally, every intent has been made to make materials available via “Fair Use,” (§107 to 118, Title 17, US Code); the content and downloadable materials on this page are solely for the benefit of the students enrolled in these courses.</p>
+			<p>©<script>document.write(new Date().getFullYear())</script> Doug Stringham, Utah Valley University; revised 2018, 2012, 2011, 2008, 2006. APA citation form: Stringham, D. (<script>document.write(new Date().getFullYear())</script>). Comparative ASL/English Language Continuum. <script>{document.write(location.href);}</script></p>
+			<!-- 
+			<p>Built with <a href="https://getbootstrap.com">Bootstrap 5</a>. <a href="https://validator.w3.org">HTML</a> | <a href="https://wave.webaim.org">WAVE WebAIM</a></p>
+			-->
+			<dl>
+				<dt>Changelog</dt>
+				<dd>26 Dec 2020: v.01; pull from Bootstrap 5 for base, custom typographic stylesheet</dd>
+				<dd>28 Dec 2020: v.02; add js solution for automatic reference numbers; don't require manual curation. Renumber themselves based on adding to the ordered list.</dd>
+				<dd>13 Jan 2021: v.03; Current iteration</dd>
+			</dl>
+			<dl>
+				<dt>Roadmap:</dt>
+				<dd>Get off Bootstrap and create simple flexbox/grid system</dd>
+				<dd>Fix mobile version; remove styling and enhance vertical design</dd>
+				<dd>Fix print version; remove unneccesary styling and fit to printed page</dd>
+				<dd>Make stylesheet consistent with rid-cpc.html, etc.</dd>
+				<dd>Add more references</dd>
+			</dl>
+		</div>
+		
+	</main>
+
+
+	<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- partial -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script>
+		$('.back').show();
+		$(".note" ).each(function( index ) {
+			$(this).attr('id','note' + index).attr('href','#fn' + index);
+		});
+		$("#refs li" ).each(function( index ) {
+			var $this = $(this);
+			$this.attr('id','fn' + index);
+			$('.back',$this).attr('href','#note' + index);
+		});
+	</script>
+	</body>
+</html>
