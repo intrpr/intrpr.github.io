@@ -11,7 +11,7 @@
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,600&display=swap');
 
-			body { padding: 2em 5em; font-family: "Open Sans", Helvetica, Arial, sans-serif; color: #222; }
+			body { padding: 2em 5em; font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Libre Franklin", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; color: #222; }
 			html { scroll-behavior: smooth; }
 			section { }
 
@@ -29,13 +29,14 @@
 			ul { margin: .5em 0 .5em -1em; }
 			dfn { font-style: normal; }
 			p, li { line-height: 1.55; margin: 0 0 .25em 0; word-break: break-word; }
-			.circle-number { font-weight: 700; font-size: 1.1rem; text-align: center; color: rgba(255,255,255,1); width: 1.6em; height: 1.6em; padding: 1em 0 0 -1em; margin: 0 0 .5em 0; background-color: rgba(0,0,0,1); border-radius: 100em; letter-spacing: -.05rem; }
+				em { font-weight: 300; }
+			.circle-number { font-weight: 700; font-size: 1.1rem; text-align: center; color: rgba(255,255,255,1); width: 1.6em; height: 1.6em; padding: 1em 0 0 -1em; margin: 0 0 .5em 0; background-color: rgba(0,0,0,.8); border-radius: 100em; letter-spacing: -.05rem; }
 			.developed { font-size: .9rem; margin: .5em 0 0 0; color: rgba(0,0,0,.5); display: inline-block; }
 			sup::before {content: "["; } 
 			sup::after {content: "]"; }
 			sup, sub { font-weight: 600; text-decoration: none; }
 			sup { font-size: .9rem; font-weight: 400; }
-			h1 { margin: 0 0 .3em 0; }
+			h1 { margin: 0 0 .3em 0; font-qqweight: 600; letter-spacing: -.01em; }
 			h2 { font-size: 1.7rem; line-height: 1.2; margin: 0 0 .3em 0; }
 			h3 { font-size: 1.4rem; margin: 0 0 1em 0; }
 			h4 { }
@@ -68,7 +69,7 @@
 				counter-increment: footnote; 
 				content: "[" counter(footnote); }
 			.note:after { content: "]"; }
-			.back { text-decoration: none; font-weight: bold;}
+			.back { text-decoration: none; font-qqweight: bold;}
 
 
 			.spectrum-container div { display: inline-block; }
@@ -209,7 +210,7 @@
 
 		<div class="row header">
 			<h1>Comparative ASL / English Language Continuum</h1>
-			<p>This is a comparative bilingual continuum for use with Deaf and Interpreting Studies students that identifies representative relationships of artificial manual codes of English (MCEs) between American Sign Language (ASL) and English. (Although the content is at least the same as the printed version, this code is still in development)</p>
+			<p>This is a comparative bilingual continuum for use with Deaf and Interpreting Studies students that identifies the diglossic<a href="#refs" class="note"></a> and representative relationships of artificial manual codes of English (MCEs) between American Sign Language (ASL) and English. (Although the content is at least the same as the printed version, this code is still in development; see changelog and roadmap at the bottom of the page.)</p>
 			<p>This HTML/hypertext version (<script>document.write(new Date().getFullYear())</script>) derives from the popular<a href="#refs" class="note"></a> printed<a href="#refs" class="note"></a> version in that 1) it is quickly updated/distributed and 2) allows for additional footnoted and documented hypertexted media (research/text, video, etc.). This version also supercedes the version printed in Humphrey<sub>H</sub>, J., Clark<sub>H</sub>, L., Featherstone<sub>D</sub>, J., and Ross III<sub>H</sub>, W. F. (2020). You want to be an interpreter (5th edition). Vancouver, WA: H&H Publishing.</p> 
 			<p>All implied relationships are relative; overlapping approaches drawn for distinction and not for accuracy. (Subscripts on names (e.g., <sub>D</sub> or <sub>H</sub>) identify that an author, researcher, or creator is Deaf or hearing.)</p>
 		</div>
@@ -388,9 +389,10 @@
 		<div class="row references">
 			<h3>References</h3>
 			<ol id="refs">
+				<li><a class="back" href="#">^</a> Riley<sub>H</sub>, B. (2011). <a href="https://www.academia.edu/2511274/The_American_Sign_Language_English_Language_Contact_Situation_with_Postscript_2011_peer_reviewed_">The American sign language–English language–contact situation</a>. <em>Lengua de Señas e Interpretación</em>, Montevideo, 2, pp 93–117.</li>
 				<li><a class="back" href="#">^</a> Stringham<sub>H</sub>, D. (2019). <a href="https://www.academia.edu/40262938/Comparative_American_Sign_Language_English_Continuum_2019_">Comparative American Sign Language/English Continuum</a>. https://www.academia.edu/40262938/Comparative_American_Sign_Language_English_Continuum_2019_</li>
 				<li><a class="back" href="#">^</a> <a href="http://intrpr.info/library/stringham-asl-english-continuum.pdf">http://intrpr.info/library/stringham-asl-english-continuum.pdf</a>. Also printed in Humphrey<sub>H</sub>, J., Clark<sub>H</sub>, L., Featherstone<sub>D</sub>, J., and Ross III<sub>H</sub>, W. F. (2020). <a href="https://www.amazon.com/So-You-Want-Interpreter-5th/dp/097043555X">You want to be an interpreter (5th edition)</a>. Vancouver, WA: H&H Publishing.</li>
-				<li><a class="back" href="#">^</a> Cokley<sub>H</sub>, D. (1983). <a href="http://intrpr.github.io/library/cokely-when-is-a-pidgin-not-a-pidgin.pdf">When is a pidgin not a pidgin? An alternate analysis of the ASL-English contact situation</a>. Sign Language Studies, 38 (Spring 1983)</a>, pp. 1–24. (<a href="https://doi.org/10.1353/sls.1983.0017">doi: 10.1353/sls.1983.0017</a>) </a></li>
+				<li><a class="back" href="#">^</a> Cokley<sub>H</sub>, D. (1983). <a href="https://www.jstor.org/stable/26203633">When is a pidgin not a pidgin? An alternate analysis of the ASL-English contact situation</a>. Sign Language Studies, 38 (Spring 1983)</a>, pp. 1–24. (<a href="https://doi.org/10.1353/sls.1983.0017">doi: 10.1353/sls.1983.0017</a>) </a></li>
 				<li>Lucas<sub>H</sub>, C. and Valli<sub>D</sub>, C. (1989)</li>
 				<li>Woodward<sub>H</sub>, J. (1973)</li>
 				<li>Clark, William Philo<sub>H</sub> (1885). <a href="https://archive.org/details/cu31924028770570">The Indian sign language, with brief explanatory notes of the gestures taught deaf-mutes in our institutions for their instruction and a description of some of the peculiar laws, customs, myths, superstitions, ways of living, code of peace and war signals of our aborigines</a>. Philadelphia: L. R. Hamersly & Co.</li>
@@ -403,17 +405,17 @@
 				<li><a class="back" href="#">^</a> Mallery<sub>H</sub>, G. (1880). <a href="">Introduction to the study of sign language among the North American Indians: as illustrating the gesture speech of mankind</a>. Washington, D.C.: Government Printing Office.</li>
 				<li></li>
 				<li>Black SLs McCaskill, Hill, Lucas</li>
-				<li>Kitzel<sub>H</sub>, M. E. (2013). Chasing ancestors: Searching for the roots of American Sign Language in the Kentish Weald, 1620–1851. Unpublilshed thesis. University of Sussex.</li>
+				<li>Kitzel<sub>H</sub>, M. E. (2013). <a href="http://sro.sussex.ac.uk/48877/">Chasing ancestors: Searching for the roots of American Sign Language in the Kentish Weald, 1620–1851</a>. Unpublilshed thesis. University of Sussex.</li>
 				<li>Lane<sub>H</sub>, H., Pillard<sub>H</sub>, R., & French<sub>H</sub>, M. (2000). Origins of the American Deaf-World: Assimilating and differentiating societies and their relation to genetic patterning. Sign Language Studies, 1(1), pp 17-44.</li>
-				<li>Groce<sub>H</sub>, N. E. (1985). Everyone here spoke sign language: Hereditary deafness on Martha's Vineyard. Cambridge, MA: Harvard University Press.</li>
+				<li>Groce<sub>H</sub>, N. E. (1985). <a href="https://www.academia.edu/28735773/Everyone_Here_Spoke_Sign_Language_Hereditary_Deafness_on_Marthas_Vineyard_Nora_Ellen_Groce">Everyone here spoke sign language: Hereditary deafness on Martha's Vineyard</a>. Cambridge, MA: Harvard University Press.</li>
 				<li></li>
 				<li>Pelissier<sub>D</sub>, P. (1856). Iconographie des signs faisant partie de l'enseignement primaire des sourds-muets. Paris: Chez L'Auteur.</li>
 				<li>Lane, H<sub>H</sub>. (1989). When the mind hears: A history of the deaf. New York: Vintage.</li>
-				<li>Brown<sub>H</sub>, J. S. (1856). <a href="http://intrpr.github.io/library/history/1856-brown-a-vocabulary-of-mute-signs.pdf">A vocabulary of mute signs</a>. Baton Rouge, LA: Daily Gazette and Morning Comet.</li>
-				<li>Brown<sub>H</sub>, J. S. (1860). <a href="http://intrpr.github.io/library/history/1860-brown-dictionary-of-signs-the-language-of-action.pdf">A dictionary of signs and of the language of action, for the use of Deaf-Mutes, their instructors and friends; and, also, designed to facilitate to members of the bar, clergymen, political speakers, lecturers, and to the pupils of schools, academies, and colleges, the acquisition of a natural, graceful, distinctive and life-like gesticulation</a>. Baton Rouge, LA: Louisiana Institution for the Deaf and Dumb and the Blind.</li>
+				<li>Brown<sub>H</sub>, J. S. (1856). A vocabulary of mute signs</a>. Baton Rouge, LA: Daily Gazette and Morning Comet.</li>
+				<li>Brown<sub>H</sub>, J. S. (1860). A dictionary of signs and of the language of action, for the use of Deaf-Mutes, their instructors and friends; and, also, designed to facilitate to members of the bar, clergymen, political speakers, lecturers, and to the pupils of schools, academies, and colleges, the acquisition of a natural, graceful, distinctive and life-like gesticulation</a>. Baton Rouge, LA: Louisiana Institution for the Deaf and Dumb and the Blind.</li>
 				<li>Stringham<sub>H</sub>, D. (2019). <a href="https://www.academia.edu/39153693/_A_Language_of_Action_James_Smedley_Brown_and_the_First_American_Dictionary_of_Sign_Language">"A Language of Action": James Smedley Brown and the First American Dictionary of Sign Language</a>. In B. Eldredge<sub>H</sub>, D. Stringham<sub>H</sub>, and B. Jarashow<sub>D</sub>. Waypoints: Proceedings of the Sixth Deaf Studies Today! Conference. Utah Valley University: Orem, Utah.</li>
 				<li></li>
-				<li>Veditz, G. (1913). Preservations of the sign language. Film. The National Association of the Deaf</li>
+				<li>Veditz<sub>D</sub>, G. (1913). Preservations of the sign language. Film. The National Association of the Deaf</li>
 				<li></li>
 				<li>Luetke-Stahlman, B. & Milburn, W. O. (1996). <a href="http://intrpr.github.io/library/luetke-stahlman-history-of-see-1.pdf">A History of Seeing Essential English (SEE I)</a>. American Annals of the Deaf, 141(1), 29–33.</li>
 				<li></li>
