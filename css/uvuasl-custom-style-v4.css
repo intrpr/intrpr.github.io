@@ -4,10 +4,9 @@
  */
 
 /*! Fontstack */
-@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,300,500,700');
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,500,700');
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
 
 html {
 	fonqqt-size: 62.5%;
@@ -70,7 +69,7 @@ h1, .h1 {
 	font-size: 3.5em;
 	line-height: 1.05;
 	font-weight: 300;
-	font-family: "Open Sans", "Poppins", "Libre Franklin", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: "Space Grotesk", "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	letter-spacing: -.02em;
 }
 .home-temp {
