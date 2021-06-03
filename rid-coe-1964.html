@@ -12,62 +12,77 @@
 
 	<meta name="theme-color" content="#fafafa">
 
-<style>
-	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,600&display=swap');
-	body { padding: 5em; font-family: "Open Sans", Helvetica, Arial, sans-serif; color: #222; }
-	html { scroll-behavior: smooth; }
-	section { }
-
-	/* https://www.codingnepalweb.com/2020/05/responsive-navigation-menu-bar-using-css-flexbox.html */
-	nav { padding: 1em; margin: 0 -1em 4em -1em; background: rgba(0,0,0,.05); }
-	nav ul { list-style: none; display: flex; flex-wrap: wrap; align-items: right; justify-content: center;padding: 0; margin: 0; }
-	nav ul li { margin: 0 .5em; }
-	nav ul li.title { flex: 1; }
-
-	@media all and (max-width: 800px) {
-		nav { padding: 1em; }
-		nav ul li { display: block; width: 100%; padding: 1em; margin: 1em 0 0 0; text-align: center; background: rgba(0,0,0,.05); }
-		nav ul li.title { background: none; padding: 0; margin: .5em 0; }
-	}
-	h1, h2, h3, h4 { line-height: 1.2; }
-	h4 { margin: 0; }
-	h2, h3 { margin: 1.5em 0 0 0; padding: 1.5em 0 0 0; border: 0; border-top: 1px solid rgba(0,0,0,.1); }
-	p, li, dd, td { line-height: 1.55; margin: 0 0 .5em 0; }
-	tr { vertical-align: top; }
-	sup { font-size: 55%; }
-	dt { font-weight: bold; float: left; width: 20%; }
-	dd { margin: 0 0 1em 25%; width: auto; }
-	dd ol, dd ul { margin: 0 0 0 -1em; }
-	.recommendation { font-weight: bold; color: #f00; }
-	table { border: none; border-collapse: collapse; margin: 0 auto 2em auto; min-width: 100%; }
-	table th { text-align: left; padding: .75em; border: none; background: #999; color: #fff; font-weight: bold; }
-	table td { padding: .5em; border: none; }
-	.task { width: 72%; }
-	.ranking { width: 4%; }
-	.contents { column-count: 2; column-gap: 2em; }
-		.contents ul { font-size: 90%; list-style: none; margin: 0 0 0 -2.6em; }
-	.endmatter { font-size: 85%; padding: 1em 0 0 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; margin: 2em 0 0 0; }
-		.endmatter p { margin: 0 0 1em 0; }
-
-	@media print {
-		@page { margin: .75in; }
-		body { padding: 0; }
-		section { page-break-before: always; border: none; margin: 1em auto; }
-		h1, h2, h3, h4 { font-size: 1.3em; color: #222; }
-		h4 { font-size: 1em; color: #222; margin: 0; }
-		table th, table td { padding: .5em 0; }
-		dl { color: #222; font-size: 1em; }
-		.recommendation { color: #222; }
-		.contents { display: none; }
-		nav { display: none; }
-	}
-</style>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,600&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+	
+		body { padding: 5vh 5vw; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Libre Franklin", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #111; font-size: 16px; hyphens: auto; }
+	
+		html { scroll-behavior: smooth; }
+		section { }
+	
+		/* https://www.codingnepalweb.com/2020/05/responsive-navigation-menu-bar-using-css-flexbox.html */
+		nav { padding: 1em; margin: 0 -1em 4em -1em; background: rgba(0,0,0,.05); }
+		nav ul { list-style: none; display: flex; flex-wrap: wrap; align-items: right; justify-content: center;padding: 0; margin: 0; }
+		nav ul li { margin: 0 .5em; }
+		nav ul li.title { flex: 1; }
+		@media all and (max-width: 800px) {
+			nav { padding: 1em; }
+			nav ul li { display: block; width: 100%; padding: 1em; margin: 1em 0 0 0; text-align: center; background: rgba(0,0,0,.05); }
+			nav ul li.title { background: none; padding: 0; margin: .5em 0; }
+		}
+		
+		h1, h2, h3 { font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Libre Franklin", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; font-weight: 700; }
+	
+		h1, h2, h3, h4 { line-height: 1.2; }
+		h4 { margin: 0; }
+		h2, h3 { margin: 1.5em 0 1em 0; padding: 1.5em 0 0 0; border: 0; border-top: 1px solid rgba(0,0,0,.1); }
+		p, li, dd, td { line-height: 1.55; margin: 0 0 .5em 0; }
+		tr { vertical-align: top; }
+		sup { font-size: 55%; }
+		dt { font-weight: bold; float: left; width: 20%; }
+		dd { margin: 0 0 1em 25%; width: auto; }
+		dd ol, dd ul { margin: 0 0 0 -1em; }
+		.recommendation { font-weight: bold; color: #f00; }
+		table { border: none; border-collapse: collapse; margin: 0 auto; min-width: 100%; }
+		td, th { overflow: hidden; padding: 1rem; word-break: normal; border: 1px solid rgba(0,0,0,.2); border-width: 1px 0 0 0; text-align: left; vertical-align: top; }
+		.task { width: 72%; }
+		.ranking { width: 4%; }
+		.contents { column-count: 2; column-gap: 2em; }
+			.contents ul { list-style: none; margin: 0 0 0 -2.6em; }
+		.endmatter { font-size: 85%; padding: 1em 0 0 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; margin: 2em 0 0 0; }
+			.endmatter p { margin: 0 0 1em 0; }
+	
+		table { border-collapse: collapse; border-spacing: 0; width: 100%; }
+		
+		ol { marqqgin: 0 0 0 -1.5em; lisqqt-style-type: decimal; }
+		.wide { width: 40%; } .narrow { width: 20%; }
+		.removed { color: rgba(0,0,0,.3); }
+		.intro { font-size: .8em; }
+		section { borqqder: 1px dotted rgba(0,0,0,.5); border-width: 4px 0 0 0; marqqgin: 0 0 1em 0; }
+		b { font-weight: bold; font-size: 1rem; color: rgba(0,0,0,1); margin: 0 .5rem 0 0; }
+	
+	
+		@media print {
+			@page { margin: .75in; }
+			body { padding: 0; }
+			section { page-break-before: always; border: none; margin: 1em auto; }
+			h1, h2, h3, h4 { font-size: 1.3em; color: #222; }
+			h4 { font-size: 1em; color: #222; margin: 0; }
+			table th, table td { padding: .5em 0; }
+			dl { color: #222; font-size: 1em; }
+			.recommendation { color: #222; }
+			.contents { display: none; }
+			nav { display: none; }
+		}
+	</style>
 
 <body>
 
 	<nav>
 		<ul>
 			<li class="title">Interpreter Codes of Conduct</li>
+			<li><a href="rid-cpc-compare.html">CoE/CPC Comparisons</a></li>
 			<li><a href="rid-cpc.html">CPC (2005)</a></li>
 			<li><a href="rid-coe-1979.html">CoE (1979)</a></li>
 			<li><a href="rid-coe-1965.html">CoE (1965)</a></li>
@@ -88,6 +103,7 @@
 	</section>
 
 	<div class="endmatter">
+		<p>Page last modified: <script>document.write(document.lastModified)</script></p>
 		<p>This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 United States License. This license grants you permission to share (copy, distribute, and transmit the website) and remix (to adapt this work) under certain conditions and understandings. This license does not apply, however, to work claimed by other authors and producers. Additionally, every intent has been made to make materials available via “Fair Use,” (§107 to 118, Title 17, US Code); the content and downloadable materials on this page are solely for the benefit of the students enrolled in these courses.</p>
 		<p>Page ©<script>document.write(new Date().getFullYear())</script> Doug Stringham, Utah Valley University; revised 2021. <script>{document.write(location.href);}</script>. APA citation form: The National Registry of Professional Interpreters and Translators for the Deaf. (1964). Code of Ethics. Muncie, Indiana: Ball State University.</p>
 		<p><a href="https://validator.w3.org">HTML</a> | <a href="https://wave.webaim.org">WAVE WebAIM</a></p>

@@ -1,0 +1,584 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<meta name="theme-color" content="#fafafa">
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,600&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+	
+		body { padding: 5vh 5vw; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Libre Franklin", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #111; font-size: 16px; hyphens: auto; }
+	
+		html { scroll-behavior: smooth; }
+		section { }
+	
+		/* https://www.codingnepalweb.com/2020/05/responsive-navigation-menu-bar-using-css-flexbox.html */
+		nav { padding: 1em; margin: 0 -1em 4em -1em; background: rgba(0,0,0,.05); }
+		nav ul { list-style: none; display: flex; flex-wrap: wrap; align-items: right; justify-content: center;padding: 0; margin: 0; }
+		nav ul li { margin: 0 .5em; }
+		nav ul li.title { flex: 1; }
+		@media all and (max-width: 800px) {
+			nav { padding: 1em; }
+			nav ul li { display: block; width: 100%; padding: 1em; margin: 1em 0 0 0; text-align: center; background: rgba(0,0,0,.05); }
+			nav ul li.title { background: none; padding: 0; margin: .5em 0; }
+		}
+		
+		h1, h2, h3 { font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Libre Franklin", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; font-weight: 700; }
+	
+		h1, h2, h3, h4 { line-height: 1.2; }
+		h4 { margin: 0; }
+		h2, h3 { margin: 1.5em 0 1em 0; padding: 1.5em 0 0 0; border: 0; border-top: 1px solid rgba(0,0,0,.1); }
+		p, li, dd, td { line-height: 1.55; margin: 0 0 .5em 0; }
+		tr { vertical-align: top; }
+		sup { font-size: 55%; }
+		dt { font-weight: bold; float: left; width: 20%; }
+		dd { margin: 0 0 .5em 25%; width: auto; }
+		dd ol, dd ul { margin: 0 0 0 -1em; }
+		.recommendation { font-weight: bold; color: #f00; }
+		table { border: none; border-collapse: collapse; margin: 0 auto; min-width: 100%; }
+		td, th { overflow: hidden; padding: 1rem; word-break: normal; border: 1px solid rgba(0,0,0,.2); border-width: 1px 0 0 0; text-align: left; vertical-align: top; }
+		.task { width: 72%; }
+		.ranking { width: 4%; }
+		.contents { column-count: 2; column-gap: 2em; }
+			.contents ul { list-style: none; margin: 0 0 0 -2.6em; }
+		.endmatter { font-size: 85%; padding: 1em 0 0 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; margin: 2em 0 0 0; }
+			.endmatter p { margin: 0 0 1em 0; }
+	
+		table { border-collapse: collapse; border-spacing: 0; width: 100%; }
+		
+		ol { marqqgin: 0 0 0 -1.5em; lisqqt-style-type: decimal; }
+		.wide { width: 40%; } .narrow { width: 20%; }
+		.removed { color: rgba(0,0,0,.3); }
+		.intro { font-size: .8em; }
+		section { border: 1px dotted rgba(0,0,0,.5); border-width: 4px 0 0 0; marqqgin: 0 0 1em 0; }
+		b { font-weight: bold; font-size: 1rem; color: rgba(0,0,0,1); margin: 0 .5rem 0 0; }
+	
+	
+		@media print {
+			@page { margin: .75in; }
+			body { padding: 0; }
+			section { page-break-before: always; border: none; margin: 1em auto; }
+			h1, h2, h3, h4 { font-size: 1.3em; color: #222; }
+			h4 { font-size: 1em; color: #222; margin: 0; }
+			table th, table td { padding: .5em 0; }
+			dl { color: #222; font-size: 1em; }
+			.recommendation { color: #222; }
+			.contents { display: none; }
+			nav { display: none; }
+		}
+	</style>
+
+<body>
+
+	<nav>
+		<ul>
+			<li class="title">Interpreter Codes of Conduct</li>
+			<li><a href="rid-cpc-compare.html">CoE/CPC Comparisons</a></li>
+			<li><a href="rid-cpc.html">CPC (2005)</a></li>
+			<li><a href="rid-coe-1979.html">CoE (1979)</a></li>
+			<li><a href="rid-coe-1965.html">CoE (1965)</a></li>
+			<li><a href="rid-coe-1964.html">CoE (1964)</a></li>
+		</ul>
+	</nav>
+
+	<h1>Comparison of NRPITD, RID, and NAD Codes of Ethics and Professional Conduct<sup style="font-weight: inherit; font-size: 60%">Beta</sup></h1>
+	
+	<section id="introduction">
+		<table>
+			<thead>
+				<tr>
+					<th class="narrow">1964</th>
+					<th class="narrow">1965</th>
+					<th class="narrow">1979</th>
+					<th class="wide">2005</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="intro">
+					<td>The newly established registry of interpreters and translators has its own code of ethics:</td>
+					<td></td>
+					<td>The Registry of Interpreters for the Deaf, Inc. has set forth the following principles of ethical behavior to protect and guide interpreters and transliterators and hearing and deaf consumers. Underlying these principles is the desire to insure for all the right to communicate. This Code of Ethics applies to all members of the Registry of Interpreters for the Deaf, Inc. and to all certified non-members.</td>
+					<td>It is the obligation of every interpreter to exercise judgment, employ critical thinking, apply the benefits of practical experience, and reflect on past actions in the practice of their profession. The guiding principles in this document represent the concepts of confidentiality, linguistic and professional competence, impartiality, professional growth and development, ethical business practices, and the rights of participants in interpreted situations to informed choice. The driving force behind the guiding principles is the notion that the interpreter will do no harm. When applying these principles to their conduct, interpreters remember that their choices are governed by a “reasonable interpreter” standard. This standard represents the hypothetical interpreter who is appropriately educated, informed, capable, aware of professional standards, and fair-minded.</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	
+	<section id="character">
+		<table>
+			<tbody>
+				<tr>
+					<td class="narrow"><b>(1964, 1.1)</b> Recognizing the invaluable influence of an interpreter in the life of a deaf person, we resolve to inject into the persons involved the highest ideals for which the association stands; to lend grace and sobriety to all our dealings, and to maintain poise and dignity under all conditions and circumstances.</td>
+					<td class="narrow"><b>(1965, 1.1)</b> The interpreter shall be a person of high moral character, honest, conscientious, trustworthy, and of emotional maturity.</td>
+					<td class="narrow"></td>
+					<td class="wide"></td>
+				</tr>
+				<tr>
+					<td><b>(1964, 1.2)</b> We resolve to exemplify loyalty and conscientiousness, and to exercise patience at all times; to keep our lives wholesome and clean; that our very presence may bring life and light to those about us; to encourage confidence and moral ethics, lend hope, and nourish faith, remembering that the eternal laws of God are the only ones under which we can truly succeed.</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	
+	
+	<section id="CPC1">
+		<table>
+			<tbody>
+				<tr>
+					<td class="narrow"></td>
+					<td class="narrow"></td>
+					<td class="narrow"></td>
+					<td class="wide"><b>(2005, 1.0)</b> Interpreters adhere to standards of confidential communication.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>Interpreters hold a position of trust in their role as linguistic and cultural facilitators of communication. Confidentiality is highly valued by consumers and is essential to protecting all involved. Each interpreting situation (e.g., elementary, secondary, and post-secondary education, legal, medical, mental health) has a standard of confidentiality. Under the reasonable interpreter standard, professional interpreters are expected to know the general requirements and applicability of various levels of confidentiality. Exceptions to confidentiality include, for example, federal and state laws requiring mandatory reporting of abuse or threats of suicide, or responding to subpoenas.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 1.2)</b> He shall guard confidential information and not betray confidences which have been entrusted to him.</td>
+					<td><b>(1979, 1.1)</b> Interpreters/transliterators shall keep all assignment-related information strictly confidential.</td>
+					<td><b>(2005, 1.1)</b> Share assignment-related information only on a confidential and “as-needed” basis (e.g., supervisors, interpreter team members, members of the educational team, hiring entities)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 1.2)</b> Manage data, invoices, records, or other situational or consumer-specific information in a manner consistent with maintaining consumer confidentiality (e.g., shredding, locked files).</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 1.3)</b> Inform consumers when federal or state mandates require disclosure of confidential information.</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	
+	<section id="CPC2">
+		<table>
+			<tbody>
+				<tr>
+					<td class="narrow"></td>
+					<td class="narrow"></td>
+					<td class="narrow"></td>
+					<td class="wide"><b>(2005, 2.0)</b> Interpreters possess the professional skills and knowledge required for the specific interpreting situation.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>Interpreters are expected to stay abreast of evolving language use and trends in the profession of interpreting as well as in the American Deaf community. Interpreters accept assignments using discretion with regard to skill, communication mode, setting, and consumer needs. Interpreters possess knowledge of American Deaf culture and deafness-related resources.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 2.1)</b> Provide service delivery regardless of race, color, national origin, gender, religion, age, disability, sexual orientation, or any other factor.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 2.2)</b> Assess consumer needs and the interpreting situation before and during the assignment and make adjustments as needed.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<p><b>(1965, 3.1)</b> The interpreter shall interpret, faithfully and to the best of his ability, always conveying the thought, intent, and spirit of the speaker.</p>
+						<p><b>(1965, 9.3)</b> Those who understand manual communication may be assisted by means of translating (rendering the original presentation verbatim), or interpreting (paraphrasing, defining, and explaining, or making known the will of the speaker without regard to the original language used).</p>
+					</td>
+					<td><b>(1979, 2.1)</b> Interpreters/transliterators shall render the message faithfully, always conveying the content and spirit of the speaker using language most readily understood by the person(s) whom they serve.</td>
+					<td><b>(2005, 2.3)</b> Render the message faithfully by conveying the content and spirit of what is being communicated, using language most readily understood by consumers, and correcting errors discreetly and expeditiously.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 2.4)</b> Request support (e.g., certified deaf interpreters, team members, language facilitators) when needed to fully convey the message or to address exceptional communication challenges (e.g. cognitive disabilities, foreign sign language, emerging language ability, or lack of formal instruction or language).</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 2.1)</b> The interpreter shall maintain an impartial attitude during the course of his interpreting avoiding interjecting his own views unless he is asked to do so by a party involved.</td>
+					<td><b>(1979, 3.1)</b> Interpreters/transliterators shall not counsel, advise or interject personal opinions.</td>
+					<td><b>(2005, 2.5)</b> Refrain from providing counsel, advice, or personal opinions.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 3.2)</b> He shall remember the limits of his particular function and not go beyond his responsibility.</td>
+					<td></td>
+					<td><b>(2005, 2.6)</b> Judiciously provide information or referral regarding available interpreting or community resources without infringing upon consumers’ rights.</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	
+	<section id="CPC3">
+		<table>
+			<tbody>
+				<tr>
+					<td class="narrow"></td>
+					<td class="narrow"></td>
+					<td class="narrow"></td>
+					<td class="wide"><b>(2005, 3.0)</b> Interpreters conduct themselves in a manner appropriate to the specific interpreting situation.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 5.1)</b> The interpreter shall adopt a conservative manner of dress upholding the dignity of the profession and not drawing undue attention to himself.</td>
+					<td></td>
+					<td>Interpreters are expected to present themselves appropriately in demeanor and appearance. They avoid situations that result in conflicting roles or perceived or actual conflicts of interest.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 3.1)</b> Consult with appropriate persons regarding the interpreting situation to determine issues such as placement and adaptations necessary to interpret effectively.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 4.1)</b> The interpreter shall recognize his own level of proficiency and use discretion in accepting assignments, seeking for the assistance of other interpreters when necessary.</td>
+					<td><b>(1979, 4.1)</b> Interpreters/transliterators shall accept assignments using discretion with regard to skill, setting, and the consumers involved.</td>
+					<td><b>(2005, 3.2)</b> Decline assignments or withdraw from the interpreting profession when not competent due to physical, mental, or emotional factors.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 3.3)</b> Avoid performing dual or conflicting roles in interdisciplinary (e.g. educational or mental health teams) or other settings.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td><b>(1979, 8.1)</b> Interpreters/transliterators, by virtue of membership or certification by the RID, Inc., shall strive to maintain high professional standards in compliance with the Code of Ethics.</td>
+					<td><b>(2005, 3.4)</b> Comply with established workplace codes of conduct, notify appropriate personnel if there is a conflict with this Code of Professional Conduct, and actively seek resolution where warranted.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 5.1)</b> The interpreter shall adopt a conservative manner of dress upholding the dignity of the profession and not drawing undue attention to himself.</td>
+					<td></td>
+					<td><b>(2005, 3.5)</b> Conduct and present themselves in an unobtrusive manner and exercise care in choice of attire.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 3.6)</b> Refrain from the use of mind-altering substances before or during the performance of duties.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 3.7)</b> Disclose to parties involved any actual or perceived conflicts of interest.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 3.8)</b> Avoid actual or perceived conflicts of interest that might cause harm or interfere with the effectiveness of interpreting services.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 7.1)</b> The interpreter shall never encourage deaf persons to seek legal other decisions in their favor merely because the interpreter is sympathetic to the handicap of deafness.</td>
+					<td></td>
+					<td><b>(2005, 3.9)</b> Refrain from using confidential interpreted information for personal, monetary, or professional gain.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 7.1)</b> The interpreter shall never encourage deaf persons to seek legal other decisions in their favor merely because the interpreter is sympathetic to the handicap of deafness.</td>
+					<td></td>
+					<td><b>(2005, 3.10)</b> Refrain from using confidential interpreted information for the benefit of personal or professional affiliations or entities.</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	
+	<section id="CPC4">
+		<table>
+			<tbody>
+				<tr>
+					<td class="narrow"></td>
+					<td class="narrow"></td>
+					<td class="narrow"></td>
+					<td class="wide"><b>(2005, 4.0)</b> Interpreters demonstrate respect for consumers.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 9.1)</b> The interpreter shall attempt to recognize the various types of assistance needed by the deaf and to do his best to meet the particular need.</td>
+					<td></td>
+					<td>Interpreters are expected to honor consumer preferences in selection of interpreters and interpreting dynamics, while recognizing the realities of qualifications, availability, and situation.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 4.1)</b> Consider consumer requests or needs regarding language preferences, and render the message accordingly (interpreted or transliterated).</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td><b>(1979, 6.1)</b> Interpreters/transliterators shall function in a manner appropriate to the situation.</td>
+					<td><b>(2005, 4.2)</b> Approach consumers with a professional demeanor at all times.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 4.3)</b> Obtain the consent of consumers before bringing an intern to an assignment.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 9.1)</b> The interpreter shall attempt to recognize the various types of assistance needed by the deaf and to do his best to meet the particular need.</td>
+					<td></td>
+					<td><b>(2005, 4.4)</b> Facilitate communication access and equality, and support the full interaction and independence of consumers.</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	
+	<section id="CPC5">
+		<table>
+			<tbody>
+				<tr>
+					<td class="narrow"></td>
+					<td class="narrow"></td>
+					<td class="narrow"></td>
+					<td class="wide"><b>(2005, 5.0)</b> Interpreters demonstrate respect for colleagues, interns and students of the profession.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>Interpreters are expected to collaborate with colleagues to foster the delivery of effective interpreting services. They also understand that the manner in which they relate to colleagues reflects upon the profession in general.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 5.1)</b> Maintain civility toward colleagues, interns, and students.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 5.2)</b> Work cooperatively with team members through consultation before assignments regarding logistics, providing professional and courteous assistance when asked and monitoring the accuracy of the message while functioning in the role of the support interpreter.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 5.3)</b> Approach colleagues privately to discuss and resolve breaches of ethical or professional conduct through standard conflict resolution methods; file a formal grievance only after such attempts have been unsuccessful or the breaches are harmful or habitual.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 5.4)</b> Assist and encourage colleagues by sharing information and serving as mentors when appropriate.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 5.5)</b> Obtain the consent of colleagues before bringing an intern to an assignment.</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	
+	<section id="CPC6">
+		<table>
+			<tbody>
+				<tr>
+					<td class="narrow"></td>
+					<td class="narrow"></td>
+					<td class="narrow"></td>
+					<td class="wide"><b>(2005, 6.0)</b> Interpreters maintain ethical business practices.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>Interpreters are expected to conduct their business in a professional manner whether in private practice or in the employ of an agency or other entity. Professional interpreters are entitled to a living wage based on their qualifications and expertise. Interpreters are also entitled to working conditions conducive to effective service delivery.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 6.1)</b> Accurately represent qualifications, such as certification, educational background, and experience, and provide documentation when requested.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 6.2)</b> Honor professional commitments and terminate assignments only when fair and justifiable grounds exist.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 6.3)</b> Promote conditions that are conducive to effective communication, inform the parties involved if such conditions do not exist, and seek appropriate remedies.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 6.4)</b> Inform appropriate parties in a timely manner when delayed or unable to fulfill assignments.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 6.5)</b> Reserve the option to decline or discontinue assignments if working conditions are not safe, healthy, or conducive to interpreting.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 6.6)</b> Refrain from harassment or coercion before, during, or after the provision of interpreting services.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 6.1)</b> The interpreter shall use discretion in the matter of accepting compensation for services and be willing to provide services in situations where funds are not available.</td>
+					<td></td>
+					<td><b>(2005, 6.7)</b> Render pro bono services in a fair and reasonable manner.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 6.1)</b> The interpreter shall use discretion in the matter of accepting compensation for services and be willing to provide services in situations where funds are not available.</td>
+					<td><b>(1979, 5.1)</b> Interpreters/transliterators shall request compensation for services in a professional and judicious manner.</td>
+					<td><b>(2005, 6.8)</b> Charge fair and reasonable fees for the performance of interpreting services and arrange for payment in a professional and judicious manner.</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	
+	<section id="CPC7">
+		<table>
+			<tbody>
+				<tr>
+					<td class="narrow"></td>
+					<td class="narrow"></td>
+					<td class="narrow"></td>
+					<td class="wide"><b>(2005, 7.0)</b> Interpreters engage in professional development.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 10.1)</b> Recognizing his need for professional improvement, the interpreter will ... (d) and develop both his expressive and his receptive skills in interpreting and translating.</td>
+					<td></td>
+					<td>Interpreters are expected to foster and maintain interpreting competence and the stature of the profession through ongoing development of knowledge and skills.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td><b>(1979, 7.1)</b> Interpreters/transliterators shall strive to further knowledge and skills through</td>
+					<td><b>(2005, 7.1)</b> Increase knowledge and strengthen skills through activities such as:</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 10.1)</b> (c) broaden his education and knowledge of life,</td>
+					<td></td>
+					<td><b>(2005, 7.1.1)</b> pursuing higher education;</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 10.1)</b> (a) join with professional colleagues for the purpose of sharing new knowledge and developments,</td>
+					<td><b>(1979, 7.1)</b> participation in workshops, professional meetings, interaction with professional colleagues</td>
+					<td><b>(2005, 7.1.2)</b> attending workshops and conferences;</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 7.1.3)</b> seeking mentoring and supervision opportunities;</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 7.1.4)</b> participating in community events; and</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td><b>(1979, 7.1)</b> and reading of current literature in the field.</td>
+					<td><b>(2005, 7.1.5)</b> engaging in independent studies.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><b>(2005, 7.2)</b> Keep abreast of laws, policies, rules, and regulations that affect the profession.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 10.1)</b> (b) to seek to understand the implications of deafness and the deaf person's particular needs,</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	
+	<section id="removed">
+		<table>
+			<tbody>
+				<tr>
+					<td class="narrow"></td>
+					<td class="narrow"><b>(1965, 8.1)</b> In the case of legal interpreting, the interpreter shall inform the court when the level of literacy of the deaf person involved is such that literal interpretation is not possible and the interpreter is having to grossly paraphrase and restate both what is said to the deaf person and what he is saying to the court.</td>
+					<td class="narrow"></td>
+					<td class="wide"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 11.1)</b> The interpreter shall seek to uphold the dignity and purity of the language of signs. He shall also maintain a readiness to learn and to accept new signs, if these are necessary to understanding.</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><b>(1965, 12.1)</b> The interpreter shall take the responsibility of educating the public regarding the deaf whenever possible recognizing that many misunderstandings arise because of the general lack of public knowledge in the area of deafness and communication of the deaf.</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<div class="endmatter">
+		<p>Page last modified: <script>document.write(document.lastModified)</script></p>
+		<p>This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 United States License. This license grants you permission to share (copy, distribute, and transmit the website) and remix (to adapt this work) under certain conditions and understandings. This license does not apply, however, to work claimed by other authors and producers. Additionally, every intent has been made to make materials available via “Fair Use,” (§107 to 118, Title 17, US Code); the content and downloadable materials on this page are solely for the benefit of the students enrolled in these courses.</p>
+		<p>Page ©<script>document.write(new Date().getFullYear())</script> Doug Stringham, Utah Valley University. APA citation form: Stringham, D. (<script>document.write(new Date().getFullYear())</script>). Comparison of Comparison of NRPITD, RID, and NAD Codes of Ethics. <script>{document.write(location.href);}</script>.</p>
+		<!-- 
+		<p>Built with <a href="https://getbootstrap.com">Bootstrap 5</a>. <a href="https://validator.w3.org">HTML</a> | <a href="https://wave.webaim.org">WAVE WebAIM</a></p>
+		-->
+		<dl>
+			<dt>Changelog</dt>
+			<dd>02 June 2021: v.01; First draft. Added to CoE/CPC documentation pages; added to navigation. Built as &#60;table&#62; and started looking for better ways(?) to make this using responsive means (tables are fluid). Need to arrange 2005 tenet/guiding principles more closely together; current layout allows for nuanced matching of subtenets, behaviors, and phrases. Added -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale to text styles. Added Space Grotesk typeface/stylesheet from <a href="http://intrpr.info/asl-english.html">http://intrpr.info/asl-english.html</a>.</dd>
+		</dl>
+		<dl>
+			<dt>Roadmap:</dt>
+			<dd>Figure out :nth-of-type() for &#60;th&#62;, &#60;td&#62;, and &#60;section&#62;</dd>
+			<dd>Nuance phrasing, tenets</dd>
+			<dd>Simple flexbox system?</dd>
+			<dd>Fix mobile version; enhance vertical design</dd>
+			<dd>Fix print version; remove unneccesary styling and fit to printed page</dd>
+		</dl>
+	</div>
+
+</body>
+
+</html>
