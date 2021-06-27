@@ -16,7 +16,7 @@
 		@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,600&display=swap');
 		@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
 	
-		body { padding: 5vh 5vw; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #111; font-size: 16px; hyphens: auto; }
+		body { padding: 5vh 5vw; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Libre Franklin", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #111; font-size: 16px; hyphens: auto; letter-spacing: .01em; }
 	
 		html { scroll-behavior: smooth; }
 		section { }
@@ -32,16 +32,17 @@
 			nav ul li.title { background: none; padding: 0; margin: .5em 0; }
 		}
 		
-		h1, h2, h3 { font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; font-weight: 700; }
+		h1, h2, h3 { font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Libre Franklin", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; font-weight: 700; }
 	
 		h1, h2, h3, h4 { line-height: 1.2; }
 		h4 { margin: 0; }
 		h2, h3 { margin: 1.5em 0 1em 0; padding: 1.5em 0 0 0; border: 0; border-top: 1px solid rgba(0,0,0,.1); }
 		p, li, dd, td { line-height: 1.55; margin: 0 0 .5em 0; }
+		blockquote { line-height: 1.55; }
 		tr { vertical-align: top; }
 		sup { font-size: 55%; }
-		dt { font-weight: bold; float: left; width: 20%; }
-		dd { margin: 0 0 .5em 25%; width: auto; }
+		dt { font-weight: bold; float: left; width: 20%; line-height: 1.55; }
+		dd { margin: 0 0 1em 25%; width: auto; }
 		dd ol, dd ul { margin: 0 0 0 -1em; }
 		.recommendation { font-weight: bold; color: #f00; }
 		table { border: none; border-collapse: collapse; margin: 0 auto; min-width: 100%; }
@@ -50,18 +51,20 @@
 		.ranking { width: 4%; }
 		.contents { column-count: 2; column-gap: 2em; }
 			.contents ul { list-style: none; margin: 0 0 0 -2.6em; }
-		.endmatter { font-size: 85%; padding: 1em 0 0 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; margin: 2em 0 0 0; }
+		.endmatter { font-size: 85%; padding: 1em 0 0 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; margin: 5vh 0 0 0; }
 			.endmatter p { margin: 0 0 1em 0; }
 	
 		table { border-collapse: collapse; border-spacing: 0; width: 100%; }
 		
 		ol { marqqgin: 0 0 0 -1.5em; lisqqt-style-type: decimal; }
-		.wide { width: 40%; } .narrow { width: 20%; }
+		.wide { width: 30%; } .narrow { width: 23%; }
 		.removed { color: rgba(0,0,0,.3); }
 		.intro { font-size: .8em; }
-		section { border: 1px dotted rgba(0,0,0,.5); border-width: 4px 0 0 0; marqqgin: 0 0 1em 0; }
+		section { borqqder: 1px dotted rgba(0,0,0,.5); border-width: 4px 0 0 0; marqqgin: 0 0 1em 0; }
 		b { font-weight: bold; font-size: 1rem; color: rgba(0,0,0,1); margin: 0 .5rem 0 0; }
-	
+		aside { margin: 0 -1em; padding: 1em 1em .75em; background: rgba(0,0,0,.05); }
+		small { font-weight: normal; }
+
 	
 		@media print {
 			@page { margin: .75in; }
@@ -90,24 +93,35 @@
 		</ul>
 	</nav>
 
-	<h1>Comparison of NRPITD, RID, and NAD Codes of Ethics and Professional Conduct<sup style="font-weight: inherit; font-size: 60%">Beta</sup></h1>
-	
+	<h1>Comparison of NRPITD, RID, and NAD Codes of Ethics and Professional Conduct<sup style="font-weight: inherit; font-size: 60%">[Beta]</sup></h1>
+	<h2>Purposes</h2>
+		<dl>
+			<dt>Identification</dt>
+			<dd>This is a comparative table of the evolution of principles and language found in the codes of ethical behavior adopted by the National Registry of Interpreters for the Deaf from 1964 to present. (Although the content is representative of the latest printed Code (2006), this code and content comparison should be considered 'in development'; see this project's changelog and roadmap below.)</dd>
+			<dt>Evolution and Comparison</dt>
+			<dd>Comparisons treat the current 2005 code tenet principles as root (far right column) and then match language and phrases from previous codes in their respective columns.</dd>
+			<dt>Documentation</dt>
+			<dd>There are numerous sites and articles across the internet that mention or discuss the evolution of RID's codes of ethical behavior (for better or worse). This compilation is intended to document this domain for students, colleagues, and other researchers and provide factual — as opposed to mythological — soil for debate on future directions for codifiying ethical behaviors in signed language interpreting.</dd>
+		</dl>
+	<p>&nbsp;</p>
+
 	<section id="introduction">
 		<table>
 			<thead>
 				<tr>
-					<th class="narrow">1964</th>
-					<th class="narrow">1965</th>
-					<th class="narrow">1979</th>
+					<th class="narrow"><p>1964 <small>14–17 Jun</small></p></th>
+					<th class="narrow"><p>1965 <small>7–27 Jul</small></p></th>
+					<th class="narrow"><p>1979 <small>Oct</small></p></th>
 					<th class="wide">2005</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr class="intro">
 					<td>The newly established registry of interpreters and translators has its own code of ethics:</td>
-					<td></td>
+					<td>Recognizing the unique position of an interpreter in the life of a deaf person, the Registry of Interpreters for the Deaf sets forth the following principles of ethical behavior which will protect both the deaf person and the interpreter in a profession that exists to serve those with a communication handicap. ¶ In the pursuit of this profession in a democratic society it is recognized that through the medium of interpreters, deaf persons can be granted equality with hearing persons in the matter of their right of communication. ¶ It is further recognized that the basic system for self-regulation governing the professional conduct of the interpreter is the same as that governing the ethical conduct of any business or profession with the addition of stronger emphasis on the high ethical characteristics of the interpreter's role in helping an oftentime misunderstood group of people. ¶ The standards of ethical practice set forth below encourage the highest standards of conduct and outline basic principles for the guidance of the interpreter.</p>
+				</td>
 					<td>The Registry of Interpreters for the Deaf, Inc. has set forth the following principles of ethical behavior to protect and guide interpreters and transliterators and hearing and deaf consumers. Underlying these principles is the desire to insure for all the right to communicate. This Code of Ethics applies to all members of the Registry of Interpreters for the Deaf, Inc. and to all certified non-members.</td>
-					<td>It is the obligation of every interpreter to exercise judgment, employ critical thinking, apply the benefits of practical experience, and reflect on past actions in the practice of their profession. The guiding principles in this document represent the concepts of confidentiality, linguistic and professional competence, impartiality, professional growth and development, ethical business practices, and the rights of participants in interpreted situations to informed choice. The driving force behind the guiding principles is the notion that the interpreter will do no harm. When applying these principles to their conduct, interpreters remember that their choices are governed by a “reasonable interpreter” standard. This standard represents the hypothetical interpreter who is appropriately educated, informed, capable, aware of professional standards, and fair-minded.</td>
+					<td>It is the obligation of every interpreter to exercise judgment, employ critical thinking, apply the benefits of practical experience, and reflect on past actions in the practice of their profession. ¶ The guiding principles in this document represent the concepts of confidentiality, linguistic and professional competence, impartiality, professional growth and development, ethical business practices, and the rights of participants in interpreted situations to informed choice. ¶ The driving force behind the guiding principles is the notion that the interpreter will do no harm. When applying these principles to their conduct, interpreters remember that their choices are governed by a “reasonable interpreter” standard. ¶ This standard represents the hypothetical interpreter who is appropriately educated, informed, capable, aware of professional standards, and fair-minded.</td>
 				</tr>
 			</tbody>
 		</table>
@@ -567,10 +581,12 @@
 		-->
 		<dl>
 			<dt>Changelog</dt>
-			<dd>02 June 2021: v.01; First draft. Added to CoE/CPC documentation pages; added to navigation. Built as &#60;table&#62; and started looking for better ways(?) to make this using responsive means (tables are fluid). Need to arrange 2005 tenet/guiding principles more closely together; current layout allows for nuanced matching of subtenets, behaviors, and phrases. Added -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale to text styles. Added Space Grotesk typeface/stylesheet from <a href="http://intrpr.info/asl-english.html">http://intrpr.info/asl-english.html</a>.</dd>
+			<dd>26 Jun 2021: v.02; added 1965 Preamble to first row. Added explanation for page.</dd>
+			<dd>02 Jun 2021: v.01; First draft. Added to CoE/CPC documentation pages; added to navigation. Built as &#60;table&#62; and started looking for better ways(?) to make this using responsive means (tables are fluid). Need to arrange 2005 tenet/guiding principles more closely together; current layout allows for nuanced matching of subtenets, behaviors, and phrases. Added -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale to text styles. Added Space Grotesk typeface/stylesheet from <a href="http://intrpr.info/asl-english.html">http://intrpr.info/asl-english.html</a>.</dd>
 		</dl>
 		<dl>
 			<dt>Roadmap:</dt>
+			<dd>Figure out { column-count: X; column-gap: Xem; } and apply to breakpoints</dd>
 			<dd>Figure out :nth-of-type() for &#60;th&#62;, &#60;td&#62;, and &#60;section&#62;</dd>
 			<dd>Nuance phrasing, tenets</dd>
 			<dd>Simple flexbox system?</dd>
