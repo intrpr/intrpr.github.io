@@ -1,0 +1,420 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<meta name="theme-color" content="#fafafa">
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,600&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+	
+		body { 
+			padding: 0;
+			margin: 0; 
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; 
+			-webkit-font-smoothing: antialiased; 
+			-moz-osx-font-smoothing: grayscale; 
+			background-color: #EEEEE8;
+			display: table;
+			color: #111; 
+			font-size: 16px; 
+			hyphens: auto; 
+			letter-spacing: .01em;
+			}
+	
+			nav, main, article { margin: 5vh 22%; }
+
+		html { scroll-behavior: smooth; }
+		section { }
+	
+		/* https://www.codingnepalweb.com/2020/05/responsive-navigation-menu-bar-using-css-flexbox.html */
+		nav { padding: 1em; margin: 0 -1em 4em -1em; background: rgba(0,0,0,.05); }
+		nav ul { list-style: none; display: flex; flex-wrap: wrap; align-items: right; justify-content: center; padding: 0; margin: 0; }
+		nav ul li { margin: 0 .5em; }
+		nav ul li.title { flex: 1; }
+		@media all and (max-width: 800px) {
+			nav { padding: 1em; }
+			nav ul li { display: block; width: 100%; padding: 1em; margin: 1em 0 0 0; text-align: center; background: rgba(0,0,0,.05); }
+			nav ul li.title { background: none; padding: 0; margin: .5em 0; }
+		}
+		
+		h1, h2, h3 { font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; font-weight: 700; }
+	
+		h1, h2, h3 { line-height: 1.2; }
+		h4, h5 { line-height: 1.5; margin: 1em 0 .25em 0; }
+		h2 { margin: 1.5em 0 1em 0; padding: 1.5em 0 0 0; border: 0; border-top: 1px solid rgba(0,0,0,.1); }
+		p, li, dd, td, figcaption, caption, blockquote { line-height: 1.55; margin: 0 0 .5em 0; }
+		blockquote { margin: 0 3vw 1vh; }
+		figcaption { color: rgba(0,0,0,.6); }
+		tr { vertical-align: top; }
+		sup { font-size: 55%; }
+		dt { font-weight: bold; float: left; width: 20%; }
+		dd { margin: 0 0 1em 25%; width: auto; }
+		dd ol, dd ul { margin: 0 0 0 -1em; }
+		.recommendation { font-weight: bold; color: #f00; }
+		table { border: none; border-collapse: collapse; margin: 0 auto; min-width: 100%; }
+		td, th { overflow: hidden; padding: 1rem; word-break: normal; border: 1px solid rgba(0,0,0,.2); border-width: 1px 0 0 0; text-align: left; vertical-align: top; }
+		.task { width: 72%; }
+		.ranking { width: 4%; }
+		.contents { column-count: 2; column-gap: 2em; }
+			.contents ul { list-style: none; margin: 0 0 0 -2.6em; }
+		.endmatter { font-size: 85%; padding: 1em 0 0 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; margin: 2em 0 0 0; }
+			.endmatter p { margin: 0 0 1em 0; }
+
+		img { width: 100%; margin: .5em 0;}
+	
+		table { border-collapse: collapse; border-spacing: 0; width: 100%; }
+		figure { width: 100%; margin: 1em 0; padding: 0; text-align: left;}
+		
+		ol { marqqgin: 0 0 0 -1.5em; lisqqt-style-type: decimal; }
+		.wide { width: 40%; } .narrow { width: 20%; }
+		.removed { color: rgba(0,0,0,.3); }
+		.intro { font-size: .8em; }
+		section { borqqder: 1px dotted rgba(0,0,0,.5); border-width: 4px 0 0 0; marqqgin: 0 0 1em 0; }
+		b { font-weight: bold; font-size: 1rem; color: rgba(0,0,0,1); margin: 0 .5rem 0 0; }
+	
+		footer { background: rgba(0,0,0,.1); padding: .002vh 0; }
+	
+		@media print {
+			@page { margin: .75in; }
+			body { padding: 0; }
+			section { page-break-before: always; border: none; margin: 1em auto; }
+			h1, h2, h3, h4 { font-size: 1.3em; color: #222; }
+			h4 { font-size: 1em; color: #222; margin: 0; }
+			table th, table td { padding: .5em 0; }
+			dl { color: #222; font-size: 1em; }
+			.recommendation { color: #222; }
+			.contents { display: none; }
+			nav { display: none; }
+		}
+	</style>
+
+<body>
+
+
+	<main>
+		<nav>
+			<ul>
+				<li class="title">Thesis</li>
+				<li><a href="#">Chapter 1</a></li>
+				<li><a href="#">Chapter 2</a></li>
+				<li><a href="#">Chapter 3</a></li>
+				<li><a href="#">Chapter 4</a></li>
+				<li><a href="#">Chapter 5</a></li>
+			</ul>
+		</nav>
+
+		<header> <!-- The <header> element represents a group of introductory or navigational aids and usually contains the section’s heading http://html5doctor.com/ -->
+			<h1>The Efficacy of Small Multiples in The Visual Language of Instructional Designs</h1>
+			<p></p>
+			<p></p>
+		</header>
+		<details>
+			<summary style="margin: 0 0 1em 0;">Table of Contents</summary>
+			<div class="contents">
+				<ul>
+					<li><a href="#applicability">Applicability</a></li>
+					<li><a href="#definitions">Definitions</a></li>
+					<li><a href="#scope">Scope</a></li>
+					<li><a href="#philosophy">Philosophy</a></li>
+					<li><a href="#voting">Voting Protocol</a></li>
+					<li><a href="#adoption">Adoption of this Code of Professional Conduct</a></li>
+					<li><a href="#tenetsguidingprinciples">Tenets and Guiding Principles</a></li>
+					<li><a href="#1confidentiality">1.0 Confidentiality</a></li>
+					<li><a href="#2professionalism">2.0 Professionalism</a></li>
+					<li><a href="#3conduct">3.0 Conduct</a></li>
+					<li><a href="#4respectconsumers">4.0 Respect for Consumers</a></li>
+					<li><a href="#5respectcolleagues">5.0 Respect for Colleagues</a></li>
+					<li><a href="#6businesspractices">6.0 Business Practices</a></li>
+					<li><a href="#7professionaldevelopement">7.0 Professional Development</a></li>
+				</ul>
+			</div>
+		</details>
+
+		<h2 id="">Chapter 1: Introduction</h2>
+		<blockquote>A single image is okay. But that same image, when multiplied a number of times, is often irresistible. — Bob Gill</blockquote>
+
+		<h3>A Medieval Pedagogical Tale</h3>
+		<aside class="left" style="font-style: italic; font-weight: 400; font-size: 92%; line-height: 1.5; position: absolute; text-align: right; left: 8%; color: red; width: 10em;">One of the legacies of the influential English Benedictine monk Bede was De computo vel loquela per gestum digitorum (“On Calculating and Speaking with the Fingers”), first published in 725 ad.</aside>
+		<p>One of the legacies of the influential English Benedictine monk Bede was De computo vel loquela per gestum digitorum (“On Calculating and Speaking with the Fingers”), first published in 725 ad. Actually a prelude to his larger work, De temporum rationae, Bede’s dactyological system contains the only complete manual counting system in existence (Menninger, 1992) and for nearly eight hundred years, its instruction remained only accessible in its original textual form:</p>
+		<ul style="list-style: none;">
+			<li>¶ Here foloweth the table of the arte of the hande</li>
+			<li>In which as you may se 1 is expressed by ye lyttle fynger of ye lefte hande closely and harde croked.</li>
+			<li>2 is declared by lyke bowynge of the weddynge fynger (whiche is the nexte to the lyttell fynger) together with the lytell fynger.</li>
+			<li>3 is signified by the myddle fynger bowed in lyke maner, with those other two.</li>
+			<li>4 is declared by the bowyng of the myddle fynger and the rynge fynger, or weddynge fynger, with the other all stretched forth.</li>
+			<li>5 is represented by the myddle fynger onely bowed.</li>
+			<li>And 6 by the weddynge fynger only crooked: and this you may marke in these a certayne order. But now 7, 8, and 9, are expressed with the bowynge of the same fyngers as are 1, 2, and 3, but after an other fourme.</li>
+			<li>For 7 is declared by the bowynge of the lytell fynger, as is 1, saue that for 1 the fynger is clasped in, harde and rounde, but for to expresse 7, you shall bowe the myddle ioynte of the lytell fynger only, and holde the other ioyntes streyght.</li>
+			<li>S. Yf you wyll geue me leue to expresse it after my rude maner, thus I vnderstand your meanyng: that 1 is expressed by crookynge in the lyttell fynger lyke the head of a bysshoppes bagle [crozier]: and 7 is declared by the same fynger bowed lyke a gybbet.</li>
+			<li>M. So I perceaue, you vnderstande it.</li>
+			<li>Then to expresse 8, you shall bowe after the same maner both the lyttell fynger and the rynge fynger.</li>
+			<li>And yf you bowe lyke wayes with them the myddle fynger, then doth it betoken 9.</li>
+			<li>Now to expresse 10, you shall bowe your fore fynger rounde, and set the ende of it on the hyghest ioynte of the thombe. (The arte of nombrynge by the hande, 1916)</li>
+		</ul>
+		<p>The reader here may find, in an attempt to parse Bede’s instructions, that he or she is tempted to reproduce the pronunciation of the described handshapes. Bede’s original system, while an important step in connecting the cognitive and physiological, lacked an integral component to its instructional design: a visual representation layer (Gibbons, 2003). How are these descriptions of handshapes to be executed? How would one know if there was error in their articulation? Bede’s method was reproduced in 1494 by Italian mathematician Luca Pacioli (Summa de Arithmetica, 1494; Figure 1), again in the 18th century by German physicist Jacob Leupold (Theatrum arithmetica-geometricum, 1724; Figure 2), and finally in an unattributed 20th century mathematics compendium (The arte of nombrynge by the hand, 1916; Figure 3). Notably, however, these reproductions did not rely solely on Bede’s original text, but instead added diagrams to their interpretations of the original dactyological system.</p>
+		<p>These reproductions of Bede’s original written system are highly significant. His original system and descriptions become much more salient when they are replaced by (or at least paired with) visual representations that help reduce the amount of memory capacity required to learn and store the information (van Merriënboer & Sweller, 2005). These diagrammatic approaches are superior for at least two vital reasons.</p>
+		<p>One, they reduce extraneous cognitive load (additional required cognitive processing because of the manner in which instruction is presented; discussed in greater depth in Chapter 2), or remove irrelevant barriers that are “imposed purely because of the design and organization of the learning materials rather than the intrinsic nature of the task” (Sweller & Chandler, 1994, p. 192). In other words, a difficult-to-parse textual description is replaced with an at-once perceptible visual representation of the task or process.</p>
+
+		<figure> <!-- The spec describes <figure> as being some flow content, optionally with a caption, that is self-contained and is typically referenced as a single unit from the main flow of the document. If it’s a purely presentational image and not referenced elsewhere in the document, then it’s definitely not a <figure> http://html5doctor.com/ -->
+			<img src="">
+			<figcaption>Figure 1. Distinctio fecunda tractatus quartus in Summa de Arithmetica, Luca Pacioli (1494).</figcaption>
+		</figure>
+		<figure>
+			<img src="">
+			<figcaption>Figure 2. Der alten finger rechnung in Theatrum arithmetica-geometricum, Jacob Leupold (1724).</figcaption>
+		</figure>
+		<figure>
+			<img src="">
+			<figcaption>Figure 3. The arte of nombrynge by the hande, Unknown (1916).</figcaption>
+		</figure>
+
+		<p>Two, and most notably for this study, the illustrations are arranged in such as way as to saliently indicate the rhetorical differences between each of the dactyological positions.</p>
+
+		<section>
+			<ul>
+				<li><img src=""><br>caption</li>
+				<li><img src=""><br>caption</li>
+				<li><img src=""><br>caption</li>
+				<li><img src=""><br>caption</li>
+				<li><img src=""><br>caption</li>
+			</ul>
+		</section>
+		<figure>
+			<img src="https://www.researchgate.net/profile/Doug-Stringham/publication/333150034/figure/fig3/AS:759307742220290@1558044481789/A-recomposed-small-multiple-comprising-images-from-e-arte-of-nombrynge-by-the-hande-and_W640.jpg">
+			<figcaption>Figure 4. A recomposed small multiple comprising images from The arte of nombrynge by the hande and text from Bede's De computo vel loquela per gestum digitorum.</figcaption>
+		</figure>
+
+		<p>In Figure 4, ‘1’ is understood as different than ‘2,’ ‘3,’ ‘4,’ or ‘5’ because they are visually distinct yet spatially relevant; the linear and spatial proximity of the images creates a before-and-after experience where a learner comes to understand that “‘1’ looks like this and ‘2’ looks like that; therefore, these must be different.” This instructional strategy of clarifying and defining the rhetorical relationships of objects by using numerous similarly sized comparative illustrations is called small multiples.</p>
+
+		<h3>Questions Addressed In This Study</h3>
+		<p>This study seeks to answer questions posed by instructional designers about the identity and utility of small multiples in instructional designs.</p>
+		<h4>What are small multiples?</h4>
+		<p> Small multiples are not just an arranged series of personable images; they are, quite literally, packed with far more than the sum of their respective parts. Small multiples might be more clinically defined as a holistic (or Gestaltian) visual representation tactic constructed of multiple homogeneous units arranged to reveal salient comparisons in data presentation, visualization, and pedagogy:</p>
+		<blockquote>At the heart of quantitative reasoning is a single question: Compared to what? Small multiple designs, multivariate and data bountiful, answer directly by visually enforcing comparisons of changes, of the differences among objects, of the score of alternatives.... Constancy of design puts the emphasis on changes in data, not changes in data frames. (Tufte, 1990, p. 67)</blockquote>
+		<p>Small multiples are most recently and famously discussed in data scientist Edward Tufte’s work on information design and visualization techniques (Tufte, 1983, 1990, 1997). Most notably, in each volume, Tufte reinforces that small multiples help readers and learners focus on the pedagogically-rich crevasses between data images: the patterns and changes and rhetorical differences between data points. In short, the real value of small multiples lies not in the actual images themselves — the what and the when — but in the differences between the images — the how and the why:</p>
+		<blockquote>An economy of perception results; once viewers decode and comprehend the design for once slice of data, they have familiar access to data in all the other slices. This constancy of design allows viewers to focus on changes in information rather than changes in graphical composition. (Tufte, 1990, p. 29)</blockquote>
+		<p>All small multiples at their very essence, then, are comparative devices, and are used (unwittingly or purposefully) in many familiar and common visual representations. To wit: the five-day forecast and the baseball scorecard.</p>
+		<h5>The five-day forecast.</h5>
+		<p>Since the 1970s, viewers of television news programs have watched (and arguably, shaped) the presentation of visual weather pattern predictions.</p>
+		<figure>
+			<img src="">
+			<figcaption>Figure 5. An example of modern five-day forecast television graphic, depicting meteorological conditions and high/low temperatures (in ˚F).</figcaption>
+		</figure>
+
+		<p>Through the use of a simple small multiple representation, meteorologists and visual information designers have evolved what used to be a lengthier recitation of potential weather conditions into an easily and visually processed two-minute visual soundbite known as the five-day forecast. This small multiple-based pictorial depiction of weather is far more efficacious than a traditional serial outlining of data because</p>
+		<ul>
+			<li>cognitively, presented data are reduced to the minimum linguistics needed to communicate expected conditions, and consequently, the data representation is more concise and less hampered by additional cognitive load (cf. Sweller, 2002);</li>
+			<li>learners see data contextualized in both a familiar (timeline) and desired (“What do I need to know for Wednesday?”) temporal presentation of events;</li>
+			<li>learners can make inferences about adjacent changes (e.g., comparisons) in weather events (“What was the weather like before X and what will it be like after Y?”) and can construct contingencies for their behavior;</li>
+			<li>renderings of the meteorological pictograms communicate implicit rhetoric about and juxtaposition within the conditions; in traditional color psychology, orange and yellow communicate happiness and warmth (doubtless because of their physical inspirations) while blues and grays communicate water, coolness, and quiet.</li>
+			<li>Though five-day forecast visuals may vary in temporal, picto-iconic, and other constituent considerations, their operational small multiple principles win out in providing cognitive advantage while maintaining instructional density.</li>
+		</ul>
+		<h5 id="the-baseball-scorecard-">The baseball scorecard.</h5>
+		<p>Invented in 1863 by baseball writer and marketer Henry Chadwick (Dickson, 2007), scorecards are baseball’s Rosetta Stone; scorecard code linguists can operationally trace and retrace the steps in any baseball narrative. Indeed, in the absence of video or audio ubiquitous in the 21st century, any game — the mundane or thrilling alike — can be codified and recreated using small multiples.
+		<p>In this case, these small multiples visually recreate the afternoon’s hidden narrative; a reader of the scorecard in Figure 6 can deduce that the Oakland team started the game with very little result and progress but, as visually noted by the density and similarity of the multiples captured in the fourth, fifth, and sixth innings, this flurry of activity resulted in six runs for the home team. Similarity and adjacency in the representation of each step help the viewer perceive, unpack, and then recreate high-context temporal narrative and progress.</p>
+		<figure>
+			<img src="https://www.researchgate.net/profile/Doug-Stringham/publication/333150034/figure/fig4/AS:759307742224384@1558044481830/Detail-of-Oakland-As-team-scorecard-Toronto-Blue-Jays-at-Oakland-As-July-29-2006_W640.jpg">
+			<figcaption>Figure 6. Detail of Oakland A’s team scorecard, Toronto Blue Jays at Oakland A’s, July 29, 2006. ©boxscorejr.com via Creative Commons BY-NC-SA 2.0.</figcaption>
+		</figure>
+
+		<h4 id="how-do-small-multiples-function-">How do small multiples function?</h4>
+		<p>Research into the use of graphics in instructional designs clearly shows that instructional (and visual) designers cannot effectively create designs without understanding how visuals syntactically fit into their pedagogical aims (Winn, 1989; Englehardt, 2002). That is, semantically, how do images and graphics fit into the visual linguistics of instructional designs? Small multiples not only visually command cognitive load, they also grammatically function as adpositionals in a visual language: they identify, differentiate, and make visually explicit the relationships of learning objects to each other. Chapter 2 of this study explores how small multiples have had historical efficacy in instructional graphics and imagery as well as how small multiples can leverage pedagogical, psychological, and cognitive advantages in contemporary instructional designs.</p>
+		<h4 id="why-should-instructional-designers-care-about-small-multiples-">Why should instructional designers care about small multiples?</h4>
+		<p>Figures 1 through 6 demonstrate the potential to strengthen pedagogical effectiveness not only by proactively using visuals in (cf. Duchastel, 1980; Pettersson, 2002) (or, in some cases, even in place of) text, but also by using visuals in specific arrangements to encourage specific outcomes. Though small multiples have been rigorously discussed and applied in other fields (cartography: MacEachren, 1995; interaction and user experience design: Tidwell, 2006, 2011; and geology: Clary, 2003), historically, the visualization strategy of small multiples (Tufte, 1983, 1990, 1997) has been typically used only to identify a genre of illustrative display. There continues to be, however, a dearth in the instructional and instructional message design literature concerning the cognitive and pedagogical benefits of using small multiples in the visual representation of instructional materials.</p>
+		<p>Drawing, then, on a critical review of literature and author analysis, this thesis aims to construct a set of tactics for small multiples usage that instructional designers can use in their work to decrease cognitive load, improve learning material aesthetic, and enhance learner perception and comprehension of instructional content and subject matter. These tactics can be constructed by culling the existing literature and better understanding how small multiples have historically been referred to and implemented in academic and nonacademic applications and how small multiples are cognitively processed and interpreted.</p>
+
+		<h2 id="chapter-2-literature-review">Chapter 2: Literature Review</h2>
+		<p>In order to help existing references to and historical usage of small multiples to be more easily and cogently digested, five broad categories of literature — historical references of small multiples, usage of graphics in instructional situations, cognitive load and cognition, Gestaltian theory and saliency, and animation — are proposed for consideration. These groupings help designers and researchers see strengths and weaknesses of small multiples application as well as help them capture salient purposes in these devices: historical treatment (and mistreatment), pedagogical and cognitive advantages, and psychological and graphical advantageousness.</p>
+
+		<h3 id="historical-examples-of-small-multiples">Historical Examples of Small Multiples</h3>
+		<p>Instructional designers can learn about the strategic and tactical benefits of small multiples by observing examples of this technique in historical contexts.</p>
+
+		<h4 id="classic-depictions-of-small-multiples-">Classic depictions of small multiples.</h4>
+		<p>Certainly scholar and educator Edward Tufte is credited with coining the contemporary moniker small multiples (Tufte, 1983, 1990, 1997). However, this type of visual approach is not a novel discovery or phenomenon only discovered in the 20th century. With the invention of relief (or woodblock) printing in the late 14th century, illustration styles shifted from a traditional Medieval iconic flat two-dimensional light-and-shadow modality (Figure 7) to that of functional — and instructionally-motivated — monolithic line art (Figure 8). The repeatable offset printing processes invented by Gutenberg, et al. in the mid-15th century fueled an increased demand for literacy, and, as a result, rudimentary instructional texts began to emerge, composing explanatory texts with, for the first time, inline illustrations (Meggs, 1983).
+		The result is a visually distinctive, unambiguous, and easily accessible communication of information. These first “block books” simply yet visually instructed learners about topics such as death preparation, religious doctrine, and trade performance. Initially these books were single-pane, still life renderings, but as demand for instructional communication increased and information design became more sophisticated, illustrators endowed their images to capitalize on the ability to display multiple tasks in multiple frames, and the flat icon style of the pre-1400s gradually faded from popularity (Meggs, 1983). Artistic, interpretive depictions gave way — for a time, at least — to information design.</p>
+		<figure>
+			<img src="">
+			<figcaption>Figure 7. Folios 9 (verso) and 10 (recto) of the Stockholm Codex Aureus (Codex Aureus of Canterbury), mid-eighth century.</figcaption>
+		</figure>
+		<figure>
+			<img src="">
+			<figcaption>Figure 8. Formschneider in Ständebuch, Jost Amman (1568).</figcaption>
+		</figure>
+		
+		<h5 id="macvlae-in-sole-apparentes-observatae-">Macvlae in sole apparentes observatae.</h5>
+		<p>Pacioli (1494) and Leupold’s (1724; cf. Tufte, 1990) small multiple renderings of Bede’s eighth-century manual counting system have been chronicled in Chapter 1. Two pre-Renaissance representations of small multiples can be found in Christopher Scheiner’s Macvlae in sole apparentes observatae (1612; Figure 9) and Christiaan Huygens’ Systema Saturnium (1659; Figure 10). Scheiner’s 1612 rendering chronicles sunspot activity and their relative composition over a 37-day period from October to December 1611. The first row of ten images in Schreiner’s small multiples portrayal impressively depicts not only the rotation of the sun during this period (as seen by the slight successive horizontal movement of the sunspot groupings), but also the relationship, variability, and overall trace placement of the other observed spots.</p>
+		<figure>
+			<img src="https://www.researchgate.net/profile/Doug-Stringham/publication/333150034/figure/fig5/AS:759307742224385@1558044481923/Macvlae-in-sole-apparentes-observatae-Christopher-Scheiner-1612_W640.jpg">
+			<figcaption>Figure 9. Macvlae in sole apparentes observatae, Christopher Scheiner (1612).</figcaption>
+		</figure>
+
+		<h5 id="systema-saturnium-">Systema Saturnium.</h5>
+		<p>Dutch astronomer Christiaan Huygens’ Systema Saturnium actually demonstrates two sets of small multiples: an inner ellipse, which shows, over the course of 16 undetermined time periods (perhaps lunar months or a zodiacal correlation), how Saturn appears to an earthbound viewer; and an outer ellipse which depicts how Saturn looks from deeper space. Tufte (1990) has remarked that this small multiple design is “superior” (p. 67) because its depicts not only 32 Saturn images but also their individual rhetorical relationships to each other. </p>
+		<figure>
+			<img src="https://www.researchgate.net/profile/Doug-Stringham/publication/333150034/figure/fig6/AS:759307746430976@1558044482002/Systema-Saturnium-Christiaan-Huygens-1659_W640.jpg">
+			<figcaption>Figure 10. Systema Saturnium, Christiaan Huygens (1659).</figcaption>
+		</figure>
+
+		<p>Tufte (1997) also points out that Huygens’ multivariate diagram “depict[s] motion” (p. 108). Because each rendering represents snapshots in an uninterrupted series, the reader is left to “interpolate between images, closing up the gaps” (p. 108). Herein lies their efficiency to prompt higher-order thinking: small multiples leverage learners’ abilities to make inferences and create connection between snapshots.</p>
+		<h5 id="atlas-universel-d-histoire-et-de-geographie-">Atlas universel d’histoire et de geographie.</h5>
+		<p>One of the more visually striking historical examples of small multiples is found in French scholar Henri Duval’s 1834 Atlas universel d’histoire et de geographie anciennes et modernes, de mythologie, des religions, d’astronomie, de physique, de geologie, de histoire naturelle, de grammaire, de rhetorique &amp;. Duval packed a wealth of general world knowledge into a collegiate textbook/atlas, but he visually arranged the information using small multiples techniques. Two plates in particular depict (like Huygens) astronomical views of the Earth and moon relative to the larger bodies they orbit, and a remarkable color plate of the relative sizes of 51 winged insects and multipedes. While the Tableau d’Astronomie et de Sphère displays expected rhetorical, positional, temporal relationships between astronomical objects, it is the Tableau d’histoire naturelle which is unique in its use of small multiples.</p>
+		<figure>
+			<img src="https://www.researchgate.net/profile/Doug-Stringham/publication/333150034/figure/fig7/AS:759307746418688@1558044482068/Tableau-dHistoire-Naturelle-Annelides-Crustaces-Arachnides-etc-detail-Henri_W640.jpg">
+			<figcaption>Figure 11. Tableau d’Histoire Naturelle: Annelides, Crustaces, Arachnides, etc. (detail), Henri Duval (1834). David Rumsey Map Collection.</figcaption>
+		</figure>
+
+		<p>Figures 9 and 10 display multiple images of homogenous sizes; Pacoli’s dactyology, the five-day forecast iconography, and Schreiner’s sun renderings all show images that are near to exact the same dimensions, the more orthodox interpretation of Tufte (1990). Figure 11 from Duval (1834), however, successfully uses heterogeneously sized small multiples to interpret the explicit rhetorical relationships of the insects.</p>
+		<figure>
+			<img src="https://www.researchgate.net/profile/Doug-Stringham/publication/333150034/figure/fig8/AS:759307746418689@1558044482143/Sallie-Gardner-at-a-Gallop-or-e-Horse-in-Motion-Eadweard-Muybridge-1878_W640.jpg">
+			<figcaption>Figure 12. “Sallie Gardner at a Gallop,” or “The Horse in Motion,” Eadweard Muybridge (1878).</figcaption>
+		</figure>
+
+		<h5 id="sallie-gardner-at-a-gallop-">Sallie Gardner at a Gallop.</h5>
+		<p>Arguably one of the most iconic small multiples of the past 150 years is the photographic series captured in 1878 by Eadweard Muybridge entitled “Sallie Gardner at a Gallop,” or “The Horse in Motion.” Enlisted to settle the then-popular dispute over whether a horse, in full gallop, was ever truly aloft, Muybridge devised a clever rigging of wires and a dozen cameras to capture multiple images of a horse’s locomotion (Leslie, 2001).</p>
+		<p>The resulting image from Muybridge’s “Gallop” rendering (as well as the lesser-known 1887 Daisy Plate 640 photograph) is a classic small multiple. To be sure, only one photograph (top row, second or third from left) was needed to simply answer the question: “yes, at some point, all four legs are clearly elevated.” But this comparative composition of 12 sequential and adjacent images not only provides the scientist with rhetorical salience — that X shares some kind of relationship with Y — it also yields the viewer a pedagogical experience: how and why and when X and Y are related.</p>
+		<p>Although de Souza &amp; Dyson (2007) counter that “Gallop” may offer some images that are too similar in nature (that is, some of the differences and comparisons in the 12 images are perhaps too discrete, e.g., plates seven and eight and one and ten), they still concede that “Gallop” explicates adjacency, trace, and procedure in a way that “make[s] instruction easier to understand” (p. 4).</p>
+
+		<h5 id="a-case-of-mislabeling-">A case of mislabeling.</h5>
+		<p>Prolific 19th-century geologist and cartographer Henri de la Beche produced dozens of illustrations for numerous European periodicals, government documents, and field notebooks (Clary, 2003) from 1819 to 1855. Many of his works were explicitly detailed and multivariate; de la Beche’s renderings are considered a watershed moment in the visual representation of geological concepts. 
+		Although Clary labels these representations “small multiple formats” (Clary, 2003, p. 170) and even qualifies Plate 3 (Figure 13) as a “pseudo small multiple format” (p. 175), here Clary’s identification of the images as small multiples is in error because de la Beche’s renderings deviate from the Tuftian definition of small multiples in at least two respects:</p>
+		<figure>
+			<img src="">
+			<figcaption>Figure 13. “Plate 3” from Sections and views, illustrative of geological phænomena, Henri De la Beche (1830).</figcaption>
+		</figure>
+
+		<figure>
+			<img src="">
+			<figcaption>Figure 14. “Figure 34: Section Across a Southern Part of the Black Down Hills,” Researches in theoretical geology, Henri De la Beche (1837)</figcaption>
+		</figure>
+
+		<ol>
+			<li>though it can be argued that the illustrations are multivariate (there is taxonomy, as evidenced by the bottom-anchored color legend, and hierarchies of labeling) and indeed “small” and “multiple,” the renderings do not demonstrate trace or adjacency, important for drawing comparisons and rhetorical relationships — as evidenced in the Muybridge sample — between X and Y.</li>
+			<li>most importantly, the renderings neither reference nor compare the same subject matter. Figure 34 from de le Beche (1837) more closely implies that the subject matter is similar in rendering style and label placement. (On closer inspection, however, the reader will discern three discrete geologic examples.)</li>
+		</ol>
+
+		<p>While de la Beche’s works are not as orthodox to the Tuftian small multiples definition as Pacioli (1494) or Scheiner (1612), they might be arguably closer to Duval’s (1834) Tableau d’histoire naturelle methodology: arranging heterogenously-sized and/or heterogenously-semantic concepts can still produce a small multiples-like representation. However, this misunderstanding of de la Beche’s work as small multiples “formats” (Clary, 2003) is typical of similar contemporary representation styles (“this illustration uses several small images, therefore, these are small multiples”) and is symptomatic of the periodic misuse of this device (see Russell, 2002 below).</p>
+
+		<h3 id="contemporary-depictions-and-applications-of-small-multiples-">Contemporary depictions and applications of small multiples.</h3>
+		<p>Similar to their historical counterparts, modern-day visualization practitioners also routinely use small multiples in their data displays.</p>
+
+		<h4 id="cartographic-data-consumers-">Cartographic data consumers.</h4>
+		<p>Researchers working with geographic visualization (GViz) tools and representation often cite the use of small multiples as effective comparative devices in map creation and review. Although MacEachren (1995) and other colleagues somewhat demur over the effectiveness of small multiples in the specific display of multivariate global model-derived data, they do concur that small multiples are almost always cognitively beneficial for users and scientists of cartography. “Side-by-side compar[ative] map pairs” (p. 402), as MacEachren terms them, are particularly suited to parsing “size and color value variation[s] at fixed locations” (p. 402) and viewing larger four-by-four matrices of controlled multivariate data points.</p>
+		<p>Similarly, Fabrikant et al. (2008) refer to several studies that analyze the effectiveness of animation and small multiples, particularly Slocum, et al. (2004) who found that</p>
+		<blockquote>map animations and small multiples are best used for different tasks. The former are more useful for inspecting the overall trend in time-series data, the latter for comparisons of various stages at different time steps (p. 202).</blockquote>
+		<p>Fabrikant, et al. argue for a concept of inference affordance in the measurement of effectiveness of visual displays. Inference affordance mingles assessments of diagrams’ informational equivalence (that information from one illustration can be concluded from another like illustration) and computational equivalence (that information from one illustration can “easily and quickly” be inferred as with another like illustration) as identified by Simon and Larkin (1987). When compared with animation displays, for example, Fabrikant et al. found that, contingent on the design and arrangement of the frames, small multiples are very effective in helping readers and viewers draw accurate inferences about the data they hold.</p>
+
+		<h4 id="interaction-and-user-experience-practitioners-">Interaction and user experience practitioners.</h4>
+		<p>Professionals working in interaction design (IxD), human-computer interaction (HCI), user experience (UX) design, and information architecture (IA) have routinely advocated for small multiples — under a variety of names and labels: “thumbnails,” “grid view,” among others — on websites and visualizations that visually taxonomize multiple products or multiple categories of like information.</p>
+		<p>Alongside several online interaction design pattern repositories (welie.com, developer.yahoo.com/ypatterns, ui-patterns.com, and others), Tidwell (2006, 2011) extols the virtues of small multiples as efficient organizational, display, and compositional devices for use in interactive (i.e., web- and app-based) applications. In Tidwell (2011), at least seven interaction design patterns — Picture Manager, Sequence Map, Grid of Equals, Thumbnail Grid, Carousel, Filmstrip, and Thumbnail-and-Text List — are, in actuality, simply expanded variations of small multiples. Tidwell recommends that the “grid of equals,” for example, be used when a</p>
+		<blockquote>page contains many content items that have similar style and importance, such as news articles, blog posts, products, or subject areas....[this presents the] viewer with rich opportunities to preview and select these items. [italics added] (p. 149) 
+		Additionally, Tidwell comments on the aesthetic appeal to small multiples, explaining that designers should “use a consistent, richly-styled template for all the items in a list....Grids look neat, ordered, and calming. That may suit the style of your site or app” (p. 149).</blockquote>
+		<figure>
+			<img src="https://www.researchgate.net/profile/Doug-Stringham/publication/333150034/figure/fig9/AS:759307746414592@1558044482236/Example-of-Grid-of-Equals-interaction-design-pattern-C2011-Jenifer-Tidwell_W640.jpg">
+			<figcaption>Figure 15. Example of “Grid of Equals” interaction design pattern. ©2011 Jenifer Tidwell.</figcaption>
+		</figure>
+
+		<h4 id="marginal-and-or-unsound-references-to-small-multiples-">Marginal (and/or unsound) references to small multiples.</h4>
+		<p>Other professions and areas of study also mention small multiples in their proposed visualization techniques but they typically do so either parenthetically or, as discussed earlier in the case of de la Beche’s renderings (Clary, 2003), inaccurately. </p>
+
+		<h5 id="business-data-">Business data.</h5>
+		<p>To his credit, Brath (1999) dedicates a fair amount of time in suggesting small multiples as a visualization strategy in displaying business (financial and economic) data, including a handful of Tufte’s definitions of the device as guideline. Brath recommends that small multiples, “at least for simple generalized forms, have the capacity to rapidly convey existence or omission of a feature” (p. 113) (a strategy also raised in this thesis). Brath, however, in making the case for effective business visualizations, reminds and explains not much more than that one should “use small multiples to visually convey multivariate data” (p. 152). Interestingly, the diagrams that Brath uses to demonstrate small multiples, while they do contain multivariate components, are very liberal interpretations of the device. Several diagrams have occluded or unparsable data (compounded by complex z-index layering) and do not create favorable conditions for comparison, adjacency, or rhetorical juxtaposition.</p>
+
+		<h5 id="scientific-data-">Scientific data.</h5>
+		<p>Wimsatt (1990) posits that, because it is often more compelling to see examples than try to describe them, “data in science” (p. 111) would benefit greatly from targeted visualization efforts. He suggests a scaled taxonomy of five approaches — ranging from simple nonvisual examples to multiple dimensional views of phenomena (or “chaos”) — including an approach that visualizes “multidimensional heuristics of the visual system” (p. 113). Among other suggested “multidimensional heuristics,” representation devices such as Chernoff face matrices (Chernoff, 1973) and motion lines on stick figures (based on Marey, 1895) are small multiples. Wimsatt plainly describes these as “small graphs [that] are ordered in a row or rows according to the values of one or two additional parameters” (p. 115) and then displays one small multiples image (from Tufte, 1983, p. 42). (Interestingly, before moving to the next approach in his taxonomy, Wimsatt suggests that an alternative use of the images would be to animate them in a flipbook or multicell style. Animations and their cognitive impacts are discussed later in this chapter.)</p>
+
+		<h5 id="computer-science-and-software-development-">Computer science and software development.</h5>
+		<p>Conway (2007) suggests the use of small multiples “in data or charts or other forms [as] promoted by folks like visualization guru Edward Tufte” (p. 1). Additionally, he references “data visualization guru” Stephen Few’s definition of small multiples as “a series of small graphs that can be used to make comparisons without resorting to 3-D graphs, which are difficult to read” (p. 1; cf. Brath, 1999). It is peculiar that, in every case in Conway’s paper, he demonstrates the result of his proposed programmatic small multiple solutions only as a series of five bar or line graphs, each with at least twelve variables, never deviating.</p>
+
+		<h5 id="military-">Military.</h5>
+		<p>A unique reference to small multiples is found in Russell (2002). In a display of multivariate data from a network designed to “analyz[e]...communication time delays (communications latencies) inherent to...simulated JDN [joint data network] message traffic” (p. 1) of a missile defense system, Russell suggests showing data using small multiples because, according to his reading of Tufte (1983), “graphics can be shrunk way down” (p. 1).</p>
+		<p>(It should be noted here that, although this is exactly what Tufte says (p. 169), this is not to what he is referring. Tufte uses this language to explain an axiom he entitles “The Shrink Principle.” He postulates that “many data graphics can be reduced in area to half their current published size with virtually no loss in legibility and information” (p. 169). However, at this point in his text, Tufte has not even discussed small multiples; he uses this “shrunk way down” language to explain how to maximize data density in a graphic, not to comment on the economy of small multiples.)</p>
+		<p>Russell’s proposal contains seven pages of time delay data arranged in eighty-percent sized box plot charts, but doesn’t give any indication to their relevance or relationship to each other. It might be surmised that the chart comparisons may already be contextualized for this audience, but the reader is left to wonder the reasoning behind citing small multiples as an efficacious display technique for the data.</p>
+
+		<h4 id="summary-">Summary</h4>
+		<p>This review of historical references illuminates three important observations: (1) while small multiples do have historical precedent (that is to say, their efficiencies are notably useful); (2) many contemporary references to small multiples largely tout their notion but not their function; and (3) consequently, there is a need to promote best practice applications of small multiples in pedagogical materials.</p>
+		<h3 id="graphics-and-visuals-in-instructional-situations">Graphics and Visuals in Instructional Situations</h3>
+		<p>Certainly as a reaction to evolving learning styles of the past thirty years, both psychology and instructional message design literature support the competent use of illustrations in instructional materials.</p>
+		<h4 id="advance-organizers-">Advance organizers.</h4>
+
+		<p><mark></mark></p>
+		<dl>
+			<dt></dt>
+			<dd></dd>
+		</dl>
+		<figure>
+			<img src="">
+			<figcaption></figcaption>
+		</figure>
+	</main>
+
+	<footer>
+		<article>
+			<p>Page last modified: <script>document.write(document.lastModified)</script></p>
+			<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 United States License</a>. This license grants you permission to share (copy, distribute, and transmit the website) and remix (to adapt this work) under certain conditions and understandings. This license does not apply, however, to work claimed by other authors and producers. Additionally, every intent has been made to make materials available via “Fair Use,” (§107 to 118, Title 17, US Code); the content and downloadable materials on this page are solely for the benefit of the students enrolled in these courses.</p>
+			<p>Page ©<script>document.write(new Date().getFullYear())</script> Doug Stringham, Utah Valley University; revised 2020, 2019. APA citation: Stringham, D. (<script>document.write(new Date().getFullYear())</script>). h1 title. Website. <script>{document.write(location.href);}</script>. <a href="https://www.scribbr.com/apa-citation-generator/new/webpage/">Get citation help from Scribbr</a>.</p>
+			<p><a href="https://validator.w3.org">HTML</a> | <a href="https://wave.webaim.org">WAVE WebAIM</a></p>	
+		</article>
+	</footer>
+
+</body>
+
+</html>
+
+<!-- architecture
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<style>
+		</style>
+	</head>
+
+	<body>
+		<nav>
+			<ul>
+				<li></li>
+			</ul>
+		</nav>
+		<main>
+			<article>
+				<header>
+					<h1></h1>
+				</header>
+				<details>
+					<summary></summary>
+					<p></p>
+				</details>
+				<h2></h2>
+				<blockquote></blockquote>
+				<p></p>
+				<ul>
+					<li></li>
+				</ul>
+				<aside></aside>
+				<h3></h3>
+				<p><mark></mark></p>
+				<dl>
+					<dt></dt>
+					<dd></dd>
+				</dl>
+				<figure>
+					<img src="">
+					<figcaption></figcaption>
+				</figure>
+			</article>
+		</main>
+		<footer>
+			<article>
+			</article>
+		</footer>
+	</body>
+</html>
+-->
