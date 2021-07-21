@@ -46,12 +46,14 @@
 			nav ul li.title { background: none; padding: 0; margin: .5em 0; }
 		}
 		
-		h1, h2, h3 { font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; font-weight: 700; }
+		h1, h2, h3 { font-family: "Space Gqqrotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; font-weight: 700; }
 	
 		h1, h2, h3 { line-height: 1.2; }
+		h3 { font-style: italic; }
+		h1, h3 { font-weight: 800; letter-spacing: -.01rem; }
 		h4, h5 { line-height: 1.5; margin: 1em 0 .25em 0; }
 		h2 { margin: 1.5em 0 1em 0; padding: 1.5em 0 0 0; border: 0; border-top: 1px solid rgba(0,0,0,.1); }
-		p, li, dd, td, figcaption, caption, blockquote { line-height: 1.55; margin: 0 0 .5em 0; }
+		p, li, dd, td, figcaption, caption, blockquote { line-height: 1.58; margin: 0 0 .5em 0; }
 		blockquote { margin: 1vh 3vw 1vh; }
 		figcaption { color: rgba(0,0,0,.6); }
 		tr { vertical-align: top; }
@@ -61,7 +63,7 @@
 		dd ol, dd ul { margin: 0 0 0 -1em; }
 		.recommendation { font-weight: bold; color: #f00; }
 		table { border: none; border-collapse: collapse; margin: 0 auto; min-width: 100%; }
-		td, th { overflow: hidden; padding: 1rem; word-break: normal; border: 1px solid rgba(0,0,0,.2); border-width: 1px 0 0 0; text-align: left; vertical-align: top; }
+		td, th { overflow: hidden; padding: .5em; word-break: normal; border: 1px solid rgba(0,0,0,.2); border-width: 1px 0 0 0; text-align: left; vertical-align: top; }
 		.task { width: 72%; }
 		.ranking { width: 4%; }
 		.contents { column-count: 2; column-gap: 2em; }
@@ -69,15 +71,17 @@
 		.endmatter { font-size: 85%; padding: 1em 0 0 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; margin: 2em 0 0 0; }
 			.endmatter p { margin: 0 0 1em 0; }
 
-		img { width: 100%; margin: .5em 0;}
+		img, video { width: 100%; margin: 1em 0; }
+			.full { width: 100%; }
+			.half { width: 49%; margin-right: 1.5em; float: left; }
 	
-		table { border-collapse: collapse; border-spacing: 0; width: 100%; }
-		figure { width: 100%; margin: 1em 0; padding: 0; text-align: left; }
+		table { border-collapse: collapse; border-spacing: 0; width: 100%; margin: 2em 0 0 0; }
+		figure { width: 100%; margin: 0 0 4vh; padding: 0; text-align: left; }
 		
 		details { padding: 2vh 0; margin: 2vh 0; border: 1px double rgba(0,0,0,.2); border-width: 3px 0; }
 		.contents { margin: 2vh 0 0 0; }
 
-		.deck { font-size: 120%; line-height: 1.7rem; }
+		.deck { font-size: 125%; line-height: 1.75rem; }
 		
 		ol { marqqgin: 0 0 0 -1.5em; lisqqt-style-type: decimal; }
 		.wide { width: 40%; } .narrow { width: 20%; }
@@ -86,6 +90,8 @@
 		section { borqqder: 1px dotted rgba(0,0,0,.5); border-width: 4px 0 0 0; marqqgin: 0 0 1em 0; }
 		b { font-weight: bold; font-size: 1rem; color: rgba(0,0,0,1); margin: 0 .5rem 0 0; }
 	
+		.references li { list-style: none; text-indent: -2.5em; }
+
 		footer { background: rgba(0,0,0,.1); padding: .002vh 0; }
 	
 		@media print {
@@ -104,8 +110,13 @@
 
 <body>
 
+	<img src="https://miro.medium.com/max/1800/1*N7Pnjg63ZtMC_eQU-HRGQA.jpeg">
 
 	<main>
+		<figure>
+			<figcaption>"Alumni reunion, ‘Ladies’ Group’, Indiana State School for the Deaf, June 6, 1908, old Institution grounds named ‘Willard Park’, May 29, 1908." [<a href="https://historicindianapolis.com/then-and-now-the-old-deaf-school-and-willard-park-1901-e-washington-street/">Historic Indianapolis.com: "Then and Now: The Old Deaf School and Willard Park 1901 E. Washington Street"</a>]</figcaption>
+		</figure>
+
 		<nav>
 			<ul>
 				<li class="title">Thesis</li>
@@ -147,24 +158,23 @@
 		<p class="deck">James Smedley Brown was a meteoric yet overlooked figure in mid-nineteenth century American Deaf education. Inspired by his wife’s familial deafness, he burst on the scene as an instructor at the Ohio Institution for the Education of the Deaf and Dumb in 1841 and, by the time he left the profession, served as the superintendent of two schools for the Deaf, contributed to the emerging national deaf education dialogue, and pioneered vocational education in asylums and institutions for the Deaf in the Midwestern and Southeastern United States.</p>
 		<p class="deck">Although his professional career lasted only twenty years, his contributions were publicly noted by his professional peers and beloved by his students and their communities, but remain largely unknown to history. Most notably, Brown’s two attempts at signed language dictionaries in 1856 and 1860 would be the first — and for almost fifty years, the only — published reference works on the developing sign language in the United States, pushing back the timeline of exploring lexemic parameters an entire century before Stokoe, Casterline, and Cronenberg.</p>
 
-		<h2 id="">Labels and Contexting</h2>
+		<h2 id="labels-and-contexting">Labels and Contexting</h2>
 		<p>In this paper, the historical terms “deaf-mute,” “deaf and dumb,” or “mutes” which Deaf people of the late nineteenth and early twentieth century were regularly called, are analogous to the contemporary term “Deaf.” Though “deaf-mute” and “deaf and dumb” are, without doubt, anachronistic and offensive today, I maintain historicity here where necessary because the people included in this narrative used these labels eponymously. Additionally, “institution” and “asylum” are vestigial and authentic — yet now disrespectful — descriptions from a time when boarded education carried a much diferent connotation.</p>
-		<p>And, while the modern descriptor “American Sign Language” or “ASL” has been in use since the 1960s, during the late nineteenth and early twentieth centuries, neither these terms nor any of their associated political connotations existed. The roughly historical equivalent term during this time period would have been “signs” or “the sign language.” The earliest attempts at formally naming an American sign language don’t even appear until the late twentieth century (cf. Stokoe, Casterline, & Cronenberg, 1965 and Fant, 1972); contemporary to this time period of this paper, authors refer to the “language of signs” (Gallaudet, 1848), “signs” (Ayres, 1849), and “the sign language” (Rae, 1850; cf. Baynton, 2002).</p>
+		<p>And, while the modern descriptor “American Sign Language” or “ASL” has been in use since the 1960s, during the late nineteenth and early twentieth centuries, neither these terms nor any of their associated political connotations existed. The roughly historical equivalent term during this time period would have been “signs” or “the sign language.” The earliest attempts at formally naming an American sign language don’t even appear until the late twentieth century (cf. Stokoe, Casterline, &amp; Cronenberg, 1965 and Fant, 1972); contemporary to this time period of this paper, authors refer to the “language of signs” (Gallaudet, 1848), “signs” (Ayres, 1849), and “the sign language” (Rae, 1850; cf. Baynton, 2002).</p>		
 			<aside class="left" style="font-style: italic; font-weight: 400; font-size: 92%; line-height: 1.5; position: absolute; text-align: right; left: 8%; color: red; width: 10em;">&#x25B6; One of the legacies of the influential English Benedictine monk Bede was De computo vel loquela per gestum digitorum (“On Calculating and Speaking with the Fingers”), first published in 725 ad.</aside>
 		<p>In the instances where signed lexemes and their semantics are discussed, I follow the traditional convention of capitalizing an English word which is a near equivalent to the sign’s meaning (e.g. WOMAN or LIBRARY).</p>
-
-		<h2>Family and Schooling</h2>
+		
+		<h2 id="family-and-schooling">Family and Schooling</h2>
 		<p>Born in Royalton, New York on 10 September 1819 to Nehemiah and Lydia (née Worcester) Brown, James was the youngest of four surviving children; of the eight born to his parents, three sisters and one brother died shortly afer birth or in infancy (Wood, 2012). Brown was the grandson of Revolutionary War patriots and renowned New England Universalist/Unitarian pastor and pacifist Dr. Noah Worcester, Jr. (cf. Ware, 1845; Sprague, 1865).</p>
 		<p>The Brown family moved from New Hampshire to New York in the late 1810s (Census, 1810) and eventually to the Connecticut Western Reserve of northeastern Ohio in the late 1820s (Census, 1820; Wood, 2012). James was closest to his older brother Rollin who survived adolescence; the two of them attended secondary and post-secondary schooling together, co-enrolled at the then newly-founded Oberlin Collegiate Institute (now Oberlin College).</p>
 			<aside class="right" style="font-style: italic; font-weight: 400; font-size: 92%; line-height: 1.5; position: absolute; text-align: left; right: 8%; color: red; width: 10em;">&#x25C0; One of the legacies of the influential English Benedictine monk Bede was De computo vel loquela per gestum digitorum (“On Calculating and Speaking with the Fingers”), first published in 725 ad.</aside>
 		<p>It is still unclear where Brown exactly graduated from university and received his teaching credentials although he initially enrolled at Oberlin as a summer term student in 1834 (Oberlin, 1834) and was listed as a preparatory (Oberlin, 1835), freshman (Oberlin, 1836), and sophomore student through 1838 (Oberlin, 1838); Brown also enrolled in 1837 at The Huron Institute (later Western Reserve Normal School) as a preparatory student in its Classical Department (Huron Institute, 1837). There currently is no extant record of his graduation from Oberlin or Huron/Western Reserve (Oberlin, 1909; Hofman, 2012).</p>
 		
-
-		<h2>Introduction to the Parks and Deafness</h2>
+		<h2 id="introduction-to-the-parks-and-deafness">Introduction to the Parks and Deafness</h2>
 		<p>Sometime in 1839, Brown met Teresa (Terrissa or Terrisa) Maria Park, the third of ten children born to Elah and Elizabeth (née Moon) Park. In 1815, Elah had, like the Browns, lef Massachusetts to purchase land and settle in the relatively new Connecticut Western Reserve of northeastern Ohio; he soon became a prominent leader in the area, specifically in Avon in Lorain County. By 1819, Elizabeth’s father Abraham, along with his brothers Amos, Oliver, and Lodowick (Lodowich), had also lef Massachusetts to settle in Lorain County (Wright, 1916).</p>
 		<p>Born 10 October 1818 in Avon (Brown, 1873), Teresa’s pedigree would prove to directly influence her to-be husband James’ work for the remainder of their lives. Park’s oldest brother Plumb (b. 12 December 1816; Avon, Lorain, Ohio) and younger sister Alice (b. 8 June 1833; Avon, Lorain, Ohio) were Deaf (ancestry.com, 2009a, 2009b), and it is likely that Teresa, though her siblings attended school one hundred and fifty miles south in Columbus, had exposure to signed language and would have at least have a gesture-based relationship with her Deaf older brother and younger sister, uncles, aunts, and cousins.</p>
-		<p>Plumb, deafened at five months from “swelling under [the] ears” and a student at the Ohio Institution beginning in 1830, graduated in 1836 and took employment as a carpentry instructor at the school from 1838 to 1840. Afer a four-year hiatus, he returned to the Ohio Institution in 1844 and remained an influential instructor and member of the Columbus Deaf community for the next forty years, eventually retiring in 1883 and relocating to California (Ohio School for the Deaf, 1898). Park’s younger sister and Brown’s new sister-in-law Alice, born deaf, entered the Ohio Institution in 1843 and graduated in 1851 (ancestry.com, 2009b).</p>
-		<p>James and Teresa were married 23 February 1840 in Avon (Ohio County Marriages, 1789–1994), and they soon moved to Columbus, Brown taking a teaching position at the Ohio Institution for the 1841–1842 school year (Fifteenth Report, 1842). Brown’s new relationship to the Deaf-World was not limited, however, to his new bride and his direct in-laws. Plumb’s wife Charlotte Peck and sisters were also deaf (ancestry.com, 2009a) and Alice’s husband Martin Marshall Hanson, a bright young teacher (and future Brown recruit and colleague), further strengthened the circle of Deaf adults around Brown (ancestry.com, 2009b).</p>
+		<p>Plumb, deafened at five months from “swelling under [the] ears” and a student at the Ohio Institution beginning in 1830, graduated in 1836 and took employment as a carpentry instructor at the school from 1838 to 1840. After a four-year hiatus, he returned to the Ohio Institution in 1844 and remained an influential instructor and member of the Columbus Deaf community for the next forty years, eventually retiring in 1883 and relocating to California (Ohio School for the Deaf, 1898). Park’s younger sister and Brown’s new sister-in-law Alice, born deaf, entered the Ohio Institution in 1843 and graduated in 1851 (ancestry.com, 2009b).</p>
+		<p>James and Teresa were married 23 February 1840 in Avon (Ohio County Marriages, 1789–1994), and they soon moved to Columbus, Brown taking a teaching position at the Ohio Institution for the 1841–1842 school year (Fifteenth Report, 1842). Brown’s new relationship to the Deaf-World was not limited, however, to his new bride and his direct in-laws. Plumb’s wife Charlotte Peck and sisters were also deaf (ancestry.com, 2009a) and Alice’s husband Martin Marshall Hanson, a bright young teacher (and future Brown recruit and colleague), further strengthened the circle of Deaf adults around Brown (ancestry.com, 2009b).</p>		
 		<p>Plumb and Alice’s deafness was congenital through their mother Elizabeth Moon; a review of Plumb’s, Alice’s, and several other 1890 federal U.S. Special Census on Deaf Family Marriages and Hearing Relatives self-disclosures indicate cousin and marriage relationships to at least seven other Deaf families in Ohio, Iowa, and beyond (ancestry.com, 2009c, 2009d, 2009e; cf. Figure 1). Along with his in-law families (and Plumb, who it appears to have helped Brown gain employment at the Ohio Institution in 1841), Brown also had exposure to at least twelve to fourteen other Deaf relatives. The Deaf community welcome mat rolled out and a position at the school procured, the Browns began their new life together in Columbus in the fall.</p>
 
 		<figure>
@@ -172,35 +182,49 @@
 			<figcaption>Figure 1. James’ wife Theresa had two direct Deaf siblings (Plumb, Alice), second maternal cousins (Robert, Carrie Lorena), and additional Deaf relations by marriage. The Browns and Parks interacted with no less than seven Midwestern and Southern Deaf families (Peck, Reed1, Townsend, Hanson, Moon, Reed2, and Webb; there are additional Deaf in-laws [Edwards, Cubberly] noted in the tree and other cousins not mentioned here); James’ career in Deaf education was likely influenced by these associations. (This tree is not representative of all family members; dozens have been removed for space and illustrative purposes. ) Key to symbols: hearing male, hearing female, n Deaf male, ● Deaf female. Solid shapes indicate self-declared deafness at birth; diagonal lines indicate self-declared deafness caused by illness. Dotted lines around shape indicate deaf-blindness (Webb and Moon families), likely caused by consanguinity.</figcaption>
 		</figure>
 
-		<h2>The Teaching Years: Ohio, Indiana, and Louisiana</h2>
+		<h2 id="the-teaching-years-ohio-indiana-and-louisiana">The Teaching Years: Ohio, Indiana, and Louisiana</h2>
+		<figure class="full">
+			<img src="https://everybody.si.edu/sites/default/files/styles/overlay/public/PL4.jpg?itok=5JJ7Xah7">
+			<figcaption><a href="https://osd.ohio.gov/wps/portal/gov/osd/about/history">The Ohio Institution for the Education of the Deaf and Dumb</a>, founded in 1826 as the 'Asylum,' changed to the 'Institution' in 1827</figcaption>
+		</figure>
 		<p>After three years of experience at the Ohio Institution, involvement in a professional teachers’ association in Columbus (Lee, 1892), and the receipt of a master’s degree between 1842 and 1844 (Eighteenth Annual Report, 1844), in a somewhat controversial move, Brown was recruited by the board of trustees of the newly-formed Indiana Asylum for the Education of the Deaf and Dumb and promoted over the then-current deaf superintendent, William Willard, to “take charge of the Institution” (First Annual Report, 1844) for the 1844–1845 school year. The Ohio Institution Board of Trustees recommended Brown as “distinguished” and “certif[ied in]…his success as a teacher of mutes, and his thorough qualification in every respect for the responsible station he proposes to fill” (Circular of the Trustees, 1844, p. 3–4).</p>
-		<p>In Brown’s first post to a school superintendency, he set himself apart by accelerating school campus building, increasing enrollment, and educating the Board about the cognitive efficacy and ability of Deaf students. Working with his deaf colleague William Willard, the two grew Asylum enrollment from thirty-five pupils in 1845–1846 to one hundred and seventy-two students in 1851–1852. Under Brown and Willard, the Indiana State Legislature appropriated three thousand dollars to procure a one-hundred and twenty-two acreplot on Indianapolis’ east side for a new campus to be completed in October 1850 (Seventh Annual Report, 1850), just in time for the school year.</p>
+		<figure class="half">
+			<img src="http://www.historicindianapolis.com/images/stories/nowtrmk/then-now/061611/image4.jpg">
+			<figcaption>The land procured with three thousand dollars from the state legislature, the Indiana School was designed and contracted by Superintendent Brown and Mr. Willard. "In 1849 the state hired architect Joseph Willis to design and build this structure east of town." <a href="https://www.world-on-paper.com/product-page/copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-201">The school campus bisected Old Washington Road and Mr. Willard's farm was located on the northwest quadrant of the campus</a>.</figcaption>
+		</figure>
+		<p>In Brown’s first post to a school superintendency, he set himself apart by accelerating school campus building, increasing enrollment, and educating the Board about the cognitive efficacy and ability of Deaf students. Working with his deaf colleague William Willard, the two grew Asylum enrollment from thirty-five pupils in 1845–1846 to one hundred and seventy-two students in 1851–1852. Under Brown and Willard, the Indiana State Legislature appropriated three thousand dollars to procure a one-hundred and twenty-two acre plot on Indianapolis’ east side for a new campus to be completed in October 1850 (Seventh Annual Report, 1850), just in time for the school year. </p>
 		<p>Brown used his Superintendent Reports in the school’s annual report to the Trustees and state legislature to educate them on the “happiness [found in] ... a community of deaf and dumb organized for instruction” (Fifth Annual Report, 1848, p. 9) and the importance of trade education for deaf mutes (Seventh Annual Report, 1850).</p>
-		<p>In Autumn 1852, Brown, considered “a gentleman eminently qualified, and occupying in his profession, the very first rank” (First Annual Report, 1853) was recruited by the board of trustees of the new Louisiana Institution for the Deaf and Dumb and Blind to assume its superintendency (Ninth Annual Report, 1852). Once again, Brown distinguished himself during his tenure through community involvement (Eighth Annual Report, 1860), walking streets and knocking doors to recruit deaf students, building 108 state-of-the-art facilities, and pioneering vocational education at the school, including the procurement of state printing contracts and a state-of-the-art printing press to be operated on the Louisiana Institution campus (Eighth Annual Report, 1860). During his eight years in Louisiana, Brown spent his own summer vacations to personally canvass miles of streets in Baton Rouge, New Orleans, and other southern states, seeking overlooked Deaf and blind students to attend the nascent school. As in Indiana, James worked tirelessly to grow enrollment, from just eleven students in 1852 to seventy-one by 1859.</p>
-		<p>Brown announced to the Institution’s trustees in the school’s 1860 Annual Report that plans to have students assist in printing a “Dictionary of Signs for the Deaf and Dumb” had already been proposed, “doubting that your Honorable Bodies will readily see the propriety of this being done by the press of the Asylum” (Eighth Annual Report, 1860, p. 7).</p>
-		<p>Earlier in the year, James had also been publicly praised for his “indispens[ibility]” and “...his untiring attention and industry, and ability, [to which] ... most of the success of the Institution [is] attributable....” (Eighth Annual Report, 1860, p. 7). Just weeks later, however, spring state elections and appointments swept in new Republican leadership, and campaign promises of local power were coming due. Despite honest efforts to bring both vocational and financial success to the campus, now in the crosshairs of a newly-appointed school board, and notwithstanding reassurances to the contrary, Brown — and the entire board of trustees — were removed from their posts in May (Porter, 1860, p. 178; Ninth Report, 1861, p. 5).</p>
-		<p>By June, Brown had become the target of Louisiana legislative cronyism, an internal power-grab, and antebellum Civil War sentiment. In a last-ditch efort to fight back, James published an eight-page newspaper article passionately detailing the injustice. Just as swiftly as his extraordinary career began, Brown was forced out of his superintendency of the Louisiana School (Brown, 1860b) and crushed his spirits of a future career in Deaf and other special education.</p>
+		
+		<p>In Autumn 1852, Brown, considered “a gentleman eminently qualified, and occupying in his profession, the very first rank” (First Annual Report, 1853) was recruited by the board of trustees of the new Louisiana Institution for the Deaf and Dumb and Blind to assume its superintendency (Ninth Annual Report, 1852). Once again, Brown distinguished himself during his tenure through community involvement (Eighth Annual Report, 1860), walking streets and knocking doors to recruit deaf students, building 108 state-of-the-art facilities, and pioneering vocational education at the school, including the procurement of state printing contracts and a state-of-the-art printing press to be operated on the Louisiana Institution campus (Eighth Annual Report, 1860). During his eight years in Louisiana, Brown spent his own summer vacations to personally canvass miles of streets in Baton Rouge, New Orleans, and other southern states, seeking overlooked Deaf and blind students to attend the nascent school. As in Indiana, James worked tirelessly to grow enrollment, from just eleven students in 1852 to seventy-one by 1859. </p>
+		<figure class="half">
+			<img src="https://p18cdn4static.sharpschool.com/UserFiles/Servers/Server_442337/Image/About%20Us/History/Original%20School%20Building/Orginial%20School%20Building.jpg">
+			<figcaption>The old "Baton Rouge College" was the first house used as the State School for the Deaf in Louisiana. The school opened on December 8, 1852, with eleven pupils in attendance. It was located on the northwest corner of the former grounds of the Institute for the Deaf which were purchased by the State in 1852. <a href="https://lalsd.org/about_us/history/original_school_building">This picture of the building</a> was drawn from memory by the late Mr. Joseph Labrans, deaf artist of New Orleans, an early pupil of the Institute.</a>.</figcaption>
+		</figure>
+		
+		<p>Brown announced to the Institution’s trustees in the school’s 1860 Annual Report that plans to have students assist in printing a “Dictionary of Signs for the Deaf and Dumb” had already been proposed, “doubting that your Honorable Bodies will readily see the propriety of this being done by the press of the Asylum” (Eighth Annual Report, 1860, p. 7). </p>
+		<p>Earlier in the year, James had also been publicly praised for his “indispens[ibility]” and “...his untiring attention and industry, and ability, [to which] ... most of the success of the Institution [is] attributable....” (Eighth Annual Report, 1860, p. 7). Just weeks later, however, spring state elections and appointments swept in new Republican leadership, and campaign promises of local power were coming due. Despite honest efforts to bring both vocational and financial success to the campus, now in the crosshairs of a newly-appointed school board, and notwithstanding reassurances to the contrary, Brown — and the entire board of trustees — were removed from their posts in May (Porter, 1860, p. 178; Ninth Report, 1861, p. 5). </p>
+		<p>By June, Brown had become the target of Louisiana legislative cronyism, an internal power-grab, and antebellum Civil War sentiment. In a last-ditch efort to fight back, James published an eight-page newspaper article passionately detailing the injustice. Just as swiftly as his extraordinary career began, Brown was forced out of his superintendency of the Louisiana School (Brown, 1860b) and crushed his spirits of a future career in Deaf and other special education.</p>		
 
-		<h2>Home Again</h2>
+		<h2 id="home-again">Home Again</h2>
 		<p>Defeated and no doubt exasperated, Brown, his wife, and two teenaged daughters retreated to the Indiana homestead (Census, 1860a) they had purchased eleven years earlier while still at the Indiana Asylum. In 1852, before leaving Indiana for Louisiana, Brown had purchased three hundred and fifty acres in southeastern Marion County, renamed it ‘Gallaudet Station,’ and “granted a diagonal right-of-way through his land to the Indianapolis and Cincinnati Railroad” (Henricks, 1984, p. 472). Upon their return home to Franklin Township, Brown served for a year as the Gallaudet Station postmaster from 3 October 1861 to 28 November 1862 (Henricks, 1984).</p>
-		<p>Though beaten down, afer William S. Marshall, “one of [the Indiana School’s] most acceptable and efficient teachers, ... tendered his resignation under a conviction of duty in the crisis of the country” (Nineteenth Report, 1862, p. 9), Brown was convinced by Superintendent MacIntire in January to accept a substitute teaching appointment for the remainder of the 1862 school year (DeMotte, 1862).</p>
+		<p>Though beaten down, afer William S. Marshall, “one of [the Indiana School’s] most acceptable and efficient teachers, ... tendered his resignation under a conviction of duty in the crisis of the country” (Nineteenth Report, 1862, p. 9), Brown was convinced by Superintendent MacIntire in January to accept a substitute teaching appointment for the remainder of the 1862 school year (DeMotte, 1862). </p>		
 			<aside class="left" style="font-style: italic; font-weight: 400; font-size: 92%; line-height: 1.5; position: absolute; text-align: right; left: 8%; color: red; width: 10em;">&#x25B6; 'Pulmonary disease' may have been <a href="https://www.geriwalton.com/common-ailments-complaints-and-diseases/">tuberculosis</a> or a terminal lung disease caused by <a href="https://www.mayoclinic.org/diseases-conditions/pulmonary-fibrosis/symptoms-causes/syc-20353690">other environmental or newly-artificial causes of the time period</a>.</aside>
 		<p>A year later, afer executing a simple will giving “my Beloved Wife, Terrisa, my whole estate, Real and personal … in all things make suitable provision for my dear Daughter Emily…,” (Brown, 1863), Brown died of pulmonary disease, fittingly, at his beloved Gallaudet Station on 10 June 1863 at the age of forty-nine (Indianapolis Journal, 1863; Indianapolis Sentinel, 1863).</p>
 
-		<h2>Mid-Nineteenth Century Deaf Education and Rise of Sign Language Homogeneity</h2>
+		<h2 id="mid-nineteenth-century-deaf-education-and-rise-of-sign-language-homogeneity">Mid-Nineteenth Century Deaf Education and Rise of Sign Language Homogeneity</h2>
 		<p>By the mid-1850s, while the centralization of the American Deaf community (especially in the Northeast) was arising with the formation of the New England Gallaudet Association in 1854 (Lane, Pillard, & French, 2007), a national debate was well underway among instructors of the Deaf over what favor of signed language had a greater pedagogical advantage.</p>
 		<p>With the founding of the American Annals of the Deaf and Dumb in 1848 by the Convention of American Instructors of the Deaf and Dumb, educators had a forum in which to discuss topics of relevance to the professional field. Articles ranging from approaches to international deaf education and theological considerations as well as state institution histories and alumni listings were commonplace in the Annals during its years of publication. However, from 1848 to 1861 (the Annals were suspended from 1861 to 1868 because of the American Civil War), no topics were discussed more  among educators of the Deaf than 1) the efficacy of colloquial (or “natural” signs) vs. methodical (or “systematic” [Fourth Annual Report, 1847, p. 19]) signs and 2) the preservation and consistency of accurate pronunciation of signs among teachers.</p>
 		<p>To wit, the first day of the 1856 annual Convention featured a provocative paper reading (and subsequent lively afternoon discussion) by Reverend John R. Keep, a professor at the American Asylum in Hartford. Keep’s presentation, ‘The best method for teachers to acquire the sign-language,’ argued that teachers of the Deaf should be “well trained in signs” (Porter, 1857, p. 8) and lamented that the first generation of American educators “were more distinguished for the clearness and elegance of their signs than the present”; they “considered the science of sign-making as of great difficulty and importance, and devoted themselves more zealously to the study of signs than teachers generally do now” (Porter, 1857, p. 8). Others agreed, and at least eight additional delegates suggested that teachers were learning “vulgar and awkward” signs from their uneducated students and that weekly inservice was necessary to keep signs accurately produced. Most convincing, however, was an address by Laurent Clerc himself, who warned teachers against learning signs from “ignorant deaf-mutes,” and not “allow[ing] themselves to be corrupted by them” (Porter, 1857, p. 9).</p>
 		<p>An observation of Brown’s efforts on his dictionary projects indicates that he had long been a proponent of sign pronunciation standards. Though he remained focused on school business during the 1856 debates, Brown rarely shied away from teacher activist opportunities, even participating in the formation of a professional teachers’ association while a young teacher at the Ohio Asylum in 1842 (Lee, 1892). Brown was already well underway in the development and production of his next major work aimed at the promotion of “teaching the signs carefully to new instructors, so that each generation might be in advance of the one that preceded it” (Porter, 1857, p. 9) although it would be another four years before a version would come of the press.</p>
 
-		<h2>The Prologue: A Vocabulary of Mute Signs (1856)</h2>
+		<h2 id="the-prologue-a-vocabulary-of-mute-signs-1856">The Prologue: A Vocabulary of Mute Signs (1856)</h2>
 		<p>In an attempt to contribute a voice to the discussion and help create standards around pronunciation among educators of the deaf, Brown published A Vocabulary of Mute Signs (hereafter “Vocabulary”) at the short-lived Daily Gazette and Comet newspaper press in Baton Rouge in 1856 (Brown, 1856), the earliest known extant attempt at compiling the American sign language. His motive was simple yet informed by much of the discussion in Deaf education at the time about the use of natural/colloquial vs. methodical/systematic signs; Brown declared in the first line of the preface that “the want of uniformity in signs is a serious inconvenience in all Institutions for the Deaf and Dumb…[however] an identity of signs employed by the diferent instructors, is absolutely indispensable” (Brown, 1856, p. 3).</p>
 		<p>Brown and others knew that, even though it would “promote the happiness of American Mutes, were the sign language of all the Institutions in the United States, not merely very much alike, but in all respects identical” (Brown, 1856, p. 5), as with other languages, that the ability for absolute consistency across all possible pedagogy and usage was beyond control, lamenting that, even in “the English language,” a sociolinguistic dictionary or lexicon was, as he put it, “still a desideratum [wanted]” for users of English" (Brown, 1856, p. 3).</p>
 		<p>Brown began assembling Vocabulary as early as 1850 (“the result of much labor and study” [Brown, 1856, p. 4]), as a means to somehow provide nonDeaf instructors of Deaf students with a minimum canonical reference to the connotations and pronunciations of then-used signs:</p>
 		<blockquote>“Its purpose was not to instruct novices in the sign-language, for its explanations being limited to brief phrases and catch words such as will be intelligible only to educated mutes and their instructors, were not explicit enough for that, but rather to bring about some degree of uniformity among sign makers, and to fix a definite standard of signs” (Fay, 1895, 168–69)</blockquote>
 		<p>Inspired by the The School and Family Dictionary and Illustrative Definer, produced in 1841 by his idol, the Reverend Tomas Hopkins Gallaudet and his colleague Horace Hooker (Gallaudet & Hooker, 1841), Brown deemed the School and Family Dictionary “a valuable work, in extensive use in the best schools and academies of the United States” (Brown, 1856, p. 4) and duplicated its contents to inform the list of entries in Vocabulary.</p>
 
-		<h3>Methodology</h3>
+		<h3 id="methodology">Methodology</h3>
 		<p>Vocabulary contained approximately twenty-five hundred signs and focused heavily on compound sign pronunciation (Nover, 2000). A typical entry in Vocabulary was very short (Figure 2); to keep the reference at the shortest possible page count (“[had] a detailed description of the signs employed been given, this little vocabulary might easily have been extended to a thousand pages….” [Brown, 1856, 4]), each entry was limited to a single line or line-and-a-half long. Individual pages featured entries in a two-column layout, and heavily abbreviated references to a word’s</p>
 		<ul>
 			<li>grammatical function (e.g. ‘v,’ for verb, ’n.’ for noun, etc.)</li>
@@ -224,16 +248,16 @@
 		<p>The two pages of abbreviations are unfortunately not only not comprehensive but also conflicting in cases (one particular entry uses “1-h” to denote a one-handed pronunciation, but the list of abbreviations indicates that “o-h” should be used).</p>
 		<p>A few examples provide unique insight into mid-century pronunciations, Brown’s understanding of signs, and his intention to preserve their accuracy. The listing on page 25 (Figure 2) for “humble” indicates a ‘simple’(or single sign): “…a [adjective], th on lips, then bt d” (Brown 1856, p. 25; italics by author). Vocabulary’s rather cryptic abbreviations defines ‘th’ as ‘thumb,’ ‘bt’ as ‘brought,’ and ‘d’ as ‘down’ (47–48), which makes this look like the pronunciation of the modern ASL sign for PATIENCE or a variation on the verb to-suffer. The entry for ‘specimen’ on page 40, however, indicates the intention to inject multiple semantic concepts into signs: “n fs of 1-h exe r-th and two fs tk one see” (Brown, 1856, p. 40). Because other contemporary pronunciation references and a comprehensive legend are not extant, in this context, Vocabulary often offers more questions than answers.</p>
 
-		<h3>Observations</h3>
+		<h3 id="observations">Observations</h3>
 		<p>There is much more discussion about the linguistics, composition, and structure of Vocabulary and Brown’s ultimate achievements with this work than can be treated here. However, Brown learned important lessons from his six years of work on Vocabulary:</p>
 
-		<h4>Signed language is more than the sum of its parts.</h4>
+		<h4 id="signed-language-is-more-than-the-sum-of-its-parts">Signed language is more than the sum of its parts.</h4>
 		<p>Immediately, a twenty-first century ASL student will recognize that several Vocabulary entries highlight not only pronunciation but also Brown’s perceived compound structure of signs in the 1860s. A comparison of how signs were written in both his 1856 and 1860 works shows that Brown (and other educators of the time) was learning how the nascent sign language was evolving to more simply and quickly convey complex semantics and salience.</p>
 
-		<h4>Signed language has an inherent morphology.</h4>
+		<h4 id="signed-language-has-an-inherent-morphology">Signed language has an inherent morphology.</h4>
 		<p>Secondly, Brown found in Gallaudet & Hooker’s School and Family Dictionary a replicable and semantic template that would not only structurally inform Vocabulary but also his second and greater attempt at a dictionary in 1860. He also began to realize a basic genetic structure for dictionary entries — grammar definitions, abbreviations, etymologies, and sign parameters (movements, handshapes, etc.). As there are no contemporary sources of American signed language production from this time period, it is unknown how accurate Brown’s pronunciations of signs were, but as will be shown later in this paper, sign descriptions from his 1860 dictionary are also found in early twentieth-century signed films, which gives some validity to their accuracy.</p>
 
-		<h2>The Main Event: A Language of Action… (1860)</h2>
+		<h2 id="the-main-event-a-language-of-action%E2%80%A6-1860">The Main Event: A Language of Action… (1860)</h2>
 		<p>Brown’s second attempt at a dictionary would be much more ambitious and grander in scale. Where Vocabulary focused on a preservation of the lexicality and a basic semantic nature of signs as he understood them, his new venture would take him into a much more complex task. There is no evidence that Brown — much less anyone — had formal training in the embryonic linguistics or the philology of mid-century sign language, nonetheless, he ventured into conveying its morphology and phonology in his second work. Convinced that the sign language had become, as Laurent Clerc himself put it, “awkward…[and] corrupted,” (Porter, 1856, p. 9), Brown picked up the torch and dedicated a significant amount of efort to preserving the language birthed at Hartford.</p>
 		<p>Brown’s work was nothing if not timely — arguably groundbreaking — and spoke to the most critical issue facing Deaf education in the mid-century: the choice of what kind of signed language should be used and promoted in the residential school classroom. Although day schools would slowly begin to gain traction in the 1880s (cf. Van Cleve, 2007 and Reis, 2007), manualism, a healthy respect for natural vs. methodical signs, and its residential/boarding school arena were still clearly the preferred method for Deaf education in the 1850s.</p>
 		<p>There is, sadly, no known academic discussion or analysis of Brown’s 1860 dictionary, but a close reading of an 1895 correspondence between Brown’s surviving daughter Emily Brown Robinson and the Indiana Deaf community newspaper The Daily Hoosier seems to suggest that she was not fully sure on which project he was working. A full-page article titled “A Dictionary of Signs One Made Fifty Years Ago” appears on page three of the February 14 edition and contains part of a letter to the editor about her father’s work. Robinson, who would have only been five years old when Brown began work on Vocabulary, discussed his work on the project, recalling that:</p>
@@ -248,7 +272,7 @@
 		<p>Although there is no extant evidence for how he determined his new work’s ultimate audience, there is little doubt that he considered his fellow Deaf educators and Deaf pupils as the primary audience for his research. However, Brown also considered a much wider appeal for this new project than for his work on Vocabulary, evident in the incredibly verbose but very specific title that he chose for his new work: “A Dictionary of Signs and of the Language of Action, for the Use of Deaf-Mutes, their Instructors and Friends; and, also, designed to facilitate to members of the Bar, Clergymen, Political Speakers, Lecturers, and to the Pupils of Schools, Academies, and Colleges, The Acquisition of a Natural, Graceful, Distinctive and Life-Like Gesticulation” (hereafter, “Dictionary”) (Brown, 1860a).</p>
 		<p>Brown was much more purposeful about assigning semantics to entries in Dictionary than in Vocabulary. In Dictionary’s preface, he mentions that the semantics in the entries draw from two sources: Joseph E. Worcester’s Boston-published 1860 Dictionary of the English Language and an 1860 edition of Webster’s American Dictionary, Pictorial Edition. Worked into the annotations at the end of each dictionary entry are quasi-cryptic numbers which coincide with definitions, “The expressions 1, 3, 5 : 2, 4 indicate the first, third, and fifth definitions of the word according to Worcester, and the second, fourth definitions according to Webster” (Brown, 1860a, p. vii).</p>
 
-		<h2>Reconsidering Stokoe</h2>
+		<h2 id="reconsidering-stokoe">Reconsidering Stokoe</h2>
 		<p>Conventional wisdom and lore among contemporary sign language researchers holds that Gallaudet College English professor William Stokoe first unleashed the possibility that a signed language could be described in a phonological and morphological framework (Stokoe, 1960). Along with graduate students Dorothy Casterline and Carl Cronenberg, Stokoe proposed a system for articulating signs in 1965 that introduced cheremes, or the parts that make up a sign, and primes, or distinct subsets of cheremes, chiefy handshapes, movements, and locations (Stokoe, Casterline, & Cronenberg, 1965). Stokoe is widely considered to have “devised the first system for describing signs” (Valli & Lucas, 2000, p. 26), however, Brown’s Dictionary has been sorely overlooked in this domain of research.</p>
 		<p>Well over one hundred years before Stokoe, Casterline, and Cronenberg, Brown envisioned a unique triplanal Cartesian morphology and coding and labeling system to enable, he hoped, subsequent generations of signers to preserve correct pronunciations. While no complete volumes of Brown’s Dictionary are yet extant, the scant pieces that do still exist give users and researchers keen insight into the language’s aesthetics a mere forty years past Clerc, Gallaudet, and Hartford.</p>
 		<p>Brown drew inspiration for his ambitious work from personal heroes Clerc and Gallaudet and the national debate of signed language efficacy, and, from the lessons he learned with Vocabulary, had co-opted published works like The School and Family Dictionary (Gallaudet & Hooker, 1841) to inform his book’s compositional and semantic structure. He appears to have largely worked alone on Dictionary; though blessed with a wife with two deaf siblings (including his good friend, professional Deaf colleague, and brother-in-law Martin Hanson, whom he had convinced to join him at the Louisiana Institution [First Annual Report, 1853]) and a large number of extended Deaf family members, there is no other evidence yet that Brown had assistance from or collaborated with any of his various fellow Deaf school teachers nor is the mention of a dictionary present in any of his correspondence or discussions with his national-level colleagues. Brown’s own admission that he began concepting Dictionary as early as 1850 seems to support this hypothesis as well: though he worked on the project for ten years, his daughter Emily corroborated that he never finished it.</p>
@@ -260,7 +284,7 @@
 			<figcaption>Figure 3b. The first page of entries to Dictionary. The entry structure followed 1860s editions of Worcester and Webster (Brown, 1860a, p. vii.)</figcaption>
 		</figure>
 
-		<h3>Methodology</h3>
+		<h3 id="methodology">Methodology</h3>
 		<p>In Dictionary, Brown proposed a Cartesian framework where sign locations — initial, transitional, and/or terminus — could be plotted, like mathematical formulae, on a dimensional grid. He imagined three perpendicular (x, y, and z) planes through and in front of the body and then divided them into meaningful sections. (Unfortunately, Dictionary is text-based and lacks any graphical explanation for its proposed system. This paper attempts to add a visual layer of instruction to augment Brown’s written explanations.) </p>
 
 		<figure>
@@ -268,16 +292,16 @@
 			<figcaption>Figure 4. A depiction of Brown’s triplanal system for describing sign location. The x-axis is divided into horizontal “palm’s breadths” by lowercase roman numerals; the y-axis is divided into eleven vertical sections (A, H, F, V, M, N, S, W, B, K, G); and the z-axis divided by palm’s breadths into positive and negative Arabic numbers. 3,564 cubic spaces are possible.</figcaption>
 		</figure>
 
-		<h3>The Horizontal, or X-axis</h3>
+		<h3 id="the-horizontal-or-x-axis">The Horizontal, or X-axis</h3>
 		<p>Brown then divided the x-axis (horizontal) in “palms’ breadths” (Brown, 1860a, p. iv) determined by Roman numerals, perpendicularly bisecting the center of the body at C (Figure 4). Whereas the Y-axis had specific letters to designate planes (A, H, B, etc.), Brown’s horizontal numeric system was dependent on the placement of the numeral in the coding system. If “iii,” for example, was listed first (or before the Y-axis planal letter, e.g. “4iii S 3v”), this indicated a location on the lef side of the signer’s body; alternatively, “iii” listed afer the Y-axis planal letter indicated location on the right side of the body (see coding system below). Brown never indicated exactly in the coding legend the limit to which a signer might stretch his or her signs (…“and by the Roman numerals i, ii, iii, iv, v, vi, vii, viii, ix, measuring to the right or left…”; Brown, 1860a, p. iii) but a scan of the extant dictionary pages shows that “viii,” or eight lateral hand widths (assigned to the pronunciations of “abominate,” “abstruse,” and “abyss”) was the widest distance Brown ever indicated in the first seventy-three words of Dictionary.</p>
 		<p>Brown also recognized that a sign might not be pronounced only in neat, fixed widths, but also in “portions of a palm’s breadth” and this would be accomplished by “fractional expression[s]; thus i½ W indicates a point on the plane W, one and one-half palms to the left of the Central plane [X-axis center] C. The expression, ¾ S, means on the plane S, three-fourths of a palm to the lef of the plane C” (Brown, 1860a, p. iv).</p>
 
-		<h4>What is a “palms’ breadth”?</h4>
+		<h4 id="what-is-a-palms-breadth">What is a “palms’ breadth”?</h4>
 		<p>Brown never actually listed a fixed measurement for it in Dictionary or any other writings, but a “palm’s breadth” or “palm” was a fairly standard linear measurement in the mid-nineteenth century and he used it twice in describing both the X- and Z-axes in Dictionary. Measurements of the late nineteenth century were not as yet standardized and still tended to follow anthropometric, or human-based, measuring systems which may have enjoyed popularity in the mid-century because of their use in Biblical texts. (Indeed, the international inch was agreed upon only in 1959 [Astin, Karo, & Mueller, 1959]). Given the wide variety of definitions for “palm,” (or “hand”) there is some disputation as to its actual distance.</p>
 		<p>Ancient Egyptians measured a hand/palm at 75 mm (or four ‘digits,’ the width of a finger, ¼ palm [19 mm]; Clagett, 1999). Roman measuring systems were slightly diferent, and introduced both a “great palm” (~12 digits at ¼ palm [18.5 mm] = 9 inches [222 mm]) and a “palm” (~4 digits at ¼ palm, or 18.5 mm = 3 inches [74 mm]; Smith, 1851). Still other Mediterranean cities and countries used a “palm” for textiles length based on hand length, not width, which introduced variants from 182 mm to 293 mm (Hutton, 1815).</p>
 		<p>The most contemporary English usage of the word palm in the nineteenth century (also called a “handbreadth” or “handsbreadth”) calculated the width of a human hand at approximately three inches (76 mm; Mortimer, 1810). Using this measurement, Brown considered that signers would likely stretch laterally no further than twenty-four inches (609 mm) or two feet to either side.</p>
 
-		<h3>The Vertical, or Y-axis</h3>
+		<h3 id="the-vertical-or-y-axis">The Vertical, or Y-axis</h3>
 		<p>Brown divided and coded the y-axis (vertical) into eleven salient planes — five focused on head and neck physiology alone — beginning at a point marked by an extended arm (A, “the Arm’s length above the head”) and ending with a ground plane (G, “l[ying] on the Ground”; Figure 4):</p>
 		<ul style="list-style: none;">
 			<li>The plane A is at the Arm’s length above the head.</li>
@@ -295,10 +319,294 @@
 		</ul>
 		<p>It is certainly curious that Brown chose to include anything as high as “A” (“[a]rm’s length above the head”) or below “W,” or the waist (including ‘base,’ ‘knees,’ and ‘ground’) as possible planes for sign production (with rare exception, signs are typically never produced even below the waist because they are out of a conversant’s peripheral eyesight) but he may have simply included them as necessary termini.</p>
 
-		<h3>The Outward, or Z-axis</h3>
-		<p></p>
-		<blockquote></blockquote>
-		<p></p>
+		<h3 id="the-outward-or-z-axis">The Outward, or Z-axis</h3>
+		<p>Finally, Brown determined placements on a z-axis, “measuring forward or backward” (Brown, 1860a, p. iii; Figure 4). Similar to his X-axis coding, the Z-axis centered on a plane envisioned in the fore and aft of the body:</p>
+		<blockquote>“The Zero, 0, plane rests on the front of the face, body, and toes, and extends indefinitely to the right and left. Distances from this plane in front, are marked, 1, 2, 3, 4, 5, 6, 7, 8, and 9 : distances in the rear of this plane, are marked by the same numerals with a negative sign prefixed; thus, -1, -2, -3, -4, -5, -6, -7, -8, and -9. Thus, 1 H indicates a point on the plane H, one palm in front of the plane 0; and -4 S means on the plane S, four palms in the rear of the plane 0” (Brown, 1860a, p. iii).</blockquote>
+		<p>This configuration of a Cartesian system gave Brown a large canvas on which to plot the morphology and lexicality of the sign language of his time. Theoretically, Brown had described 3,564 whole cubic spaces (eleven vertical spaces × eighteen horizontal spaces × eighteen outward spaces; not to mention thousands of additional fractional half- or quarter-spaces) which surrounded the body and could map where signs could potentially be placed. The next step in his system was to create a coding method and orthography.</p>
+
+		<h2 id="the-coding-system">The Coding System</h2>
+		<p>Brown introduced his readers to his unique coding system first with two simple examples:</p>
+		<blockquote>“…N v indicates a point on the plane N [base of neck], five palms to the right of the Central plane [that bisects the Y-axis]; while iv N indicates a point on the plane N, four palms to the left of the Central plane.” (Brown, 1860a, p. iv)</blockquote>
+		<p>In the preface, Brown identified four potential locations that his Dictionary could display:</p>
+		<ul>
+			<li>a single hand position on one plane</li>
+			<li>simultaneous positions of both hands on same plane</li>
+			<li>simultaneous positions of hands on diferent planes</li>
+			<li>continued movement of both hands</li>
+		</ul>
+
+		<h4 id="single-hand-position-on-one-plane">Single hand position on one plane</h4>
+		<p>The simplest of the sign positions, Brown defined a simple morphological formula for indicating a point in space — XL Y XR — where (from the signer’s perspective) XL represents the distance away from the Central plane on the left side of the signer’s body or XR represents the distance away from the Central plane on the right side of the signer’s body, and Y represents the single plane on which the sign is articulated. (It should be emphasized that this is only a single point in space, not a sign pronunciation; a handshape and movement still would need to be defined.)</p>
+
+		<h4 id="simultaneous-positions-of-both-hands-on-same-plane">Simultaneous positions of both hands on same plane</h4>
+		<p>Brown also needed a way to describe two-handed signs spaces, or two independent points on the grid and proposed a simple typographic distinction: separate two single hand/single plane point notations with a semicolon (e.g., 4v S 4vi; 3vii 4ii H)</p>
+		<blockquote>“The terms, 4v S 4vi, indicate, the left hand placed on the plane S [upper mid-torso], four palms in front of the plane 0, and five palms to the left of the plane C; and, at the same time, the right hand placed on the plane S, four palms in front of 0, and six palms to the right of the plane C. The series, 3vii 4ii H, indicate both hands placed on H [top of head] at the left of C; the left hand three palms in front of 0, and seven palms to the left of C; and the right hand four palms in front of 0, and two palms to the left of C.” (Brown, 1860a, p. iv)</blockquote>
+
+		<h4 id="simultaneous-positions-of-hands-on-diferent-planes">Simultaneous positions of hands on diferent planes</h4>
+		<p>When hands are moved to diferent planes, however, Brown used a diferent 
+		typographic distinction, listing the position of the left hand first, and then 
+		the right hand second, separated by a colon:</p>
+		<blockquote>“Simultaneous positions of the hands on diferent planes, arc indicated by writing the numerals and plane letters together, separated only by a colon. Thus 5ii W : 6iii indicate, the left hand on the plane W, five palms in front of 0, and two palms to the left of C; and, at the same time, the right hand on the plane H, six palms in front of 0, and three palms to the right of C.” (Brown, 1860a, p. iv)</blockquote>
+
+		<h4 id="continued-movement-of-both-hands">Continued movement of both hands</h4>
+		<p>The final concept that Brown created was intended to help a learner be able to reproduce longer and more fluid motion and move signs through multiple points. Brown again used a unique typographic conventions — a comma — to separate discrete movements on either side of a signer’s body:</p>
+		<blockquote>“A continued movement of one or both hands, may be indicated by the numerals and plane letters marking the points successively passed. Thus: Carry both hands through 4iii S 3i, 3ii M [mouth] 4i, 5i H 5ii, 6v W [waist] : 5ii C, means that the hands are to be carried from point to point, simultaneously and successively, as here stated.” (Brown, 1860a, p. v)</blockquote>
+
+		<h2 id="handshapes-and-phonology">Handshapes and Phonology</h2>
+		<p>Outside of the ongoing discussions of signed language pedagogy found in the Annals between 1848 and 1861 (cf. Baynton, 2002) and even their focus on syntax, the state of sign language phonology in the mid-nineteenth century was largely in infancy. Along with creating his location coding system, Brown attempted to describe various handshapes that could be used in various spaces. Compared to Stokoe, Casterline, and Cronenberg’s (1965) nineteen discriminate handshapes (“dez”), Dictionary only roughly identifies fifteen shapes, several of them repeated with orientation diferences (Table 1).</p>
+
+		<figure>
+			<table>
+				<thead>
+					<tr>
+						<th>Brown (1860a) handshapes</th>
+						<th>Stokoe, Casterline, Cronenberg (1965) handshapes (“dez”)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>various explanations of ‘phalanges’</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>closed hand shut’ (A); ‘closed shut hand’ (S); ‘closed hand thumb pointing up’ (Å)</td>
+						<td>A fist</td>
+					</tr>
+					<tr>
+						<td>palm down’; ‘palm up’; ‘palm out inclining forward about 45˚’; ‘the tip of the hand’</td>
+						<td>B flat hand</td>
+					</tr>
+					<tr>
+						<td>extended hand’ (B); ‘extended hand thumbs up’</td>
+						<td>5 spread hand</td>
+					</tr>
+					<tr>
+						<td>curved hand’ (C)</td>
+						<td>C cupped hand</td>
+					</tr>
+					<tr>
+						<td>‘curved hand flattened'</td>
+						<td>E claw hand</td>
+					</tr>
+					<tr>
+						<td>'curved hand, thumb by index’</td>
+						<td>F okay hand</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>G pointing hand</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>H index + middle fingers together</td>
+					</tr>
+					<tr>
+						<td>‘closed hand, little finger down’ </td>
+						<td>I pinkie</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>K thumb touches middle finger of V</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>L angle hand, thumb + index</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>3 vehicle classifier hand, thumb + index + middle fingers</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>O tapered hand, fingers curved to touch thumbtip</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>R crossed fingers</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>V spread index + middle fingers</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>W thumb touches pinkie</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>X hook</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Y horns</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>ȣ (8) bent middle finger; may touch thumb</td>
+					</tr>
+	
+				</tbody>
+			</table>
+				<figcaption>Table 1. Comparison of Brown (1860a) handshapes and Stokoe, et al. (1965) (“dez”)</figcaption>
+		</figure>
+
+		<p>Additionally, viewing Brown through the lens of Baker-Shenk &amp; Cokely’s (1980) parameter (handshape, palm orientation, movement, and location) taxonomy results in enlightening discoveries. Though not terribly strong in handshape recognition, Brown was surprisingly prophetic in highlighting ‘palm down,’ ‘palm up,’ and ‘palm out,’ or 45˚-inclined-forward orientations (Brown, 1860a, p. v). He also recognized the beginning and terminals of sign movement with descriptors like “transversely” (movement along x-axis), “upward” or “downward” (movement along y-axis), “forwards,” “backward,” or “out” (palm movement along z-axis) (Brown, 1860a, p. vi).</p>
+		<p>Where Dictionary excels, however, is in identifying sign location; it is apparent from Brown’s methodology that he (and perhaps other colleagues) valued and considered location — even granular location — to be a primary feature of preserving the accuracy of 1860s sign language.</p>
+
+		<h2 id="the-entries">The Entries</h2>
+		<p>Sadly, only twenty-four pages of Dictionary are known extant, containing just sixty-eight words with one hundred and three pronunciations (including derivative diferences such as noun and adjectival forms along with active and neuter verbs) of words from ‘abandon’ to ‘accroach.’ If a word carried multiple definitions, a given description of how to produce the sign was sometimes associated with a coding system reference. Extant 1860 Dictionary word entry contents (n = 68) are roughly analogous those of Brown’s 1856 Vocabulary (n = 47, or a 69.1% similarity). A typical entry in Dictionary consisted of several boilerplate features:</p>
+		<ul>
+			<li>the word entry itself</li>
+			<li>an identified part of speech (“grammar, etc.”) identified in an abbreviation legend (viii)</li>
+			<li>its spoken language etymology (Latin, Greek, French, or otherwise; also identified in an abbreviation legend [viii]) and any identifiable meaningful roots (e.g. ‘abandon’ was identified as Latin, ab, from and bandum, a fag); this appears to be a carryover from the 1856 Vocabulary which focused on identifying semantic parts of compound signs</li>
+			<li>a detailed description of how to produce the sign, including a reference to the coding system</li>
+			<li>a ‘rationale,’ or a visual etymology of what the sign iconically depicts use of the word in an English sentence, often in poetry or literature</li>
+		</ul>
+
+		<h2 id="triangulating-brown">Triangulating Brown</h2>
+			<aside class="left" style="font-style: italic; font-weight: 400; font-size: 92%; line-height: 1.5; position: absolute; text-align: right; left: 8%; color: red; width: 10em;">&#x25B6; Lorem ipsum datum.</aside>
+		<p>Of course, without other extant contemporary documents and triangulation, it is difficult to determine how accurate Brown was in describing 1860s sign language. Including Brown’s 1856 Vocabulary, there are few rare published descriptions of nineteenth-century American signed language articulation (cf., Mallery, 1881; Clark, 1885; Long, 1909, 1918; Supalla, 1992). There is rather enlightening evidence, however, in Brown’s description of the AGENT sign (Brown, 1860a, p. vii). American Sign Language employs a lexemic suffix that a signer can use to designate the actor of a particular activity (the sign AGENT); this sign often functions afer the declaration of a verb:</p>
+		<blockquote>“thus, by adding this sign to that for the verb serve, we have the sign for servant; 
+		to legislate, and we have legislator; to benefit, and we have benefactor; to law, and we have lawyer; to deceive, and we have, deceiver, etc. etc.” (Brown, 1860a, p. vii, italics added)</blockquote>
+		<p>Pronunciation of this sign today appears as shown below, but in 1860, Brown described the sign’s articulation and etymology as:</p>
+		<blockquote>“the personal sign [AGENT]…is made by placing the palms of the extended hands pointing toward each other 0i N [neck] 0i on the breast, tips of the hands nearly meeting; and thus carrying the hands down the front of the body to 0i W [waist] 0i. This sign owes its origin to the apron which an artisan wears, which covering as it does the front of the person, becomes a sign for the person. (Brown, 1860a, p. vii)</blockquote>
+
+		<figure>
+			<video controls="controls" src="http://hsldb.georgetown.edu/src-films/laysermon.mp4">
+				Your browser does not support the HTML5 Video element.
+			</video>
+			<figcaption>Figure 5: Robert P. McGregor pronouncing the AGENT suffix in DISCIPLES <mark>(see 1:33)</mark> in “A Lay Sermon” (1913) as described in Brown (1860a).</figcaption>
+		</figure>
+
+		<p>In the 1913 film, “A Lay Sermon: The Universal Brotherhood of Man and Fatherhood of God” produced by the National Association of the Deaf (NAD) as part of its Preservation series, Robert P. McGregor provides some serendipitous evidence to Brown’s AGENT sufix description. As he questions, in the New Testament, to whom Jesus was indicating should pray to God, McGregor signs FOLLOW + AGENT (“disciples”), and pronounces it exactly as Brown elaborates in Dictionary.</p>
+
+		<figure>
+			<video controls="controls" src="http://hsldb.georgetown.edu/src-films/slpreservation.mp4">
+				Your browser does not support the HTML5 Video element.
+			</video>
+			<figcaption>Figure 6. George W. Veditz pronouncing the AGENT suffix in TEACHER <mark>(see 1:29)</mark> in “Preservation of the Sign Language” (1913) as described in Brown (1860a).</figcaption>
+		</figure>
+
+			<aside class="left" style="font-style: italic; font-weight: 400; font-size: 92%; line-height: 1.5; position: absolute; text-align: right; left: 8%; color: red; width: 10em;">&#x25B6; Veditz also pronounces the AGENT sign in 'creator and inventor' (see 1:42), 'teacher' (2:39), 'prisoner' (3:41), 'master' (6:49). More evaluation on the corpus of Veditz' film can be found at the <a href="http://hsldb.georgetown.edu/films/film-title.php?source=veditz">Historical Sign Language Database</a>.</aside>
+		<p>Even in the most beloved film of the NAD series, “Preservation of the Sign Language” (1913), as George W. Veditz explains the reason for the love that “friends and fellow deaf-mutes” have for the French icon of deaf education Abbe de L’Epee is because he was their first TEACH + AGENT (“teacher”), pronouncing the lexeme exactly as Brown describes it in Dictionary. A review of other like references to AGENT sufixes in the Preservation film series provides evidence that Brown’s recorded pronunciation was still present in McGregor, Veditz, and the oratory style of several other contemporaries fifty years afer Dictionary.</p>
+		<p>This is significant because comparing and contrasting signs in Dictionary, the NAD Preservation film series, and modern-day American Sign Language provides rich grounds for research and potential video evidence in observing not only how signed language was pronounced a mere two generations past Hartford but also cataloging how signs have evolved to date.</p>
+
+		<h2 id="conclusion">Conclusion</h2>
+		<p>In 1924, editor of the Indiana Deaf community newspaper The Silent Hoosier John E. Travis proudly promoted that:</p>
+		<blockquote>“It was once thought that there could be no dictionary of the sign-language, as it is so largely ideographic, but we already have two such — the one by Dr. J.[oseph] S.[chuyler] Long of Iowa, and that of Rev. J.[ohn] W. Michaels, recently issued. Now comes another, by Rev. Father D.[aniel] D. Higgins, C. S. S. R, of St. Louis, missionary to the Catholic deaf” (Travis, 1924, p. 4). </blockquote>
+		<p>In one of the only extant references to Brown’s 1860 work, however, Travis rightfully seated Dictionary in a rare place in American Sign Language’s linguistic and developmental history:</p>
+		<blockquote>“There is still another dictionary of the sign language. Perhaps it would be safe to say the first ever undertaken — in America, anyhow. The book is now out of print, it was arranged, edited[,] and published by James S. Brown, the first head of the Indiana School to be designated Superintendent — 1845 to 1853….[T]here remains yet to be printed what should be put into book form, not so much as a dictionary of the sign language as the philology of it.” (Travis, 1924, p. 4)</blockquote>
+		<p>Brown’s work on Dictionary was, in the chronology of Deaf and sign language studies, one hundred years ahead of its time. It pushes the timeline of exploring American signed language lexemic parameters back an entire century before Stokoe, Casterline, and Cronenberg. It not only incorporated basic semantics for students and teachers to understand but it also deconstructed composition and skeletal pronunciation while also clarifying etymologies and contexting sign usage. Though tragically shortened and unfinished, better understanding Dictionary’s representation of mid-nineteenth century sign language provides researchers with a new tool for triangulating the evolution of signs shortly afer their formation at Hartford.</p>
+
+		<h3>Contributions</h3>
+		<p>Many colleagues have provided valuable assistance to this work; heartfelt thanks to Brandon Scates, Ted Supalla (Georgetown University), Edward Copenhagen (Harvard University), Walker Estes (Louisiana School for the Deaf), Kris Johnson (Indiana School for the Deaf), Elizabeth Dunn (Duke University), Betty Warren and Laura Eliason (Indiana State Library), Connie Swartz (American Philatelic Society), Sylvia Henricks (Franklin Township Historical Society), Frances Wood, Anne Leahy, and research librarians at the State Library of Ohio, Duke University, Gallaudet University, The Ohio State University, and the University of Minnesota.</p>
+
+		<h2 id="works-cited">References</h2>
+		<ul class="references">
+			<li>Astin, A. V.; Karo, H. A.; &amp; Mueller, F.H. (25 June 1959). “Refinement of values for the yard and the pound.” <a href="http://www.ngs.noaa.gov/PUBS_LIB/FedRegister/FRdoc59-5442.pdf">http://www.ngs.noaa.gov/PUBS_LIB/FedRegister/FRdoc59-5442.pdf</a>.</li>
+			<li>Ayres, J. A. (1849). A complete education for the deaf and dumb. American Annals of the Deaf and Dumb, 2(1), 24–32.</li>
+			<li>Baynton, D. C. (2002). The curious death of sign language studies in the nineteenth century. In W. C. Stokoe, D. F. Armstrong, M. A. Karchmer, J. V. Van Cleve (Eds.), The Study of Signed Languages (pp. 13–34). Washington, D.C.: Gallaudet University Press.</li>
+			<li>Baker-Shenk, C. L., &amp; Cokely, D. (1980). American sign language: A teacher’s resource text on grammar and culture. Silver Spring, MD: T.J. Publishers.</li>
+			<li>Brown, J. S. (1856). A vocabulary of mute signs. Baton Rouge, LA: Daily Gazette and Comet.</li>
+			<li>Brown, J. S. (1860a). A dictionary of signs and of the language of action: For the use of deaf-mutes, their instructors and friends; and, also, designed to facilitate to members of the bar, clergymen, political speakers, lecturers, and to the pupils of schools, academies, and colleges, the acquisition of a natural, graceful, distinct and life-like gesticulation. Baton Rouge, LA: Louisiana Institution for the Deaf and Dumb and the Blind. Retrieved from <a href="http://pds.lib.harvard.edu/pds/view/14809124">http://pds.lib.harvard.edu/pds/view/14809124</a> 16 April 2012.</li>
+			<li>Brown, J. S. (1860b). Exposition of the action of a majority of the board of administrators of the Louisiana Institution for the deaf and dumb and the blind. New Orleans, LA: A. H. Kay.</li>
+			<li>Brown, J. S. (1863). “Last Will and Testament,” recorded in the court 21 Jun 1863. Executed “Galaudet [sic] Marion County Indiana, June 8, 1863.” Marion County, Indiana, Will Book C, page 400.</li>
+			<li>Brown, T. M. (1873). Passport Applications, 1795-1905. Collection Number: ARC Identifier 566612 / MLR Number A1 508; NARA Series: M1372; Roll #: 195: 23 May 1873–10 Jun 1873. Washington D.C.: National Archives and Records Administration (NARA).</li>
+			<li>Clagett, M. (1999). Ancient Egyptian Science, A Source Book. Volume 3: Ancient Egyptian Mathematics. Philadelphia: American Philosophical Society.</li>
+			<li>Clark, W. P. (1885). The Indian sign language, with brief explanatory notes of the gestures taught deaf-mutes in our institutions for their instruction and a description of some of the peculiar laws, customs, myths, superstitions, ways of living, code of peace and war signals of our aborigines. Philadelphia: L.R. Hammersly &amp; Co.</li>
+			<li>DeMotte. W. H. (1862, April). Indiana Institution for the Education of the Deaf and Dumb. Indiana School Journal, 7(4). Indianapolis, IN: Indiana State Teachers’ Association.</li>
+			<li>Fant, L. (1972). Ameslan. Acton, CA: Joyce Media, Inc.</li>
+			<li>Fay, E. A. (Ed.) (1895). Miscellaneous: Mr. Brown’s Vocabulary of Signs. American Annals of the Deaf and Dumb, 40(2), Washington, D.C.: The Conference of Superintendents and Principals of American Schools for the Deaf. p. 168–169.</li>
+			<li>Gallaudet, T. H. &amp; Hooker, H. (1841). The school and family dictionary and illustrative definer. New York: Robinson, Pratt &amp; Co.</li>
+			<li>Gallaudet, T. H., Rev. (1848). On the natural language of signs; and its value and uses in the instruction of the deaf and dumb. American Annals of the Deaf and Dumb, 1(1), 55–60.</li>
+			<li>Grover, F. (2013, September 12). Email interview.</li>
+			<li>Henricks, S. C. (1984, May). Gallaudet: Famous Name and Forgotten Indiana Town. American Philatelist, 98, 469-472, 565.</li>
+			<li>Hofman, L. (2012, May 29). Email interview.</li>
+			<li>Hutton, C. (1815). A philosophical and mathematical dictionary, containing an explanation of the terms, and an account of the several subjects, comprised under the heads mathematics, astronomy, and philosophy both natural and experimental; with an historical account of the rise, progress and present state of these sciences; also memoirs of the lives and writings of the most eminent authors, both ancient and modern, who by their discoveries or improvements have contributed to the advancement of them (2nd ed). London: the author.</li>
+			<li>Indianapolis Journal. (1863, June 10). James S. Brown obituary, p 2, c 5.</li>
+			<li>Indianapolis Sentinel. (1863, June 10). James Smedley Brown obituary, p 2, c 4.</li>
+			<li>Johnson, R. O. (1895, February 14). A dictionary of signs one made fifty years ago. The Daily Hoosier, p. 3. Retrieved from <a href="http://indiamond6.ulib.iupui.edu:2011/cdm/compoundobject/collection/ISD/id/1139/show/1137">http://indiamond6.ulib.iupui.edu:2011/cdm/compoundobject/collection/ISD/id/1139/show/1137</a></li>
+			<li>Lane, H., Hofmeister, R., &amp; Bahan, B. (1996). A journey into the Deaf-world. San Diego, CA: DawnSignPress.</li>
+			<li>Lane, H., Pillard, R. C., &amp; French, M. (2007). Origins of the American deaf-world: Assimilating and differentiating societies and their relation to genetic patterning. In J. V. Van Cleve (Ed.), The Deaf History Reader (pp. 47–73). Washington, D.C.: Gallaudet University Press.</li>
+			<li>Lee, A. E. (1892). History of the city of Columbus, capital of Ohio, Volume 1. Columbus, OH: W.W. Munsell &amp; Co., p. 544.</li>
+			<li>Long, J. S. (1909). The sign language: A manual of signs, being a descriptive vocabulary of signs used by the deaf of the United States and Canada. Washington, D.C.: Press of Gibson Bros.</li>
+			<li>Long, J. S. (1918). The sign language: A manual of signs, being a descriptive vocabulary of signs used by the deaf of the United States and Canada (2nd ed.). Washington, D.C.: Press of Gibson Bros.</li>
+			<li>Mallery, G. (1881). A collection of gesture-signs and signals of the North American Indians with some comparisons. Washington, D.C.: Government Printing Office.</li>
+			<li>McGregor, R. C. (1913). A Lay Sermon: The Universal Brotherhood of Man and Fatherhood of God [Motion picture]. United States: National Association of the Deaf.</li>
+			<li>Mortimer, T. (1810). A general dictionary of commerce, trade, and manufactures: exhibiting their present state in every part of the world; and carefully comp. from the latest and best authorities. London: R. Phillips.</li>
+			<li>Nover, S. M. (2000). History of language planning in deaf education: The 19th century. Unpublished doctoral dissertation, University of Arizona, Tucson. </li>
+			<li>Ohio, County Marriages, 1789-1994, index and images, FamilySearch (<a href="https://familysearch.org/pal:/MM9.3.1/TH-1-19359-27003-51?cc=1614804&amp;wc=M94Q-VGV:n1424608130">https://familysearch.org/pal:/MM9.3.1/TH-1-19359-27003-51?cc=1614804&amp;wc=M94Q-VGV:n1424608130</a>: retrieved 16 Feb 2014), Lorain &gt; Marriage certificates 1824-1848, vol 1.</li>
+			<li>Ohio School for the Deaf. (1898). Historical and biographical souvenir of the Ohio school for the deaf: Seventy years’ history of a notable seat of learning, with personal recollections of its founders and early officials. Columbus, OH: C. C. Johnston, Publisher.</li>
+			<li>Padden, C., &amp; Humphries, T. (1988). Deaf in America: Voices from a culture. Cambridge, MA: Harvard University Press.</li>
+			<li>Padden, C. &amp; Humphries, T. (2005). Inside Deaf culture. Cambridge, MA: Harvard University Press.</li>
+			<li>Porter, S. (ed.) (1857). Fourth Convention of American Instructors of the Deaf and Dumb. American Annals of the Deaf and Dumb, 9(1). Hartford, CT: American Instructors of the Deaf and Dumb.</li>
+			<li>Porter, S. (ed.) (1860). Institution Notices: Louisiana. American Annals of the Deaf and Dumb, 12(3). Hartford, CT: American Instructors of the Deaf and Dumb.</li>
+			<li>Rae, L. (1850). Presentation of silver plate to Messrs. Gallaudet and Clerc. American Annals of the Deaf and Dumb, 3(1), 41–63. (p. 46)</li>
+			<li>Reis, M. (2007). The academic integration of deaf children: A historical perspective. In The Deaf History Reader (pp. 85–115). John Vickery Van Cleve (ed.). Washington, D.C.: Gallaudet University Press.</li>
+			<li>Smith, W. &amp; Anthon, C. (1851). A new classical dictionary of Greek and Roman biography, mythology, and geography partly based upon the Dictionary of Greek and Roman biography and mythology. New York: Harper &amp; Bros.</li>
+			<li>Sprague, W. B. (1865). “Noah Worcester, D. D.” Annals of the American Pulpit, Or, Commemorative Notices of Distinguished American Clergymen of Various Denominations: From the Early Settlement of the Country to the Close of the Year Eighteen Hundred and Fifty-five: with Historical Introductions. Volume 8, p. 191. New York: Robert Carter &amp; Brothers.</li>
+			<li>Stokoe, W. C. (1960). Sign language structure: An outline of the visual communication systems of the American Deaf. Studies in Linguistics: Occasional papers (No. 8). Bufalo: Dept. of Anthropology and Linguistics, University of Bufalo.</li>
+			<li>Stokoe, W. C., Casterline, D., &amp; Cronenberg, C. (1965). A dictionary of American sign language based on linguistic principles. Washington, D.C.: Gallaudet College Press.</li>
+			<li>Supalla, S. (1992). The book of name signs: Naming in American Sign Language. San Diego, CA: Dawn Sign Press.</li>
+			<li>Travis, J. E. (Ed.) (1924). The Silent Hoosier, February 7, 1924. Indiana School for the Deaf: Indianapolis, IN.</li>
+			<li>Valli, C. &amp; Lucas, C. (2000). Linguistics of American Sign Language: An introduction. Washington, D.C.: Clerc Books.</li>
+			<li>Van Cleve, J. V. (2007). The academic integration of deaf children: A historical perspective. In The Deaf History Reader (pp. 116–135.) John Vickery Van Cleve (ed.). Washington, D.C.: Gallaudet University Press.</li>
+			<li>Veditz, G. W. (1913). Preservation of the Sign Language [Motion picture]. Silver Springs, MD: National Association of the Deaf.</li>
+			<li>Ware, H. (1845). Memoirs of Rev. Noah Worcester, D. D. The Advocate of Peace (1837–1845), 6(3), 33–34.</li>
+			<li>Wood, F. (2012, May 27). Email interview.</li>
+			<li>Wright, G. F. (Ed.)(1916). A standard history of Lorain County Ohio: An authentic narrative of the past, with particular attention to the modern era in the commercial, industrial, civic, and social development; a chronicle of people, with family lineage and memoirs. Chicago and New York: The Lewis Publishing Company.</li>
+		</ul>
+
+		<h3>Oberlin and Huron College Records</h3>
+		<ul class="references">
+			<li>Oberlin College (1909). Seventy-Fifth Anniversary General Catalogue of Oberlin College, 1833-1908. Cleveland: Press of The O. S. Hubbell Printing Co. p. 126.</li>
+			<li>Oberlin Collegiate Institute. (1834). First Annual Report of the Oberlin Collegiate Institute. November, 1834. Elyria, OH.</li>
+			<li>Oberlin Collegiate Institute. (1835). Catalogue of the Trustees, Officers, and Students of Oberlin Collegiate Institute; Together with the Second Annual Report. Cleveland: Rice &amp; Penniman’s Print.</li>
+			<li>Oberlin Collegiate Institute. (1836). Catalogue of the Trustees, Officers and Students, of the Oberlin Collegiate Institute. Cleveland: Francis B. Penniman.</li>
+			<li>Huron Institute. (1837). Catalogue of the Officers and Students of Huron Institute, 1837–38. Milan, Huron Co. Ohio. Norwalk, OH: Prestons, Printers, Norwalk.</li>
+			<li>Oberlin Collegiate Institute. (1838). Catalogue of the Trustees, Officers and Students, of the Oberlin Collegiate Institute. Cuyahoga Falls, OH: Allison &amp; Mariner, Printers.</li>
+		</ul>
+
+		<h3>United States Federal Census Records</h3>
+		<ul class="references">
+			<li>Third Census of the United States. (1810). (NARA microfilm publication M252, 71 rolls). Census Place: Tornton, Grafton, New Hampshire. Records of the Bureau of the Census, Record Group 29. National Archives, Washington, D.C. Retrieved 14 November 2013 from <a href="http://ancestry.com">http://ancestry.com</a>.</li>
+			<li>Fourth Census of the United States. (1820). (NARA microfilm publication M33, 142 rolls). Census Place: Royalton, Niagara, New York. Records of the Bureau of the Census, Record Group 29. National Archives, Washington, D.C. Retrieved 26 April 2014 from <a href="http://ancestry.com">http://ancestry.com</a>.</li>
+			<li>Eighth Census of the United States. (1860a). (NARA microfilm publication M653, 1,438 rolls). Census Place: Franklin, Marion, Indiana. Records of the Bureau of the Census, Roll: M653_280; Page: 891; Image: 268. National Archives, Washington, D.C. Retrieved 26 April 2014 from <a href="http://ancestry.com">http://ancestry.com</a>.</li>
+			<li>Eighth Census of the United States. (1860b). (NARA microfilm publication M653, 1,438 rolls). Census Place: Baton Rouge, East Baton Rouge, Louisiana. Records of the Bureau of the Census, Roll: M653_408; Page: 466; Image: 24. National Archives, Washington, D.C. Retrieved 26 April 2014 from <a href="http://ancestry.com">http://ancestry.com</a>.</li>
+			<li>Ancestry.com. (2009a). Marriage Record of Plumb M. Park and Charlotte Peck: U.S. Special Census on Deaf Family Marriages and Hearing Relatives, 1888-1895 [database on-line]. Provo, UT, USA: Ancestry.com Operations Inc.</li>
+			<li>Ancestry.com. (2009b). Marriage Record of Martin M. Hanson and Alice M. Park: U.S. Special Census on Deaf Family Marriages and Hearing Relatives, 1888-1895 [database on-line]. Provo, UT, USA: Ancestry.com Operations Inc.</li>
+			<li>Ancestry.com. (2009c). Marriage Record of Robert F. Moon and Lucinda Webb: U.S. Special Census on Deaf Family Marriages and Hearing Relatives, 1888-1895 [database on-line]. Provo, UT, USA: Ancestry.com Operations Inc.</li>
+			<li>Ancestry.com. (2009d). Marriage Record of John Wilson Reed and Carrie Lorena Moon: U.S. Special Census on Deaf Family Marriages and Hearing Relatives, 1888-1895 [database on-line]. Provo, UT, USA: Ancestry.com Operations Inc.</li>
+			<li>Ancestry.com. (2009e). Marriage Record of Joseph Wilson Reed and Carrie Belle Moon: U.S. Special Census on Deaf Family Marriages and Hearing Relatives, 1888-1895 [database on-line]. Provo, UT, USA: Ancestry.com Operations Inc.</li>
+		</ul>
+
+		<h3>Ohio Asylum for the Education of the Deaf and Dumb Annual Reports</h3>
+		<ul class="references">
+			<li>Fifteenth annual report of the Trustees of the Ohio Asylum for the Education of the Deaf and Dumb. (1842). Columbus, OH: Samuel Medary, State Printer.</li>
+			<li>Eighteenth annual report of the Trustees and Superintendent of the Deaf and Dumb Asylum of the State of Ohio. (1844). Columbus, OH: Samuel Medary, State Printer.</li>
+		</ul>
+
+		<h3>Louisiana Asylum for the Education of the Deaf and Dumb Annual Reports</h3>
+		<ul class="references">
+			<li>First annual report of the Administrators and Superintendent of the Louisiana Institution for the Education of the Deaf and Dumb, and the Blind. (1853). Baton Rouge, LA: T. B. B. Hatch &amp; Co., Advocate Office, Printers.</li>
+			<li>Sixth annual report of the administrators and superintendent of the Louisiana Institution for the Education of the Deaf and Dumb, and the Blind. (1858). Baton Rouge, LA: at the office of the Daily Advocate.</li>
+			<li>Eighth annual report of the Administrators and Superintendent of the Louisiana Institution for the Education of the Deaf and Dumb, and the Blind. (1860). Baton Rouge, LA: at the office of the Institution.</li>
+		</ul>
+
+		<h3>Indiana Asylum for the Education of the Deaf and Dumb Annual Reports</h3>
+		<ul class="references">
+			<li>Circular of the Trustees of the Indiana Asylum for the Education of the Deaf and Dumb and the Rules of Internal Economy. (1844). Indianapolis, IN.</li>
+			<li>First annual report of the Trustees of the Indiana Asylum for the Education of the Deaf and Dumb. (1844). Indianapolis, IN.</li>
+			<li>Second annual report of the Trustees of the Indiana Asylum for the Education of the Deaf and Dumb. (1845). Indianapolis, IN.</li>
+			<li>Fourth annual report of the Trustees of the Indiana Asylum for the Education of the Deaf and Dumb. (1847). Indianapolis, IN.</li>
+			<li>Fifth annual report of the Trustees of the Indiana Asylum for the Education of the Deaf and Dumb. (1848). Indianapolis, IN.</li>
+			<li>Sixth annual report of the Trustees and Superintendent of the Indiana State Asylum for the Education of the Deaf and Dumb. (1849). Indianapolis, IN: John D. Defrees, State Printer.</li>
+			<li>Seventh annual report of the Trustees of the Indiana Asylum for the Education of the Deaf and Dumb. (1850). Indianapolis, IN: J. P. Chapman, State printer.</li>
+			<li>Eighth annual report of the Trustees of the Indiana Asylum for Educating of the Deaf and Dumb. (1851). Indianapolis, IN: J. P. Chapman, State printer.</li>
+			<li>Ninth annual report of the Trustees of the Indiana Asylum for Educating of the Deaf and Dumb. (1852). Indianapolis, IN: J. P. Chapman, State printer.</li>
+			<li>Nineteenth annual report of the Trustees of the Indiana Institution for Educating of the Deaf and Dumb. (1862). Indianapolis, IN: Berry R. Sulgrove, State printer.</li>
+		</ul>
+		
 
 
 
