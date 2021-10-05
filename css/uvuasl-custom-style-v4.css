@@ -128,7 +128,7 @@ h6, .h6 {
 .lead { font-weight: 300; line-height: 1.6; }
 .alert { margin: 1em 0 2em 0; padding: 1.1em 1.5em; line-height: 1.6; font-weight: 300;}
 
-p, li, dt, dd, td { fontqq-family: 'Libre Franklin', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; fontqq-size: 18px; lineqq-height: 1.65; color: #555; letter-spacing: .015em; font-weight: 400; margin: 0; }
+p, li, dt, dd, td { fontqq-family: 'Libre Franklin', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; fontqq-size: 18px; lineqq-height: 1.65; color: #555; letter-spacing: .015em; font-weight: 300; margin: 0; }
 /* p, li, dt, dd, td { font-family: "Merriweather"; font-size: 1em; line-height: 1.6; color: #666; } */
 
 dt { font-weight: 700; }
