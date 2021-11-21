@@ -9,10 +9,9 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
 		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,600&display=swap');
 			@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
 
-			body { padding: 5vh 5vw; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Libre Franklin", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #111; font-size: 16px; }
+			body { padding: 5vh 5vw; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "qqApple Color Emoji", "qqSegoe UI Emoji", "qqSegoe UI Symbol", "qqNoto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #111; font-size: 16px; }
 			html { scroll-behavior: smooth; }
 			section { }
 
@@ -37,33 +36,50 @@
 
 			.circle-number { font-weight: 800; font-size: 1.1rem; text-align: center; color: rgba(255,255,255,1); width: 1.6em; height: 1.6em; padding: 0; margin: 0 0 .5em -.25em; background-color: rgba(0,0,0,.9); border-radius: 100em; }
 			
-			.circle-letter { font-weight: 800; font-size: 1.1rem; text-align: center; color: rgba(0,0,0,1); width: 1.6em; height: 1.6em; margin: 0 .1em .75em 0; background-color: rgba(255,255,255,.8); border-radius: 100em; box-shadow: .25em .25em 1em rgba(0,0,0,.3); }
+			.circle-letter { font-size: 1.1rem; text-align: center; color: rgba(0,0,0,1); width: 1.6em; height: 1.6em; margin: 0 .25em .75em 0; background-color: rgba(255,255,255,.8); border-radius: 100em; box-shadow: .1em .1em 1em rgba(0,0,0,.2); }
 			
 			.developed { font-size: .9rem; margin: .5em 0 0 0; color: rgba(0,0,0,.6); display: inline-block; }
-			sup::before {content: "["; } 
-			sup::after {content: "]"; }
+			sup::before { content: "["; } 
+			sup::after { content: "]"; }
 			sup, sub { font-weight: 500; text-decoration: none; }
-			sup { font-size: .9rem; font-weight: 400; }
-			h1 { margin: 0 0 .25em 0; line-height: 1.2; font-qqweight: 700; letqqter-spacing: -.02rem;  }
-			h2 { font-size: 1.4rem; margin: 1.5em 0 1em 0; font-weight: 800; }
-			h3 { font-size: 1.6rem; line-height: 1.2; margin: 0 0 .3em 0; font-weight: 500; letqqter-spacing: -.015rem; }
-			h4 { font-size: 1rem; letter-spacing: .01rem; font-weight: 800; margin: 1em 0 .8em 0; padding: 0 0 .8em 0; border: 1px dotted rgba(0,0,0,.3); border-width: 0 0 1px 0; }
 
-			h1, h2, h3 { font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Libre Franklin", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; font-weight: 700; }
+			h1 { margin: 0 0 1em 0; line-height: 1.2;  }
+			h2 { font-size: 1.6rem; line-height: 1.2; margin: 2em 0 .5em 0; padding: .75em 0 .5em 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; }
+			h3 { font-size: 1.3rem; margin: .75em 0; font-weight: 800; }
+			h4 { font-size: 1rem; letter-spacing: .01rem; font-weight: 800; margin: 1em 0 .8em 0; padding: 0 0 .8em 0; border: 1px dotted rgba(0,0,0,.3); border-width: 0 0 1px 0; }
+			
+			h1, h2, h3 { font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "qqApple Color Emoji", "qqSegoe UI Emoji", "qqSegoe UI Symbol", "qqNoto Color Emoji", Helvetica, Arial, sans-serif; }
+
 			
 			dt { font-weight: 800; float: left; width: 20%; }
-			dd { margin: 0 0 .5em 25%; width: auto; line-height: 1.48; }
+			dd { margin: 0 0 1em 25%; width: auto; line-height: 1.48; }
 			dd ol, dd ul { margin: 0 0 0 -1em; }
+
+			/* counters */
+			#refs:target, #refs li:target, .note:target { background:rgba(13,110,253,.1); }
+			.container { counter-reset: footnotes; }
+			.note { vertical-align: super; font-size: .9rem; line-height: 0; margin: 0; }
+			.note:before { 
+				counter-increment: footnotes; 
+				content: "[" counter(footnotes); }
+			.note:after { content: "]"; }
+			.back { text-decoration: none; font-weight: bold; }
 
 			.view-continuum { display: none; }
 
-			.header { margin: 0 0 2em 0; }
-				.header p { margin: 0 0 1em 0; }
+			.intro { }
+				.intro p { margin: 0 0 1em 0; }
 
-			.definitions { margin: 1em 0; padding: 0; }
-				.definitions p { margin: 0; padding: 0; }
+			.continuum { }
 
-			.spectrum-container { height: 28em; width: 100%; padding: 1em 0; margin: 0 0 2em 0; }
+			.mces {  }
+				.mces-video { margin: 1em 0; }
+				.mces .col-md-6, .mces .col-xl-4 { margin: .5em 0; }
+
+			.definitions { margin-bottom: 1em; padding: 0; }
+				.definitions p { line-height: 1.4; margin: 0; padding: 0; }
+
+			.spectrum-container { height: 29em; padding: 1.5em 0; }
 			.spectrum-container {
 				background-image: 
 				linear-gradient(
@@ -73,19 +89,9 @@
 				);
 			}
 
-			/* counters */
-			#refs:target, #refs li:target, .note:target { background:rgba(13,110,253,.15); }
-			.container { counter-reset: footnote; }
-			.note { vertical-align: super; font-size: .82rem; line-height: 0; margin: 0; }
-			.note:before { 
-				counter-increment: footnote; 
-				content: "[" counter(footnote); }
-			.note:after { content: "]"; }
-			.back { text-decoration: none; font-weight: bold; }
-
-
-			.spectrum-container div { display: inline-block; }
-				.spectrum { position: relative; z-index: 1199; }
+			.spectrum-container div { display: block; }
+				.codes { position: relative; z-index: 90; }
+				.spectrum { position: relative; z-index: 100; }
 					/* arrow left shaping; removed to put gradient at end
 					.spectrum::before { 
 						content:"";
@@ -102,8 +108,8 @@
 						content: "";
 						position: absolute;
 						right: 100%;
-						height: 28em;
-						top: -1em;
+						height: 29em;
+						top: -1.5em;
 						border-left: 5em solid transparent;
 						border-image-source: linear-gradient(to left, rgba(102,102,255,1), rgba(102,102,255,0));
 						border-image-slice: 200;
@@ -124,13 +130,12 @@
 						content: "";
 						position: absolute;
 						left: 100%;
-						height: 28em;
-						top: -1em;
+						height: 29em;
+						top: -1.5em;
 						border-left: 5em solid transparent;
 						border-image-source: linear-gradient(to right, rgba(255,102,204,1), rgba(255,102,204,0));
 						border-image-slice: 200;
 					}
-				
 					.approach-left, .approach-right {
 						position: absolute; 
 						z-index: 1200;
@@ -158,7 +163,7 @@
 						border-left: 2em solid rgba(255,255,255,.4);
 						border-bottom: 5.5em solid transparent;
 					}
-					.more-like { position: relative; width: 95%; z-index: 1201; bottom: 0; margin: 3.5em auto .5em auto; padding: 1em 0; background: rgba(0,0,0,.2); color: rgba(255,255,255,1); border-radius: .5em; }
+					.more-like { position: relative; width: 95%; z-index: 110; margin: 1.5em auto 2em auto; padding: 1.25em 0; background: rgba(0,0,0,.2); color: rgba(255,255,255,1); border-radius: .5em; height: auto; }
 						.more-like a { color: rgba(255,255,255,1); }
 						.more-like::before { 
 							content:"";
@@ -178,17 +183,14 @@
 							border-left: 1em solid rgba(0,0,0,.2);
 							border-bottom: 2.5em solid transparent;
 						}
-			.controls { display: none; padding: 1em; margin: 0 0 2em 0 !important; }
-			.mces { margin: 0 0; }
-				.mces-video { margin: 1em 0; }
-				.mces .col-md-6, .mces .col-xl-4 { margin: 1em 0; }
-			.other-mces { padding: 1em 0 0 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; margin: 3em 0 0 0; }
+			.controls { padding: 1em; margin: 0 !important; }
 
-			.references { padding: 1em 0 0 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; margin: 2em 0 0 0; }
+
+			.references { }
 				.references ol { column-count: 2; column-gap: 4em; }
 				.references li { margin: 0 0 .5em 0; line-height: 1.55; }
 
-			.endmatter { font-size: 85%; padding: 1em 0 0 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; margin: 2em 0 0 0; }
+			.endmatter { font-size: 85%; padding: 1em 0 0 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; margin-top: 2em; }
 				.endmatter p { margin: 0 0 1em 0; }
 
 			hr { margin: 1em 0 2em 0 !important; border: 0; border: 1px solid rgba(0,0,0,1); border-width: 0 0 1px 0; background: rgba(0,0,0,1); opacity: .1; }
@@ -231,225 +233,265 @@
 
 	<body>
 
-	<main class="pt-5 container">
+		<!--
+			<style>
+			div, form { borqqder: 1px dotted #f00; }
+			.box { padqqding: 1em; borqqder: 1px dotted #00f; }
+		</style>
+		!-->
 
-		<div class="row header">
+		<main class="container box">
+
+			<!-- header -->
+			<header>
+
+			</header>
+
+			<!-- introduction -->
 			<h1>Comparative ASL / English Language Continuum<sup style="font-weight: inherit; font-size: 60%">Beta</sup></h1>
-			<hr>
 
 			<h2>Purposes</h2>
 			<dl>
 				<dt>Diglossia</dt>
-				<dd>This is a comparative bilingual continuum for use with Deaf and Interpreting Studies students that identifies the diglossic<a href="#refs" class="note"></a> and representative relationships of artificial (or 'contrived'<a href="#refs" class="note"></a>) <u>m</u>anual <u>c</u>odes of <u>E</u>nglish (<abbr title="Manual code of English">MCE</abbr>s) historically derived between American Sign Language (ASL) and English.</dd>
+					<dd>This is a comparative bilingual continuum for use with Deaf and Interpreting Studies students that identifies the diglossic<a href="#refs" class="note"></a> and representative relationships of artificial (or 'contrived'<a href="#refs" class="note"></a>) manual codes of English (<abbr title="Manual code of English">MCE</abbr>s) historically derived between American Sign Language (ASL) and English.</dd>
 				<dt>Identification</dt>
-				<dd>It identifies 1) creators and contributors, 2) cultural (Deaf, hearing, or interpreter) status, and 3) MCE 'approaches' and other gestural MCEs that are English-derived but that may also be used with various deaf populations. (Although the content is representative of the latest printed version (2019), this code and content should be considered 'in development'; see this project's changelog and roadmap below.)</dd>
-				<dd>For clarity in modality, this document makes a distinction between SLs (sign(ed) languages) and SpLs (spoken languages), while also recognizing that linguistically and academically, a signed language can be spoken.</dd>
+					<dd>It identifies 1) creators and contributors, 2) cultural (Deaf, hearing, or interpreter) status, and 3) MCE 'approaches' and other gestural MCEs that are English-derived but that may also be used with various deaf populations. (Although the content is representative of the latest printed version (2019), this code and content should be considered 'in development'; see this project's changelog and roadmap below.)</dd>
+					<dd>For clarity in modality, this document makes a distinction between SLs (sign(ed) languages) and SpLs (spoken languages), while also recognizing that linguistically and academically, a signed language can be spoken.</dd>
+					<dd>All implied placements and relationships are relative; overlapping approaches drawn for distinction and not for accuracy. Subscripts on surnames (e.g., <sub>D</sub>, <sub>H</sub>, or <sub>?</sub>) identify that an author, researcher, contributor, or creator is Deaf, hearing, or unknown. Additional credit to authors <a href="https://www.danparvaz.com">DParvaz</a><sub>H</sub>, Garrrett<sub>?</sub>, Jguk<sub>?</sub>, Adrignola<sub>?</sub>, and other unnamed contributors to the Visual Language Interpreting/Tools of the Trade wikibook<a href="#refs" class="note"></a> for references to dates, contributors, and descriptions.</dd>
 				<dt>Documentation</dt>
-				<dd>There are numerous sites and articles (and student projects) across the internet that mention or discuss this unique set of systems, their etymologies, variables, and pedagogical aims. This compilation is intended to empirically document this domain for students, colleagues, and other researchers.</dd>
+					<dd>There are numerous sites and articles (and student projects) across the internet that mention or discuss this unique set of systems, their etymologies, variables, and pedagogical aims. This compilation is intended to empirically document this domain for students, colleagues, and other researchers. Feedback, additions, and corrections are appreciated.</dd>
 				<dt>Education</dt>
-				<dd>This artifact, while intended for a greater contribution to histories and historiographies in our field, is primarily used for discussion by Deaf and Interpreter Studies students in learning more about the praxis of these codes in educational and interpreted work. A future section of this artifact should/will likely be 'learning objectives.'</dd>
+					<dd>This artifact, while intended for a greater contribution to histories and historiographies in our field, is primarily used for discussion by Deaf and Interpreter Studies students in learning more about the praxis of these codes in educational and interpreted work. A future section of this artifact should/will likely be 'learning objectives.'</dd>
 			</dl>
 
 			<h2>Definitions</h2>
 			<dl>
 				<dt>"Code"</dt>
-				<dd>(In development.) 'Codes' differ from 'approaches' in that they are relatively set, defined (albeit loose or dotted-line) established systems with fairly accepted lexical items and linguistic rules. (Add more here; Riley (2011), Crystal & Craig (1978) to define 'code')</dd>
+					<dd>(In development.) 'Codes' differ from 'approaches' in that they are relatively set, defined (albeit loose or dotted-line) established systems with fairly accepted lexical items and linguistic rules. (Add more here; Riley (2011), Crystal & Craig (1978) to define 'code')</dd>
 				<dt>"Approach"</dt>
-				<dd>(In development.) Approaches differ (and are visually designed differently) in that there are nuances in how principles of CASE are 'used' to render a transliteration.</dd>
+					<dd>(In development.) Approaches differ (and are visually designed differently) in that there are nuances in how principles of CASE are 'used' to render a transliteration.</dd>
 			</dl>
 
 			<h2>Version and currency</h2>
-			<p>This HTML/hypertext version (<script>document.write(new Date().getFullYear())</script>) supercedes any of the popular<a href="#refs" class="note"></a> printed<a href="#refs" class="note"></a> versions in that 1) it is more easily updated/distributed and 2) allows for additional footnoted and documented hypertexted media (research/text, video, etc.). This version also supercedes any other existing printed versions as well as the version printed in Humphrey<sub>H</sub>, J., Clark<sub>H</sub>, L., Featherstone<sub>D</sub>, J., and Ross III<sub>H</sub>, W. F. (2020). <em>You want to be an interpreter (5th edition)</em>. Vancouver, WA: H&H Publishing.</p> 
+			<p>This HTML/hypertext version (<script>document.write(new Date().getFullYear())</script>) supercedes any of the popular<a href="#refs" class="note"></a> printed<a href="#refs" class="note"></a> versions in that 1) it is more easily updated/distributed and 2) allows for additional footnoted and documented hypertexted media (research/text, video, etc.). This version also supercedes any other existing printed versions as well as the version printed in Humphrey<sub>H</sub>, J., Clark<sub>H</sub>, L., Featherstone<sub>D</sub>, J., and Ross III<sub>H</sub>, W. F. (2020). <em>You want to be an interpreter (5th edition)</em>. Vancouver, WA: H&H Publishing.</p>
 
-			<h2>Disclaimer and additional credits</h2>
-			<p>All implied placements and relationships are relative; overlapping approaches drawn for distinction and not for accuracy. Subscripts on surnames (e.g., <sub>D</sub>, <sub>H</sub>, or <sub>?</sub>) identify that an author, researcher, contributor, or creator is Deaf, hearing, or unknown. Additional credit to authors <a href="https://www.danparvaz.com">DParvaz</a><sub>H</sub>, Garrrett<sub>?</sub>, Jguk<sub>?</sub>, Adrignola<sub>?</sub>, and other unnamed contributors to the Visual Language Interpreting/Tools of the Trade wikibook<a href="#refs" class="note"></a> for references to dates, contributors, and descriptions.</p>
-			<p>Feedback, additions, and corrections are appreciated.</p>
-			<p class="view-continuum">View this page in a web browser to see a visual comparative continuum.</p>
-		</div>
+			<!-- continuum -->
+			<h2>Continuum</h2>
 
-		<div class="row definitions">
-			<div class="col">
-				<p><strong>&#8672; American Sign Language</strong></p>
-				<p><small>(principle is operational for other SLs)</small></p>
-			</div>
-			<div class="col-auto mr-auto">
-				<p><strong>English &#8674;</strong></p>
-				<p><small>(principle is operational for other SpLs)</small></p>
-			</div>
-		</div>
-
-		<div class="row col-12 spectrum-container">
-			<div class="spectrum">
-				<div class="col-5 col-3-xxl offset-md-1 approach-left">
-					<p class="text-black-50 text-uppercase">&#8672; MCE approach</p>
-					<h3 style="width: 85%"><span class="circle-letter" style="padding: .15em .4em;">A</span> Conceptually Accurate Signed English <attr class="initialism">(CASE)</attr></h3>
-					<p style="width: 85%">Popular alternative to Signed English, sometimes called PSE (Pidgin Signed English). Combines ASL signs and semantics in an MCE form. <strong>Not a language.</strong></p>
+			<!-- definitions -->
+			<div class="row definitions">
+				<div class="col">
+					<p><strong>&#8672; American Sign Language</strong></p>
+					<p><small>(principle is operational for other SLs)</small></p>
 				</div>
-				<div class="col-5 col-3-xxl offset-md-4 approach-right">
-					<p class="text-black-50 text-uppercase">MCE approach &#8674;</p>
-					<h3><span class="circle-letter" style="padding: .15em .4em;">B</span> Sign Supported Speech <attr class="initialism">(SSS)</attr></h3>
-					<p style="width: 100%">Voicing spoken English and signing an MCE. Sometimes called Simultaneous Communication (SimCom) or Total Communication (TC). <strong>Not a language.</strong></p>
+				<div class="col-auto mr-auto">
+					<p><strong>English &#8674;</strong></p>
+					<p><small>(principle is operational for other SpLs)</small></p>
 				</div>
 			</div>
-			<div class="col-12">
-				<div class="col-1"><p class="circle-number">1</p></div>
-				<div class="col-1 offset-md-7">
-					<p class="circle-number">2</p>
+			
+			<!-- spectrum -->
+			<div class="row spectrum-container box">
+				<div class="spectrum">
+					<div class="col-5 col-3-xxl offset-md-1 approach-left">
+						<p class="text-black-50 text-uppercase">&#8672; MCE approach</p>
+						<h3 style="width: 85%"><span class="circle-letter" style="padding: .15em .4em;">A</span> Conceptually Accurate Signed English <attr class="initialism">(CASE)</attr></h3>
+						<p style="width: 85%">Popular alternative to Signed English, sometimes called PSE (Pidgin Signed English). Combines ASL signs and semantics in an MCE form. <strong>Not a language.</strong></p>
+					</div>
+					<div class="col-5 col-3-xxl offset-md-4 approach-right">
+						<p class="text-black-50 text-uppercase">MCE approach &#8674;</p>
+						<h3><span class="circle-letter" style="padding: .15em .4em;">B</span> Sign Supported Speech <attr class="initialism">(SSS)</attr></h3>
+						<p style="width: 100%">Voicing spoken English and signing an MCE. Sometimes called Simultaneous Communication (SimCom) or Total Communication (TC). <strong>Not a language.</strong></p>
+					</div>
 				</div>
-				<div class="col-1 offset-md-8">
-					<p class="circle-number">4</p>
+
+				<!-- code placement -->
+				<div class="codes col-12">
+					<div class="col-1"><p class="circle-number">1</p></div>
+					<div class="col-1 offset-md-8">
+						<p class="circle-number">4</p>
+					</div>
+					<div class="col-1 offset-md-8">
+						<p class="circle-number">2</p>
+					</div>
+					<div class="col-1 offset-md-9">
+						<p class="circle-number">3</p>
+						<p class="circle-number">5</p>
+					</div>
+					<div class="col-1 offset-md-11">
+						<p class="circle-number">6</p>
+						<p class="circle-number">7</p>
+						<p class="circle-number">8</p>
+					</div>
 				</div>
-				<div class="col-1 offset-md-9">
-					<p class="circle-number">3</p>
-					<p class="circle-number">5</p>
-				</div>
-				<div class="col-1 offset-md-11">
-					<p class="circle-number">6</p>
-					<p class="circle-number">7</p>
-					<p class="circle-number">8</p>
+	
+				<!-- more like... comparison -->
+				<div class="more-like">
+					<div class="col-12 text-center d-flex justify-content-between">
+						<div class="col-2 text-right">&#8672; more like ASL</div>
+						<div class="col-7"><strong>Contact signs<a href="#refs" class="note"></a> and Manual Codes of English</strong><br>(Cokely<sub>H</sub>, 1983<a href="#refs" class="note"></a>; Lucas<sub>D</sub> & Valli<sub>D</sub>, 1992<a href="#refs" class="note"></a>; Woodward<sub>H</sub>, 1973<a href="#refs" class="note"></a>)</div>
+						<div class="col-2 text-left">more like English &#8674;</div>
+					</div>
 				</div>
 			</div>
 
-			<div class="more-like">
-				<div class="col-12 text-center d-flex justify-content-between">
-					<div class="col-2 text-right">&#8672; more like ASL</div>
-					<div class="col-7"><strong>Contact signs<a href="#refs" class="note"></a> and Manual Codes of English</strong><br>(Cokely<sub>H</sub>, 1983<a href="#refs" class="note"></a>; Lucas<sub>D</sub> & Valli<sub>D</sub>, 1992<a href="#refs" class="note"></a>; Woodward<sub>H</sub>, 1973<a href="#refs" class="note"></a>)</div>
-					<div class="col-2 text-left">more like English &#8674;</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row controls">
-			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked01" checked>
-				<label class="form-check-label" for="flexSwitchCheckChecked">Relative MCE placements</label>
-			</div>
-			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked02" checked>
-				<label class="form-check-label" for="flexSwitchCheckChecked">MCE approaches</label>
-			</div>
-		</div>
-
-		<!-- Manual codes for English !-->
-
-		<div class="row other-mces">
+			<!-- mces -->
 			<h2>Manual Codes for English<a href="#refs" class="note"></a></h2>	
+			<div class="row mces box">
 
-			<div class="col-md-6 col-xl-4">
-				<p class="circle-number">1</p>
-				<h3>American Sign Language <attr class="initialism">(ASL)</attr></h3>
-				<p>Visio-gestural, preferred, and connate language of Deaf people of the United States and Canada. Also historically exported to/creolized with other national Deaf educational efforts in African and Asian countries. Etymology and roots in:</p>
-				<ul>
-					<li>Indigenous<a href="#refs" class="note"></a><a href="#refs" class="note"></a><a href="#refs" class="note"></a><a href="#refs" class="note"></a>, 
-						regional<a href="#refs" class="note"></a><a href="#refs" class="note"></a>,
-						unrecorded<a href="#refs" class="note"></a>, 
-						and unknown<a href="#refs" class="note"></a> <abbr title="Sign language variants">SLV</abbr>s
-						</li>
-					<li>Native American SLVs (Clark<sub>H</sub>, 1885<a href="#refs" class="note"></a>; Davis<sub>D</sub>, 2017<a href="#refs" class="note"></a>)</li>
-					<li>Black SLVs (Hill<sub>D</sub>, McCaskill<sub>D</sub>, Bayley<sub>H</sub>, & Lucas<sub>H</sub>, 2015<a href="#refs" class="note"></a>; McCaskill<sub>D</sub>, Lucas<sub>H</sub>, Bayley<sub>H</sub>, & Hill<sub>D</sub>, 2020<a href="#refs" class="note"></a>)</li>
-					<li>British<a href="#refs" class="note"></a>/Kentish<a href="#refs" class="note"></a>/Vineyard<a href="#refs" class="note"></a>
-						SLVs (Groce<sub>H</sub>, 1985<a href="#refs" class="note"></a>; c.f.,  Kitzel<sub>H</sub>, 2013)</li>
-					<li>Mexican SLVs (Quinto-Pozos<sub>H</sub>, 2002<a href="#refs" class="note"></a>; 2008<a href="#refs" class="note"></a>)</li>
-					<li>French SLVs (Pelissier<sub>D</sub>, 1856<a href="#refs" class="note"></a>; Lane<sub>H</sub>, 1984<a href="#refs" class="note"></a>; )</li>
-					<li>Cistercian monk SLVs (Cagle<sub>D</sub>, 2010<a href="#refs" class="note"></a>)</li>
-				</ul>
-				<p>First documented in Brown<sub>H</sub>, 1856<a href="#refs" class="note"></a> and 1860<a href="#refs" class="note"></a> (Stringham<sub>H</sub>, 2019<a href="#refs" class="note"></a>). Topic-comment grammatical structure and approach (cf. Baker-Shenk<sub>H</sub> & Cokely<sub>H</sub>, 1980)<a href="#refs" class="note"></a>; utilizes code-borrowing from majority spoken language. Also called ‘the sign language’ (Veditz<sub>D</sub>, 1913)<a href="#refs" class="note"></a> and ‘Ameslan’ (Fant<sub>H</sub>, 1972)<a href="#refs" class="note"></a>.</p>
-				<p>Archaeological evolution of ASL lexical items and influence of proximity to other sign languages (Supalla<sub>D</sub>, Clark<sub>H</sub>, et al<sub>D, H</sub>., 2015)<a href="refs" class="note"></a></p>
-			</div>
-
-			<div class="col-md-6 col-xl-4">
-				<p class="circle-number">2</p>
-				<h3>Signed English <attr class="initialism">(SE)</attr></h3>
-				<p>English-based manual code with a variety of additional grammatical and semantic markers. Though there are commercially-available "Signed English" curricula and dictionaries, 'Signed English' is more arguably an umbrella term — and not a singular system — for other related MCE systems (SEE<sub>1</sub>, SEE<sub>2</sub>, LOVE, 'Siglish'<a href="#refs" class="note"></a> and 'Amelish,'<a href="#refs" class="note"></a> et al.)</p>
-				<h4>Analysis:</h4>
-				<ul>
-					<li>In the preface to <em><a href="http://gupress.gallaudet.edu/3051.html">The Comprehensive Signed English Dictionary</a></em>, Bornstein<sub>D</sub> and Saulnier<sub>D</sub> (1983)<a href="#refs" class="note"></a> explain some of the methodology behind their MCE system. They describe SE’s (what actually appears to be SEE<sub>2</sub>) affixes and rationale behind their sign creation rules.</li>
-				</ul>
-				<p class="developed">(Developed mid-1970s, Dr Harry Bornstein<sub>D</sub><a href="#refs" class="note"></a>, Gallaudet College; 1983, Bornstein<sub>D</sub>, Saulnier<sub>?</sub>, & Hamilton<sub>?</sub>)</p>
-			</div>
-
-			<div class="col-md-6 col-xl-4">
-				<p class="circle-number">3</p>
-				<h3>Seeing Essential English <attr class="initialism">(SEE<sub>1</sub>)</attr></h3>
-				<p><strong>Now defunct</strong>. Formerly ‘SEE<sub>1</sub>’ and 'Morphemic Sign System'<a href="#refs" class="note"></a> (cf., Milburn, 1986<a href="#refs" class="note"></a>); developed to "provide deaf/hard-of-hearing children with an intelligble visual-manual representation of English..." (Luetke-Stahlman<sub>H</sub> & Milburn<sub>H</sub>, 1996):</p>
-				<ul>
-					<li>compound words are broken in semantic morphemes/formed with separate signs (e.g., ‘<a href="https://www.handspeak.com/word/search/index.php?id=291">butter</a>’+ ‘<a href="https://www.handspeak.com/word/search/index.php?id=829">fly</a>’)</li>
-					<li>like SEE<sub>2</sub>, follows a 'two out of three' rule; "if a word is spelled with the same letters and sounds the same (e.g., 'bear'/'bear'), it is signed the same way, even if the meaning of the two words differs" (Nielsen, Luetke, & Stryker, 2011). The same rule applies for homonyms (e.g., ‘bear’ and ‘bare’)</li>
-					<li>heavy use of initialization (e.g., ha<u>V</u>e, ha<u>D</u>, ha<u>S</u>)</li>
-					<li>affixes, articles, and ‘to be’ (<a href="https://en.m.wikipedia.org/wiki/Copula_(linguistics)#English">copula</a>; '<u>B</u>e,' '<u>A</u>m,' '<u>I</u>s,' 'a<u>R</u>e,' '<u>B</u>e<u>I</u>ng,' '<u>W</u>a<u>S</u>,' '<u>W</u>e<u>R</u>e,' '<u>B</u>ee<u>N</u>') verb added</li>
-				</ul>
-				<h4>Analysis:</h4>
-				<ul>
-					<li>Washburn<sub>H</sub> & Anthony<sub>D</sub> (1974)<a href="#refs" class="note"></a> explain the history and explanation of SEE<sub>1</sub> production rules.</li>
-					<li>Parodied in deaf literature and narratives; the "Mr. SeeTerp"<sub>D</sub> parody character<a href="#refs" class="note"></a> demonstrates how ‘survivor’ humor is derived out of an over-the-top use of SEE as a communicative platform. Emblematic of its rhetorical conflict, SEE is often used in culturally Deaf discourse as a marker; those who use it are not ‘us,’ but ‘them.’</li>
-				</ul>
-				<p class="developed">(Developed 1966<a href="#refs" class="note"></a>, David Anthony<sub>D</sub>, Gallaudet College)</p>
-			</div>
-
-			<div class="col-md-6 col-xl-4">
-				<p class="circle-number">4</p>
-				<h3>Signing Exact English <attr class="initialism">(SEE<sub>2</sub>)</attr></h3>
-				<p><strong>Modified since original creation; evolving</strong>.(Formerly ‘SEE<sub>2</sub>’); similar to SEE<sub>1</sub> and more similar to Signed English (Bornstein<sub>D</sub>, 1983) but:
+				<!-- 1 ASL -->
+				<div class="col-md-6 col-xl-4">
+					<p class="circle-number">1</p>
+					<h3>American Sign Language <attr class="initialism">(ASL)</attr></h3>
+					<p>Visio-gestural, preferred, and connate language of Deaf people of the United States and Canada. Also historically exported to/creolized with other national Deaf educational efforts in African and Asian countries. Etymology and roots in:</p>
 					<ul>
-						<li>compound words are typically single signs and are more conceptually accurate (‘<a href="https://www.handspeak.com/word/search/index.php?id=292">butterfly</a>,’ not ‘<a href="https://www.handspeak.com/word/search/index.php?id=291">butter</a>’+ ‘<a href="https://www.handspeak.com/word/search/index.php?id=829">fly</a>’)</li>
-						<li>signs tend to be semantically like ASL; one sounded word = one sign</li>
-						<li>to create more single-sign semantic lexical items, sign 'families' are created through initialization (e.g., <u>C</u>ar, <u>B</u>us, <u>T</u>ruck, <u>V</u>an, <u>S</u>tation <u>W</u>agon)</li>
-						<li>dozens of invented initialized signs and affixes (prefixes [<u>A</u>-, <u>I</u>n-, <u>R</u>e-] and suffixes [-<u>N</u>ess, -<u>T</u>ion, -<u>I</u>ng]) to create additional semantics</li>
+						<li>Indigenous<a href="#refs" class="note"></a><a href="#refs" class="note"></a><a href="#refs" class="note"></a><a href="#refs" class="note"></a>, 
+							regional<a href="#refs" class="note"></a><a href="#refs" class="note"></a>,
+							unrecorded<a href="#refs" class="note"></a>, 
+							and unknown<a href="#refs" class="note"></a> <abbr title="Sign language variants">SLV</abbr>s
+							</li>
+						<li>Native American SLVs (Clark<sub>H</sub>, 1885<a href="#refs" class="note"></a>; Davis<sub>D</sub>, 2017<a href="#refs" class="note"></a>)</li>
+						<li>Black SLVs (Hill<sub>D</sub>, McCaskill<sub>D</sub>, Bayley<sub>H</sub>, & Lucas<sub>H</sub>, 2015<a href="#refs" class="note"></a>; McCaskill<sub>D</sub>, Lucas<sub>H</sub>, Bayley<sub>H</sub>, & Hill<sub>D</sub>, 2020<a href="#refs" class="note"></a>)</li>
+						<li>British<a href="#refs" class="note"></a>/Kentish<a href="#refs" class="note"></a>/Vineyard<a href="#refs" class="note"></a>
+							SLVs (Groce<sub>H</sub>, 1985<a href="#refs" class="note"></a>; c.f.,  Kitzel<sub>H</sub>, 2013)</li>
+						<li>Mexican SLVs (Quinto-Pozos<sub>H</sub>, 2002<a href="#refs" class="note"></a>; 2008<a href="#refs" class="note"></a>)</li>
+						<li>French SLVs (Pelissier<sub>D</sub>, 1856<a href="#refs" class="note"></a>; Lane<sub>H</sub>, 1984<a href="#refs" class="note"></a>; )</li>
+						<li>Cistercian monk SLVs (Cagle<sub>D</sub>, 2010<a href="#refs" class="note"></a>)</li>
+					</ul>
+					<p>First documented in Brown<sub>H</sub>, 1856<a href="#refs" class="note"></a> and 1860<a href="#refs" class="note"></a> (Stringham<sub>H</sub>, 2019<a href="#refs" class="note"></a>). Topic-comment grammatical structure and approach (cf. Baker-Shenk<sub>H</sub> & Cokely<sub>H</sub>, 1980)<a href="#refs" class="note"></a>; utilizes code-borrowing from majority spoken language. Also called ‘the sign language’ (Veditz<sub>D</sub>, 1913)<a href="#refs" class="note"></a> and ‘Ameslan’ (Fant<sub>H</sub>, 1972)<a href="#refs" class="note"></a>.</p>
+					<p>Archaeological evolution of ASL lexical items and influence of proximity to other sign languages (Supalla<sub>D</sub>, Clark<sub>H</sub>, et al<sub>D, H</sub>., 2015)<a href="refs" class="note"></a></p>
+				</div>
+
+				<!-- 2 signed english -->
+				<div class="col-md-6 col-xl-4">
+					<p class="circle-number">2</p>
+					<h3>Signed English <attr class="initialism">(SE)</attr></h3>
+					<p>English-based manual code with a variety of additional grammatical and semantic markers. Though there are commercially-available "Signed English" curricula and dictionaries, 'Signed English' is more arguably an umbrella term — and not a singular system — for other related MCE systems (SEE<sub>1</sub>, SEE<sub>2</sub>, LOVE, 'Siglish'<a href="#refs" class="note"></a> and 'Amelish,'<a href="#refs" class="note"></a> et al.)</p>
+					<h4>Analysis:</h4>
+					<ul>
+						<li>In the preface to <em><a href="http://gupress.gallaudet.edu/3051.html">The Comprehensive Signed English Dictionary</a></em>, Bornstein<sub>D</sub> and Saulnier<sub>D</sub> (1983)<a href="#refs" class="note"></a> explain some of the methodology behind their MCE system. They describe SE’s (what actually appears to be SEE<sub>2</sub>) affixes and rationale behind their sign creation rules.</li>
+					</ul>
+					<p class="developed">(Developed mid-1970s, Dr Harry Bornstein<sub>D</sub><a href="#refs" class="note"></a>, Gallaudet College; 1983, Bornstein<sub>D</sub>, Saulnier<sub>?</sub>, & Hamilton<sub>?</sub>)</p>
+				</div>
+
+				<!-- 3 SEE1 -->
+				<div class="col-md-6 col-xl-4">
+					<p class="circle-number">3</p>
+					<h3>Seeing Essential English <attr class="initialism">(SEE<sub>1</sub>)</attr></h3>
+					<p><strong>Now defunct</strong>. Formerly ‘SEE<sub>1</sub>’ and 'Morphemic Sign System'<a href="#refs" class="note"></a> (cf., Milburn, 1986<a href="#refs" class="note"></a>); developed to "provide deaf/hard-of-hearing children with an intelligble visual-manual representation of English..." (Luetke-Stahlman<sub>H</sub> & Milburn<sub>H</sub>, 1996):</p>
+					<ul>
+						<li>compound words are broken in semantic morphemes/formed with separate signs (e.g., ‘<a href="https://www.handspeak.com/word/search/index.php?id=291">butter</a>’+ ‘<a href="https://www.handspeak.com/word/search/index.php?id=829">fly</a>’)</li>
+						<li>like SEE<sub>2</sub>, follows a 'two out of three' rule; "if a word is spelled with the same letters and sounds the same (e.g., 'bear'/'bear'), it is signed the same way, even if the meaning of the two words differs" (Nielsen, Luetke, & Stryker, 2011). The same rule applies for homonyms (e.g., ‘bear’ and ‘bare’)</li>
+						<li>heavy use of initialization (e.g., haVe, haD, haS)</li>
+						<li>affixes, articles, and ‘to be’ (<a href="https://en.m.wikipedia.org/wiki/Copula_(linguistics)#English">copula</a>; 'Be,' 'Am,' 'Is,' 'aRe,' 'BeIng,' 'WaS,' 'WeRe,' 'BeeN') verb added</li>
 					</ul>
 					<h4>Analysis:</h4>
 					<ul>
-						<li>Gustason<sub>D</sub> (1990)<a href="#refs" class="note"></a> examines the origins of, reasons for, and common myths about SEE<sub>2</sub> creation and usage.</li>
-						<li>Comparison of a simultaneous ASL and SEE<sub>2</sub> rendering<a href="#refs" class="note"></a>; rhetoric aside, linguistically, what is happening in the SEE<sub>2</sub> text?</li>
-						<li>Interpreting colleague Daniel Greene<sub>H</sub><a href="#refs" class="note"></a> attempts to dispel misinformation and clarify the use of SEE2 for other interpreter practitioners. “My desire is for people to make educated choices about the language they use, which is why I want to make sure people who use the term SEE know what it actually is.” Includes video of SEE<sub>2</sub> users.</li>
+						<li>Washburn<sub>H</sub> & Anthony<sub>D</sub> (1974)<a href="#refs" class="note"></a> explain the history and explanation of SEE<sub>1</sub> production rules.</li>
+						<li>Parodied in deaf literature and narratives; the "Mr. SeeTerp"<sub>D</sub> parody character<a href="#refs" class="note"></a> demonstrates how ‘survivor’ humor is derived out of an over-the-top use of SEE as a communicative platform. Emblematic of its rhetorical conflict, SEE is often used in culturally Deaf discourse as a marker; those who use it are not ‘us,’ but ‘them.’</li>
 					</ul>
-					<p class="developed">(Developed 1972<a href="#refs" class="note"></a>, Dr Gerilee Gustason<sub>D</sub>, Esther Zawolkow<sub>H</sub>, Donna Pfetzing<sub>H</sub>)</p>
-				</p>
+					<p class="developed">(Developed 1966<a href="#refs" class="note"></a>, David Anthony<sub>D</sub>, Gallaudet College)</p>
+				</div>
+
+				<!-- 4 SEE2 -->
+				<div class="col-md-6 col-xl-4">
+					<p class="circle-number">4</p>
+					<h3>Signing Exact English <attr class="initialism">(SEE<sub>2</sub>)</attr></h3>
+					<p><strong>Modified since original creation; evolving</strong>.(Formerly ‘SEE<sub>2</sub>’); similar to SEE<sub>1</sub> and more similar to Signed English (Bornstein<sub>D</sub>, 1983) but:
+						<ul>
+							<li>compound words are typically single signs and are more conceptually accurate (‘<a href="https://www.handspeak.com/word/search/index.php?id=292">butterfly</a>,’ not ‘<a href="https://www.handspeak.com/word/search/index.php?id=291">butter</a>’+ ‘<a href="https://www.handspeak.com/word/search/index.php?id=829">fly</a>’)</li>
+							<li>signs tend to be semantically like ASL; one sounded word = one sign</li>
+							<li>to create more single-sign semantic lexical items, sign 'families' are created through initialization (e.g., Car, Bus, Truck, Van, Station Wagon)</li>
+							<li>dozens of invented initialized signs and affixes (prefixes [A-, In-, Re-] and suffixes [-Ness, -Tion, -Ing]) to create additional semantics</li>
+						</ul>
+						<h4>Analysis:</h4>
+						<ul>
+							<li>Gustason<sub>D</sub> (1990)<a href="#refs" class="note"></a> examines the origins of, reasons for, and common myths about SEE<sub>2</sub> creation and usage.</li>
+							<li>Comparison of a simultaneous ASL and SEE<sub>2</sub> rendering<a href="#refs" class="note"></a>; rhetoric aside, linguistically, what is happening in the SEE<sub>2</sub> text?</li>
+							<li>Interpreting colleague Daniel Greene<sub>H</sub><a href="#refs" class="note"></a> attempts to dispel misinformation and clarify the use of SEE2 for other interpreter practitioners. “My desire is for people to make educated choices about the language they use, which is why I want to make sure people who use the term SEE know what it actually is.” Includes video of SEE<sub>2</sub> users.</li>
+						</ul>
+						<p class="developed">(Developed 1972<a href="#refs" class="note"></a>, Dr Gerilee Gustason<sub>D</sub>, Esther Zawolkow<sub>H</sub>, Donna Pfetzing<sub>H</sub>)</p>
+					</p>
+				</div>
+
+				<!-- 5 LOVE -->
+				<div class="col-md-6 col-xl-4">
+					<p class="circle-number">5</p>
+					<h3>Linguistics of Visual English <attr class="initialism">(LOVE)</attr></h3>
+					<p><strong>Now defunct</strong>. Visual recording system invented by Dennis Wampler<sub>D</sub> based on Seeing Essential English (SEE<sub>1</sub>)<a href="#refs" class="note"></a>. Used Stokoe Notation System (tab-dez-sig; Stokoe<sub>H</sub>, 1960<a href="#refs" class="note"></a><a href="#refs" class="note"></a>; Stokoe<sub>H</sub>, Casterline<sub>D</sub>, & Croneberg<sub>D</sub>, 1965<a href="#refs" class="note"></a>) to write sentences.</p>
+					<h4>Analysis:</h4>
+					<ul>
+						<li>Nomeland<sub>D</sub> & Nomeland<sub>D</sub> (2011)<a href="#refs" class="note"></a> give a very brief description of Wampler’s LOVE system, highlighting its 1:1 coding and heavy use of initialization.</li>
+						<li>Gustason<sub>D</sub> (1990)<a href="#refs" class="note"></a> provides a brief description of the origin and use of Wampler’s LOVE system.</li>
+						<li>Comprehensive article by Lou<sub>H</sub> (1988)<a href="#refs" class="note"></a> on the evolution of language usage in American deaf education and a very brief description of LOVE and how it was implemented in schools. (Other bonus information about other English-bound sign systems and approaches also given here.)</li>
+					</ul>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Stokoe_passage.gif" alt="sample of Stokoe sign language notation system; orthographic representation of the first two sentences of an ASL text: 'Goldilocks and the Three Bears.'">
+					<p class="developed">(Developed 1972, Dennis Wampler<sub>D</sub>)</p>
+				</div>
+				
+				<!-- 6 rochester method -->
+				<div class="col-md-6 col-xl-4">
+					<p class="circle-number">6</p>
+					<h3>Rochester Method</h3>
+					<p><strong>Now largely defunct</strong>. Each lexical unit produced using individual phonemes of the American one-handed manual alphabet<a href="#refs" class="note"></a> Extensively used in schools for the deaf in the later 19th century to exactly represent written English phrases or sentences. Sometimes used in tactile/deaf-blind signing situations; some Deaf adults still use vestiges of this method.</p>
+					<h4>Analysis:</h4>
+					<ul>
+						<li>Parodied in deaf literature and narratives<a href="#refs" class="note"></a> because of its difficulty for some users to reproduce and parse accurately.</li>
+						<li>Sometimes used as language 'shibboleth' to determine a (typically hearing) signer's fluency.</li>
+					</ul>
+					<p class="developed">(Developed 1878<a href="#refs" class="note"></a>, Zenas Westervelt<sub>D</sub>, Superintendent, Western New York Institute for Deaf-Mutes, later Rochester School for the Deaf)</p>
+				</div>
+
+				<!-- 7 written english -->
+				<div class="col-md-6 col-xl-4">
+					<p class="circle-number">7</p>
+					<h3>Written English</h3>
+					<p></p>
+				</div>
+
+				<!-- 8 spoken english -->
+				<div class="col-md-6 col-xl-4">
+					<p class="circle-number">8</p>
+					<h3>Spoken English</h3>
+					<p></p>
+				</div>
 			</div>
 
-			<div class="col-md-6 col-xl-4">
-				<p class="circle-number">5</p>
-				<h3>Linguistics of Visual English <attr class="initialism">(LOVE)</attr></h3>
-				<p><strong>Now defunct</strong>. Visual recording system invented by Dennis Wampler<sub>D</sub> based on Seeing Essential English (SEE<sub>1</sub>)<a href="#refs" class="note"></a>. Used Stokoe Notation System (tab-dez-sig; Stokoe<sub>H</sub>, 1960<a href="#refs" class="note"></a><a href="#refs" class="note"></a>; Stokoe<sub>H</sub>, Casterline<sub>D</sub>, & Croneberg<sub>D</sub>, 1965<a href="#refs" class="note"></a>) to write sentences.</p>
-				<h4>Analysis:</h4>
-				<ul>
-					<li>Nomeland<sub>D</sub> & Nomeland<sub>D</sub> (2011)<a href="#refs" class="note"></a> give a very brief description of Wampler’s LOVE system, highlighting its 1:1 coding and heavy use of initialization.</li>
-					<li>Gustason<sub>D</sub> (1990)<a href="#refs" class="note"></a> provides a brief description of the origin and use of Wampler’s LOVE system.</li>
-					<li>Comprehensive article by Lou<sub>H</sub> (1988)<a href="#refs" class="note"></a> on the evolution of language usage in American deaf education and a very brief description of LOVE and how it was implemented in schools. (Other bonus information about other English-bound sign systems and approaches also given here.)</li>
-				</ul>
-				<img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Stokoe_passage.gif">
-				<p class="developed">(Developed 1972, Dennis Wampler<sub>D</sub>)</p>
+			<!-- other mces -->
+			<h2>Other Manual Codes for English</h2>
+			<div class="row mces box">
+
+				<!-- 9 cued speech -->
+				<div class="col-md-6 col-xl-4">
+					<p class="circle-number">9</p>
+					<h3>Cued Speech <attr class="initialism">(CS)</attr></h3>
+					<p><strong>Code; not a signed language.</strong> Uses eight non-semantic handshapes in eight different but related locations to visually represent <em>spoken</em> phonemes. <a href="https://www.youtube.com/watch?v=B9emmTMswkE">Cued speech video sample</a> and <a href="https://www.youtube.com/channel/UCFB13JV4oV8kpNqoK5kwXYQ">Cued Speech Association video samples</a>. Learning to cue: <a href="https://www.youtube.com/watch?v=WbyMfuJr0J0">Lesson 1</a> and <a href="https://www.youtube.com/watch?v=fpueRPp4nz8">Lesson 2</a> with a deaf CS user.</p>
+					<img src="http://trivisualcommunications.com/WordPress/wp-content/uploads/CueChartweb1.jpg" alt="chart of cued speech eight handshapes and eight potential face placements">
+					<p class="developed">(Developed 1966<a href="#refs" class="note"></a>, Dr Robert Cornett<sub>H</sub>, Gallaudet College)</p>
+				</div>
+
+				<!-- 10 paget gorman -->
+				<div class="col-md-6 col-xl-4">
+					<p class="circle-number">10</p>
+					<h3>Paget-Gorman Signed Speech <attr class="initialism">(PGSS)</attr></h3>
+					<p><strong>Code; not a signed language.</strong> British-based pantomimic, morphological based manual system. First experimental teaching of the system in 1964 with a group of deaf adults; <a href="http://www.pagetgorman.org/history/b5674aa4-a021-4667-bc94-429482a84274">PGSS first conceptualized in Britain in 1934 as a systematic pantomimic sign language</a> whereby <a href="https://www.youtube.com/channel/UCIEKqKjHzQZknXUc0QTSmsg/videos">each word would have its own sign</a>, with the <a href="http://www.pagetgorman.org/see-the-basic-signs">signs</a> presented in the same sequence as the words in the phrases or sentences to be signed. 37 basic 'signs,' 21 hand 'postures'; do not correspond to British Sign Language. Similar to Makaton, now used primarily with people who present with aphasia and/or speech disabilities.</p>
+					<p class="developed">(Developed 1934<a href="#refs" class="note"></a>, Sir Richard Paget<sub>H</sub>)</p>
+				</div>
+
+				<!-- 11 makaton -->
+				<div class="col-md-6 col-xl-4">
+					<p class="circle-number">11</p>
+					<h3>Makaton</h3>
+					<p><strong>Code; not a signed language.</strong> <a href="https://www.youtube.com/watch?v=nt_zUhoy2ok">Originally researched by Margaret Walker</a> in the early 1970s and added vocabulary development in the mid-1980s to work with cognitively disabled deaf adults. Later and <a href="https://makaton.org/TMC/TMC/About_Makaton/Who_uses_Makaton.aspx">currently adapted to work with communicatively disabled hearing children and adults</a>. Base vocabularies originally derived from British Sign Language (BSL) but <a href="https://www.youtube.com/watch?v=qWtS8jmwV34">adapted to work locally/regionally by deriving signs and gestures from other BANZSLs</a> and other national SLs and their variants. <a href="http://oro.open.ac.uk/19897/1/SheehyDuffy_Makaton_112009_No_2.pdf">Attitudes about the creation of Makaton</a> and <a href="https://twitter.com/Deaf/status/1371190725514264579">perceptions of BSL appropriation</a> still persist.</p> 
+					<p class="developed">(Research c. 1972–1973; vocabulary development 1985–1986<a href="#refs" class="note"></a>, Margaret Walker<sub>H</sub>, Botley Park Hospital, Chertsey, Surrey, UK</p>
+				</div>
 			</div>
 			
-			<div class="col-md-6 col-xl-4">
-				<p class="circle-number">6</p>
-				<h3>Rochester Method</h3>
-				<p><strong>Now largely defunct</strong>. Each lexical unit produced using individual phonemes of the American one-handed manual alphabet<a href="#refs" class="note"></a> Extensively used in schools for the deaf in the later 19th century to exactly represent written English phrases or sentences. Sometimes used in tactile/deaf-blind signing situations; some Deaf adults still use vestiges of this method.</p>
-				<h4>Analysis:</h4>
-				<ul>
-					<li>Parodied in deaf literature and narratives<a href="#refs" class="note"></a> because of its difficulty for some users to reproduce and parse accurately.</li>
-					<li>Sometimes used as language 'shibboleth' to determine a (typically hearing) signer's fluency.</li>
-				</ul>
-				<p class="developed">(Developed 1878<a href="#refs" class="note"></a>, Zenas Westervelt<sub>D</sub>, Superintendent, Western New York Institute for Deaf-Mutes, later Rochester School for the Deaf)</p>
-			</div>
-
-			<div class="col-md-6 col-xl-4">
-				<p class="circle-number">7</p>
-				<h3>Written English</h3>
-				<p></p>
-			</div>
-
-			<div class="col-md-6 col-xl-4">
-				<p class="circle-number">8</p>
-				<h3>Spoken English</h3>
-				<p></p>
-			</div>
-		</div>
-
-		<!-- MCE Approaches !-->
-
-		<div class="row other-mces">
+			<!-- approaches -->
 			<h2><attr class="initialism">MCE</attr> Approaches</h2>
-			<div class="row">
+			<div class="row mces box">
+				
+				<!-- A CASE -->
 				<div class="col-md-6 col-xl-4">
 					<p class="circle-letter">A</p>
 					<h3>Conceptually Accurate Signed English <attr class="initialism">(CASE)</attr></h3>
@@ -460,6 +502,7 @@
 					</ul>
 				</div>
 
+				<!-- B SSS -->
 				<div class="col-md-6 col-xl-4">
 					<p class="circle-letter">B</p>
 					<h3>Sign Supported Speech <attr class="initialism">(SSS)</attr></h3>
@@ -470,179 +513,151 @@
 					</ul>
 				</div>
 			</div>
-		</div>
 
-		<!-- Other non-SL manual codes for English !-->
-
-		<div class="row other-mces">
-			<h2>Other Manual Codes for English</h2>
-			<div class="row">
-				<div class="col-md-6 col-xl-4">
-					<p class="circle-number">9</p>
-					<h3>Cued Speech <attr class="initialism">(CS)</attr></h3>
-					<p><strong>Code; not a signed language.</strong> Uses eight non-semantic handshapes in eight different but related locations to visually represent <em>spoken</em> phonemes. <a href="https://www.youtube.com/watch?v=B9emmTMswkE">Cued speech video sample</a> and <a href="https://www.youtube.com/channel/UCFB13JV4oV8kpNqoK5kwXYQ">Cued Speech Association video samples</a>. Learning to cue: <a href="https://www.youtube.com/watch?v=WbyMfuJr0J0">Lesson 1</a> and <a href="https://www.youtube.com/watch?v=fpueRPp4nz8">Lesson 2</a> with a deaf CS user.</p>
-					<img src="http://trivisualcommunications.com/WordPress/wp-content/uploads/CueChartweb1.jpg">
-					<p class="developed">(Developed 1966<a href="#refs" class="note"></a>, Dr Robert Cornett<sub>H</sub>, Gallaudet College)</p>
-				</div>
-
-				<div class="col-md-6 col-xl-4">
-					<p class="circle-number">10</p>
-					<h3>Paget-Gorman Signed Speech <attr class="initialism">(PGSS)</attr></h3>
-					<p><strong>Code; not a signed language.</strong> British-based pantomimic, morphological based manual system. First experimental teaching of the system in 1964 with a group of deaf adults; <a href="http://www.pagetgorman.org/history/b5674aa4-a021-4667-bc94-429482a84274">PGSS first conceptualized in Britain in 1934 as a systematic pantomimic sign language</a> whereby <a href="https://www.youtube.com/channel/UCIEKqKjHzQZknXUc0QTSmsg/videos">each word would have its own sign</a>, with the <a href="http://www.pagetgorman.org/see-the-basic-signs">signs</a> presented in the same sequence as the words in the phrases or sentences to be signed. 37 basic 'signs,' 21 hand 'postures'; do not correspond to British Sign Language. Similar to Makaton, now used primarily with people who present with aphasia and/or speech disabilities.</p>
-					<p class="developed">(Developed 1934<a href="#refs" class="note"></a>, Sir Richard Paget<sub>H</sub>)</p>
-				</div>
-
-				<div class="col-md-6 col-xl-4">
-					<p class="circle-number">11</p>
-					<h3>Makaton</h3>
-					<p><strong>Code; not a signed language.</strong> <a href="https://www.youtube.com/watch?v=nt_zUhoy2ok">Originally researched by Margaret Walker</a> in the early 1970s and added vocabulary development in the mid-1980s to work with cognitively disabled deaf adults. Later and <a href="https://makaton.org/TMC/TMC/About_Makaton/Who_uses_Makaton.aspx">currently adapted to work with communicatively disabled hearing children and adults</a>. Base vocabularies originally derived from British Sign Language (BSL) but <a href="https://www.youtube.com/watch?v=qWtS8jmwV34">adapted to work locally/regionally by deriving signs and gestures from other BANZSLs</a> and other national SLs and their variants. <a href="http://oro.open.ac.uk/19897/1/SheehyDuffy_Makaton_112009_No_2.pdf">Attitudes about the creation of Makaton</a> and <a href="https://twitter.com/Deaf/status/1371190725514264579">perceptions of BSL appropriation</a> still persist.</p> 
-					<p class="developed">(Research c. 1972–1973; vocabulary development 1985–1986<a href="#refs" class="note"></a>, Margaret Walker<sub>H</sub>, Botley Park Hospital, Chertsey, Surrey, UK</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="row references">
+			<!-- references !-->
 			<h2>References</h2>
-			<ol id="refs">
-				<h3>Definitions and Foundation</h3>
-				<li><a class="back" href="#">^</a> Riley<sub>H</sub>, B. (2011). <a href="https://www.academia.edu/2511274/The_American_Sign_Language_English_Language_Contact_Situation_with_Postscript_2011_peer_reviewed_">The American sign language–English language–contact situation</a>. <em>Lengua de Señas e Interpretación</em>, Montevideo, 2, 93–117.</li>
-				<li><a class="back" href="#">^</a> Crystal<sub>H</sub>, D. & Craig<sub>H</sub>, E. (1978). <a href="http://intrpr.info/library/crystal-craig-contrived-sign-languages.pdf">Contrived sign language</a>. In I. M. Schlesinger<sub>H</sub> & L. Namir<sub>H</sub>, <em>Sign language of the deaf: Psychological, linguistic, and sociological perspectives</em>, 141–166. New York: Academic Press. (Discussion of 'contrived signing systems' on pp 161–166.)</li>
-				<li><a class="back" href="#">^</a> Stringham<sub>H</sub>, D. (2019). <a href="https://www.academia.edu/40262938/Comparative_American_Sign_Language_English_Continuum_2019_">Comparative American Sign Language/English Continuum</a>. https://www.academia.edu/40262938/Comparative_American_Sign_Language_English_Continuum_2019_.</li>
-				<li><a class="back" href="#">^</a> <a href="http://intrpr.info/library/stringham-asl-english-continuum.pdf">http://intrpr.info/library/stringham-asl-english-continuum.pdf</a>. Also printed in Humphrey<sub>H</sub>, J., Clark<sub>H</sub>, L., Featherstone<sub>D</sub>, J., and Ross III<sub>H</sub>, W. F. (2020). <em><a href="https://www.amazon.com/So-You-Want-Interpreter-5th/dp/097043555X">You want to be an interpreter (5th edition)</a></em>. Vancouver, WA: H&H Publishing.</li>
-				<li><a class="back" href="#">^</a> Wikibooks, <a href="https://en.wikibooks.org/wiki/Visual_Language_Interpreting/Tools_of_the_Trade">Visual Language Interpreting/Tools of the Trade</a>, initial creation 3 May 2014; last content edit 11 Mar 2016.</li>
-				<li><a class="back" href="#">^</a> "Contact sign." <a href="https://en.wikipedia.org/wiki/Contact_sign">https://en.wikipedia.org/wiki/Contact_sign</a></li>
-				<li><a class="back" href="#">^</a> Cokley<sub>H</sub>, D. (1983). <a href="https://www.jstor.org/stable/26203633">When is a pidgin not a pidgin? An alternate analysis of the ASL-English contact situation</a>. <em>Sign Language Studies</em>, 38 (Spring 1983), 1–24. (<a href="https://doi.org/10.1353/sls.1983.0017">doi: 10.1353/sls.1983.0017</a>).</li>
-				<li><a class="back" href="#">^</a> Lucas<sub>H</sub>, C. & Valli<sub>D</sub>, C. (1992). Language contact in the American Deaf community. In C. Valli<sub>D</sub> & C. Lucas<sub>H</sub> (eds), <em><a href="https://www.google.com/books/edition/Linguistics_of_American_Sign_Language/mfS3GlTLAUMC">Linguistics of American Sign Language: An introduction</a></em>, 458–480. Washington, D.C.: Gallaudet University Press. (cf., Lucas<sub>H</sub> & Valli<sub>H</sub>, 1988, 1989, 1991.)</li>
-				<li><a class="back" href="#">^</a> Woodward<sub>H</sub>, J. (1973). <a href="https://muse.jhu.edu/article/510936/summary">Some Characteristics of Pidgin Sign English</a>. <em>Sign Language Studies</em>, 2(3), 39–46. (<a href="https://doi.org/10.1353%2Fsls.2005.0001">doi:10.1353/sls.1973.0006</a>).</li>
-				<li><a class="back" href="#">^</a> "Manually coded English." <a href="https://en.wikipedia.org/wiki/Manually_coded_English">https://en.wikipedia.org/wiki/Manually_coded_English</a></li>
+			<div class="row references box">
+				<ol id="refs">
+					<h3>Definitions and Foundation</h3>
+					<li><a class="back" href="#">&#8617;</a> Riley<sub>H</sub>, B. (2011). <a href="https://www.academia.edu/2511274/The_American_Sign_Language_English_Language_Contact_Situation_with_Postscript_2011_peer_reviewed_">The American sign language–English language–contact situation</a>. <em>Lengua de Señas e Interpretación</em>, Montevideo, 2, 93–117.</li>
+					<li><a class="back" href="#">&#8617;</a> Crystal<sub>H</sub>, D. & Craig<sub>H</sub>, E. (1978). <a href="http://intrpr.info/library/crystal-craig-contrived-sign-languages.pdf">Contrived sign language</a>. In I. M. Schlesinger<sub>H</sub> & L. Namir<sub>H</sub>, <em>Sign language of the deaf: Psychological, linguistic, and sociological perspectives</em>, 141–166. New York: Academic Press. (Discussion of 'contrived signing systems' on pp 161–166.)</li>
+					<li><a class="back" href="#">&#8617;</a> Wikibooks, <a href="https://en.wikibooks.org/wiki/Visual_Language_Interpreting/Tools_of_the_Trade">Visual Language Interpreting/Tools of the Trade</a>, initial creation 3 May 2014; last content edit 11 Mar 2016.</li>
+					<li><a class="back" href="#">&#8617;</a> Stringham<sub>H</sub>, D. (2019). <a href="https://www.academia.edu/40262938/Comparative_American_Sign_Language_English_Continuum_2019_">Comparative American Sign Language/English Continuum</a>. https://www.academia.edu/40262938/Comparative_American_Sign_Language_English_Continuum_2019_.</li>
+					<li><a class="back" href="#">&#8617;</a> <a href="http://intrpr.info/library/stringham-asl-english-continuum.pdf">http://intrpr.info/library/stringham-asl-english-continuum.pdf</a>. Also printed in Humphrey<sub>H</sub>, J., Clark<sub>H</sub>, L., Featherstone<sub>D</sub>, J., and Ross III<sub>H</sub>, W. F. (2020). <em><a href="https://www.amazon.com/So-You-Want-Interpreter-5th/dp/097043555X">You want to be an interpreter (5th edition)</a></em>. Vancouver, WA: H&H Publishing.</li>
+					<li><a class="back" href="#">&#8617;</a> "Contact sign." <a href="https://en.wikipedia.org/wiki/Contact_sign">https://en.wikipedia.org/wiki/Contact_sign</a></li>
+					<li><a class="back" href="#">&#8617;</a> Cokley<sub>H</sub>, D. (1983). <a href="https://www.jstor.org/stable/26203633">When is a pidgin not a pidgin? An alternate analysis of the ASL-English contact situation</a>. <em>Sign Language Studies</em>, 38 (Spring 1983), 1–24. (<a href="https://doi.org/10.1353/sls.1983.0017">doi: 10.1353/sls.1983.0017</a>).</li>
+					<li><a class="back" href="#">&#8617;</a> Lucas<sub>H</sub>, C. & Valli<sub>D</sub>, C. (1992). Language contact in the American Deaf community. In C. Valli<sub>D</sub> & C. Lucas<sub>H</sub> (eds), <em><a href="https://www.google.com/books/edition/Linguistics_of_American_Sign_Language/mfS3GlTLAUMC">Linguistics of American Sign Language: An introduction</a></em>, 458–480. Washington, D.C.: Gallaudet University Press. (cf., Lucas<sub>H</sub> & Valli<sub>H</sub>, 1988, 1989, 1991.)</li>
+					<li><a class="back" href="#">&#8617;</a> Woodward<sub>H</sub>, J. (1973). <a href="https://muse.jhu.edu/article/510936/summary">Some Characteristics of Pidgin Sign English</a>. <em>Sign Language Studies</em>, 2(3), 39–46. (<a href="https://doi.org/10.1353%2Fsls.2005.0001">doi:10.1353/sls.1973.0006</a>).</li>
+					<li><a class="back" href="#">&#8617;</a> "Manually coded English." <a href="https://en.wikipedia.org/wiki/Manually_coded_English">https://en.wikipedia.org/wiki/Manually_coded_English</a></li>
 
-				<h4>American Sign Language</h4>
-				<li><a class="back" href="#">^</a> Davis<sub>D</sub>, J. E. & McKay-Cody<sub>D</sub>, M. (2011). <a href="https://www.academia.edu/4058350/Signed_Languages_of_American_Indian_Communities_Considerations_for_Interpreting_Work_and_Research">Signed languages of American Indian communities: Considerations for interpreting work and research</a>. In R. L. McKee<sub>H</sub> & J. E. Davis<sub>D</sub> (eds.), <em><a href="http://gupress.gallaudet.edu/excerpts/IMMCtoc.html">Interpreting in Multilingual, Multicultural Contexts</a></em>, 119–157. Washington, D.C.: Gallaudet University Press. (cf., Davis<sub>D</sub>, 2007; Wurtzburg<sub>?</sub> & Campbell<sub>?</sub>, 1995; McKay-Cody<sub>D</sub>, 1997, 1998, 1999.)</li>
-				<li><a class="back" href="#">^</a> Robinson<sub>D</sub>, O. (2019). "The 1817 Origins Myth," published 30 Nov 2019; <a href="https://www.youtube.com/watch?v=8M40MarjY0c">https://www.youtube.com/watch?v=8M40MarjY0c</a>.</li>
-				<li><a class="back" href="#">^</a> Mallery<sub>H</sub>, G. (1880). <em><a href="https://archive.org/details/introstudysignlang00mallrich">Introduction to the study of sign language among the North American Indians: as illustrating the gesture speech of mankind</a></em>. Washington, D.C.: Government Printing Office.</li>
-				<li><a class="back" href="#">^</a> "ASL: Colorless?" (Laurene Simms<sub>D</sub>) 17 Mar 2019; <a href="https://youtu.be/StHsChYWGC4?t=63">https://youtu.be/StHsChYWGC4?t=63</a> (discussion of multiple ethnic etymologies in 'The birth of ASL,' 1:33–4:45).</li>
-				<li><a class="back" href="#">^</a> Loew<sub>?</sub>, R. C., Akamatsu<sub>H</sub>, C. T., & Lanaville<sub>H</sub>, M. (2000). <a href="http://intrpr.github.io/library/loew-akamatsu-lanaville-two-handed-manual-alphabet-united-states.pdf">Two-handed manual alphabet in the United States</a>. In K. Emmorey<sub>H</sub> & H. Lane<sub>H</sub> (eds.), <em><a href="https://www.taylorfrancis.com/chapters/two-handed-manual-alphabet-united-states-ruth-loew-tane-akamatsu-mary-lanaville/e/10.4324/9781410604972-23">The signs of language revisited: An anthology to honor Ursula Bellugi and Edward Klima</a></em>, 215–227. New York: Psychology Press. (<a href="https://doi.org/10.4324/9781410604972">https://doi.org/10.4324/9781410604972</a>).</li>
-				<li><a class="back" href="#">^</a> (References to Kentish, Henniker, Martha's Vineyard, and Sandy River Sign Languages.) Lane<sub>H</sub>, H., Pillard<sub>H</sub>, R. C., & Hedberg<sub>D</sub>, M. (2011). <em><a href="https://oxford.universitypressscholarship.com/view/10.1093/acprof:oso/9780199759293.001.0001/acprof-9780199759293">The people of the eye: Deaf ethnicity and ancestry</a></em>. Oxford: Oxford University Press.</li>
-				<li><a class="back" href="#">^</a> (unrecorded; still gathering)</li>
-				<li><a class="back" href="#">^</a> (unknown; possible to gather?)</li>
-				<li><a class="back" href="#">^</a> Clark, William Philo<sub>H</sub> (1885). <em><a href="https://archive.org/details/cu31924028770570">The Indian sign language, with brief explanatory notes of the gestures taught deaf-mutes in our institutions for their instruction and a description of some of the peculiar laws, customs, myths, superstitions, ways of living, code of peace and war signals of our aborigines</a></em>. Philadelphia: L. R. Hamersly & Co.</li>
-				<li><a class="back" href="#">^</a> Davis<sub>D</sub>, J. E. (Online publication: May 2017). <a href="https://www.oxfordhandbooks.com/view/10.1093/oxfordhb/9780199935345.001.0001/oxfordhb-9780199935345-e-42">Native American signed languages</a>. Oxford: Oxford University Press. <a href="https://doi.org/10.1093/oxfordhb/9780199935345.013.42">doi: 10.1093/oxfordhb/9780199935345.013.42</a>.</li>
-				<li><a class="back" href="#">^</a> Hill<sub>D</sub>, J., McCaskill<sub>D</sub>, C., Bayley<sub>H</sub>, R., & Lucas<sub>H</sub>, C. (2015). <a href="https://www.oxfordhandbooks.com/view/10.1093/oxfordhb/9780199795390.001.0001/oxfordhb-9780199795390-e-38">The Black ASL (American Sign Language) Project: An Overview</a>. In J. Bloomquist<sub>H</sub>, L. J. Green<sub>H</sub>, & S. L. Lanehart<sub>H</sub> (eds.), <em>The Oxford Handbook of African American Language</em>, 316–337. Oxford: Oxford University Press. (<a href="https://doi.org/10.1093/oxfordhb/9780199795390.013.38">10.1093/oxfordhb/9780199795390.013.38</a>).</li>
-				<li><a class="back" href="#">^</a> McCaskill<sub>D</sub>, C., Lucas<sub>H</sub>, C., Bayley<sub>H</sub>, R., & Hill<sub>D</sub>, J. (2020). <em><a href="http://gupress.gallaudet.edu/the-hidden-treasure-of-black-asl.html">The hidden treasure of Black ASL: Its history and structure</a></em>. Washington, D.C.: Gallaudet University Press. (See also related presentations and references at <a href="http://blackaslproject.gallaudet.edu/">http://blackaslproject.gallaudet.edu</a> and <a href="https://www.youtube.com/playlist?list=PLejWLQVmRAs9oyuKRqdr9D8aiYWQOuFkk">The Hidden Treasure of Black ASL video presentations/data collection</a>.)</li>
-				<li><a class="back" href="#">^</a> (cf., Lane<sub>H</sub>, Pillard<sub>H</sub>, & Hedberg<sub>D</sub>, 2011. References to British SL mixed with Martha's Vineyard SL.)</li>
-				<li><a class="back" href="#">^</a> Kitzel<sub>H</sub>, M. E. (2013). <a href="http://sro.sussex.ac.uk/48877/">Chasing ancestors: Searching for the roots of American Sign Language in the Kentish Weald, 1620–1851</a>. Unpublilshed thesis. University of Sussex.</li>
-				<li><a class="back" href="#">^</a> Lane<sub>H</sub>, H., Pillard<sub>H</sub>, R., & French<sub>H</sub>, M. (2000). <a href="https://www.jstor.org/stable/26204927">Origins of the American Deaf-World: Assimilating and differentiating societies and their relation to genetic patterning</a>. <em>Sign Language Studies</em>, 1(1), 17-44.</li>
-				<li><a class="back" href="#">^</a> Groce<sub>H</sub>, N. E. (1985). <em><a href="https://www.academia.edu/28735773/Everyone_Here_Spoke_Sign_Language_Hereditary_Deafness_on_Marthas_Vineyard_Nora_Ellen_Groce">Everyone here spoke sign language: Hereditary deafness on Martha's Vineyard</a></em>. Cambridge, MA: Harvard University Press.</li>
-				<li><a class="back" href="#">^</a> Quinto-Pozos<sub>H</sub>, D. G. (2002). <a href="https://www.academia.edu/1561221/Contact_between_Mexican_Sign_Language_LSM_and_American_Sign_Language_ASL_in_two_Texas_border_areas">Contact between Mexican Sign Language and American Sign Language in two Texas border areas</a>. Unpublished dissertation. University of Texas at Austin.</li>
-				<li><a class="back" href="#">^</a> Quinto-Pozos<sub>H</sub>, D. G. (2008). <a href="https://www.academia.edu/1561221/Contact_between_Mexican_Sign_Language_LSM_and_American_Sign_Language_ASL_in_two_Texas_border_areas">Sign language contact and interference: ASL and LSM</a>. <em><a href="https://www.researchgate.net/publication/231941675_Sign_language_contact_and_interference_ASL_and_LSM">Language in Society</a></em>, 37, 161–189. (<a href="https://doi.org/10.10170S0047404508080251">doi: 10.10170S0047404508080251</a>).</li>
-				<li><a class="back" href="#">^</a> Pelissier<sub>D</sub>, P. (1856). <em><a href="https://gallica.bnf.fr/ark:/12148/bpt6k131991f.texteImage">Iconographie des signs faisant partie de l'enseignement primaire des sourds-muets</a></em>. Paris: Chez L'Auteur.</li>
-				<li><a class="back" href="#">^</a> Lane<sub>H</sub>, H. (1989). <em>When the mind hears: A history of the deaf</em>. New York: Vintage.</li>
-				<li><a class="back" href="#">^</a> Cagle<sub>D</sub>, K. M. (2010). <em><a href="https://www.academia.edu/21748806/Exploring_the_Ancestral_Roots_of_American_Sign_Language_Lexical_Borrowing_from_Cistercian_Sign_Language_and_French_Sign_Language">Exploring the ancestral roots of American sign language: Lexical borrowing from Cistercian sign language and French sign language</a></em>. The University of New Mexico. Unpublished dissertation.</li>
-				<li><a class="back" href="#">^</a> Brown<sub>H</sub>, J. S. (1856). <em>A vocabulary of mute signs</em>. Baton Rouge, LA: Daily Gazette and Morning Comet.</li>
-				<li><a class="back" href="#">^</a> Brown<sub>H</sub>, J. S. (1860). <em>A dictionary of signs and of the language of action, for the use of Deaf-Mutes, their instructors and friends; and, also, designed to facilitate to members of the bar, clergymen, political speakers, lecturers, and to the pupils of schools, academies, and colleges, the acquisition of a natural, graceful, distinctive and life-like gesticulation</em>. Baton Rouge, LA: Louisiana Institution for the Deaf and Dumb and the Blind.</li>
-				<li><a class="back" href="#">^</a> Stringham<sub>H</sub>, D. (2019). <a href="https://www.academia.edu/39153693/_A_Language_of_Action_James_Smedley_Brown_and_the_First_American_Dictionary_of_Sign_Language">"A Language of Action": James Smedley Brown and the First American Dictionary of Sign Language</a>. In B. Eldredge<sub>H</sub>, D. Stringham<sub>H</sub>, and B. Jarashow<sub>D</sub>. <em>Waypoints</em>: Proceedings of the Sixth Deaf Studies <em>Today!</em> Conference. Utah Valley University: Orem, Utah.</li>
-				<li><a class="back" href="#">^</a> Baker-Shenk<sub>H</sub>, C. & Cokely<sub>H</sub>, D. (1980). <em>American Sign Language: A teacher's resource text on grammar and culture</em>. Washington, D.C.: Gallaudet University Press.</li>
-				<li><a class="back" href="#">^</a> Veditz<sub>D</sub>, G. (1913). <a href="https://www.youtube.com/watch?v=wrBf9WAjRsg">Preservation of the sign language</a>. Film. The National Association of the Deaf. (All 'Preservation Series' films by the National Association of the Deaf can be found [with annotations] at the <a href="http://hsldb.georgetown.edu/films/">Historical Sign Language Database</a> at Georgetown University, curated by <a href="http://hsldb.georgetown.edu/about.php">Ted Supalla and other contributors</a>.)</li>
-				<li><a class="back" href="#">^</a> Fant<sub>H</sub>, L., Jr. (1972). <em><a href="https://www.thriftbooks.com/w/ameslan-an-introduction-to-american-sign-language_lou-fant/1309108#edition=725456&idiq=34199181">Ameslan: An introduction to American Sign Language</a></em>. Silver Spring, MD: National Association of the Deaf.</li>
-				<li><a class="back" href="#">^</a> "Georgetown Professor Ted Supalla's ASL Archaeology Presentation at RIT," published 4 Sep 2015; <a href="https://www.youtube.com/watch?v=zLW7ASfH77I">https://www.youtube.com/watch?v=zLW7ASfH77I</a>. cf. Supalla<sub>D</sub>, T. & Clark<sub>H</sub>, P. (2015). <em>Sign Language Archeology: Understanding the Historical Roots of American Sign Language</em>. Washington, D.C.: Gallaudet University Press and materials at the <a href="http://hsldb.georgetown.edu">Historical Sign Language Database</a>.</li>
+					<h3>American Sign Language</h3>
+					<li><a class="back" href="#">&#8617;</a> Davis<sub>D</sub>, J. E. & McKay-Cody<sub>D</sub>, M. (2011). <a href="https://www.academia.edu/4058350/Signed_Languages_of_American_Indian_Communities_Considerations_for_Interpreting_Work_and_Research">Signed languages of American Indian communities: Considerations for interpreting work and research</a>. In R. L. McKee<sub>H</sub> & J. E. Davis<sub>D</sub> (eds.), <em><a href="http://gupress.gallaudet.edu/excerpts/IMMCtoc.html">Interpreting in Multilingual, Multicultural Contexts</a></em>, 119–157. Washington, D.C.: Gallaudet University Press. (cf., Davis<sub>D</sub>, 2007; Wurtzburg<sub>?</sub> & Campbell<sub>?</sub>, 1995; McKay-Cody<sub>D</sub>, 1997, 1998, 1999.)</li>
+					<li><a class="back" href="#">&#8617;</a> Robinson<sub>D</sub>, O. (2019). "The 1817 Origins Myth," published 30 Nov 2019; <a href="https://www.youtube.com/watch?v=8M40MarjY0c">https://www.youtube.com/watch?v=8M40MarjY0c</a>.</li>
+					<li><a class="back" href="#">&#8617;</a> Mallery<sub>H</sub>, G. (1880). <em><a href="https://archive.org/details/introstudysignlang00mallrich">Introduction to the study of sign language among the North American Indians: as illustrating the gesture speech of mankind</a></em>. Washington, D.C.: Government Printing Office.</li>
+					<li><a class="back" href="#">&#8617;</a> "ASL: Colorless?" (Laurene Simms<sub>D</sub>) 17 Mar 2019; <a href="https://youtu.be/StHsChYWGC4?t=63">https://youtu.be/StHsChYWGC4?t=63</a> (discussion of multiple ethnic etymologies in 'The birth of ASL,' 1:33–4:45).</li>
+					<li><a class="back" href="#">&#8617;</a> Loew<sub>?</sub>, R. C., Akamatsu<sub>H</sub>, C. T., & Lanaville<sub>H</sub>, M. (2000). <a href="http://intrpr.github.io/library/loew-akamatsu-lanaville-two-handed-manual-alphabet-united-states.pdf">Two-handed manual alphabet in the United States</a>. In K. Emmorey<sub>H</sub> & H. Lane<sub>H</sub> (eds.), <em><a href="https://www.taylorfrancis.com/chapters/two-handed-manual-alphabet-united-states-ruth-loew-tane-akamatsu-mary-lanaville/e/10.4324/9781410604972-23">The signs of language revisited: An anthology to honor Ursula Bellugi and Edward Klima</a></em>, 215–227. New York: Psychology Press. (<a href="https://doi.org/10.4324/9781410604972">https://doi.org/10.4324/9781410604972</a>).</li>
+					<li><a class="back" href="#">&#8617;</a> (References to Kentish, Henniker, Martha's Vineyard, and Sandy River Sign Languages.) Lane<sub>H</sub>, H., Pillard<sub>H</sub>, R. C., & Hedberg<sub>D</sub>, M. (2011). <em><a href="https://oxford.universitypressscholarship.com/view/10.1093/acprof:oso/9780199759293.001.0001/acprof-9780199759293">The people of the eye: Deaf ethnicity and ancestry</a></em>. Oxford: Oxford University Press.</li>
+					<li><a class="back" href="#">&#8617;</a> (unrecorded; still gathering)</li>
+					<li><a class="back" href="#">&#8617;</a> (unknown; possible to gather?)</li>
+					<li><a class="back" href="#">&#8617;</a> Clark, William Philo<sub>H</sub> (1885). <em><a href="https://archive.org/details/cu31924028770570">The Indian sign language, with brief explanatory notes of the gestures taught deaf-mutes in our institutions for their instruction and a description of some of the peculiar laws, customs, myths, superstitions, ways of living, code of peace and war signals of our aborigines</a></em>. Philadelphia: L. R. Hamersly & Co.</li>
+					<li><a class="back" href="#">&#8617;</a> Davis<sub>D</sub>, J. E. (Online publication: May 2017). <a href="https://www.oxfordhandbooks.com/view/10.1093/oxfordhb/9780199935345.001.0001/oxfordhb-9780199935345-e-42">Native American signed languages</a>. Oxford: Oxford University Press. <a href="https://doi.org/10.1093/oxfordhb/9780199935345.013.42">doi: 10.1093/oxfordhb/9780199935345.013.42</a>.</li>
+					<li><a class="back" href="#">&#8617;</a> Hill<sub>D</sub>, J., McCaskill<sub>D</sub>, C., Bayley<sub>H</sub>, R., & Lucas<sub>H</sub>, C. (2015). <a href="https://www.oxfordhandbooks.com/view/10.1093/oxfordhb/9780199795390.001.0001/oxfordhb-9780199795390-e-38">The Black ASL (American Sign Language) Project: An Overview</a>. In J. Bloomquist<sub>H</sub>, L. J. Green<sub>H</sub>, & S. L. Lanehart<sub>H</sub> (eds.), <em>The Oxford Handbook of African American Language</em>, 316–337. Oxford: Oxford University Press. (<a href="https://doi.org/10.1093/oxfordhb/9780199795390.013.38">10.1093/oxfordhb/9780199795390.013.38</a>).</li>
+					<li><a class="back" href="#">&#8617;</a> McCaskill<sub>D</sub>, C., Lucas<sub>H</sub>, C., Bayley<sub>H</sub>, R., & Hill<sub>D</sub>, J. (2020). <em><a href="http://gupress.gallaudet.edu/the-hidden-treasure-of-black-asl.html">The hidden treasure of Black ASL: Its history and structure</a></em>. Washington, D.C.: Gallaudet University Press. (See also related presentations and references at <a href="http://blackaslproject.gallaudet.edu/">http://blackaslproject.gallaudet.edu</a> and <a href="https://www.youtube.com/playlist?list=PLejWLQVmRAs9oyuKRqdr9D8aiYWQOuFkk">The Hidden Treasure of Black ASL video presentations/data collection</a>.)</li>
+					<li><a class="back" href="#">&#8617;</a> (cf., Lane<sub>H</sub>, Pillard<sub>H</sub>, & Hedberg<sub>D</sub>, 2011. References to British SL mixed with Martha's Vineyard SL.)</li>
+					<li><a class="back" href="#">&#8617;</a> Kitzel<sub>H</sub>, M. E. (2013). <a href="http://sro.sussex.ac.uk/48877/">Chasing ancestors: Searching for the roots of American Sign Language in the Kentish Weald, 1620–1851</a>. Unpublilshed thesis. University of Sussex.</li>
+					<li><a class="back" href="#">&#8617;</a> Lane<sub>H</sub>, H., Pillard<sub>H</sub>, R., & French<sub>H</sub>, M. (2000). <a href="https://www.jstor.org/stable/26204927">Origins of the American Deaf-World: Assimilating and differentiating societies and their relation to genetic patterning</a>. <em>Sign Language Studies</em>, 1(1), 17-44.</li>
+					<li><a class="back" href="#">&#8617;</a> Groce<sub>H</sub>, N. E. (1985). <em><a href="https://www.academia.edu/28735773/Everyone_Here_Spoke_Sign_Language_Hereditary_Deafness_on_Marthas_Vineyard_Nora_Ellen_Groce">Everyone here spoke sign language: Hereditary deafness on Martha's Vineyard</a></em>. Cambridge, MA: Harvard University Press.</li>
+					<li><a class="back" href="#">&#8617;</a> Quinto-Pozos<sub>H</sub>, D. G. (2002). <a href="https://www.academia.edu/1561221/Contact_between_Mexican_Sign_Language_LSM_and_American_Sign_Language_ASL_in_two_Texas_border_areas">Contact between Mexican Sign Language and American Sign Language in two Texas border areas</a>. Unpublished dissertation. University of Texas at Austin.</li>
+					<li><a class="back" href="#">&#8617;</a> Quinto-Pozos<sub>H</sub>, D. G. (2008). <a href="https://www.researchgate.net/publication/231941675_Sign_language_contact_and_interference_ASL_and_LSM">Sign language contact and interference: ASL and LSM</a>. <em><a href="https://www.researchgate.net/publication/231941675_Sign_language_contact_and_interference_ASL_and_LSM">Language in Society</a></em>, 37, 161–189. (<a href="https://doi.org/10.10170S0047404508080251">doi: 10.10170S0047404508080251</a>).</li>
+					<li><a class="back" href="#">&#8617;</a> Pelissier<sub>D</sub>, P. (1856). <em><a href="https://gallica.bnf.fr/ark:/12148/bpt6k131991f.texteImage">Iconographie des signs faisant partie de l'enseignement primaire des sourds-muets</a></em>. Paris: Chez L'Auteur.</li>
+					<li><a class="back" href="#">&#8617;</a> Lane<sub>H</sub>, H. (1989). <em>When the mind hears: A history of the deaf</em>. New York: Vintage.</li>
+					<li><a class="back" href="#">&#8617;</a> Cagle<sub>D</sub>, K. M. (2010). <em><a href="https://www.academia.edu/21748806/Exploring_the_Ancestral_Roots_of_American_Sign_Language_Lexical_Borrowing_from_Cistercian_Sign_Language_and_French_Sign_Language">Exploring the ancestral roots of American sign language: Lexical borrowing from Cistercian sign language and French sign language</a></em>. The University of New Mexico. Unpublished dissertation.</li>
+					<li><a class="back" href="#">&#8617;</a> Brown<sub>H</sub>, J. S. (1856). <em>A vocabulary of mute signs</em>. Baton Rouge, LA: Daily Gazette and Morning Comet.</li>
+					<li><a class="back" href="#">&#8617;</a> Brown<sub>H</sub>, J. S. (1860). <em>A dictionary of signs and of the language of action, for the use of Deaf-Mutes, their instructors and friends; and, also, designed to facilitate to members of the bar, clergymen, political speakers, lecturers, and to the pupils of schools, academies, and colleges, the acquisition of a natural, graceful, distinctive and life-like gesticulation</em>. Baton Rouge, LA: Louisiana Institution for the Deaf and Dumb and the Blind.</li>
+					<li><a class="back" href="#">&#8617;</a> Stringham<sub>H</sub>, D. (2019). <a href="https://www.academia.edu/39153693/_A_Language_of_Action_James_Smedley_Brown_and_the_First_American_Dictionary_of_Sign_Language">"A Language of Action": James Smedley Brown and the First American Dictionary of Sign Language</a>. In B. Eldredge<sub>H</sub>, D. Stringham<sub>H</sub>, and B. Jarashow<sub>D</sub>. <em>Waypoints</em>: Proceedings of the Sixth Deaf Studies <em>Today!</em> Conference. Utah Valley University: Orem, Utah.</li>
+					<li><a class="back" href="#">&#8617;</a> Baker-Shenk<sub>H</sub>, C. & Cokely<sub>H</sub>, D. (1980). <em>American Sign Language: A teacher's resource text on grammar and culture</em>. Washington, D.C.: Gallaudet University Press.</li>
+					<li><a class="back" href="#">&#8617;</a> Veditz<sub>D</sub>, G. (1913). <a href="https://www.youtube.com/watch?v=wrBf9WAjRsg">Preservation of the sign language</a>. Film. The National Association of the Deaf. (All 'Preservation Series' films by the National Association of the Deaf can be found [with annotations] at the <a href="http://hsldb.georgetown.edu/films/">Historical Sign Language Database</a> at Georgetown University, curated by <a href="http://hsldb.georgetown.edu/about.php">Ted Supalla and other contributors</a>.)</li>
+					<li><a class="back" href="#">&#8617;</a> Fant<sub>H</sub>, L., Jr. (1972). <em><a href="https://www.thriftbooks.com/w/ameslan-an-introduction-to-american-sign-language_lou-fant/1309108#edition=725456&idiq=34199181">Ameslan: An introduction to American Sign Language</a></em>. Silver Spring, MD: National Association of the Deaf.</li>
+					<li><a class="back" href="#">&#8617;</a> "Georgetown Professor Ted Supalla's ASL Archaeology Presentation at RIT," published 4 Sep 2015; <a href="https://www.youtube.com/watch?v=zLW7ASfH77I">https://www.youtube.com/watch?v=zLW7ASfH77I</a>. cf. Supalla<sub>D</sub>, T. & Clark<sub>H</sub>, P. (2015). <em>Sign Language Archeology: Understanding the Historical Roots of American Sign Language</em>. Washington, D.C.: Gallaudet University Press and materials at the <a href="http://hsldb.georgetown.edu">Historical Sign Language Database</a>.</li>
 
-				<h4>Signed English </h4>
-				<li><a class="back" href="#">^</a> 'Siglish' is also mentioned at "<a href="https://www.handspeak.com/study/index.php?id=86">Siglish: an old term of Signed English</a>" and Murphy<sub>?</sub>, H. J. & Fleischer<sub>D</sub>, L. R. (1977). <a href="https://core.ac.uk/download/pdf/234960167.pdf">The effects of Ameslan versus Siglish upon test scores</a>. <em><a href="https://repository.wcsu.edu/jadara/">Journal of American Deafness and Rehabilitation Association (JADARA)</a></em>, 11(2; October 1977), 15–18.</li>
-				<li><a class="back" href="#">^</a> There is little to no extant reference of 'Amelish'; the only seeming reference to it is "This term was coined by Bernard Bragg<sub>D</sub> from Texas. This method uses lots of ASL & fs [fingerspelling] in English order." (<a href="https://deaf-info.zak.co.il/d/deaf-info/old/methods.html">https://deaf-info.zak.co.il/d/deaf-info/old/methods.html</a>.)</li>
-				<li><a class="back" href="#">^</a> Bornstein<sub>D</sub>, H., Saulnier<sub>?</sub>, K, & Hamilton<sub>?</sub>, L. (1983). <em><a href="http://intrpr.info/library/bornstein-signed-english-preface.pdf">The comprehensive signed English dictionary</a></em>. Washington, D.C.: Gallaudet University Press.</li>
-				<li><a class="back" href="#">^</a> Bornstein<sub>D</sub>, H. (1974). Signed English: A Manual Approach to English Language Development. <em>Journal of Speech and Hearing Disorders</em>, 39(3), 330–342. (<a href="https://doi.org/10.1044/jshd.3903.330">doi:10.1044/jshd.3903.330</a>).</li>
-				
-				<h4>Seeing Essential English (SEE<sub>1</sub>)</h4>
-				<li><a class="back" href="#">^</a> Nielsen<sub>?</sub>, D. C., Luetke<sub>H</sub>, B., & Stryker<sub>?</sub>, D. S. (2011). <a href="https://academic.oup.com/jdsde/article/16/3/275/430405">The importance of morphemic awareness to reading achievement and the potential of signing morphemes to supporting reading development</a>. <em>Journal of Deaf Studies and Deaf Education</em>, 16(3), Summer, 275–288. (<a href="https://doi.org/10.1093/deafed/enq063">doi:10.1093/deafed/enq063</a>).</li>
-				<li><a class="back" href="#">^</a> Milburn<sub>H</sub>, W. (1986). 1986 morphemic list. Amarillo, TX: Amarillo Independent School District Regional Educational Program for the Deaf.</li>
-				<li><a class="back" href="#">^</a> Washburn<sub>H</sub>, A. O., & Anthony<sub>D</sub>, D. A. (1974). <a href="http://intrpr.info/library/washburn-anthony-seeing-essential-english.pdf">Seeing Essential English: A sign system of English</a>. <em>Journal of Academy of Rehabilitative Audiology</em>, 7(1), 18-25.</li>
-				<li><a class="back" href="#">^</a> "Star Spangled Banner Parody: Mr. SeeTerp" (John Maucere<sub>D</sub>), published 3 Feb 2014; <a href="https://vimeo.com/groups/73395/videos/85760406">https://vimeo.com/groups/73395/videos/85760406</a>.</li>
-				<li><a class="back" href="#">^</a> Luetke-Stahlman<sub>H</sub>, B. & Milburn<sub>H</sub>, W. O. (1996). <a href="http://intrpr.github.io/library/luetke-stahlman-history-of-see-1.pdf">A History of Seeing Essential English (SEE I)</a>. <em>American Annals of the Deaf</em>, 141(1), 29–33.</li>
-				
-				<h4>Signing Exact English (SEE<sub>2</sub>)</h4>
-				<li><a class="back" href="#">^</a> Gustason<sub>D</sub>, G. (1990). <a href="http://intrpr.info/library/gustason-signing-exact-english-ch6.pdf">Signing exact english</a>. In H. Bornstein<sub>D</sub> (ed.), <em><a href="https://www.google.com/books/edition/Manual_Communication/eul6HRZJZWIC?q=&gbpv=1#f=false">Manual communication: Implications for education</a></em>, 108–127. Washington, D.C.: Gallaudet University Press.</li>
-				<li><a class="back" href="#">^</a> "ASL vs. SEE Comparison | ASL - American Sign Language," (ASLTHAT! [Joseph Wheeler<sub>D</sub>]), published 19 Oct 2016, <a href="https://www.youtube.com/watch?v=hvqZ83pS0B4">https://www.youtube.com/watch?v=hvqZ83pS0B4</a></li>
-				<li><a class="back" href="#">^</a> Greene<sub>H</sub>, D. (2012, 5 Sep). "SEE: Allow me to disabuse you of a common misnomer." <a href="http://danielgreene.com/2012/09/05/see-allow-me-to-disabuse-you-of-a-common-misnomer/">http://danielgreene.com/2012/09/05/see-allow-me-to-disabuse-you-of-a-common-misnomer</a></li>
-				<li><a class="back" href="#">^</a> </li>
-				
-				<h4>Linguistics of Visual English (LOVE)</h4>
-				<li>Gustason<sub>D</sub>, G. (1990). <a href="http://intrpr.info/library/gustason-signing-exact-english-ch6.pdf">Signing exact english</a>. In H. Bornstein<sub>D</sub> (ed.), <em><a href="https://www.google.com/books/edition/Manual_Communication/eul6HRZJZWIC?q=&gbpv=1#f=false">Manual communication: Implications for education</a></em>, 108–127. Washington, D.C.: Gallaudet University Press.</li>
-				<li><a class="back" href="#">^</a> "Stokoe Notation," <a href="https://en.wikipedia.org/wiki/Stokoe_notation">https://en.wikipedia.org/wiki/Stokoe_notation</a>. (cf., <a href="https://www.brighthubeducation.com/special-ed-hearing-impairments/50514-stokoe-notation-and-american-sign-language/">History of American Sign Language: Stokoe Notation</a> and Stokoe<sub>H</sub>, W. C. (2005; original 1960). <a href="https://academic.oup.com/jdsde/article-pdf/10/1/3/1034248/eni001.pdf">Sign language structure: An outline of the visual communication systems of the American Deaf</a>. <em>Journal of Deaf Studies and Deaf Education</em>, 10(1), 3–37. (<a href="https://doi.org/10.1093/deafed/eni001">doi:10.1093/deafed/eni001</a>). (Originally published as <em>Studies in Linguistics, Occasional Papers 8</em> (1960), by the Department of Anthropology and Linguistics, University of Buffalo, Buffalo 14, New York.)</li>
-				<li><a class="back" href="#">^</a> "Signs of Change: William Stokoe's Research into American Sign Language," published 3 Mar 2017; <a href="https://www.youtube.com/watch?v=X-N2dSl6ZBU">https://www.youtube.com/watch?v=X-N2dSl6ZBU</a>. (Student project: Stoughton<sub>H</sub>, J., Individual Documentary, Senior Division, National History Day 2017)</li>
-				<li><a class="back" href="#">^</a> Stokoe<sub>H</sub>, W. C., Casterline<sub>D</sub>, D. C., & Croneberg<sub>D</sub>, C. G. (1965). <em><a href="https://archive.org/details/dictionaryofamer00stok">A dictionary of American sign language on linguistic principles</a></em>. Washington, D.C.: Gallaudet College Press.</li>
-				<li><a class="back" href="#">^</a> Nomeland<sub>D</sub>, M. M. & Nomeland<sub>D</sub>, R. E. (2011). <em><a href="https://books.google.com/books?id=kNvGuljM99wC&pg=PA122&lpg=PA122&dq=Dennis+Wampler&source=bl&ots=HmU-yAjcbh&sig=_B8sv9ZYiq1SrDg7PZYYSOrEVU4&hl=en&sa=X&ved=0CEUQ6AEwBzgUahUKEwimmLGu5tHIAhVExmMKHb1GBE4#v=onepage&q=Dennis%20Wampler&f=false">The Deaf community in America: History in the making</a></em>. Jefferson, NC: McFarland & Company.</li>
-				<li><a class="back" href="#">^</a> Gustason<sub>D</sub>, G. (1990). <a href="http://intrpr.info/library/gustason-signing-exact-english-ch6.pdf">Signing exact english</a>. In H. Bornstein<sub>D</sub> (ed.), <em><a href="https://www.google.com/books/edition/Manual_Communication/eul6HRZJZWIC?q=&gbpv=1#f=false">Manual communication: Implications for education</a></em>, 108–127. Washington, D.C.: Gallaudet University Press.</li>
-				<li><a class="back" href="#">^</a> Lou<sub>H</sub>, M. W. (1988). <a href="https://www.google.com/books/edition/Language_Learning_and_Deafness/yIb7XvGDh3YC?q=Dennis+Wampler&gbpv=1#f=false">The history of language use in the education of the Deaf in the United States</a>. In M. Strong<sub>H</sub> (ed.) <em>Language Learning and Deafness</em>. London: Cambridge University Press.</li>
-				
-				<h4>Rochester Method</h4>
-				<li><a class="back" href="#">^</a> "Rochester Method - American Deaf Culture," (<a href="https://www.coursera.org/learn/deaf-culture">Terrell Brittain</a>, University of Houston) published 10 Nov 2020; <a href="https://www.youtube.com/watch?v=Gb1EH1pijHA">https://www.youtube.com/watch?v=Gb1EH1pijHA</a>.</li>
-				<li><a class="back" href="#">^</a> "Billy Kelman<sub>D</sub>," published 27 Aug 2008; <a href="https://www.youtube.com/watch?v=fYAVL1Dxokk">https://www.youtube.com/watch?v=fYAVL1Dxokk</a>.</li>
-				<li><a class="back" href="#">^</a> </li>
-				
-				<h4>Cued Speech</h4>
-				<li><a class="back" href="#">^</a> "Cued Speech," <a href="https://en.wikipedia.org/wiki/Cued_speech">https://en.wikipedia.org/wiki/Cued_speech</a>.</li>
-				
-				<h4>Paget-Gorman Signed Speech (PGSS)</h4>
-				<li><a class="back" href="#">^</a> "Sir Richard Paget<sub>H</sub>," <a href="https://en.wikipedia.org/wiki/Sir_Richard_Paget,_2nd_Baronet">https://en.wikipedia.org/wiki/Sir_Richard_Paget,_2nd_Baronet</a>.</li>
-				
-				<h4>Makaton</h4>
-				<li><a class="back" href="#">^</a> "Makaton," <a href="https://en.wikipedia.org/wiki/Makaton">https://en.wikipedia.org/wiki/Makaton</a>.</li>
-			</ol>
-		</div>
+					<h3>Signed English </h3>
+					<li><a class="back" href="#">&#8617;</a> 'Siglish' is also mentioned at "<a href="https://www.handspeak.com/study/index.php?id=86">Siglish: an old term of Signed English</a>" and Murphy<sub>?</sub>, H. J. & Fleischer<sub>D</sub>, L. R. (1977). <a href="https://core.ac.uk/download/pdf/234960167.pdf">The effects of Ameslan versus Siglish upon test scores</a>. <em><a href="https://repository.wcsu.edu/jadara/">Journal of American Deafness and Rehabilitation Association (JADARA)</a></em>, 11(2; October 1977), 15–18.</li>
+					<li><a class="back" href="#">&#8617;</a> There is little to no extant reference of 'Amelish'; the only seeming reference to it is "This term was coined by Bernard Bragg<sub>D</sub> from Texas. This method uses lots of ASL & fs [fingerspelling] in English order." (<a href="https://deaf-info.zak.co.il/d/deaf-info/old/methods.html">https://deaf-info.zak.co.il/d/deaf-info/old/methods.html</a>.)</li>
+					<li><a class="back" href="#">&#8617;</a> Bornstein<sub>D</sub>, H., Saulnier<sub>?</sub>, K, & Hamilton<sub>?</sub>, L. (1983). <em><a href="http://intrpr.info/library/bornstein-signed-english-preface.pdf">The comprehensive signed English dictionary</a></em>. Washington, D.C.: Gallaudet University Press.</li>
+					<li><a class="back" href="#">&#8617;</a> Bornstein<sub>D</sub>, H. (1974). Signed English: A Manual Approach to English Language Development. <em>Journal of Speech and Hearing Disorders</em>, 39(3), 330–342. (<a href="https://doi.org/10.1044/jshd.3903.330">doi:10.1044/jshd.3903.330</a>).</li>
+					
+					<h3>Seeing Essential English (SEE<sub>1</sub>)</h3>
+					<li><a class="back" href="#">&#8617;</a> Nielsen<sub>?</sub>, D. C., Luetke<sub>H</sub>, B., & Stryker<sub>?</sub>, D. S. (2011). <a href="https://academic.oup.com/jdsde/article/16/3/275/430405">The importance of morphemic awareness to reading achievement and the potential of signing morphemes to supporting reading development</a>. <em>Journal of Deaf Studies and Deaf Education</em>, 16(3), Summer, 275–288. (<a href="https://doi.org/10.1093/deafed/enq063">doi:10.1093/deafed/enq063</a>).</li>
+					<li><a class="back" href="#">&#8617;</a> Milburn<sub>H</sub>, W. (1986). 1986 morphemic list. Amarillo, TX: Amarillo Independent School District Regional Educational Program for the Deaf.</li>
+					<li><a class="back" href="#">&#8617;</a> Washburn<sub>H</sub>, A. O., & Anthony<sub>D</sub>, D. A. (1974). <a href="http://intrpr.info/library/washburn-anthony-seeing-essential-english.pdf">Seeing Essential English: A sign system of English</a>. <em>Journal of Academy of Rehabilitative Audiology</em>, 7(1), 18-25.</li>
+					<li><a class="back" href="#">&#8617;</a> "Star Spangled Banner Parody: Mr. SeeTerp" (John Maucere<sub>D</sub>), published 3 Feb 2014; <a href="https://vimeo.com/groups/73395/videos/85760406">https://vimeo.com/groups/73395/videos/85760406</a>.</li>
+					<li><a class="back" href="#">&#8617;</a> Luetke-Stahlman<sub>H</sub>, B. & Milburn<sub>H</sub>, W. O. (1996). <a href="http://intrpr.github.io/library/luetke-stahlman-history-of-see-1.pdf">A History of Seeing Essential English (SEE I)</a>. <em>American Annals of the Deaf</em>, 141(1), 29–33.</li>
+					
+					<h3>Signing Exact English (SEE<sub>2</sub>)</h3>
+					<li><a class="back" href="#">&#8617;</a> Gustason<sub>D</sub>, G. (1990). <a href="http://intrpr.info/library/gustason-signing-exact-english-ch6.pdf">Signing exact english</a>. In H. Bornstein<sub>D</sub> (ed.), <em><a href="https://www.google.com/books/edition/Manual_Communication/eul6HRZJZWIC?q=&gbpv=1#f=false">Manual communication: Implications for education</a></em>, 108–127. Washington, D.C.: Gallaudet University Press.</li>
+					<li><a class="back" href="#">&#8617;</a> "ASL vs. SEE Comparison | ASL - American Sign Language," (ASLTHAT! [Joseph Wheeler<sub>D</sub>]), published 19 Oct 2016, <a href="https://www.youtube.com/watch?v=hvqZ83pS0B4">https://www.youtube.com/watch?v=hvqZ83pS0B4</a></li>
+					<li><a class="back" href="#">&#8617;</a> Greene<sub>H</sub>, D. (2012, 5 Sep). "SEE: Allow me to disabuse you of a common misnomer." <a href="http://danielgreene.com/2012/09/05/see-allow-me-to-disabuse-you-of-a-common-misnomer/">http://danielgreene.com/2012/09/05/see-allow-me-to-disabuse-you-of-a-common-misnomer</a></li>
+					<li><a class="back" href="#">&#8617;</a> </li>
+					
+					<h3>Linguistics of Visual English (LOVE)</h3>
+					<li>Gustason<sub>D</sub>, G. (1990). <a href="http://intrpr.info/library/gustason-signing-exact-english-ch6.pdf">Signing exact english</a>. In H. Bornstein<sub>D</sub> (ed.), <em><a href="https://www.google.com/books/edition/Manual_Communication/eul6HRZJZWIC?q=&gbpv=1#f=false">Manual communication: Implications for education</a></em>, 108–127. Washington, D.C.: Gallaudet University Press.</li>
+					<li><a class="back" href="#">&#8617;</a> "Stokoe Notation," <a href="https://en.wikipedia.org/wiki/Stokoe_notation">https://en.wikipedia.org/wiki/Stokoe_notation</a>. (cf., <a href="https://www.brighthubeducation.com/special-ed-hearing-impairments/50514-stokoe-notation-and-american-sign-language/">History of American Sign Language: Stokoe Notation</a> and Stokoe<sub>H</sub>, W. C. (2005; original 1960). <a href="https://academic.oup.com/jdsde/article-pdf/10/1/3/1034248/eni001.pdf">Sign language structure: An outline of the visual communication systems of the American Deaf</a>. <em>Journal of Deaf Studies and Deaf Education</em>, 10(1), 3–37. (<a href="https://doi.org/10.1093/deafed/eni001">doi:10.1093/deafed/eni001</a>). (Originally published as <em>Studies in Linguistics, Occasional Papers 8</em> (1960), by the Department of Anthropology and Linguistics, University of Buffalo, Buffalo 14, New York.)</li>
+					<li><a class="back" href="#">&#8617;</a> "Signs of Change: William Stokoe's Research into American Sign Language," published 3 Mar 2017; <a href="https://www.youtube.com/watch?v=X-N2dSl6ZBU">https://www.youtube.com/watch?v=X-N2dSl6ZBU</a>. (Student project: Stoughton<sub>H</sub>, J., Individual Documentary, Senior Division, National History Day 2017)</li>
+					<li><a class="back" href="#">&#8617;</a> Stokoe<sub>H</sub>, W. C., Casterline<sub>D</sub>, D. C., & Croneberg<sub>D</sub>, C. G. (1965). <em><a href="https://archive.org/details/dictionaryofamer00stok">A dictionary of American sign language on linguistic principles</a></em>. Washington, D.C.: Gallaudet College Press.</li>
+					<li><a class="back" href="#">&#8617;</a> Nomeland<sub>D</sub>, M. M. & Nomeland<sub>D</sub>, R. E. (2011). <em><a href="https://books.google.com/books?id=kNvGuljM99wC&pg=PA122&lpg=PA122&dq=Dennis+Wampler&source=bl&ots=HmU-yAjcbh&sig=_B8sv9ZYiq1SrDg7PZYYSOrEVU4&hl=en&sa=X&ved=0CEUQ6AEwBzgUahUKEwimmLGu5tHIAhVExmMKHb1GBE4#v=onepage&q=Dennis%20Wampler&f=false">The Deaf community in America: History in the making</a></em>. Jefferson, NC: McFarland & Company.</li>
+					<li><a class="back" href="#">&#8617;</a> Gustason<sub>D</sub>, G. (1990). <a href="http://intrpr.info/library/gustason-signing-exact-english-ch6.pdf">Signing exact english</a>. In H. Bornstein<sub>D</sub> (ed.), <em><a href="https://www.google.com/books/edition/Manual_Communication/eul6HRZJZWIC?q=&gbpv=1#f=false">Manual communication: Implications for education</a></em>, 108–127. Washington, D.C.: Gallaudet University Press.</li>
+					<li><a class="back" href="#">&#8617;</a> Lou<sub>H</sub>, M. W. (1988). <a href="https://www.google.com/books/edition/Language_Learning_and_Deafness/yIb7XvGDh3YC?q=Dennis+Wampler&gbpv=1#f=false">The history of language use in the education of the Deaf in the United States</a>. In M. Strong<sub>H</sub> (ed.) <em>Language Learning and Deafness</em>. London: Cambridge University Press.</li>
+					
+					<h3>Rochester Method</h3>
+					<li><a class="back" href="#">&#8617;</a> "Rochester Method - American Deaf Culture," (<a href="https://www.coursera.org/learn/deaf-culture">Terrell Brittain</a>, University of Houston) published 10 Nov 2020; <a href="https://www.youtube.com/watch?v=Gb1EH1pijHA">https://www.youtube.com/watch?v=Gb1EH1pijHA</a>.</li>
+					<li><a class="back" href="#">&#8617;</a> "Billy Kelman<sub>D</sub>," published 27 Aug 2008; <a href="https://www.youtube.com/watch?v=fYAVL1Dxokk">https://www.youtube.com/watch?v=fYAVL1Dxokk</a>.</li>
+					<li><a class="back" href="#">&#8617;</a> </li>
+					
+					<h3>Cued Speech</h3>
+					<li><a class="back" href="#">&#8617;</a> "Cued Speech," <a href="https://en.wikipedia.org/wiki/Cued_speech">https://en.wikipedia.org/wiki/Cued_speech</a>.</li>
+					
+					<h3>Paget-Gorman Signed Speech (PGSS)</h3>
+					<li><a class="back" href="#">&#8617;</a> "Sir Richard Paget<sub>H</sub>," <a href="https://en.wikipedia.org/wiki/Sir_Richard_Paget,_2nd_Baronet">https://en.wikipedia.org/wiki/Sir_Richard_Paget,_2nd_Baronet</a>.</li>
+					
+					<h3>Makaton</h3>
+					<li><a class="back" href="#">&#8617;</a> "Makaton," <a href="https://en.wikipedia.org/wiki/Makaton">https://en.wikipedia.org/wiki/Makaton</a>.</li>
+				</ol>
+			</div>
 
-		<div class="row endmatter">
-			<p>Page last modified: <script>document.write(document.lastModified)</script></p>
-			<p>All relationships relative; overlapping approaches drawn for distinction and not for accuracy.</p>
-			<p>This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 United States License. This license grants you permission to share (copy, distribute, and transmit the website) and remix (to adapt this work) under certain conditions and understandings. This license does not apply, however, to work claimed by other authors and producers. Additionally, every intent has been made to make materials available via “Fair Use,” (§107 to 118, Title 17, US Code); the content and downloadable materials on this page are solely for the benefit of the students enrolled in these courses.</p>
-			<p>Page ©<script>document.write(new Date().getFullYear())</script> Doug Stringham, Utah Valley University; revised 2021, 2019, 2018, 2012, 2011, 2008, 2006. APA citation: Stringham, D. (<script>document.write(new Date().getFullYear())</script>). Comparative ASL/English language continuum. <script>{document.write(location.href);}</script></p>
-			<p><a href="https://validator.w3.org">HTML</a> | <a href="https://wave.webaim.org">WAVE WebAIM</a></p>
+			<div class="row endmatter box">
+				<p>Page last modified: <script>document.write(document.lastModified)</script></p>
+				<p>All relationships relative; overlapping approaches drawn for distinction and not for accuracy.</p>
+				<p>This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 United States License. This license grants you permission to share (copy, distribute, and transmit the website) and remix (to adapt this work) under certain conditions and understandings. This license does not apply, however, to work claimed by other authors and producers. Additionally, every intent has been made to make materials available via “Fair Use,” (§107 to 118, Title 17, US Code); the content and downloadable materials on this page are solely for the benefit of the students enrolled in these courses.</p>
+				<p>Page ©<script>document.write(new Date().getFullYear())</script> Doug Stringham, Utah Valley University; revised 2021, 2019, 2018, 2012, 2011, 2008, 2006. APA citation: Stringham, D. (<script>document.write(new Date().getFullYear())</script>). Comparative ASL/English language continuum. <script>{document.write(location.href);}</script></p>
+				<p><a href="https://validator.w3.org">HTML</a> | <a href="https://wave.webaim.org">WAVE WebAIM</a></p>
 
-			<!-- 
-			<p>Built with <a href="https://getbootstrap.com">Bootstrap 5</a>. <a href="https://validator.w3.org">HTML</a> | <a href="https://wave.webaim.org">WAVE WebAIM</a></p>
-			-->
-			<dl>
-				<dt>Changelog</dt>
-				<dd>13 Aug 2021: v.10; added dividers in the references section to make it easier to identify references relevant to language/code sections. Added Supalla reference and updated link styles, formats.</dd>
-				<dd>06 July 2021: v.09; added more references to ASL influences, corrected links and references for accuracy. Updated CSS for better fidelity across all main body styles. Updated footer to be consistent with other projects.</dd>
-				<dd>18 Feb 2021: v.08; removed Inter typeface, back to using system font stack (<a h ref="https://css-tricks.com/snippets/css/system-font-stack">https://css-tricks.com/snippets/css/system-font-stack</a>); edited 'Purposes' and 'Definitions' paragraph.</dd>
-				<dd>03 Feb 2021: v.07; Nuance breakpoints, specifically for when references change from columns to single-width. Nuance line-height for references. Add a page modified indicator. Added indigenous signs/etymology reference. Experimenting with Inter typeface. Added -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale to text styles.</dd>
-				<dd>01 Feb 2021: v.06; Added references for signed English (Siglish, Amelish) and corrected page numbers for The Black ASL Project, corrected links. Hide the continuum when the width gets too narrow. Fix circle numbers. Fix author citations.</dd>
-				<dd>31 Jan 2021: v.05; Added more references, corrected links.</dd>
-				<dd>25 Jan 2021: v.04; Added several more references, corrected links. Added explanation for gestural English-derived MCEs. Added new citations. Change layout from four to three columns at full width.</dd>
-				<dd>13 Jan 2021: v.03; Added more references, need to be streamlined and linked</dd>
-				<dd>28 Dec 2020: v.02; add js solution for automatic reference numbers; don't require manual curation. Renumber themselves based on adding to the ordered list.</dd>
-				<dd>26 Dec 2020: v.01; pull from Bootstrap 5 for base, custom typographic stylesheet</dd>
-			</dl>
-			<dl>
-				<dt>Roadmap:</dt>
-				<dd>Get off Bootstrap and create simple flexbox/grid system</dd>
-				<dd>Fix mobile version; remove styling and enhance vertical design</dd>
-				<dd>Fix print version; remove unneccesary styling and fit to printed page</dd>
-				<dd>Make stylesheet consistent with rid-cpc.html, etc. and new v.8 of intrpr.info</dd>
-				<dd>Fix .circle-number class</dd>
-				<dd>Add more references</dd>
-				<dd>Figure out the best way to set footnote text with punctuation (before or after?)</dd>
-			</dl>
-		</div>
-		
-	</main>
+				<!-- 
+				<p>Built with <a href="https://getbootstrap.com">Bootstrap 5</a>. <a href="https://validator.w3.org">HTML</a> | <a href="https://wave.webaim.org">WAVE WebAIM</a></p>
+				-->
+				<dl>
+					<dt>Changelog</dt>
+					<dd>20 Aug 2021: v.11; completely rebuilt page, fixed Bootstrap organization errors. Rebuilt continuum to fit the layout correctly; need to build to fit narrow viewports, reorganized h1–h4. Fixed font stack. Cleaned up introduction and consolidated text. Need to fix auto-footnote creation; numbering is off by one. Added alt text.</dd>
+					<dd>13 Aug 2021: v.10; added dividers in the references section to make it easier to identify references relevant to language/code sections. Added Supalla reference and updated link styles, formats.</dd>
+					<dd>06 July 2021: v.09; added more references to ASL influences, corrected links and references for accuracy. Updated CSS for better fidelity across all main body styles. Updated footer to be consistent with other projects.</dd>
+					<dd>18 Feb 2021: v.08; removed Inter typeface, back to using system font stack (<a h ref="https://css-tricks.com/snippets/css/system-font-stack">https://css-tricks.com/snippets/css/system-font-stack</a>); edited 'Purposes' and 'Definitions' paragraph.</dd>
+					<dd>03 Feb 2021: v.07; Nuance breakpoints, specifically for when references change from columns to single-width. Nuance line-height for references. Add a page modified indicator. Added indigenous signs/etymology reference. Experimenting with Inter typeface. Added -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale to text styles.</dd>
+					<dd>01 Feb 2021: v.06; Added references for signed English (Siglish, Amelish) and corrected page numbers for The Black ASL Project, corrected links. Hide the continuum when the width gets too narrow. Fix circle numbers. Fix author citations.</dd>
+					<dd>31 Jan 2021: v.05; Added more references, corrected links.</dd>
+					<dd>25 Jan 2021: v.04; Added several more references, corrected links. Added explanation for gestural English-derived MCEs. Added new citations. Change layout from four to three columns at full width.</dd>
+					<dd>13 Jan 2021: v.03; Added more references, need to be streamlined and linked</dd>
+					<dd>28 Dec 2020: v.02; add js solution for automatic reference numbers; don't require manual curation. Renumber themselves based on adding to the ordered list.</dd>
+					<dd>26 Dec 2020: v.01; pull from Bootstrap 5 for base, custom typographic stylesheet</dd>
+				</dl>
+				<dl>
+					<dt>Roadmap:</dt>
+					<dd>Get off Bootstrap and create simple flexbox/grid system</dd>
+					<dd>Fix mobile version; remove styling and enhance vertical design</dd>
+					<dd>Fix print version; remove unneccesary styling and fit to printed page</dd>
+					<dd>Make stylesheet consistent with rid-cpc.html, etc. and new v.8 of intrpr.info</dd>
+					<dd>Fix .circle-number class</dd>
+					<dd>Add more references</dd>
+					<dd>Figure out the best way to set footnote text with punctuation (before or after?)</dd>
+				</dl>
+			</div>
 
+		</main>
 
-	<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-	<!-- partial -->
-	<!-- https://codepen.io/paulobrien/pen/LEbVgx -->
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	<script>
-		$('.back').show();
-		$(".note" ).each(function( index ) {
-			$(this).attr('id','note' + index).attr('href','#fn' + index);
-		});
-		$("#refs li" ).each(function( index ) {
-			var $this = $(this);
-			$this.attr('id','fn' + index);
-			$('.back',$this).attr('href','#note' + index);
-		});
-	</script>
+		<!-- partial -->
+		<!-- https://codepen.io/paulobrien/pen/LEbVgx -->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<script>
+			$('.back').show();
+			$(".note" ).each(function( index ) {
+				$(this).attr('id','note' + index).attr('href','#fn' + index);
+			});
+			$("#refs li" ).each(function( index ) {
+				var $this = $(this);
+				$this.attr('id','fn' + index);
+				$('.back',$this).attr('href','#note' + index);
+			});
+		</script>
+
 	</body>
 </html>
