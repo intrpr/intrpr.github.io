@@ -17,7 +17,7 @@
 
 			/* https://www.codingnepalweb.com/2020/05/responsive-navigation-menu-bar-using-css-flexbox.html */
 			nav { padding: 1em; margin: 0 -1em 4em -1em; background: rgba(0,0,0,.05); }
-			nav ul { list-style: none; display: flex; flex-wrap: wrap; align-items: right; justify-content: center; padding: 0; margin: 0; }
+			nav ul { list-style: none; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: center; padding: 0; margin: 0; }
 			nav ul li { margin: 0 .5em; }
 			nav ul li.title { flex: 1; }
 			@media all and (max-width: 800px) {
@@ -45,7 +45,7 @@
 
 			h1 { margin: 0 0 1em 0; line-height: 1.2;  }
 			h2 { font-size: 1.6rem; line-height: 1.2; margin: 2em 0 .5em 0; padding: .75em 0 .5em 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; }
-			h3 { font-size: 1.3rem; margin: .75em 0; font-weight: 800; }
+			h3 { font-size: 1.3rem; margin: .75em 0; }
 			h4 { font-size: 1rem; letter-spacing: .01rem; font-weight: 800; margin: 1em 0 .8em 0; padding: 0 0 .8em 0; border: 1px dotted rgba(0,0,0,.3); border-width: 0 0 1px 0; }
 			
 			h1, h2, h3 { font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "qqApple Color Emoji", "qqSegoe UI Emoji", "qqSegoe UI Symbol", "qqNoto Color Emoji", Helvetica, Arial, sans-serif; }
@@ -295,12 +295,12 @@
 				<div class="spectrum">
 					<div class="col-5 col-3-xxl offset-md-1 approach-left">
 						<p class="text-black-50 text-uppercase">&#8672; MCE approach</p>
-						<h3 style="width: 85%"><span class="circle-letter" style="padding: .15em .4em;">A</span> Conceptually Accurate Signed English <attr class="initialism">(CASE)</attr></h3>
+						<h3 style="width: 85%"><span class="circle-letter" style="padding: .15em .4em;">A</span> Conceptually Accurate Signed English <abbr class="initialism">(CASE)</abbr></h3>
 						<p style="width: 85%">Popular alternative to Signed English, sometimes called PSE (Pidgin Signed English). Combines ASL signs and semantics in an MCE form. <strong>Not a language.</strong></p>
 					</div>
 					<div class="col-5 col-3-xxl offset-md-4 approach-right">
 						<p class="text-black-50 text-uppercase">MCE approach &#8674;</p>
-						<h3><span class="circle-letter" style="padding: .15em .4em;">B</span> Sign Supported Speech <attr class="initialism">(SSS)</attr></h3>
+						<h3><span class="circle-letter" style="padding: .15em .4em;">B</span> Sign Supported Speech <abbr class="initialism">(SSS)</abbr></h3>
 						<p style="width: 100%">Voicing spoken English and signing an MCE. Sometimes called Simultaneous Communication (SimCom) or Total Communication (TC). <strong>Not a language.</strong></p>
 					</div>
 				</div>
@@ -342,7 +342,7 @@
 				<!-- 1 ASL -->
 				<div class="col-md-6 col-xl-4">
 					<p class="circle-number">1</p>
-					<h3>American Sign Language <attr class="initialism">(ASL)</attr></h3>
+					<h3>American Sign Language <abbr class="initialism">(ASL)</abbr></h3>
 					<p>Visio-gestural, preferred, and connate language of Deaf people of the United States and Canada. Also historically exported to/creolized with other national Deaf educational efforts in African and Asian countries. Etymology and roots in:</p>
 					<ul>
 						<li>Indigenous<a href="#refs" class="note"></a><a href="#refs" class="note"></a><a href="#refs" class="note"></a><a href="#refs" class="note"></a>, 
@@ -365,7 +365,7 @@
 				<!-- 2 signed english -->
 				<div class="col-md-6 col-xl-4">
 					<p class="circle-number">2</p>
-					<h3>Signed English <attr class="initialism">(SE)</attr></h3>
+					<h3>Signed English <abbr class="initialism">(SE)</abbr></h3>
 					<p>English-based manual code with a variety of additional grammatical and semantic markers. Though there are commercially-available "Signed English" curricula and dictionaries, 'Signed English' is more arguably an umbrella term — and not a singular system — for other related MCE systems (SEE<sub>1</sub>, SEE<sub>2</sub>, LOVE, 'Siglish'<a href="#refs" class="note"></a> and 'Amelish,'<a href="#refs" class="note"></a> et al.)</p>
 					<h4>Analysis:</h4>
 					<ul>
@@ -377,7 +377,7 @@
 				<!-- 3 SEE1 -->
 				<div class="col-md-6 col-xl-4">
 					<p class="circle-number">3</p>
-					<h3>Seeing Essential English <attr class="initialism">(SEE<sub>1</sub>)</attr></h3>
+					<h3>Seeing Essential English <abbr class="initialism">(SEE<sub>1</sub>)</abbr></h3>
 					<p><strong>Now defunct</strong>. Formerly ‘SEE<sub>1</sub>’ and 'Morphemic Sign System'<a href="#refs" class="note"></a> (cf., Milburn, 1986<a href="#refs" class="note"></a>); developed to "provide deaf/hard-of-hearing children with an intelligble visual-manual representation of English..." (Luetke-Stahlman<sub>H</sub> & Milburn<sub>H</sub>, 1996):</p>
 					<ul>
 						<li>compound words are broken in semantic morphemes/formed with separate signs (e.g., ‘<a href="https://www.handspeak.com/word/search/index.php?id=291">butter</a>’+ ‘<a href="https://www.handspeak.com/word/search/index.php?id=829">fly</a>’)</li>
@@ -396,28 +396,27 @@
 				<!-- 4 SEE2 -->
 				<div class="col-md-6 col-xl-4">
 					<p class="circle-number">4</p>
-					<h3>Signing Exact English <attr class="initialism">(SEE<sub>2</sub>)</attr></h3>
-					<p><strong>Modified since original creation; evolving</strong>.(Formerly ‘SEE<sub>2</sub>’); similar to SEE<sub>1</sub> and more similar to Signed English (Bornstein<sub>D</sub>, 1983) but:
-						<ul>
-							<li>compound words are typically single signs and are more conceptually accurate (‘<a href="https://www.handspeak.com/word/search/index.php?id=292">butterfly</a>,’ not ‘<a href="https://www.handspeak.com/word/search/index.php?id=291">butter</a>’+ ‘<a href="https://www.handspeak.com/word/search/index.php?id=829">fly</a>’)</li>
-							<li>signs tend to be semantically like ASL; one sounded word = one sign</li>
-							<li>to create more single-sign semantic lexical items, sign 'families' are created through initialization (e.g., Car, Bus, Truck, Van, Station Wagon)</li>
-							<li>dozens of invented initialized signs and affixes (prefixes [A-, In-, Re-] and suffixes [-Ness, -Tion, -Ing]) to create additional semantics</li>
-						</ul>
-						<h4>Analysis:</h4>
-						<ul>
-							<li>Gustason<sub>D</sub> (1990)<a href="#refs" class="note"></a> examines the origins of, reasons for, and common myths about SEE<sub>2</sub> creation and usage.</li>
-							<li>Comparison of a simultaneous ASL and SEE<sub>2</sub> rendering<a href="#refs" class="note"></a>; rhetoric aside, linguistically, what is happening in the SEE<sub>2</sub> text?</li>
-							<li>Interpreting colleague Daniel Greene<sub>H</sub><a href="#refs" class="note"></a> attempts to dispel misinformation and clarify the use of SEE2 for other interpreter practitioners. “My desire is for people to make educated choices about the language they use, which is why I want to make sure people who use the term SEE know what it actually is.” Includes video of SEE<sub>2</sub> users.</li>
-						</ul>
-						<p class="developed">(Developed 1972<a href="#refs" class="note"></a>, Dr Gerilee Gustason<sub>D</sub>, Esther Zawolkow<sub>H</sub>, Donna Pfetzing<sub>H</sub>)</p>
-					</p>
+					<h3>Signing Exact English <abbr class="initialism">(SEE<sub>2</sub>)</abbr></h3>
+					<p><strong>Modified since original creation; evolving</strong>.(Formerly ‘SEE<sub>2</sub>’); similar to SEE<sub>1</sub> and more similar to Signed English (Bornstein<sub>D</sub>, 1983) but:</p>
+					<ul>
+						<li>compound words are typically single signs and are more conceptually accurate (‘<a href="https://www.handspeak.com/word/search/index.php?id=292">butterfly</a>,’ not ‘<a href="https://www.handspeak.com/word/search/index.php?id=291">butter</a>’+ ‘<a href="https://www.handspeak.com/word/search/index.php?id=829">fly</a>’)</li>
+						<li>signs tend to be semantically like ASL; one sounded word = one sign</li>
+						<li>to create more single-sign semantic lexical items, sign 'families' are created through initialization (e.g., Car, Bus, Truck, Van, Station Wagon)</li>
+						<li>dozens of invented initialized signs and affixes (prefixes [A-, In-, Re-] and suffixes [-Ness, -Tion, -Ing]) to create additional semantics</li>
+					</ul>
+					<h4>Analysis:</h4>
+					<ul>
+						<li>Gustason<sub>D</sub> (1990)<a href="#refs" class="note"></a> examines the origins of, reasons for, and common myths about SEE<sub>2</sub> creation and usage.</li>
+						<li>Comparison of a simultaneous ASL and SEE<sub>2</sub> rendering<a href="#refs" class="note"></a>; rhetoric aside, linguistically, what is happening in the SEE<sub>2</sub> text?</li>
+						<li>Interpreting colleague Daniel Greene<sub>H</sub><a href="#refs" class="note"></a> attempts to dispel misinformation and clarify the use of SEE2 for other interpreter practitioners. “My desire is for people to make educated choices about the language they use, which is why I want to make sure people who use the term SEE know what it actually is.” Includes video of SEE<sub>2</sub> users.</li>
+					</ul>
+					<p class="developed">(Developed 1972<a href="#refs" class="note"></a>, Dr Gerilee Gustason<sub>D</sub>, Esther Zawolkow<sub>H</sub>, Donna Pfetzing<sub>H</sub>)</p>
 				</div>
 
 				<!-- 5 LOVE -->
 				<div class="col-md-6 col-xl-4">
 					<p class="circle-number">5</p>
-					<h3>Linguistics of Visual English <attr class="initialism">(LOVE)</attr></h3>
+					<h3>Linguistics of Visual English <abbr class="initialism">(LOVE)</abbr></h3>
 					<p><strong>Now defunct</strong>. Visual recording system invented by Dennis Wampler<sub>D</sub> based on Seeing Essential English (SEE<sub>1</sub>)<a href="#refs" class="note"></a>. Used Stokoe Notation System (tab-dez-sig; Stokoe<sub>H</sub>, 1960<a href="#refs" class="note"></a><a href="#refs" class="note"></a>; Stokoe<sub>H</sub>, Casterline<sub>D</sub>, & Croneberg<sub>D</sub>, 1965<a href="#refs" class="note"></a>) to write sentences.</p>
 					<h4>Analysis:</h4>
 					<ul>
@@ -425,7 +424,7 @@
 						<li>Gustason<sub>D</sub> (1990)<a href="#refs" class="note"></a> provides a brief description of the origin and use of Wampler’s LOVE system.</li>
 						<li>Comprehensive article by Lou<sub>H</sub> (1988)<a href="#refs" class="note"></a> on the evolution of language usage in American deaf education and a very brief description of LOVE and how it was implemented in schools. (Other bonus information about other English-bound sign systems and approaches also given here.)</li>
 					</ul>
-					<img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Stokoe_passage.gif" alt="sample of Stokoe sign language notation system; orthographic representation of the first two sentences of an ASL text: 'Goldilocks and the Three Bears.'">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Stokoe_passage.gif" alt="sample of Stokoe sign language notation system">
 					<p class="developed">(Developed 1972, Dennis Wampler<sub>D</sub>)</p>
 				</div>
 				
@@ -464,16 +463,16 @@
 				<!-- 9 cued speech -->
 				<div class="col-md-6 col-xl-4">
 					<p class="circle-number">9</p>
-					<h3>Cued Speech <attr class="initialism">(CS)</attr></h3>
+					<h3>Cued Speech <abbr class="initialism">(CS)</abbr></h3>
 					<p><strong>Code; not a signed language.</strong> Uses eight non-semantic handshapes in eight different but related locations to visually represent <em>spoken</em> phonemes. <a href="https://www.youtube.com/watch?v=B9emmTMswkE">Cued speech video sample</a> and <a href="https://www.youtube.com/channel/UCFB13JV4oV8kpNqoK5kwXYQ">Cued Speech Association video samples</a>. Learning to cue: <a href="https://www.youtube.com/watch?v=WbyMfuJr0J0">Lesson 1</a> and <a href="https://www.youtube.com/watch?v=fpueRPp4nz8">Lesson 2</a> with a deaf CS user.</p>
-					<img src="http://trivisualcommunications.com/WordPress/wp-content/uploads/CueChartweb1.jpg" alt="chart of cued speech eight handshapes and eight potential face placements">
+					<img src="http://trivisualcommunications.com/WordPress/wp-content/uploads/CueChartweb1.jpg" alt="chart of cued speech handshapes and locations">
 					<p class="developed">(Developed 1966<a href="#refs" class="note"></a>, Dr Robert Cornett<sub>H</sub>, Gallaudet College)</p>
 				</div>
 
 				<!-- 10 paget gorman -->
 				<div class="col-md-6 col-xl-4">
 					<p class="circle-number">10</p>
-					<h3>Paget-Gorman Signed Speech <attr class="initialism">(PGSS)</attr></h3>
+					<h3>Paget-Gorman Signed Speech <abbr class="initialism">(PGSS)</abbr></h3>
 					<p><strong>Code; not a signed language.</strong> British-based pantomimic, morphological based manual system. First experimental teaching of the system in 1964 with a group of deaf adults; <a href="http://www.pagetgorman.org/history/b5674aa4-a021-4667-bc94-429482a84274">PGSS first conceptualized in Britain in 1934 as a systematic pantomimic sign language</a> whereby <a href="https://www.youtube.com/channel/UCIEKqKjHzQZknXUc0QTSmsg/videos">each word would have its own sign</a>, with the <a href="http://www.pagetgorman.org/see-the-basic-signs">signs</a> presented in the same sequence as the words in the phrases or sentences to be signed. 37 basic 'signs,' 21 hand 'postures'; do not correspond to British Sign Language. Similar to Makaton, now used primarily with people who present with aphasia and/or speech disabilities.</p>
 					<p class="developed">(Developed 1934<a href="#refs" class="note"></a>, Sir Richard Paget<sub>H</sub>)</p>
 				</div>
@@ -488,13 +487,13 @@
 			</div>
 			
 			<!-- approaches -->
-			<h2><attr class="initialism">MCE</attr> Approaches</h2>
+			<h2><abbr class="initialism">MCE</abbr> Approaches</h2>
 			<div class="row mces box">
 				
 				<!-- A CASE -->
 				<div class="col-md-6 col-xl-4">
 					<p class="circle-letter">A</p>
-					<h3>Conceptually Accurate Signed English <attr class="initialism">(CASE)</attr></h3>
+					<h3>Conceptually Accurate Signed English <abbr class="initialism">(CASE)</abbr></h3>
 					<p><strong>Not a language</strong>. CASE (Conceptually Accurate Signed English) is a popular alternative to Signed English, sometimes called PSE (Pidgin Signed English); combines ASL signs and concepts in an MCE form.</p>
 					<h4>Analysis:</h4>
 					<ul>
@@ -505,7 +504,7 @@
 				<!-- B SSS -->
 				<div class="col-md-6 col-xl-4">
 					<p class="circle-letter">B</p>
-					<h3>Sign Supported Speech <attr class="initialism">(SSS)</attr></h3>
+					<h3>Sign Supported Speech <abbr class="initialism">(SSS)</abbr></h3>
 					<p><strong>Not a language</strong>. SSS (Sign Supported Speech) consists of voicing spoken English and signing an MCE. Sometimes called Simultaneous Communication (SimCom) or Total Communication (TC).</p>
 					<h4>Analysis:</h4>
 					<ul>
@@ -548,7 +547,7 @@
 					<li><a class="back" href="#">&#8617;</a> Lane<sub>H</sub>, H., Pillard<sub>H</sub>, R., & French<sub>H</sub>, M. (2000). <a href="https://www.jstor.org/stable/26204927">Origins of the American Deaf-World: Assimilating and differentiating societies and their relation to genetic patterning</a>. <em>Sign Language Studies</em>, 1(1), 17-44.</li>
 					<li><a class="back" href="#">&#8617;</a> Groce<sub>H</sub>, N. E. (1985). <em><a href="https://www.academia.edu/28735773/Everyone_Here_Spoke_Sign_Language_Hereditary_Deafness_on_Marthas_Vineyard_Nora_Ellen_Groce">Everyone here spoke sign language: Hereditary deafness on Martha's Vineyard</a></em>. Cambridge, MA: Harvard University Press.</li>
 					<li><a class="back" href="#">&#8617;</a> Quinto-Pozos<sub>H</sub>, D. G. (2002). <a href="https://www.academia.edu/1561221/Contact_between_Mexican_Sign_Language_LSM_and_American_Sign_Language_ASL_in_two_Texas_border_areas">Contact between Mexican Sign Language and American Sign Language in two Texas border areas</a>. Unpublished dissertation. University of Texas at Austin.</li>
-					<li><a class="back" href="#">&#8617;</a> Quinto-Pozos<sub>H</sub>, D. G. (2008). <a href="https://www.researchgate.net/publication/231941675_Sign_language_contact_and_interference_ASL_and_LSM">Sign language contact and interference: ASL and LSM</a>. <em><a href="https://www.researchgate.net/publication/231941675_Sign_language_contact_and_interference_ASL_and_LSM">Language in Society</a></em>, 37, 161–189. (<a href="https://doi.org/10.10170S0047404508080251">doi: 10.10170S0047404508080251</a>).</li>
+					<li><a class="back" href="#">&#8617;</a> Quinto-Pozos<sub>H</sub>, D. G. (2008). Sign language contact and interference: ASL and LSM</a>. <em><a href="https://www.researchgate.net/publication/231941675_Sign_language_contact_and_interference_ASL_and_LSM">Language in Society</a></em>, 37, 161–189. (<a href="https://doi.org/10.10170S0047404508080251">doi: 10.10170S0047404508080251</a>).</li>
 					<li><a class="back" href="#">&#8617;</a> Pelissier<sub>D</sub>, P. (1856). <em><a href="https://gallica.bnf.fr/ark:/12148/bpt6k131991f.texteImage">Iconographie des signs faisant partie de l'enseignement primaire des sourds-muets</a></em>. Paris: Chez L'Auteur.</li>
 					<li><a class="back" href="#">&#8617;</a> Lane<sub>H</sub>, H. (1989). <em>When the mind hears: A history of the deaf</em>. New York: Vintage.</li>
 					<li><a class="back" href="#">&#8617;</a> Cagle<sub>D</sub>, K. M. (2010). <em><a href="https://www.academia.edu/21748806/Exploring_the_Ancestral_Roots_of_American_Sign_Language_Lexical_Borrowing_from_Cistercian_Sign_Language_and_French_Sign_Language">Exploring the ancestral roots of American sign language: Lexical borrowing from Cistercian sign language and French sign language</a></em>. The University of New Mexico. Unpublished dissertation.</li>
@@ -619,7 +618,7 @@
 					<dd>20 Aug 2021: v.11; completely rebuilt page, fixed Bootstrap organization errors. Rebuilt continuum to fit the layout correctly; need to build to fit narrow viewports, reorganized h1–h4. Fixed font stack. Cleaned up introduction and consolidated text. Need to fix auto-footnote creation; numbering is off by one. Added alt text.</dd>
 					<dd>13 Aug 2021: v.10; added dividers in the references section to make it easier to identify references relevant to language/code sections. Added Supalla reference and updated link styles, formats.</dd>
 					<dd>06 July 2021: v.09; added more references to ASL influences, corrected links and references for accuracy. Updated CSS for better fidelity across all main body styles. Updated footer to be consistent with other projects.</dd>
-					<dd>18 Feb 2021: v.08; removed Inter typeface, back to using system font stack (<a h ref="https://css-tricks.com/snippets/css/system-font-stack">https://css-tricks.com/snippets/css/system-font-stack</a>); edited 'Purposes' and 'Definitions' paragraph.</dd>
+					<dd>18 Feb 2021: v.08; removed Inter typeface, back to using system font stack (<a href="https://css-tricks.com/snippets/css/system-font-stack">https://css-tricks.com/snippets/css/system-font-stack</a>); edited 'Purposes' and 'Definitions' paragraph.</dd>
 					<dd>03 Feb 2021: v.07; Nuance breakpoints, specifically for when references change from columns to single-width. Nuance line-height for references. Add a page modified indicator. Added indigenous signs/etymology reference. Experimenting with Inter typeface. Added -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale to text styles.</dd>
 					<dd>01 Feb 2021: v.06; Added references for signed English (Siglish, Amelish) and corrected page numbers for The Black ASL Project, corrected links. Hide the continuum when the width gets too narrow. Fix circle numbers. Fix author citations.</dd>
 					<dd>31 Jan 2021: v.05; Added more references, corrected links.</dd>
