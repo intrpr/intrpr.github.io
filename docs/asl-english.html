@@ -10,8 +10,9 @@
 
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+			@import url('https://rsms.me/inter/inter.css');
 
-			body { padding: 5vh 5vw; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "qqApple Color Emoji", "qqSegoe UI Emoji", "qqSegoe UI Symbol", "qqNoto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #111; font-size: 16px; }
+			body { padding: 5vh 5vw; font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #111; font-size: 16px; font-feature-settings: "cpsp","frac","ss04","cv09","cv11"; }
 			html { scroll-behavior: smooth; }
 			section { }
 
@@ -29,26 +30,26 @@
 			ul { margin: .5em 0 .5em -1em; }
 			img { width: 100%; margin: 1em 0;}
 			dfn { font-style: normal; }
-			p, li, ul li, dd, dt { line-height: 1.55; margin: 0 0 .5em 0; word-break: break-word; letter-spacing: .015rem; }
+			p, li, ul li, dd, dt { line-height: 1.55; margin: 0 0 .5em 0; word-break: break-word; letqqter-spacing: .005rem; }
 			strong { font-weight: 800; }
 
-			.initialism { font-size: 85%; letter-spacing: .09rem; }
+			.initialism { font-size: 85%; letter-spacing: .04rem; }
 
-			.circle-number { font-weight: 800; font-size: 1.1rem; text-align: center; color: rgba(255,255,255,1); width: 1.6em; height: 1.6em; padding: 0; margin: 0 0 .5em -.25em; background-color: rgba(0,0,0,.9); border-radius: 100em; }
+			.circle-number { font-weight: 900; font-size: 1.1rem; text-align: center; color: rgba(255,255,255,1); width: 1.6em; height: 1.6em; padding: 0; margin: 0 0 .5em -.25em; background-color: rgba(0,0,0,.9); border-radius: 100em; }
 			
 			.circle-letter { font-size: 1.1rem; text-align: center; color: rgba(0,0,0,1); width: 1.6em; height: 1.6em; margin: 0 .25em .75em 0; background-color: rgba(255,255,255,.8); border-radius: 100em; box-shadow: .1em .1em 1em rgba(0,0,0,.2); }
 			
 			.developed { font-size: .9rem; margin: .5em 0 0 0; color: rgba(0,0,0,.6); display: inline-block; }
 			sup::before { content: "["; } 
 			sup::after { content: "]"; }
-			sup, sub { font-weight: 500; text-decoration: none; }
+			sup, sub { font-weight: inherit; text-decoration: none; }
 
-			h1 { margin: 0 0 1em 0; line-height: 1.2;  }
-			h2 { font-size: 1.6rem; line-height: 1.2; margin: 2em 0 .5em 0; padding: .75em 0 .5em 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; }
-			h3 { font-size: 1.3rem; margin: .75em 0; }
+			h1 { margin: 0 0 1em 0; line-height: 1.2; font-weight: 800; letter-spacing: -.025rem; }
+			h2 { font-size: 1.6rem; line-height: 1.2; margin: 2em 0 .5em 0; padding: .75em 0 .5em 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; font-weight: 800; letter-spacing: -.005rem; }
+			h3 { font-size: 1.4rem; margin: .75em 0; font-weight: 700; letter-spacing: -.015rem; }
 			h4 { font-size: 1rem; letter-spacing: .01rem; font-weight: 800; margin: 1em 0 .8em 0; padding: 0 0 .8em 0; border: 1px dotted rgba(0,0,0,.3); border-width: 0 0 1px 0; }
 			
-			h1, h2, h3 { font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "qqApple Color Emoji", "qqSegoe UI Emoji", "qqSegoe UI Symbol", "qqNoto Color Emoji", Helvetica, Arial, sans-serif; }
+			h1, h2, h3 { font-family: "Inter var", "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "qqApple Color Emoji", "qqSegoe UI Emoji", "qqSegoe UI Symbol", "qqNoto Color Emoji", Helvetica, Arial, sans-serif; }
 
 			
 			dt { font-weight: 800; float: left; width: 20%; }
@@ -58,7 +59,7 @@
 			/* counters */
 			#refs:target, #refs li:target, .note:target { background:rgba(13,110,253,.1); }
 			.container { counter-reset: footnotes; }
-			.note { vertical-align: super; font-size: .9rem; line-height: 0; margin: 0; }
+			.note { vertical-align: super; font-size: .85rem; line-height: 0; margin: 0; }
 			.note:before { 
 				counter-increment: footnotes; 
 				content: "[" counter(footnotes); }
@@ -217,7 +218,7 @@
 				body { padding: 0; }
 				.row { width: 100%; }
 				section { page-break-before: always; border: none; margin: 1em auto; }
-				h1, h2, h3, h4 { font-size: 1.3em; color: #222; }
+				h1, h2, h3, h4 { font-size: 1.2em; color: #222; }
 				h4 { font-size: 1em; color: #222; margin: 0; }
 				h3 { margin: 1em 0 0 0; }
 				table th, table td { padding: .5em 0; }
@@ -227,6 +228,16 @@
 				nav { display: none; }
 				.circle-number { display: none; }
 			}
+
+			/*
+			https://duckduckgo.com/?q=input%3Achecked+%2B+.toggle&ia=web
+			https://duckduckgo.com/?q=%3Achecked&ia=web
+			https://stackoverflow.com/questions/37187202/css-show-hide-elements-based-on-checkbox
+			https://duckduckgo.com/?q=automatic+number+footnote+html+css+js&ia=web
+			https://www.princexml.com/howcome/2009/wikipedia/ref/
+			https://www.impressivewebs.com/dynamically-highlight-content-wikipedia-css3/
+			
+			*/
 		</style>
 
 	</head>
@@ -248,7 +259,7 @@
 			</header>
 
 			<!-- introduction -->
-			<h1>Comparative ASL / English Language Continuum<sup style="font-weight: inherit; font-size: 60%">Beta</sup></h1>
+			<h1>Comparative ASL / English Language Continuum<sup style="font-weight: 400; font-size: 60%">Beta</sup></h1>
 
 			<h2>Purposes</h2>
 			<dl>
@@ -261,7 +272,14 @@
 				<dt>Documentation</dt>
 					<dd>There are numerous sites and articles (and student projects) across the internet that mention or discuss this unique set of systems, their etymologies, variables, and pedagogical aims. This compilation is intended to empirically document this domain for students, colleagues, and other researchers. Feedback, additions, and corrections are appreciated.</dd>
 				<dt>Education</dt>
-					<dd>This artifact, while intended for a greater contribution to histories and historiographies in our field, is primarily used for discussion by Deaf and Interpreter Studies students in learning more about the praxis of these codes in educational and interpreted work. A future section of this artifact should/will likely be 'learning objectives.'</dd>
+					<dd>Rhetorically, this artifact, while intended for a greater contribution to histories and historiographies in our field, is for discussion by Deaf and Interpreter Studies students in learning more about the praxis of these codes in educational and interpreted work. A future section of this artifact should/will likely be 'learning objectives.'</dd>
+					<dd>Learning objectives:
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</dd>
 			</dl>
 
 			<h2>Definitions</h2>
@@ -617,6 +635,7 @@
 				-->
 				<dl>
 					<dt>Changelog</dt>
+					<dd>10 Dec 2021: v.12; returned to Inter as master typeface, including contextual alternate characters. Began looking at <a href="https://tailwindcss.com">Tailwind CSS</a> as a replacement CSS/layout tool.</dd>
 					<dd>20 Nov 2021: v.11; completely rebuilt page, fixed Bootstrap organization errors. Rebuilt continuum to fit the layout correctly; need to build to fit narrow viewports, reorganized h1–h4. Fixed font stack. Cleaned up introduction and consolidated text. Need to fix auto-footnote creation; numbering is off by one. Added alt text.</dd>
 					<dd>13 Aug 2021: v.10; added dividers in the references section to make it easier to identify references relevant to language/code sections. Added Supalla reference and updated link styles, formats.</dd>
 					<dd>06 July 2021: v.09; added more references to ASL influences, corrected links and references for accuracy. Updated CSS for better fidelity across all main body styles. Updated footer to be consistent with other projects.</dd>
