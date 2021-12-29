@@ -12,7 +12,7 @@
 			@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
 			@import url('https://rsms.me/inter/inter.css');
 
-			body { padding: 5vh 5vw; font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #111; font-size: 16px; font-feature-settings: "cpsp","frac","ss04","cv09","cv11"; }
+			body { padding: 5vh 5vw; font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "qqApple Color Emoji", "qqSegoe UI Emoji", "Segoe UI Symbol", "qqNoto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #111; font-size: 16px; font-feature-settings: "cpsp","frqqac","ss04","cv09","cv11"; hyphens: auto; }
 			html { scroll-behavior: smooth; }
 			section { }
 
@@ -28,9 +28,9 @@
 			}
 
 			ul { margin: .5em 0 .5em -1em; }
-			img { width: 100%; margin: 1em 0;}
+			img { width: 100%; margin: 1em 0; }
 			dfn { font-style: normal; }
-			p, li, ul li, dd, dt { line-height: 1.55; margin: 0 0 .5em 0; word-break: break-word; letqqter-spacing: .005rem; }
+			p, li, ul li, dd, dt { line-height: 1.55; margin: 0 0 .5em 0; word-break: break-word; }
 			strong { font-weight: 800; }
 
 			.initialism { font-size: 85%; letter-spacing: .04rem; }
@@ -44,9 +44,9 @@
 			sup::after { content: "]"; }
 			sup, sub { font-weight: 500; text-decoration: none; }
 
-			h1 { margin: 0 0 1em 0; line-height: 1.2; font-weight: 800; letter-spacing: -.025rem; }
+			h1 { margin: 0 0 1em 0; font-size: 2.5rem; line-height: 1.1; font-weight: 900; letter-spacing: -.0125em; }
 			h2 { font-size: 1.6rem; line-height: 1.2; margin: 2em 0 .5em 0; padding: .75em 0 .5em 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; font-weight: 800; letter-spacing: -.005rem; }
-			h3 { font-size: 1.4rem; margin: .75em 0; font-weight: 700; letter-spacing: -.005rem; }
+			h3 { font-size: 1.4rem; margin: .5em 0; font-weight: 700; letter-spacing: -.005rem; }
 			h4 { font-size: 1rem; letter-spacing: .01rem; font-weight: 800; margin: 1em 0 .8em 0; padding: 0 0 .8em 0; border: 1px dotted rgba(0,0,0,.3); border-width: 0 0 1px 0; }
 			
 			/*
@@ -67,21 +67,15 @@
 			.note:after { content: "]"; }
 			.back { text-decoration: none; font-weight: bold; }
 
-			.view-continuum { display: none; }
+			.intro p { margin: 0 0 1em 0; }
 
-			.intro { }
-				.intro p { margin: 0 0 1em 0; }
-
-			.continuum { }
-
-			.mces {  }
-				.mces-video { margin: 1em 0; }
-				.mces .col-md-6, .mces .col-xl-4 { margin: .5em 0; }
+			.mces-video { margin: 1em 0; }
+			.mces .col-md-6, .mces .col-xl-4 { margin: .5em 0; }
 
 			.definitions { margin-bottom: 1em; padding: 0; }
 				.definitions p { line-height: 1.4; margin: 0; padding: 0; }
 
-			.spectrum-container { height: 29em; padding: 1.5em 0; }
+			.spectrum-container { height: 30em; padding: 1.5em 0; }
 			.spectrum-container {
 				background-image: 
 				linear-gradient(
@@ -110,7 +104,7 @@
 						content: "";
 						position: absolute;
 						right: 100%;
-						height: 29em;
+						height: 30em;
 						top: -1.5em;
 						border-left: 5em solid transparent;
 						border-image-source: linear-gradient(to left, rgba(102,102,255,1), rgba(102,102,255,0));
@@ -132,7 +126,7 @@
 						content: "";
 						position: absolute;
 						left: 100%;
-						height: 29em;
+						height: 30em;
 						top: -1.5em;
 						border-left: 5em solid transparent;
 						border-image-source: linear-gradient(to right, rgba(255,102,204,1), rgba(255,102,204,0));
@@ -147,6 +141,7 @@
 					}
 					.approach-left { margin: 1em calc(19% + 1em); transform: translateX(-19%); box-shadow: 1em 1em 1em rgba(0,0,0,.1); }
 					.approach-right { margin: 5em calc(81% + 1em); transform: translateX(-81%); box-shadow: -1em 1em 1em rgba(0,0,0,.1); }
+					.approach-left h3, .approach-left p { width: 85%; }
 					.approach-left:before {
 						content:"";
 						position: absolute;
@@ -165,7 +160,7 @@
 						border-left: 2em solid rgba(255,255,255,.4);
 						border-bottom: 5.5em solid transparent;
 					}
-					.more-like { position: relative; width: 95%; z-index: 110; margin: 1.5em auto 2em auto; padding: 1.25em 0; background: rgba(0,0,0,.2); color: rgba(255,255,255,1); border-radius: .5em; height: auto; }
+					.more-like { position: relative; width: 90%; z-index: 110; margin: 1em auto; padding: 1.5em; background: rgba(0,0,0,.2); color: rgba(255,255,255,1); border-radius: .5em; height: auto; bottom: 3vh;}
 						.more-like a { color: rgba(255,255,255,1); }
 						.more-like::before { 
 							content:"";
@@ -187,7 +182,6 @@
 						}
 			.controls { padding: 1em; margin: 0 !important; }
 
-
 			.references { }
 				.references ol { column-count: 2; column-gap: 4em; }
 				.references li { margin: 0 0 .5em 0; line-height: 1.55; }
@@ -206,11 +200,28 @@
 
 			@media (max-width: 768px) {
 				body { padding: 2em; }
-				.spectrum { background-image: linear-gradient(to bottom, #6666ff, #ff66cc); height: 30em; }
+				.spectrum-container { background-image: linear-gradient(to right, #6666ff, #ff66cc); height: auto; }
+				.spectrum { height: auto; }
+				.codes { position: absolute; width: 72vw; z-index: 90; }
+
+				.approach-left, .approach-right {
+						position: absolute; 
+						z-index: 1200;
+						background: rgba(255,255,255,.4); 
+						padding: 2em 2em 1.5em 2em; 
+						border-radius: .5em;
+					}
+					.approach-left { position: relative; margin: 1em calc(19% + 1em); transform: translateX(-19%); box-shadow: 1em 1em 1em rgba(0,0,0,.1); }
+					.approach-left h3, .approach-left p { width: 100%; }
+					.approach-right { position: relative; margin: -2em calc(81% + -1em); transform: translateX(-81%); box-shadow: -1em 1em 1em rgba(0,0,0,.1); }
+					
+					.spectrum::before, .spectrum::after {
+					height: 0;
+				}
+
 				.circle-number { margin: 1em 0 .5em 0; }
 				.references ol { column-count: 1; column-gap: 0; }
-				.definitions, .spectrum-container { display: none; }
-				.view-continuum { display: block; }
+				.definitions, .spectrum-container { disqqplay: none; }
 			}
 
 			/* print styles* */
@@ -269,7 +280,7 @@
 				<dt>Identification</dt>
 					<dd>It identifies 1) creators and contributors, 2) cultural (Deaf, hearing, or interpreter) status, and 3) MCE 'approaches' and other gestural MCEs that are English-derived but that may also be used with various deaf populations. (Although the content is representative of the latest printed version (2019), this code and content should be considered 'in development'; see this project's changelog and roadmap below.)</dd>
 					<dd>For clarity in modality, this document makes a distinction between SLs (sign(ed) languages) and SpLs (spoken languages), while also recognizing that linguistically and academically, a signed language can be spoken.</dd>
-					<dd>All implied placements and relationships are relative; overlapping approaches drawn for distinction and not for accuracy. Subscripts on surnames (e.g., <sub>D</sub>, <sub>H</sub>, or <sub>?</sub>) identify that an author, researcher, contributor, or creator is Deaf, hearing, or unknown. Additional credit to authors <a href="https://www.danparvaz.com">DParvaz</a><sub>H</sub>, Garrrett<sub>?</sub>, Jguk<sub>?</sub>, Adrignola<sub>?</sub>, and other unnamed contributors to the Visual Language Interpreting/Tools of the Trade wikibook<a href="#refs" class="note"></a> for references to dates, contributors, and descriptions.</dd>
+					<dd>All implied placements and relationships are relative; overlapping approaches drawn for distinction and not for accuracy. Subscripts on surnames (e.g., <sub>D</sub>, <sub>H</sub>, or <sub>?</sub>) identify that an author, researcher, contributor, or creator is Deaf, hearing, or unknown. Additional credit to authors <a href="https://www.danparvaz.com">DParvaz</a><sub>HI</sub>, Garrrett<sub>?</sub>, Jguk<sub>?</sub>, Adrignola<sub>?</sub>, and other unnamed contributors to the Visual Language Interpreting/Tools of the Trade wikibook<a href="#refs" class="note"></a> for references to dates, contributors, and descriptions.</dd>
 				<dt>Documentation</dt>
 					<dd>There are numerous sites and articles (and student projects) across the internet that mention or discuss this unique set of systems, their etymologies, variables, and pedagogical aims. This compilation is intended to empirically document this domain for students, colleagues, and other researchers. Feedback, additions, and corrections are appreciated.</dd>
 				<dt>Education</dt>
@@ -292,18 +303,18 @@
 			</dl>
 
 			<h2>Version and currency</h2>
-			<p>This HTML/hypertext version (<script>document.write(new Date().getFullYear())</script>) supercedes any of the popular<a href="#refs" class="note"></a> printed<a href="#refs" class="note"></a> versions in that 1) it is more easily updated/distributed and 2) allows for additional footnoted and documented hypertexted media (research/text, video, etc.). This version also supercedes any other existing printed versions as well as the version printed in Humphrey<sub>H</sub>, J., Clark<sub>H</sub>, L., Featherstone<sub>D</sub>, J., and Ross III<sub>H</sub>, W. F. (2020). <em>You want to be an interpreter (5th edition)</em>. Vancouver, WA: H&H Publishing.</p>
+			<p>This HTML/hypertext version (<script>document.write(new Date().getFullYear())</script>) supercedes any of the popular<a href="#refs" class="note"></a> printed<a href="#refs" class="note"></a> versions in that 1) it is more easily updated/distributed and 2) allows for additional footnoted and documented hypertexted media (research/text, video, etc.). This version also supercedes any other existing printed versions as well as the version printed in Humphrey<sub>HI</sub>, J., Clark<sub>H</sub>, L., Featherstone<sub>DI</sub>, J., and Ross III<sub>HI</sub>, W. F. (2020). <em>You want to be an interpreter (5th edition)</em>. Vancouver, WA: H&H Publishing.</p>
 
 			<!-- continuum -->
 			<h2>Continuum</h2>
 
 			<!-- definitions -->
-			<div class="row definitions">
-				<div class="col">
+			<div class="row justify-content-between definitions">
+				<div class="col-6">
 					<p><strong>&#8672; American Sign Language</strong></p>
 					<p><small>(principle is operational for other SLs)</small></p>
 				</div>
-				<div class="col-auto mr-auto">
+				<div class="col-6" style="text-align: right;">
 					<p><strong>English &#8674;</strong></p>
 					<p><small>(principle is operational for other SpLs)</small></p>
 				</div>
@@ -312,12 +323,12 @@
 			<!-- spectrum -->
 			<div class="row spectrum-container box">
 				<div class="spectrum">
-					<div class="col-5 col-3-xxl offset-md-1 approach-left">
+					<div class="col-9 col-3-xxl offset-md-1 col-md-5 approach-left">
 						<p class="text-black-50 text-uppercase">&#8672; MCE approach</p>
-						<h3 style="width: 85%"><span class="circle-letter" style="padding: .15em .4em;">A</span> Conceptually Accurate Signed English <abbr class="initialism">(CASE)</abbr></h3>
-						<p style="width: 85%">Popular alternative to Signed English, sometimes called PSE (Pidgin Signed English). Combines ASL signs and semantics in an MCE form. <strong>Not a language.</strong></p>
+						<h3><span class="circle-letter" style="padding: .15em .4em;">A</span> Conceptually Accurate Signed English <abbr class="initialism">(CASE)</abbr></h3>
+						<p>Popular alternative to Signed English, previously called PSE (Pidgin Signed English). Combines ASL signs and semantics in an MCE form. <strong>Not a language.</strong></p>
 					</div>
-					<div class="col-5 col-3-xxl offset-md-4 approach-right">
+					<div class="col-9 col-3-xxl offset-md-4 col-md-5 approach-right">
 						<p class="text-black-50 text-uppercase">MCE approach &#8674;</p>
 						<h3><span class="circle-letter" style="padding: .15em .4em;">B</span> Sign Supported Speech <abbr class="initialism">(SSS)</abbr></h3>
 						<p style="width: 100%">Voicing spoken English and signing an MCE. Sometimes called Simultaneous Communication (SimCom) or Total Communication (TC). <strong>Not a language.</strong></p>
@@ -327,29 +338,33 @@
 				<!-- code placement -->
 				<div class="codes col-12">
 					<div class="col-1"><p class="circle-number">1</p></div>
-					<div class="col-1 offset-md-8">
+					<div class="col-1 offset-7">
 						<p class="circle-number">4</p>
 					</div>
-					<div class="col-1 offset-md-8">
+					<div class="col-1 offset-6">
 						<p class="circle-number">2</p>
 					</div>
-					<div class="col-1 offset-md-9">
+					<div class="col-1 offset-9">
 						<p class="circle-number">3</p>
 						<p class="circle-number">5</p>
 					</div>
-					<div class="col-1 offset-md-11">
+					<div class="col-1 offset-10">
 						<p class="circle-number">6</p>
-						<p class="circle-number">7</p>
 						<p class="circle-number">8</p>
+					</div>
+					<div class="col-1 offset-11">
+						<p style="float: right;" class="circle-number">7</p>
 					</div>
 				</div>
 	
 				<!-- more like... comparison -->
-				<div class="more-like">
-					<div class="col-12 text-center d-flex justify-content-between">
-						<div class="col-2 text-right">&#8672; more like ASL</div>
-						<div class="col-7"><strong>Contact signs<a href="#refs" class="note"></a> and Manual Codes of English</strong><br>(Cokely<sub>H</sub>, 1983<a href="#refs" class="note"></a>; Lucas<sub>D</sub> & Valli<sub>D</sub>, 1992<a href="#refs" class="note"></a>; Woodward<sub>H</sub>, 1973<a href="#refs" class="note"></a>)</div>
-						<div class="col-2 text-left">more like English &#8674;</div>
+				<div class="container mt-md-5 more-like">
+					<div class="row" style="display: flex;">
+						<div class="col col-md-2 order-1 order-md-1">&#8672; more like ASL</div>
+
+						<div class="col-auto col-md-8 order-3 order-md-2 text-center"><strong>Contact signs<a href="#refs" class="note"></a> and Manual Codes of English</strong><br>(Cokely<sub>HI</sub>, 1983<a href="#refs" class="note"></a>; Lucas<sub>D</sub> & Valli<sub>DI</sub>, 1992<a href="#refs" class="note"></a>; Woodward<sub>H</sub>, 1973<a href="#refs" class="note"></a>)</div>
+
+						<div class="col-auto col-md-2 order-2 order-md-3" style="text-align: right;" >more like English &#8674;</div>
 					</div>
 				</div>
 			</div>
@@ -369,16 +384,16 @@
 							unrecorded<a href="#refs" class="note"></a>, 
 							and unknown<a href="#refs" class="note"></a> <abbr title="Sign language variants">SLV</abbr>s
 							</li>
-						<li>Native American SLVs (Clark<sub>H</sub>, 1885<a href="#refs" class="note"></a>; Davis<sub>D</sub>, 2017<a href="#refs" class="note"></a>)</li>
+						<li>Native American SLVs (Clark<sub>HI</sub>, 1885<a href="#refs" class="note"></a>; Davis<sub>DI</sub>, 2017<a href="#refs" class="note"></a>)</li>
 						<li>Black SLVs (Hill<sub>D</sub>, McCaskill<sub>D</sub>, Bayley<sub>H</sub>, & Lucas<sub>H</sub>, 2015<a href="#refs" class="note"></a>; McCaskill<sub>D</sub>, Lucas<sub>H</sub>, Bayley<sub>H</sub>, & Hill<sub>D</sub>, 2020<a href="#refs" class="note"></a>)</li>
 						<li>British<a href="#refs" class="note"></a>/Kentish<a href="#refs" class="note"></a>/Vineyard<a href="#refs" class="note"></a>
 							SLVs (Groce<sub>H</sub>, 1985<a href="#refs" class="note"></a>; c.f.,  Kitzel<sub>H</sub>, 2013)</li>
-						<li>Mexican SLVs (Quinto-Pozos<sub>H</sub>, 2002<a href="#refs" class="note"></a>; 2008<a href="#refs" class="note"></a>)</li>
+						<li>Mexican SLVs (Quinto-Pozos<sub>HI</sub>, 2002<a href="#refs" class="note"></a>; 2008<a href="#refs" class="note"></a>)</li>
 						<li>French SLVs (Pelissier<sub>D</sub>, 1856<a href="#refs" class="note"></a>; Lane<sub>H</sub>, 1984<a href="#refs" class="note"></a>; )</li>
-						<li>Cistercian monk SLVs (Cagle<sub>D</sub>, 2010<a href="#refs" class="note"></a>)</li>
+						<li>Cistercian monk SLVs (Cagle<sub>DI</sub>, 2010<a href="#refs" class="note"></a>)</li>
 					</ul>
-					<p>First documented in Brown<sub>H</sub>, 1856<a href="#refs" class="note"></a> and 1860<a href="#refs" class="note"></a> (Stringham<sub>H</sub>, 2019<a href="#refs" class="note"></a>). Topic-comment grammatical structure and approach (cf. Baker-Shenk<sub>H</sub> & Cokely<sub>H</sub>, 1980)<a href="#refs" class="note"></a>; utilizes code-borrowing from majority spoken language. Also called ‘the sign language’ (Veditz<sub>D</sub>, 1913)<a href="#refs" class="note"></a> and ‘Ameslan’ (Fant<sub>H</sub>, 1972)<a href="#refs" class="note"></a>.</p>
-					<p>Archaeological evolution of ASL lexical items and influence of proximity to other sign languages (Supalla<sub>D</sub>, Clark<sub>H</sub>, et al<sub>D, H</sub>., 2015)<a href="refs" class="note"></a></p>
+					<p>First documented in Brown<sub>H</sub>, 1856<a href="#refs" class="note"></a> and 1860<a href="#refs" class="note"></a> (Stringham<sub>HI</sub>, 2019<a href="#refs" class="note"></a>). Topic-comment grammatical structure and approach (cf. Baker-Shenk<sub>HI</sub> & Cokely<sub>HI</sub>, 1980)<a href="#refs" class="note"></a>; utilizes code-borrowing from majority spoken language. Also called ‘the sign language’ (Veditz<sub>D</sub>, 1913)<a href="#refs" class="note"></a> and ‘Ameslan’ (Fant<sub>HI</sub>, 1972)<a href="#refs" class="note"></a>.</p>
+					<p>Archaeological evolution of ASL lexical items and influence of proximity to other sign languages (Supalla<sub>D</sub>, Clark<sub>HI</sub>, et al<sub>D, H</sub>., 2015)<a href="refs" class="note"></a></p>
 				</div>
 
 				<!-- 2 signed english -->
@@ -397,10 +412,10 @@
 				<div class="col-md-6 col-xl-4">
 					<p class="circle-number">3</p>
 					<h3>Seeing Essential English <abbr class="initialism">(SEE<sub>1</sub>)</abbr></h3>
-					<p><strong>Now defunct</strong>. Formerly ‘SEE<sub>1</sub>’ and 'Morphemic Sign System'<a href="#refs" class="note"></a> (cf., Milburn, 1986<a href="#refs" class="note"></a>); developed to "provide deaf/hard-of-hearing children with an intelligble visual-manual representation of English..." (Luetke-Stahlman<sub>H</sub> & Milburn<sub>H</sub>, 1996):</p>
+					<p><strong>Now defunct</strong>. Formerly ‘SEE<sub>1</sub>’ and 'Morphemic Sign System'<a href="#refs" class="note"></a> (cf., Milburn<sub>H</sub>, 1986<a href="#refs" class="note"></a>); developed to "provide deaf/hard-of-hearing children with an intelligble visual-manual representation of English..." (Luetke-Stahlman<sub>H</sub> & Milburn<sub>H</sub>, 1996):</p>
 					<ul>
 						<li>compound words are broken in semantic morphemes/formed with separate signs (e.g., ‘<a href="https://www.handspeak.com/word/search/index.php?id=291">butter</a>’+ ‘<a href="https://www.handspeak.com/word/search/index.php?id=829">fly</a>’)</li>
-						<li>like SEE<sub>2</sub>, follows a 'two out of three' rule; "if a word is spelled with the same letters and sounds the same (e.g., 'bear'/'bear'), it is signed the same way, even if the meaning of the two words differs" (Nielsen, Luetke, & Stryker, 2011). The same rule applies for homonyms (e.g., ‘bear’ and ‘bare’)</li>
+						<li>like SEE<sub>2</sub>, follows a 'two out of three' rule; "if a word is spelled with the same letters and sounds the same (e.g., 'bear'/'bear'), it is signed the same way, even if the meaning of the two words differs" (Nielsen<sub>?</sub>, Luetke<sub>H</sub>, & Stryker<sub>?</sub>, 2011). The same rule applies for homonyms (e.g., ‘bear’ and ‘bare’)</li>
 						<li>heavy use of initialization (e.g., haVe, haD, haS)</li>
 						<li>affixes, articles, and ‘to be’ (<a href="https://en.m.wikipedia.org/wiki/Copula_(linguistics)#English">copula</a>; 'Be,' 'Am,' 'Is,' 'aRe,' 'BeIng,' 'WaS,' 'WeRe,' 'BeeN') verb added</li>
 					</ul>
@@ -427,7 +442,7 @@
 					<ul>
 						<li>Gustason<sub>D</sub> (1990)<a href="#refs" class="note"></a> examines the origins of, reasons for, and common myths about SEE<sub>2</sub> creation and usage.</li>
 						<li>Comparison of a simultaneous ASL and SEE<sub>2</sub> rendering<a href="#refs" class="note"></a>; rhetoric aside, linguistically, what is happening in the SEE<sub>2</sub> text?</li>
-						<li>Interpreting colleague Daniel Greene<sub>H</sub><a href="#refs" class="note"></a> attempts to dispel misinformation and clarify the use of SEE2 for other interpreter practitioners. “My desire is for people to make educated choices about the language they use, which is why I want to make sure people who use the term SEE know what it actually is.” Includes video of SEE<sub>2</sub> users.</li>
+						<li>Interpreting colleague Daniel Greene<sub>HI</sub><a href="#refs" class="note"></a> attempts to dispel misinformation and clarify the use of SEE2 for other interpreter practitioners. “My desire is for people to make educated choices about the language they use, which is why I want to make sure people who use the term SEE know what it actually is.” Includes video of SEE<sub>2</sub> users.</li>
 					</ul>
 					<p class="developed">(Developed 1972<a href="#refs" class="note"></a>, Dr Gerilee Gustason<sub>D</sub>, Esther Zawolkow<sub>H</sub>, Donna Pfetzing<sub>H</sub>)</p>
 				</div>
@@ -636,6 +651,7 @@
 				-->
 				<dl>
 					<dt>Changelog</dt>
+					<dd>29 Dec 2021: v.13; designed v1 of mobile-sized continuum (needs better spacing and realignment), updated Purposes, (8) Written English, and (9) Spoken English, error in footnotes now. Safari does not display continuum correctly.(</dd>
 					<dd>10 Dec 2021: v.12; returned to Inter as master typeface, including contextual alternate characters. Began looking at <a href="https://tailwindcss.com">Tailwind CSS</a> as a replacement CSS/layout tool.</dd>
 					<dd>20 Nov 2021: v.11; completely rebuilt page, fixed Bootstrap organization errors. Rebuilt continuum to fit the layout correctly; need to build to fit narrow viewports, reorganized h1–h4. Fixed font stack. Cleaned up introduction and consolidated text. Need to fix auto-footnote creation; numbering is off by one. Added alt text.</dd>
 					<dd>13 Aug 2021: v.10; added dividers in the references section to make it easier to identify references relevant to language/code sections. Added Supalla reference and updated link styles, formats.</dd>
