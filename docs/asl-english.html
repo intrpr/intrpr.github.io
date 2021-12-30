@@ -45,7 +45,8 @@
 			.developed { font-size: .9rem; margin: .5em 0 0 0; color: rgba(0,0,0,.6); display: inline-block; }
 			sup::before { content: "["; } 
 			sup::after { content: "]"; }
-			sup, sub { font-weight: 500; text-decoration: none; }
+			sup, sub { font-weight: inherit; text-decoration: none; }
+			p sup, p sub { font-weight: 500; text-decoration: none; }
 
 			h1 { margin: 0 0 .25em 0; font-size: 3rem; line-height: 1.15; font-weight: 900; letter-spacing: -.0125em; text-align: center;}
 			h2 { font-size: 1.6rem; line-height: 1.2; margin: 2em 0 .5em 0; padding: .75em 0 .5em 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; font-weight: 800; letter-spacing: -.005rem; }
@@ -185,9 +186,9 @@
 						}
 			.controls { padding: 1em; margin: 0 !important; }
 
-			.references { }
-				.references ol { column-count: 2; column-gap: 4em; }
-				.references li { margin: 0 0 .5em 0; line-height: 1.55; }
+			.references h3 { font-size: 1.15em; margin: 1em 0 .5em 0; }
+			.references ol { column-count: 2; column-gap: 4em; }
+			.references li { margin: 0 0 .5em 0; line-height: 1.55; }
 
 			.endmatter { font-size: 85%; padding: 1em 0 0 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; margin-top: 2em; }
 				.endmatter p { margin: 0 0 1em 0; }
@@ -296,13 +297,14 @@
 			<style>
 				.card { border-radius: .75em;}
 				.card:hover { transition: all .25s ease-in-out; transform: scale(1.03); transform-origin: center; background: rgba(255,255,255,.6);}
+				.card .p-6 { padding: 2.2em; }
 			</style>
 
 			<h2>Purposes & Definitions</h2>
 			<div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 align-items-stretch g-4 py-2">
 				<div class="col">
 					<div class="card h-100 overflow-hidden border-0 shadow-lg" style="background: var(--bs-dark); background-image: url('');">
-						<div class="flex-column p-5 text-white text-shadow-1">
+						<div class="flex-column p-6 text-white text-shadow-1">
 							<h3 class="pt-0 mt-0 mb-4 fw-bold">Diglossia</h3>
 							<p>This is a comparative bilingual continuum for use with Deaf and Interpreting Studies students that identifies the diglossic<a href="#refs" class="note"></a> and representative relationships of artificial (or 'contrived'<a href="#refs" class="note"></a>) manual codes of English (<abbr title="Manual code of English">MCE</abbr>s) historically derived between American Sign Language (ASL) and English.</p>
 						</div>
@@ -311,16 +313,16 @@
 		  
 				<div class="col">
 					<div class="card h-100 overflow-hidden border-0 shadow-lg" style="background: var(--bs-dark); background-image: url('');">
-						<div class="flex-column p-5 text-white text-shadow-1">
+						<div class="flex-column p-6 text-white text-shadow-1">
 							<h3 class="pt-0 mt-0 mb-4 lh-1 fw-bold">Identify</h3>
-							<p>It identifies 1) creators and contributors, 2) cultural (Deaf, hearing, or interpreter) status, and 3) MCE 'approaches' and other gestural MCEs that are English-derived but that may also be used with various deaf populations. (Although the content is representative of the latest printed version (2019), this code and content should be considered 'in development'; see this project's changelog and roadmap below.)</p>
+							<p>It identifies 1) creators and contributors, 2) cultural (Deaf, hearing, or interpreter) status, and 3) MCE 'approaches' and other gestural MCEs that are English-derived but that may also be used with various deaf populations. (This code and content should be considered 'in development'; see this project's changelog and roadmap below.)</p>
 						</div>
 				  	</div>
 				</div>
 		  
 				<div class="col">
 					<div class="card h-100 overflow-hidden border-0 shadow-lg" style="background: var(--bs-dark); background-image: url('');">
-						<div class="flex-column p-5 text-white text-shadow-1">
+						<div class="flex-column p-6 text-white text-shadow-1">
 							<h3 class="pt-0 mt-0 mb-4 lh-1 fw-bold">Document</h3>
 							<p>There are numerous sites and articles (and student projects) across the internet that mention or discuss this unique set of systems, their etymologies, variables, and pedagogical aims. This compilation is intended to empirically document this domain for students, colleagues, and other researchers. Feedback, additions, and corrections are appreciated.</p>
 						</div>
@@ -328,7 +330,7 @@
 				</div>
 				<div class="col">
 					<div class="card h-100 overflow-hidden border-0 shadow-lg" style="background: var(--bs-dark); background-image: url('');">
-						<div class="flex-column p-5 text-white text-shadow-1">
+						<div class="flex-column p-6 text-white text-shadow-1">
 							<h3 class="pt-0 mt-0 mb-4 lh-1 fw-bold">Educate</h3>
 							<p>Rhetorically, this artifact, while intended for a greater contribution to histories and historiographies in our field, is for discussion by Deaf and Interpreter Studies students in learning more about the praxis of these codes in educational and interpreted work. A future section of this artifact should/will likely be 'learning objectives.'</p>
 						</div>
@@ -337,7 +339,7 @@
 		  
 				<div class="col">
 					<div class="card h-100 overflow-hidden border-0 shadow-lg" style="background: var(--bs-dark); background-image: url('');">
-						<div class="flex-column p-5 text-white text-shadow-1">
+						<div class="flex-column p-6 text-white text-shadow-1">
 							<h3 class="pt-0 mt-0 mb-4 lh-1 fw-bold">"Code"</h3>
 							<p>(In development.) 'Codes' differ from 'approaches' in that they are relatively set, defined (albeit loose or dotted-line) established systems with fairly accepted lexical items and linguistic rules. (Add more here; Riley (2011), Crystal & Craig (1978) to define 'code')</p>
 						</div>
@@ -346,7 +348,7 @@
 		  
 				<div class="col">
 					<div class="card h-100 overflow-hidden border-0 shadow-lg" style="background: var(--bs-dark); background-image: url('');">
-						<div class="flex-column p-5 text-white text-shadow-1">
+						<div class="flex-column p-6 text-white text-shadow-1">
 							<h3 class="pt-0 mt-0 mb-4 lh-1 fw-bold">"Approach"</h3>
 							<p>(In development.) Approaches differ (and are visually designed differently) in that there are nuances in how principles of CASE are 'used' to render a transliteration.</p>
 						</div>
@@ -368,7 +370,7 @@
 				</div>
 			</div>
 
-			<div style="background-image: linear-gradient(to right, rgba(102,102,255,0) 0%, rgba(102,102,255,1) 5%, rgba(255,102,204,1) 95%, rgba(255,102,204,0) 100%); margin: 0 -5em;">
+			<div style="background-image: linear-gradient(to right, rgba(102,102,255,0) 0%, rgba(102,102,255,1) 8%, rgba(255,102,204,1) 92%, rgba(255,102,204,0) 100%); margin: 0 -5em;">
 				<div class="row">
 					<div class="col-9 col-3-xxl offset-md-1 col-md-5 approach-left">
 						<p class="text-black-50 text-uppercase">&#8672; MCE approach</p>
@@ -749,7 +751,7 @@
 				-->
 				<dl>
 					<dt>Changelog</dt>
-					<dd>29 Dec 2021: v.13; designed v1 of mobile-sized continuum (needs better spacing and realignment), updated Purposes, (8) Written English, and (9) Spoken English, error in footnotes now. Safari does not display continuum correctly.(</dd>
+					<dd>29 Dec 2021: v.13; redesigned page to add visual weight to Purposes & Definitions; redesigned v1 and v2 (apply gradient to a div outside of <code>&#60;main&#62;</code>) so this will work better on mobile devices (needs better spacing and realignment); updated Purposes, (8) Written English, and (9) Spoken English; error in footnote display; error in approach cloud display. Safari does not display continuum correctly but should with the continuum redesign.</dd>
 					<dd>10 Dec 2021: v.12; returned to Inter as master typeface, including contextual alternate characters. Began looking at <a href="https://tailwindcss.com">Tailwind CSS</a> as a replacement CSS/layout tool.</dd>
 					<dd>20 Nov 2021: v.11; completely rebuilt page, fixed Bootstrap organization errors. Rebuilt continuum to fit the layout correctly; need to build to fit narrow viewports, reorganized h1–h4. Fixed font stack. Cleaned up introduction and consolidated text. Need to fix auto-footnote creation; numbering is off by one. Added alt text.</dd>
 					<dd>13 Aug 2021: v.10; added dividers in the references section to make it easier to identify references relevant to language/code sections. Added Supalla reference and updated link styles, formats.</dd>
