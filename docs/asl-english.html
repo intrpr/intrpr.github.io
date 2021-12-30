@@ -6,15 +6,18 @@
 		<title>Comparative ASL / English Language Continuum</title>
 
 		<!-- Bootstrap core CSS -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Bootstrap JavaScript -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
 			@import url('https://rsms.me/inter/inter.css');
 
-			body { padding: 5vh 5vw; font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "qqApple Color Emoji", "qqSegoe UI Emoji", "Segoe UI Symbol", "qqNoto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #111; font-size: 16px; font-feature-settings: "cpsp","frqqac","ss04","cv09","cv11"; hyphens: auto; }
+			body { padding: 0 5vw; font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "qqApple Color Emoji", "qqSegoe UI Emoji", "Segoe UI Symbol", "qqNoto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #111; font-size: 16px; font-feature-settings: "cpsp","frqqac","ss04","cv09","cv11"; }
 			html { scroll-behavior: smooth; }
-			section { }
+			header { text-align: center; }
 
 			/* https://www.codingnepalweb.com/2020/05/responsive-navigation-menu-bar-using-css-flexbox.html */
 			nav { padding: 1em; margin: 0 -1em 4em -1em; background: rgba(0,0,0,.05); }
@@ -44,7 +47,7 @@
 			sup::after { content: "]"; }
 			sup, sub { font-weight: 500; text-decoration: none; }
 
-			h1 { margin: 0 0 1em 0; font-size: 2.5rem; line-height: 1.1; font-weight: 900; letter-spacing: -.0125em; }
+			h1 { margin: 0 0 .25em 0; font-size: 3rem; line-height: 1.15; font-weight: 900; letter-spacing: -.0125em; text-align: center;}
 			h2 { font-size: 1.6rem; line-height: 1.2; margin: 2em 0 .5em 0; padding: .75em 0 .5em 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; font-weight: 800; letter-spacing: -.005rem; }
 			h3 { font-size: 1.4rem; margin: .5em 0; font-weight: 700; letter-spacing: -.005rem; }
 			h4 { font-size: 1rem; letter-spacing: .01rem; font-weight: 800; margin: 1em 0 .8em 0; padding: 0 0 .8em 0; border: 1px dotted rgba(0,0,0,.3); border-width: 0 0 1px 0; }
@@ -139,14 +142,14 @@
 						padding: 1.5em 1.5em 1em 1.5em; 
 						border-radius: .5em;
 					}
-					.approach-left { margin: 1em calc(19% + 1em); transform: translateX(-19%); box-shadow: 1em 1em 1em rgba(0,0,0,.1); }
-					.approach-right { margin: 5em calc(81% + 1em); transform: translateX(-81%); box-shadow: -1em 1em 1em rgba(0,0,0,.1); }
+					.approach-left { margin: 2em calc(19% + 2em); transform: translateX(-19%); box-shadow: 1em 1em 1em rgba(0,0,0,.1); }
+					.approach-right { margin: 5em calc(81% + 2em); transform: translateX(-81%); box-shadow: -1em 1em 1em rgba(0,0,0,.1); }
 					.approach-left h3, .approach-left p { width: 85%; }
 					.approach-left:before {
 						content:"";
 						position: absolute;
 						right: 100%;
-						top: calc(7% - 1vh);
+						top: calc(8% - 1vh);
 						border-top: 6.5em solid transparent;
 						border-right: 2em solid rgba(255,255,255,.4);
 						border-bottom: 6.5em solid transparent;
@@ -155,12 +158,12 @@
 						content:"";
 						position: absolute;
 						left: 100%;
-						top: calc(8% - 1vh);
+						top: calc(9% - 1vh);
 						border-top: 5.5em solid transparent;
 						border-left: 2em solid rgba(255,255,255,.4);
 						border-bottom: 5.5em solid transparent;
 					}
-					.more-like { position: relative; width: 90%; z-index: 110; margin: 1em auto; padding: 1.5em; background: rgba(0,0,0,.2); color: rgba(255,255,255,1); border-radius: .5em; height: auto; bottom: 3vh;}
+					.more-like { position: relative; width: 90%; z-index: 110; margin: 1em auto; padding: 1.5em; background: rgba(0,0,0,.2); color: rgba(255,255,255,1); border-radius: .5em; height: auto; top: -1em;}
 						.more-like a { color: rgba(255,255,255,1); }
 						.more-like::before { 
 							content:"";
@@ -202,7 +205,6 @@
 				body { padding: 2em; }
 				.spectrum-container { background-image: linear-gradient(to right, #6666ff, #ff66cc); height: auto; }
 				.spectrum { height: auto; }
-				.codes { position: absolute; width: 72vw; z-index: 90; }
 
 				.approach-left, .approach-right {
 						position: absolute; 
@@ -256,58 +258,104 @@
 
 	<body>
 
-		<!--
-			<style>
+		<style>
 			div, form { borqqder: 1px dotted #f00; }
 			.box { padqqding: 1em; borqqder: 1px dotted #00f; }
 		</style>
-		!-->
+	
 
 		<main class="container box">
 
 			<!-- header -->
-			<header>
+			<header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+				<a href="" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+				  <span class="fs-5">intrpr.info Docs</span>
+				</a>
+		  
+				<ul class="nav nav-pills">
+				  <li class="nav-item"><a href="/docs/asl-english.html" class="nav-link active" aria-current="page">Continuum</a></li>
+				  <li class="nav-item"><a href="/docs/rid-cpc.html" class="nav-link">RID Codes of Conduct</a></li>
+				  <li class="nav-item"><a href="/docs/eipa-rating.html" class="nav-link">EIPA</a></li>
+				</ul>
 
+				<div class="row mt-5 justify-content-center">
+					<div class="col col-9">
+						<h1>Comparative ASL and English Language Continuum<sup style="font-weight: 400; font-size: 60%">Beta</sup></h1>
+						<p><span class="fs-4 text-muted">For use with Transliterating and Interpreting Studies classes.</span></p>
+					</div>
+				</div>
 			</header>
 
 			<!-- introduction -->
-			<h1>Comparative ASL / English Language Continuum<sup style="font-weight: 400; font-size: 60%">Beta</sup></h1>
-
-			<h2>Purposes</h2>
-			<dl>
-				<dt>Diglossia</dt>
-					<dd>This is a comparative bilingual continuum for use with Deaf and Interpreting Studies students that identifies the diglossic<a href="#refs" class="note"></a> and representative relationships of artificial (or 'contrived'<a href="#refs" class="note"></a>) manual codes of English (<abbr title="Manual code of English">MCE</abbr>s) historically derived between American Sign Language (ASL) and English.</dd>
-				<dt>Identification</dt>
-					<dd>It identifies 1) creators and contributors, 2) cultural (Deaf, hearing, or interpreter) status, and 3) MCE 'approaches' and other gestural MCEs that are English-derived but that may also be used with various deaf populations. (Although the content is representative of the latest printed version (2019), this code and content should be considered 'in development'; see this project's changelog and roadmap below.)</dd>
-					<dd>For clarity in modality, this document makes a distinction between SLs (sign(ed) languages) and SpLs (spoken languages), while also recognizing that linguistically and academically, a signed language can be spoken.</dd>
-					<dd>All implied placements and relationships are relative; overlapping approaches drawn for distinction and not for accuracy. Subscripts on surnames (e.g., <sub>D</sub>, <sub>H</sub>, or <sub>?</sub>) identify that an author, researcher, contributor, or creator is Deaf, hearing, or unknown. Additional credit to authors <a href="https://www.danparvaz.com">DParvaz</a><sub>HI</sub>, Garrrett<sub>?</sub>, Jguk<sub>?</sub>, Adrignola<sub>?</sub>, and other unnamed contributors to the Visual Language Interpreting/Tools of the Trade wikibook<a href="#refs" class="note"></a> for references to dates, contributors, and descriptions.</dd>
-				<dt>Documentation</dt>
-					<dd>There are numerous sites and articles (and student projects) across the internet that mention or discuss this unique set of systems, their etymologies, variables, and pedagogical aims. This compilation is intended to empirically document this domain for students, colleagues, and other researchers. Feedback, additions, and corrections are appreciated.</dd>
-				<dt>Education</dt>
-					<dd>Rhetorically, this artifact, while intended for a greater contribution to histories and historiographies in our field, is for discussion by Deaf and Interpreter Studies students in learning more about the praxis of these codes in educational and interpreted work. A future section of this artifact should/will likely be 'learning objectives.'</dd>
-					<dd>Learning objectives:
-						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-					</dd>
-			</dl>
-
-			<h2>Definitions</h2>
-			<dl>
-				<dt>"Code"</dt>
-					<dd>(In development.) 'Codes' differ from 'approaches' in that they are relatively set, defined (albeit loose or dotted-line) established systems with fairly accepted lexical items and linguistic rules. (Add more here; Riley (2011), Crystal & Craig (1978) to define 'code')</dd>
-				<dt>"Approach"</dt>
-					<dd>(In development.) Approaches differ (and are visually designed differently) in that there are nuances in how principles of CASE are 'used' to render a transliteration.</dd>
-			</dl>
-
+			
 			<h2>Version and currency</h2>
 			<p>This HTML/hypertext version (<script>document.write(new Date().getFullYear())</script>) supercedes any of the popular<a href="#refs" class="note"></a> printed<a href="#refs" class="note"></a> versions in that 1) it is more easily updated/distributed and 2) allows for additional footnoted and documented hypertexted media (research/text, video, etc.). This version also supercedes any other existing printed versions as well as the version printed in Humphrey<sub>HI</sub>, J., Clark<sub>H</sub>, L., Featherstone<sub>DI</sub>, J., and Ross III<sub>HI</sub>, W. F. (2020). <em>You want to be an interpreter (5th edition)</em>. Vancouver, WA: H&H Publishing.</p>
+			<p>All implied placements and relationships are relative; overlapping approaches drawn for distinction and not for accuracy. Subscripts on surnames (e.g., <sub>D</sub>, <sub>H</sub>, or <sub>?</sub>) identify that an author, researcher, contributor, or creator is Deaf, hearing, or unknown. Additional credit to authors <a href="https://www.danparvaz.com">DParvaz</a><sub>HI</sub>, Garrrett<sub>?</sub>, Jguk<sub>?</sub>, Adrignola<sub>?</sub>, and other unnamed contributors to the Visual Language Interpreting/Tools of the Trade wikibook<a href="#refs" class="note"></a> for references to dates, contributors, and descriptions.</p>
+			<small>For clarity in modality, this document makes a distinction between SLs (sign(ed) languages) and SpLs (spoken languages), while also recognizing that linguistically and academically, a signed language can be spoken.</small>
+
+			<style>
+				.card { border-radius: .75em;}
+				.card:hover { transition: all .25s ease-in-out; transform: scale(1.03); transform-origin: center; background: rgba(255,255,255,.6);}
+			</style>
+
+			<h2>Purposes & Definitions</h2>
+			<div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 align-items-stretch g-4 py-2">
+				<div class="col">
+					<div class="card h-100 overflow-hidden shadow-lg" style="background: var(--bs-blue); background-image: url('');">
+						<div class="flex-column p-5 text-white text-shadow-1">
+							<h3 class="pt-0 mt-0 mb-4 fw-bold">Diglossia</h3>
+							<p>This is a comparative bilingual continuum for use with Deaf and Interpreting Studies students that identifies the diglossic<a href="#refs" class="note"></a> and representative relationships of artificial (or 'contrived'<a href="#refs" class="note"></a>) manual codes of English (<abbr title="Manual code of English">MCE</abbr>s) historically derived between American Sign Language (ASL) and English.</p>
+						</div>
+				  	</div>
+				</div>
+		  
+				<div class="col">
+					<div class="card h-100 overflow-hidden  shadow-lg" style="background: var(--bs-orange); background-image: url('');">
+						<div class="flex-column p-5 text-white text-shadow-1">
+							<h3 class="pt-0 mt-0 mb-4 lh-1 fw-bold">Identify</h3>
+							<p>It identifies 1) creators and contributors, 2) cultural (Deaf, hearing, or interpreter) status, and 3) MCE 'approaches' and other gestural MCEs that are English-derived but that may also be used with various deaf populations. (Although the content is representative of the latest printed version (2019), this code and content should be considered 'in development'; see this project's changelog and roadmap below.)</p>
+						</div>
+				  	</div>
+				</div>
+		  
+				<div class="col">
+					<div class="card h-100 overflow-hidden  shadow-lg" style="background: var(--bs-gray); background-image: url('');">
+						<div class="flex-column p-5 text-white text-shadow-1">
+							<h3 class="pt-0 mt-0 mb-4 lh-1 fw-bold">Document</h3>
+							<p>There are numerous sites and articles (and student projects) across the internet that mention or discuss this unique set of systems, their etymologies, variables, and pedagogical aims. This compilation is intended to empirically document this domain for students, colleagues, and other researchers. Feedback, additions, and corrections are appreciated.</p>
+						</div>
+				  	</div>
+				</div>
+				<div class="col">
+					<div class="card h-100 overflow-hidden shadow-lg" style="background: var(--bs-dark); background-image: url('');">
+						<div class="flex-column p-5 text-white text-shadow-1">
+							<h3 class="pt-0 mt-0 mb-4 lh-1 fw-bold">Educate</h3>
+							<p>Rhetorically, this artifact, while intended for a greater contribution to histories and historiographies in our field, is for discussion by Deaf and Interpreter Studies students in learning more about the praxis of these codes in educational and interpreted work. A future section of this artifact should/will likely be 'learning objectives.'</p>
+						</div>
+				  	</div>
+				</div>
+		  
+				<div class="col">
+					<div class="card h-100 overflow-hidden shadow-lg" style="background: var(--bs-purple); background-image: url('');">
+						<div class="flex-column p-5 text-white text-shadow-1">
+							<h3 class="pt-0 mt-0 mb-4 lh-1 fw-bold">"Code"</h3>
+							<p>(In development.) 'Codes' differ from 'approaches' in that they are relatively set, defined (albeit loose or dotted-line) established systems with fairly accepted lexical items and linguistic rules. (Add more here; Riley (2011), Crystal & Craig (1978) to define 'code')</p>
+						</div>
+				  	</div>
+				</div>
+		  
+				<div class="col">
+					<div class="card h-100 overflow-hidden border-0 shadow-lg" style="background: var(--bs-indigo); background-image: url('');">
+						<div class="flex-column p-5 text-white text-shadow-1">
+							<h3 class="pt-0 mt-0 mb-4 lh-1 fw-bold">"Approach"</h3>
+							<p>(In development.) Approaches differ (and are visually designed differently) in that there are nuances in how principles of CASE are 'used' to render a transliteration.</p>
+						</div>
+				  	</div>
+				</div>
+			</div>
 
 			<!-- continuum -->
 			<h2>Continuum</h2>
-
 			<!-- definitions -->
 			<div class="row justify-content-between definitions">
 				<div class="col-6">
@@ -319,10 +367,9 @@
 					<p><small>(principle is operational for other SpLs)</small></p>
 				</div>
 			</div>
-			
-			<!-- spectrum -->
-			<div class="row spectrum-container box">
-				<div class="spectrum">
+
+			<div style="background-image: linear-gradient(to right, rgba(102,102,255,0) 0%, rgba(102,102,255,1) 5%, rgba(255,102,204,1) 95%, rgba(255,102,204,0) 100%); margin: 0 -5em;">
+				<div class="row">
 					<div class="col-9 col-3-xxl offset-md-1 col-md-5 approach-left">
 						<p class="text-black-50 text-uppercase">&#8672; MCE approach</p>
 						<h3><span class="circle-letter" style="padding: .15em .4em;">A</span> Conceptually Accurate Signed English <abbr class="initialism">(CASE)</abbr></h3>
@@ -336,6 +383,57 @@
 				</div>
 
 				<!-- code placement -->
+				<div class="codes col-12">
+					<div class="col-1 offset-1">
+						<p class="circle-number">1</p>
+					</div>
+					<div class="col-1 offset-7">
+						<p class="circle-number">4</p>
+					</div>
+					<div class="col-1 offset-6">
+						<p class="circle-number">2</p>
+					</div>
+					<div class="col-1 offset-9">
+						<p class="circle-number">3</p>
+						<p class="circle-number">5</p>
+					</div>
+					<div class="col-1 offset-10">
+						<p class="circle-number">6</p>
+						<p class="circle-number">8</p>
+					</div>
+					<div class="col-1 offset-11">
+						<p class="circle-number">7</p>
+					</div>
+				</div>
+		
+				<!-- more like... comparison -->
+				<div class="container mt-md-5 more-like">
+					<div class="row" style="display: flex;">
+						<div class="col col-md-2 order-1 order-md-1">&#8672; more like ASL</div>
+
+						<div class="col-auto col-md-8 order-3 order-md-2 text-center"><strong>Contact signs<a href="#refs" class="note"></a> and Manual Codes of English</strong><br>(Cokely<sub>HI</sub>, 1983<a href="#refs" class="note"></a>; Lucas<sub>D</sub> & Valli<sub>DI</sub>, 1992<a href="#refs" class="note"></a>; Woodward<sub>H</sub>, 1973<a href="#refs" class="note"></a>)</div>
+
+						<div class="col-auto col-md-2 order-2 order-md-3" style="text-align: right;" >more like English &#8674;</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- spectrum
+			<div class="row spectrum-container box">
+				<div class="spectrum">
+					<div class="col-9 col-3-xxl offset-md-1 col-md-5 approach-left">
+						<p class="text-black-50 text-uppercase">&#8672; MCE approach</p>
+						<h3><span class="circle-letter" style="padding: .15em .4em;">A</span> Conceptually Accurate Signed English <abbr class="initialism">(CASE)</abbr></h3>
+						<p>Popular alternative to Signed English, previously called PSE (Pidgin Signed English). Combines ASL signs and semantics in an MCE form. <strong>Not a language.</strong></p>
+					</div>
+					<div class="col-9 col-3-xxl offset-md-4 col-md-5 approach-right">
+						<p class="text-black-50 text-uppercase">MCE approach &#8674;</p>
+						<h3><span class="circle-letter" style="padding: .15em .4em;">B</span> Sign Supported Speech <abbr class="initialism">(SSS)</abbr></h3>
+						<p style="width: 100%">Voicing spoken English and signing an MCE. Sometimes called Simultaneous Communication (SimCom) or Total Communication (TC). <strong>Not a language.</strong></p>
+					</div>
+				</div> -->
+
+			<!-- code placement
 				<div class="codes col-12">
 					<div class="col-1"><p class="circle-number">1</p></div>
 					<div class="col-1 offset-7">
@@ -355,9 +453,9 @@
 					<div class="col-1 offset-11">
 						<p style="float: right;" class="circle-number">7</p>
 					</div>
-				</div>
+				</div> -->
 	
-				<!-- more like... comparison -->
+			<!-- more like... comparison
 				<div class="container mt-md-5 more-like">
 					<div class="row" style="display: flex;">
 						<div class="col col-md-2 order-1 order-md-1">&#8672; more like ASL</div>
@@ -367,7 +465,7 @@
 						<div class="col-auto col-md-2 order-2 order-md-3" style="text-align: right;" >more like English &#8674;</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 			<!-- mces -->
 			<h2>Manual Codes for English<a href="#refs" class="note"></a></h2>	
