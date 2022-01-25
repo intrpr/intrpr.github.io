@@ -78,7 +78,7 @@
 			.definitions { margin-bottom: 1em; padding: 0; }
 				.definitions p { line-height: 1.4; margin: 0; padding: 0; }
 
-			.spectrum-container { height: 30em; padding: 1.5em 0; }
+			.spectrum-container { height: 40em; padding: 1.5em 0; }
 			.spectrum-container {
 				background-image: 
 				linear-gradient(
@@ -87,6 +87,8 @@
 					rgba(255,102,204,1)
 				);
 			}
+
+			.card a { color: rgba(255,255,255,.8); }
 
 			.spectrum-container div { display: block; }
 				.codes { position: relative; z-index: 90; }
@@ -143,7 +145,7 @@
 						border-radius: .5em;
 					}
 					.approach-left { margin: 2em calc(19% + 2em); transform: translateX(-19%); box-shadow: 1em 1em 1em rgba(0,0,0,.1); }
-					.approach-right { margin: 5em calc(81% + 2em); transform: translateX(-81%); box-shadow: -1em 1em 1em rgba(0,0,0,.1); }
+					.approach-right { margin: 5em calc(81% + 3em); transform: translateX(-81%); box-shadow: -1em 1em 1em rgba(0,0,0,.1); }
 					.approach-left h3, .approach-left p { width: 85%; }
 					.approach-left:before {
 						content:"";
@@ -163,7 +165,7 @@
 						border-left: 2em solid rgba(255,255,255,.4);
 						border-bottom: 5.5em solid transparent;
 					}
-					.more-like { position: relative; width: 90%; z-index: 110; margin: 1em auto; padding: 1.5em; background: rgba(0,0,0,.2); color: rgba(255,255,255,1); border-radius: .5em; height: auto; top: -1em;}
+					.more-like { position: relative; width: 90%; z-index: 110; margin: 1em auto; padding: 1.5em; background: rgba(0,0,0,.2); color: rgba(255,255,255,1); border-radius: .5em; height: auto; bottom: 1.5em;}
 						.more-like a { color: rgba(255,255,255,1); }
 						.more-like::before { 
 							content:"";
@@ -215,7 +217,7 @@
 					}
 					.approach-left { position: relative; margin: 1em calc(19% + 1em); transform: translateX(-19%); box-shadow: 1em 1em 1em rgba(0,0,0,.1); }
 					.approach-left h3, .approach-left p { width: 100%; }
-					.approach-right { position: relative; margin: -2em calc(81% + -1em); transform: translateX(-81%); box-shadow: -1em 1em 1em rgba(0,0,0,.1); }
+					.approach-right { position: relative; margin: -2em calc(81% + 1em); transform: translateX(-81%); box-shadow: -1em 1em 1em rgba(0,0,0,.1); }
 					
 					.spectrum::before, .spectrum::after {
 					height: 0;
@@ -371,12 +373,12 @@
 
 			<div style="background-image: linear-gradient(to right, rgba(102,102,255,0) 0%, rgba(102,102,255,1) 8%, rgba(255,102,204,1) 92%, rgba(255,102,204,0) 100%); margin: 0 -5em;">
 				<div class="row">
-					<div class="col-9 col-3-xxl offset-md-1 col-md-5 approach-left">
+					<div class="col-9 offset-md-1 col-md-5 approach-left">
 						<p class="text-black-50 text-uppercase">&#8672; MCE approach</p>
 						<h3><span class="circle-letter" style="padding: .15em .4em;">A</span> Conceptually Accurate Signed English <abbr class="initialism">(CASE)</abbr></h3>
 						<p>Popular alternative to Signed English, previously called PSE (Pidgin Signed English). Combines ASL signs and semantics in an MCE form. <strong>Not a language.</strong></p>
 					</div>
-					<div class="col-9 col-3-xxl offset-md-4 col-md-5 approach-right">
+					<div class="col-9 offset-md-12 col-md-5 approach-right">
 						<p class="text-black-50 text-uppercase">MCE approach &#8674;</p>
 						<h3><span class="circle-letter" style="padding: .15em .4em;">B</span> Sign Supported Speech <abbr class="initialism">(SSS)</abbr></h3>
 						<p style="width: 100%">Voicing spoken English and signing an MCE. Sometimes called Simultaneous Communication (SimCom) or Total Communication (TC). <strong>Not a language.</strong></p>
@@ -384,7 +386,7 @@
 				</div>
 
 				<!-- code placement -->
-				<div class="codes col-12">
+				<div class="codes col-12" style="margin: 2em 0 0 0;">
 					<div class="col-1 offset-1">
 						<p class="circle-number">1</p>
 					</div>
@@ -408,7 +410,7 @@
 				</div>
 		
 				<!-- more like... comparison -->
-				<div class="container mt-md-5 more-like">
+				<div class="container mt-md-4 more-like">
 					<div class="row" style="display: flex;">
 						<div class="col col-md-2 order-1 order-md-1">&#8672; more like ASL</div>
 
@@ -418,55 +420,6 @@
 					</div>
 				</div>
 			</div>
-
-			<!-- spectrum
-			<div class="row spectrum-container box">
-				<div class="spectrum">
-					<div class="col-9 col-3-xxl offset-md-1 col-md-5 approach-left">
-						<p class="text-black-50 text-uppercase">&#8672; MCE approach</p>
-						<h3><span class="circle-letter" style="padding: .15em .4em;">A</span> Conceptually Accurate Signed English <abbr class="initialism">(CASE)</abbr></h3>
-						<p>Popular alternative to Signed English, previously called PSE (Pidgin Signed English). Combines ASL signs and semantics in an MCE form. <strong>Not a language.</strong></p>
-					</div>
-					<div class="col-9 col-3-xxl offset-md-4 col-md-5 approach-right">
-						<p class="text-black-50 text-uppercase">MCE approach &#8674;</p>
-						<h3><span class="circle-letter" style="padding: .15em .4em;">B</span> Sign Supported Speech <abbr class="initialism">(SSS)</abbr></h3>
-						<p style="width: 100%">Voicing spoken English and signing an MCE. Sometimes called Simultaneous Communication (SimCom) or Total Communication (TC). <strong>Not a language.</strong></p>
-					</div>
-				</div> -->
-
-			<!-- code placement
-				<div class="codes col-12">
-					<div class="col-1"><p class="circle-number">1</p></div>
-					<div class="col-1 offset-7">
-						<p class="circle-number">4</p>
-					</div>
-					<div class="col-1 offset-6">
-						<p class="circle-number">2</p>
-					</div>
-					<div class="col-1 offset-9">
-						<p class="circle-number">3</p>
-						<p class="circle-number">5</p>
-					</div>
-					<div class="col-1 offset-10">
-						<p class="circle-number">6</p>
-						<p class="circle-number">8</p>
-					</div>
-					<div class="col-1 offset-11">
-						<p style="float: right;" class="circle-number">7</p>
-					</div>
-				</div> -->
-	
-			<!-- more like... comparison
-				<div class="container mt-md-5 more-like">
-					<div class="row" style="display: flex;">
-						<div class="col col-md-2 order-1 order-md-1">&#8672; more like ASL</div>
-
-						<div class="col-auto col-md-8 order-3 order-md-2 text-center"><strong>Contact signs<a href="#refs" class="note"></a> and Manual Codes of English</strong><br>(Cokely<sub>HI</sub>, 1983<a href="#refs" class="note"></a>; Lucas<sub>D</sub> & Valli<sub>DI</sub>, 1992<a href="#refs" class="note"></a>; Woodward<sub>H</sub>, 1973<a href="#refs" class="note"></a>)</div>
-
-						<div class="col-auto col-md-2 order-2 order-md-3" style="text-align: right;" >more like English &#8674;</div>
-					</div>
-				</div>
-			</div> -->
 
 			<!-- mces -->
 			<h2>Manual Codes for English<a href="#refs" class="note"></a></h2>	
@@ -653,11 +606,13 @@
 			<div class="row references box">
 				<ol id="refs">
 					<h3>Definitions and Foundation</h3>
-					<li><a class="back" href="#">&#8617;</a> Riley<sub>H</sub>, B. (2011). <a href="https://www.academia.edu/2511274/The_American_Sign_Language_English_Language_Contact_Situation_with_Postscript_2011_peer_reviewed_">The American sign language–English language–contact situation</a>. <em>Lengua de Señas e Interpretación</em>, Montevideo, 2, 93–117.</li>
-					<li><a class="back" href="#">&#8617;</a> Crystal<sub>H</sub>, D. & Craig<sub>H</sub>, E. (1978). <a href="http://intrpr.info/library/crystal-craig-contrived-sign-languages.pdf">Contrived sign language</a>. In I. M. Schlesinger<sub>H</sub> & L. Namir<sub>H</sub>, <em>Sign language of the deaf: Psychological, linguistic, and sociological perspectives</em>, 141–166. New York: Academic Press. (Discussion of 'contrived signing systems' on pp 161–166.)</li>
-					<li><a class="back" href="#">&#8617;</a> Wikibooks, <a href="https://en.wikibooks.org/wiki/Visual_Language_Interpreting/Tools_of_the_Trade">Visual Language Interpreting/Tools of the Trade</a>, initial creation 3 May 2014; last content edit 11 Mar 2016.</li>
+
+					<!-- 01-10 -->
 					<li><a class="back" href="#">&#8617;</a> Stringham<sub>H</sub>, D. (2019). <a href="https://www.academia.edu/40262938/Comparative_American_Sign_Language_English_Continuum_2019_">Comparative American Sign Language/English Continuum</a>. https://www.academia.edu/40262938/Comparative_American_Sign_Language_English_Continuum_2019_.</li>
 					<li><a class="back" href="#">&#8617;</a> <a href="http://intrpr.info/library/stringham-asl-english-continuum.pdf">http://intrpr.info/library/stringham-asl-english-continuum.pdf</a>. Also printed in Humphrey<sub>H</sub>, J., Clark<sub>H</sub>, L., Featherstone<sub>D</sub>, J., and Ross III<sub>H</sub>, W. F. (2020). <em><a href="https://www.amazon.com/So-You-Want-Interpreter-5th/dp/097043555X">You want to be an interpreter (5th edition)</a></em>. Vancouver, WA: H&H Publishing.</li>
+					<li><a class="back" href="#">&#8617;</a> Wikibooks, <a href="https://en.wikibooks.org/wiki/Visual_Language_Interpreting/Tools_of_the_Trade">Visual Language Interpreting/Tools of the Trade</a>, initial creation 3 May 2014; last content edit 11 Mar 2016.</li>
+					<li><a class="back" href="#">&#8617;</a> Riley<sub>H</sub>, B. (2011). <a href="https://www.academia.edu/2511274/The_American_Sign_Language_English_Language_Contact_Situation_with_Postscript_2011_peer_reviewed_">The American sign language–English language–contact situation</a>. <em>Lengua de Señas e Interpretación</em>, Montevideo, 2, 93–117.</li>
+					<li><a class="back" href="#">&#8617;</a> Crystal<sub>H</sub>, D. & Craig<sub>H</sub>, E. (1978). <a href="http://intrpr.info/library/crystal-craig-contrived-sign-languages.pdf">Contrived sign language</a>. In I. M. Schlesinger<sub>H</sub> & L. Namir<sub>H</sub>, <em>Sign language of the deaf: Psychological, linguistic, and sociological perspectives</em>, 141–166. New York: Academic Press. (Discussion of 'contrived signing systems' on pp 161–166.)</li>
 					<li><a class="back" href="#">&#8617;</a> "Contact sign." <a href="https://en.wikipedia.org/wiki/Contact_sign">https://en.wikipedia.org/wiki/Contact_sign</a></li>
 					<li><a class="back" href="#">&#8617;</a> Cokley<sub>H</sub>, D. (1983). <a href="https://www.jstor.org/stable/26203633">When is a pidgin not a pidgin? An alternate analysis of the ASL-English contact situation</a>. <em>Sign Language Studies</em>, 38 (Spring 1983), 1–24. (<a href="https://doi.org/10.1353/sls.1983.0017">doi: 10.1353/sls.1983.0017</a>).</li>
 					<li><a class="back" href="#">&#8617;</a> Lucas<sub>H</sub>, C. & Valli<sub>D</sub>, C. (1992). Language contact in the American Deaf community. In C. Valli<sub>D</sub> & C. Lucas<sub>H</sub> (eds), <em><a href="https://www.google.com/books/edition/Linguistics_of_American_Sign_Language/mfS3GlTLAUMC">Linguistics of American Sign Language: An introduction</a></em>, 458–480. Washington, D.C.: Gallaudet University Press. (cf., Lucas<sub>H</sub> & Valli<sub>H</sub>, 1988, 1989, 1991.)</li>
@@ -665,6 +620,7 @@
 					<li><a class="back" href="#">&#8617;</a> "Manually coded English." <a href="https://en.wikipedia.org/wiki/Manually_coded_English">https://en.wikipedia.org/wiki/Manually_coded_English</a></li>
 
 					<h3>American Sign Language</h3>
+					<!-- 11-20 -->
 					<li><a class="back" href="#">&#8617;</a> Davis<sub>D</sub>, J. E. & McKay-Cody<sub>D</sub>, M. (2011). <a href="https://www.academia.edu/4058350/Signed_Languages_of_American_Indian_Communities_Considerations_for_Interpreting_Work_and_Research">Signed languages of American Indian communities: Considerations for interpreting work and research</a>. In R. L. McKee<sub>H</sub> & J. E. Davis<sub>D</sub> (eds.), <em><a href="http://gupress.gallaudet.edu/excerpts/IMMCtoc.html">Interpreting in Multilingual, Multicultural Contexts</a></em>, 119–157. Washington, D.C.: Gallaudet University Press. (cf., Davis<sub>D</sub>, 2007; Wurtzburg<sub>?</sub> & Campbell<sub>?</sub>, 1995; McKay-Cody<sub>D</sub>, 1997, 1998, 1999.)</li>
 					<li><a class="back" href="#">&#8617;</a> Robinson<sub>D</sub>, O. (2019). "The 1817 Origins Myth," published 30 Nov 2019; <a href="https://www.youtube.com/watch?v=8M40MarjY0c">https://www.youtube.com/watch?v=8M40MarjY0c</a>.</li>
 					<li><a class="back" href="#">&#8617;</a> Mallery<sub>H</sub>, G. (1880). <em><a href="https://archive.org/details/introstudysignlang00mallrich">Introduction to the study of sign language among the North American Indians: as illustrating the gesture speech of mankind</a></em>. Washington, D.C.: Government Printing Office.</li>
@@ -695,7 +651,7 @@
 					<li><a class="back" href="#">&#8617;</a> "Georgetown Professor Ted Supalla's ASL Archaeology Presentation at RIT," published 4 Sep 2015; <a href="https://www.youtube.com/watch?v=zLW7ASfH77I">https://www.youtube.com/watch?v=zLW7ASfH77I</a>. cf. Supalla<sub>D</sub>, T. & Clark<sub>H</sub>, P. (2015). <em>Sign Language Archeology: Understanding the Historical Roots of American Sign Language</em>. Washington, D.C.: Gallaudet University Press and materials at the <a href="http://hsldb.georgetown.edu">Historical Sign Language Database</a>.</li>
 
 					<h3>Signed English </h3>
-					<li><a class="back" href="#">&#8617;</a> 'Siglish' is also mentioned at "<a href="https://www.handspeak.com/study/index.php?id=86">Siglish: an old term of Signed English</a>" and Murphy<sub>?</sub>, H. J. & Fleischer<sub>D</sub>, L. R. (1977). <a href="https://core.ac.uk/download/pdf/234960167.pdf">The effects of Ameslan versus Siglish upon test scores</a>. <em><a href="https://repository.wcsu.edu/jadara/">Journal of American Deafness and Rehabilitation Association (JADARA)</a></em>, 11(2; October 1977), 15–18.</li>
+					<li><a class="back" href="#">&#8617;</a> 'Siglish' is also mentioned at "<a href="https://www.handspeak.com/study/index.php?id=86">Siglish: an old term of Signed English</a>" and Murphy<sub>?</sub>, H. J. & Fleischer<sub>D</sub>, L. R. (1977). <a href="https://core.ac.uk/download/pdf/234960167.pdf">The effects of Ameslan versus Siglish upon test scores</a>. <em><a href="https://nsuworks.nova.edu/jadara/">Journal of American Deafness and Rehabilitation Association (JADARA)</a></em>, 11(2; October 1977), 15–18.</li>
 					<li><a class="back" href="#">&#8617;</a> There is little to no extant reference of 'Amelish'; the only seeming reference to it is "This term was coined by Bernard Bragg<sub>D</sub> from Texas. This method uses lots of ASL & fs [fingerspelling] in English order." (<a href="https://deaf-info.zak.co.il/d/deaf-info/old/methods.html">https://deaf-info.zak.co.il/d/deaf-info/old/methods.html</a>.)</li>
 					<li><a class="back" href="#">&#8617;</a> Bornstein<sub>D</sub>, H., Saulnier<sub>?</sub>, K, & Hamilton<sub>?</sub>, L. (1983). <em><a href="http://intrpr.info/library/bornstein-signed-english-preface.pdf">The comprehensive signed English dictionary</a></em>. Washington, D.C.: Gallaudet University Press.</li>
 					<li><a class="back" href="#">&#8617;</a> Bornstein<sub>D</sub>, H. (1974). Signed English: A Manual Approach to English Language Development. <em>Journal of Speech and Hearing Disorders</em>, 39(3), 330–342. (<a href="https://doi.org/10.1044/jshd.3903.330">doi:10.1044/jshd.3903.330</a>).</li>
