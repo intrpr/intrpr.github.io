@@ -15,7 +15,7 @@
 			@import url('https://rsms.me/inter/inter.css');
 			@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-			body { padding: 0 5vw; font-family: "Noto Sans", "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "qqApple Color Emoji", "qqSegoe UI Emoji", "Segoe UI Symbol", "qqNoto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #111; font-size: 16px; font-feature-settings: "cpsp","frqqac","ss04","cv09","cv11"; }
+			body { padding: 0; font-family: "Noto Sans", "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "qqApple Color Emoji", "qqSegoe UI Emoji", "Segoe UI Symbol", "qqNoto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #111; font-size: 16px; font-feature-settings: "cpsp","frqqac","ss04","cv09","cv11"; }
 			html { scroll-behavior: smooth; }
 			header { text-align: center; }
 
@@ -46,7 +46,7 @@
 			sup::before { content: "["; } 
 			sup::after { content: "]"; }
 			sup, sub { font-weight: inherit; text-decoration: none; }
-			p sup, p sub { font-weight: 500; text-decoration: none; }
+			p sup, p sub { font-weight: inherit; text-decoration: none; }
 
 			h1 { margin: 0 0 .25em 0; font-size: 3rem; line-height: 1.15; font-weight: 900; letter-spacing: -.0125em; text-align: center;}
 			h2 { font-size: 1.6rem; line-height: 1.2; margin: 2em 0 .5em 0; padding: .75em 0 .5em 0; border: 1px solid rgba(0,0,0,.1); border-width: 1px 0 0 0; font-weight: 800; letter-spacing: -.005rem; }
@@ -146,7 +146,7 @@
 						border-radius: .5em;
 					}
 					.approach-left { margin: 2em calc(19% + 2em); transform: translateX(-19%); box-shadow: 1em 1em 1em rgba(0,0,0,.1); }
-					.approach-right { margin: 5em calc(81% + 3em); transform: translateX(-81%); box-shadow: -1em 1em 1em rgba(0,0,0,.1); }
+					.approach-right { margin: 5em calc(75% + 3em); transform: translateX(-75%); box-shadow: -1em 1em 1em rgba(0,0,0,.1); }
 					.approach-left h3, .approach-left p { width: 85%; }
 					.approach-left:before {
 						content:"";
@@ -206,7 +206,7 @@
 
 			@media (max-width: 768px) {
 				body { padding: 2em; }
-				.spectrum-container { background-image: linear-gradient(to right, #6666ff, #ff66cc); height: auto; }
+				.spectrum-container { background-image: linear-gradient(to right, #6666ff, #ff66cc); height: auto; display: none; }
 				.spectrum { height: auto; }
 
 				.approach-left, .approach-right {
@@ -216,7 +216,7 @@
 						padding: 2em 2em 1.5em 2em; 
 						border-radius: .5em;
 					}
-					.approach-left { position: relative; margin: 1em calc(19% + 1em); transform: translateX(-19%); box-shadow: 1em 1em 1em rgba(0,0,0,.1); }
+					.approach-left { position: relative; margin: 1em calc(17% + 1em); transform: translateX(-17%); box-shadow: 1em 1em 1em rgba(0,0,0,.1); }
 					.approach-left h3, .approach-left p { width: 100%; }
 					.approach-right { position: relative; margin: -2em calc(81% + 1em); transform: translateX(-81%); box-shadow: -1em 1em 1em rgba(0,0,0,.1); }
 					
@@ -264,8 +264,12 @@
 		<style>
 			div, form { borqqder: 1px dotted #f00; }
 			.box { padqqding: 1em; borqqder: 1px dotted #00f; }
+			aside { width: 100%; padding: 1em; background: rgba(255,255,0,.1); text-align: center;}
 		</style>
 	
+		<aside>
+			<small>Errors are occuring in continuum sizing, repositioning for mobile views, and automatic footnote numbering. Working on a fix.</small>
+		</aside>
 
 		<main class="container box">
 
@@ -293,8 +297,8 @@
 			
 			<h2>Version and currency</h2>
 			<p>This HTML/hypertext version (<script>document.write(new Date().getFullYear())</script>) supercedes any of the popular<a href="#refs" class="note"></a> printed<a href="#refs" class="note"></a> versions in that 1) it is more easily updated/distributed and 2) allows for additional footnoted and documented hypertexted media (research/text, video, etc.). This version also supercedes any other existing printed versions as well as the version printed in Humphrey<sub>HI</sub>, J., Clark<sub>H</sub>, L., Featherstone<sub>DI</sub>, J., and Ross III<sub>HI</sub>, W. F. (2020). <em>You want to be an interpreter (5th edition)</em>. Vancouver, WA: H&H Publishing.</p>
-			<p>All implied placements and relationships are relative; overlapping approaches drawn for distinction and not for accuracy. Subscripts on surnames (e.g., <sub>D</sub>, <sub>H</sub>, or <sub>?</sub>) identify that an author, researcher, contributor, or creator is Deaf, hearing, or unknown. Additional credit to authors <a href="https://www.danparvaz.com">DParvaz</a><sub>HI</sub>, Garrrett<sub>?</sub>, Jguk<sub>?</sub>, Adrignola<sub>?</sub>, and other unnamed contributors to the Visual Language Interpreting/Tools of the Trade wikibook<a href="#refs" class="note"></a> for references to dates, contributors, and descriptions.</p>
-			<small>For clarity in modality, this document makes a distinction between SLs (sign(ed) languages) and SpLs (spoken languages), while also recognizing that linguistically and academically, a signed language can be spoken.</small>
+			<p>All implied placements and relationships are relative; overlapping approaches drawn for distinction and not for accuracy. Subscripts on surnames (e.g., <sub>D</sub>, <sub>DI</sub>, <sub>H</sub>, <sub>HI</sub> or <sub>?</sub>) identify that an author, researcher, contributor, or creator is Deaf, hearing, also an interpreter, or unknown. Additional credit to authors <a href="https://www.danparvaz.com">DParvaz</a><sub>HI</sub>, Garrrett<sub>?</sub>, Jguk<sub>?</sub>, Adrignola<sub>?</sub>, and other unnamed contributors to the Visual Language Interpreting/Tools of the Trade wikibook<a href="#refs" class="note"></a> for references to dates, contributors, and descriptions.</p>
+			<small>For clarity in modality, this document makes a distinction between SLs (sign(ed) languages) and SpLs (spoken languages), while also recognizing that linguistically and academically, a signed language can be 'spoken.'</small>
 
 			<style>
 				.card { border-radius: .75em;}
@@ -379,7 +383,7 @@
 						<h3><span class="circle-letter" style="padding: .15em .4em;">A</span> Conceptually Accurate Signed English <abbr class="initialism">(CASE)</abbr></h3>
 						<p>Popular alternative to Signed English, previously called PSE (Pidgin Signed English). Combines ASL signs and semantics in an MCE form. <strong>Not a language.</strong></p>
 					</div>
-					<div class="col-9 offset-md-12 col-md-5 approach-right">
+					<div class="col-7 offset-md-7 col-md-5 approach-right">
 						<p class="text-black-50 text-uppercase">MCE approach &#8674;</p>
 						<h3><span class="circle-letter" style="padding: .15em .4em;">B</span> Sign Supported Speech <abbr class="initialism">(SSS)</abbr></h3>
 						<p style="width: 100%">Voicing spoken English and signing an MCE. Sometimes called Simultaneous Communication (SimCom) or Total Communication (TC). <strong>Not a language.</strong></p>
@@ -610,14 +614,14 @@
 					<h3>Definitions and Foundation</h3>
 
 					<!-- 01-10 -->
-					<li><a class="back" href="#">&#8617;</a> Stringham<sub>H</sub>, D. (2019). <a href="https://www.academia.edu/40262938/Comparative_American_Sign_Language_English_Continuum_2019_">Comparative American Sign Language/English Continuum</a>. https://www.academia.edu/40262938/Comparative_American_Sign_Language_English_Continuum_2019_.</li>
+					<li><a class="back" href="#">&#8617;</a> Stringham<sub>HI</sub>, D. (2019). <a href="https://www.academia.edu/40262938/Comparative_American_Sign_Language_English_Continuum_2019_">Comparative American Sign Language/English Continuum</a>. https://www.academia.edu/40262938/Comparative_American_Sign_Language_English_Continuum_2019_.</li>
 					<li><a class="back" href="#">&#8617;</a> <a href="http://intrpr.info/library/stringham-asl-english-continuum.pdf">http://intrpr.info/library/stringham-asl-english-continuum.pdf</a>. Also printed in Humphrey<sub>H</sub>, J., Clark<sub>H</sub>, L., Featherstone<sub>D</sub>, J., and Ross III<sub>H</sub>, W. F. (2020). <em><a href="https://www.amazon.com/So-You-Want-Interpreter-5th/dp/097043555X">You want to be an interpreter (5th edition)</a></em>. Vancouver, WA: H&H Publishing.</li>
 					<li><a class="back" href="#">&#8617;</a> Wikibooks, <a href="https://en.wikibooks.org/wiki/Visual_Language_Interpreting/Tools_of_the_Trade">Visual Language Interpreting/Tools of the Trade</a>, initial creation 3 May 2014; last content edit 11 Mar 2016.</li>
 					<li><a class="back" href="#">&#8617;</a> Riley<sub>H</sub>, B. (2011). <a href="https://www.academia.edu/2511274/The_American_Sign_Language_English_Language_Contact_Situation_with_Postscript_2011_peer_reviewed_">The American sign language–English language–contact situation</a>. <em>Lengua de Señas e Interpretación</em>, Montevideo, 2, 93–117.</li>
 					<li><a class="back" href="#">&#8617;</a> Crystal<sub>H</sub>, D. & Craig<sub>H</sub>, E. (1978). <a href="http://intrpr.info/library/crystal-craig-contrived-sign-languages.pdf">Contrived sign language</a>. In I. M. Schlesinger<sub>H</sub> & L. Namir<sub>H</sub>, <em>Sign language of the deaf: Psychological, linguistic, and sociological perspectives</em>, 141–166. New York: Academic Press. (Discussion of 'contrived signing systems' on pp 161–166.)</li>
 					<li><a class="back" href="#">&#8617;</a> "Contact sign." <a href="https://en.wikipedia.org/wiki/Contact_sign">https://en.wikipedia.org/wiki/Contact_sign</a></li>
 					<li><a class="back" href="#">&#8617;</a> Cokley<sub>H</sub>, D. (1983). <a href="https://www.jstor.org/stable/26203633">When is a pidgin not a pidgin? An alternate analysis of the ASL-English contact situation</a>. <em>Sign Language Studies</em>, 38 (Spring 1983), 1–24. (<a href="https://doi.org/10.1353/sls.1983.0017">doi: 10.1353/sls.1983.0017</a>).</li>
-					<li><a class="back" href="#">&#8617;</a> Lucas<sub>H</sub>, C. & Valli<sub>D</sub>, C. (1992). Language contact in the American Deaf community. In C. Valli<sub>D</sub> & C. Lucas<sub>H</sub> (eds), <em><a href="https://www.google.com/books/edition/Linguistics_of_American_Sign_Language/mfS3GlTLAUMC">Linguistics of American Sign Language: An introduction</a></em>, 458–480. Washington, D.C.: Gallaudet University Press. (cf., Lucas<sub>H</sub> & Valli<sub>H</sub>, 1988, 1989, 1991.)</li>
+					<li><a class="back" href="#">&#8617;</a> Lucas<sub>H</sub>, C. & Valli<sub>DI</sub>, C. (1992). Language contact in the American Deaf community. In C. Valli<sub>DI</sub> & C. Lucas<sub>H</sub> (eds), <em><a href="https://www.google.com/books/edition/Linguistics_of_American_Sign_Language/mfS3GlTLAUMC">Linguistics of American Sign Language: An introduction</a></em>, 458–480. Washington, D.C.: Gallaudet University Press. (cf., Lucas<sub>H</sub> & Valli<sub>DI</sub>, 1988, 1989, 1991.)</li>
 					<li><a class="back" href="#">&#8617;</a> Woodward<sub>H</sub>, J. (1973). <a href="https://muse.jhu.edu/article/510936/summary">Some Characteristics of Pidgin Sign English</a>. <em>Sign Language Studies</em>, 2(3), 39–46. (<a href="https://doi.org/10.1353%2Fsls.2005.0001">doi:10.1353/sls.1973.0006</a>).</li>
 					<li><a class="back" href="#">&#8617;</a> "Manually coded English." <a href="https://en.wikipedia.org/wiki/Manually_coded_English">https://en.wikipedia.org/wiki/Manually_coded_English</a></li>
 
@@ -646,7 +650,7 @@
 					<li><a class="back" href="#">&#8617;</a> Cagle<sub>D</sub>, K. M. (2010). <em><a href="https://www.academia.edu/21748806/Exploring_the_Ancestral_Roots_of_American_Sign_Language_Lexical_Borrowing_from_Cistercian_Sign_Language_and_French_Sign_Language">Exploring the ancestral roots of American sign language: Lexical borrowing from Cistercian sign language and French sign language</a></em>. The University of New Mexico. Unpublished dissertation.</li>
 					<li><a class="back" href="#">&#8617;</a> Brown<sub>H</sub>, J. S. (1856). <em>A vocabulary of mute signs</em>. Baton Rouge, LA: Daily Gazette and Morning Comet.</li>
 					<li><a class="back" href="#">&#8617;</a> Brown<sub>H</sub>, J. S. (1860). <em>A dictionary of signs and of the language of action, for the use of Deaf-Mutes, their instructors and friends; and, also, designed to facilitate to members of the bar, clergymen, political speakers, lecturers, and to the pupils of schools, academies, and colleges, the acquisition of a natural, graceful, distinctive and life-like gesticulation</em>. Baton Rouge, LA: Louisiana Institution for the Deaf and Dumb and the Blind.</li>
-					<li><a class="back" href="#">&#8617;</a> Stringham<sub>H</sub>, D. (2019). <a href="https://www.academia.edu/39153693/_A_Language_of_Action_James_Smedley_Brown_and_the_First_American_Dictionary_of_Sign_Language">"A Language of Action": James Smedley Brown and the First American Dictionary of Sign Language</a>. In B. Eldredge<sub>H</sub>, D. Stringham<sub>H</sub>, and B. Jarashow<sub>D</sub>. <em>Waypoints</em>: Proceedings of the Sixth Deaf Studies <em>Today!</em> Conference. Utah Valley University: Orem, Utah.</li>
+					<li><a class="back" href="#">&#8617;</a> Stringham<sub>H</sub>, D. (2019). <a href="https://www.academia.edu/39153693/_A_Language_of_Action_James_Smedley_Brown_and_the_First_American_Dictionary_of_Sign_Language">"A Language of Action": James Smedley Brown and the First American Dictionary of Sign Language</a>. In B. Eldredge<sub>H</sub>, D. Stringham<sub>HI</sub>, and B. Jarashow<sub>D</sub>. <em>Waypoints</em>: Proceedings of the Sixth Deaf Studies <em>Today!</em> Conference. Utah Valley University: Orem, Utah.</li>
 					<li><a class="back" href="#">&#8617;</a> Baker-Shenk<sub>H</sub>, C. & Cokely<sub>H</sub>, D. (1980). <em>American Sign Language: A teacher's resource text on grammar and culture</em>. Washington, D.C.: Gallaudet University Press.</li>
 					<li><a class="back" href="#">&#8617;</a> Veditz<sub>D</sub>, G. (1913). <a href="https://www.youtube.com/watch?v=wrBf9WAjRsg">Preservation of the sign language</a>. Film. The National Association of the Deaf. (All 'Preservation Series' films by the National Association of the Deaf can be found [with annotations] at the <a href="http://hsldb.georgetown.edu/films/">Historical Sign Language Database</a> at Georgetown University, curated by <a href="http://hsldb.georgetown.edu/about.php">Ted Supalla and other contributors</a>.)</li>
 					<li><a class="back" href="#">&#8617;</a> Fant<sub>H</sub>, L., Jr. (1972). <em><a href="https://www.thriftbooks.com/w/ameslan-an-introduction-to-american-sign-language_lou-fant/1309108#edition=725456&idiq=34199181">Ameslan: An introduction to American Sign Language</a></em>. Silver Spring, MD: National Association of the Deaf.</li>
@@ -708,7 +712,7 @@
 				-->
 				<dl>
 					<dt>Changelog</dt>
-					<dd>29 Dec 2021: v.13; redesigned page to add visual weight to Purposes & Definitions; redesigned v1 and v2 (apply gradient to a div outside of <code>&#60;main&#62;</code>) so this will work better on mobile devices (needs better spacing and realignment); updated Purposes, (8) Written English, and (9) Spoken English; error in footnote display; error in approach cloud display. Safari does not display continuum correctly but should with the continuum redesign.</dd>
+					<dd>29 Dec 2021: v.13; redesigned page to add visual weight to Purposes & Definitions; redesigned v1 and v2 (apply gradient to a div outside of <code>&#60;main&#62;</code>) so this will work better on mobile devices (needs better spacing and realignment); updated Purposes, (8) Written English, and (9) Spoken English; <strong>error in footnote display; current error in approach cloud display</strong>. Safari does not display continuum correctly but should with the continuum redesign.</dd>
 					<dd>10 Dec 2021: v.12; returned to Inter as master typeface, including contextual alternate characters. Began looking at <a href="https://tailwindcss.com">Tailwind CSS</a> as a replacement CSS/layout tool.</dd>
 					<dd>20 Nov 2021: v.11; completely rebuilt page, fixed Bootstrap organization errors. Rebuilt continuum to fit the layout correctly; need to build to fit narrow viewports, reorganized h1–h4. Fixed font stack. Cleaned up introduction and consolidated text. Need to fix auto-footnote creation; numbering is off by one. Added alt text.</dd>
 					<dd>13 Aug 2021: v.10; added dividers in the references section to make it easier to identify references relevant to language/code sections. Added Supalla reference and updated link styles, formats.</dd>
