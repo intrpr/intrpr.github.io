@@ -11,12 +11,17 @@
 		<!-- Bootstrap JavaScript -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 
+		<!--
+			Font exploration: Inter, Noto, Manrope, SFPro, Sora
+		-->
 		<style>
 			@import url('https://rsms.me/inter/inter.css');
 			@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 			@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;700&display=swap');
 
-			body { padding: 0; font-family: "Noqqto Sans", "Inqqter var", "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "qqApple Color Emoji", "qqSegoe UI Emoji", "Segoe UI Symbol", "qqNoto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: rgba(0,0,0,.8); font-size: 16px; font-feature-settings: "cpsp","ss01","cv05","cv08","cv09","cv11"; }
+
+			body { padding: 0; font-family: "Sora", "Noqqto Sans", "Inter var", "Manqqrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "qqApple Color Emoji", "qqSegoe UI Emoji", "Segoe UI Symbol", "qqNoto Color Emoji", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: rgba(0,0,0,.8); font-size: 16px; font-feature-settings: "cpsp","ss01","cv05","cv08","cv09","cvqq11"; }
 			html { scroll-behavior: smooth; }
 			header { text-align: center; }
 
@@ -627,7 +632,7 @@
 					<li><a class="back" href="#">&#8617;</a> "Contact sign." <a href="https://en.wikipedia.org/wiki/Contact_sign">https://en.wikipedia.org/wiki/Contact_sign</a></li>
 					<li><a class="back" href="#">&#8617;</a> Cokley<sub>H</sub>, D. (1983). <a href="https://www.jstor.org/stable/26203633">When is a pidgin not a pidgin? An alternate analysis of the ASL-English contact situation</a>. <em>Sign Language Studies</em>, 38 (Spring 1983), 1–24. (<a href="https://doi.org/10.1353/sls.1983.0017">doi: 10.1353/sls.1983.0017</a>).</li>
 					<li><a class="back" href="#">&#8617;</a> Lucas<sub>H</sub>, C. & Valli<sub>DI</sub>, C. (1992). Language contact in the American Deaf community. In C. Valli<sub>DI</sub> & C. Lucas<sub>H</sub> (eds), <em><a href="https://www.google.com/books/edition/Linguistics_of_American_Sign_Language/mfS3GlTLAUMC">Linguistics of American Sign Language: An introduction</a></em>, 458–480. Washington, D.C.: Gallaudet University Press. (cf., Lucas<sub>H</sub> & Valli<sub>DI</sub>, 1988, 1989, 1991.)</li>
-					<li><a class="back" href="#">&#8617;</a> Woodward<sub>H</sub>, J. (1973). <a href="https://muse.jhu.edu/article/510936/summary">Some Characteristics of Pidgin Sign English</a>. <em>Sign Language Studies</em>, 2(3), 39–46. (<a href="https://doi.org/10.1353%2Fsls.2005.0001">doi:10.1353/sls.1973.0006</a>).</li>
+					<li><a class="back" href="#">&#8617;</a> Woodward<sub>H</sub>, J. (1973). <a href="https://muse.jhu.edu/article/510936/summary">Some Characteristics of Pidgin Sign English</a>. <em>Sign Language Studies</em>, 2(3), 39–46. (<a href="https://doi.org/10.1353%2Fsls.1973.0006">doi:10.1353/sls.1973.0006</a>).</li>
 					<li><a class="back" href="#">&#8617;</a> "Manually coded English." <a href="https://en.wikipedia.org/wiki/Manually_coded_English">https://en.wikipedia.org/wiki/Manually_coded_English</a></li>
 
 					<h3>American Sign Language</h3>
@@ -707,7 +712,12 @@
 			</div>
 
 			<div class="row endmatter box">
-				<p>Page last modified: <script>document.write(document.lastModified)</script></p>
+
+				<p>Page last modified: <span id="demo"></span></p>
+				<script>
+					const date = new Date(document.lastModified);
+					document.getElementById("demo").innerHTML = date;
+				</script>
 				<p>All relationships relative; overlapping approaches drawn for distinction and not for accuracy.</p>
 				<p>This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 United States License. This license grants you permission to share (copy, distribute, and transmit the website) and remix (to adapt this work) under certain conditions and understandings. This license does not apply, however, to work claimed by other authors and producers. Additionally, every intent has been made to make materials available via “Fair Use,” (§107 to 118, Title 17, US Code); the content and downloadable materials on this page are solely for the benefit of the students enrolled in these courses.</p>
 				<p>Page ©<script>document.write(new Date().getFullYear())</script> Doug Stringham, Utah Valley University; revised 2021, 2019, 2018, 2012, 2011, 2008, 2006. APA citation: Stringham, D. (<script>document.write(new Date().getFullYear())</script>). Comparative ASL/English language continuum. <script>{document.write(location.href);}</script></p>
@@ -718,6 +728,7 @@
 				-->
 				<dl>
 					<dt>Changelog</dt>
+					<dd>6 Sep 2002: v.15; removed "<code>document.write(document.lastModified)</code>" from 'last modified' script because this is deprecated/considered a poor practice (<a href="https://stackoverflow.com/questions/802854/why-is-document-write-considered-a-bad-practice">https://stackoverflow.com/questions/802854/why-is-document-write-considered-a-bad-practice</a></dd>
 					<dd>Jan–May 2022: v.14; Added/clarified additional references, corrected links. Added <code>&#60;-webkit-background-clip: text&#62;</code>; and <code>&#60;-webkit-text-fill-color: transparent&#62;</code> to continuum gradient.</dd>
 					<dd>29 Dec 2021: v.13; redesigned page to add visual weight to Purposes & Definitions; redesigned v1 and v2 (apply gradient to a div outside of <code>&#60;main&#62;</code>) so this will work better on mobile devices (needs better spacing and realignment); updated Purposes, (8) Written English, and (9) Spoken English; <strong>error in footnote display; current error in approach cloud display</strong>. Safari does not display continuum correctly but should with the continuum redesign.</dd>
 					<dd>10 Dec 2021: v.12; returned to Inter as master typeface, including contextual alternate characters. Began looking at <a href="https://tailwindcss.com">Tailwind CSS</a> as a replacement CSS/layout tool.</dd>
