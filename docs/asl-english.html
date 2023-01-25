@@ -91,7 +91,8 @@
 				background-image: 
 				linear-gradient(
 					to right,
-					rgba(102,102,255,1), 
+					rgba(102,102,255,1),
+					ease-in-out,
 					rgba(255,102,204,1)
 				);
 				-webkit-background-clip: text;
@@ -122,7 +123,7 @@
 						height: 30em;
 						top: -1.5em;
 						border-left: 5em solid transparent;
-						border-image-source: linear-gradient(to left, rgba(102,102,255,1), rgba(102,102,255,0));
+						border-image-source: linear-gradient(to left, rgba(102,102,255,1), ease-in-out, rgba(102,102,255,0));
 						border-image-slice: 200;
 					}
 					/* arrow right shaping; removed to put gradient at end
@@ -144,7 +145,7 @@
 						height: 30em;
 						top: -1.5em;
 						border-left: 5em solid transparent;
-						border-image-source: linear-gradient(to right, rgba(255,102,204,1), rgba(255,102,204,0));
+						border-image-source: linear-gradient(to right, rgba(255,102,204,1), ease-in-out, rgba(255,102,204,0));
 						border-image-slice: 200;
 					}
 					.approach-left, .approach-right {
@@ -215,7 +216,7 @@
 
 			@media (max-width: 768px) {
 				body { padding: 2em; }
-				.spectrum-container { background-image: linear-gradient(to right, #6666ff, #ff66cc); height: auto; display: none; }
+				.spectrum-container { background-image: linear-gradient(to right, #6666ff, ease-in-out, #ff66cc); height: auto; display: none; }
 				.spectrum { height: auto; }
 
 				.approach-left, .approach-right {
@@ -392,7 +393,15 @@
 				</div>
 			</div>
 			
-			<div style="background-image: linear-gradient(to right, rgba(102,102,255,0) 0%, rgba(102,102,255,1) 8%, rgba(255,102,204,1) 92%, rgba(255,102,204,0) 100%); margin: 0 -5em;">
+			<div style="
+			background-image: linear-gradient(
+				to right, 
+				rgba(102,102,255,0) 0%, 
+				rgba(102,102,255,1) 8%, 
+				rgba(255,102,204,1) 92%, 
+				rgba(255,102,204,0) 100%
+				); 
+				margin: 0 -5em;">
 				<div class="row">
 					<div class="col-9 offset-md-1 col-md-5 approach-left">
 						<p class="text-black-50 text-uppercase">&#8672; MCE approach</p>
@@ -582,7 +591,7 @@
 				<div class="col-md-6 col-xl-4">
 					<p class="circle-number">10</p>
 					<h3>Paget-Gorman Signed Speech <abbr class="initialism">(PGSS)</abbr></h3>
-					<p><strong>Code; not a signed language.</strong> British-based pantomimic, morphological based manual system. First experimental teaching of the system in 1964 with a group of deaf adults; <a href="http://www.pagetgorman.org/history/b5674aa4-a021-4667-bc94-429482a84274">PGSS first conceptualized in Britain in 1934 as a systematic pantomimic sign language</a> whereby <a href="https://www.youtube.com/channel/UCIEKqKjHzQZknXUc0QTSmsg/videos">each word would have its own sign</a>, with the <a href="http://www.pagetgorman.org/see-the-basic-signs">signs</a> presented in the same sequence as the words in the phrases or sentences to be signed. 37 basic 'signs,' 21 hand 'postures'; do not correspond to British Sign Language. Similar to Makaton, now used primarily with people who present with aphasia and/or speech disabilities.</p>
+					<p><strong>Code; not a signed language.</strong> <a href="https://en.wikipedia.org/wiki/Paget_Gorman_Sign_System">British-based pantomimic, morphological based manual system</a>. First experimental teaching of the system in 1964 with a group of deaf adults; <a href="https://web.archive.org/web/20211205105016/http://www.pagetgorman.org/history/b5674aa4-a021-4667-bc94-429482a84274">PGSS first conceptualized in Britain in 1934 as a systematic pantomimic sign language</a> whereby each word would have its own sign, with the <a href="https://www.youtube.com/channel/UCIEKqKjHzQZknXUc0QTSmsg/videos">signs</a> presented in the same sequence as the words in the phrases or sentences to be signed. 37 basic 'signs,' 21 hand 'postures'; do not correspond to British Sign Language. Similar to Makaton, now used primarily with people who present with aphasia and/or speech disabilities.</p>
 					<p class="developed">(Developed 1934<a href="#refs" class="note"></a>, Sir Richard Paget<sub>H</sub>)</p>
 				</div>
 
