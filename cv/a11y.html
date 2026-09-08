@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Accessible HTML Document</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			/* High-contrast colors */
+			--color-bg: #f9f9f9;
+			--color-text: #222222;
+			--color-hr: #bbbbbb;
+			--color-link: #003399;
+			--color-link-visited: #5a2a83;
+			--color-link-hover: #001a66;
+			--color-focus: #8a5a00;
+			--color-skip-bg: #000000;
+			--color-skip-text: #ffffff;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		html {
+			font-size: 100%;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: var(--color-bg);
+			color: var(--color-text);
+			font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+			font-size: 1.125rem; /* ~18p */
+			line-height: 1.5;
+			font-optical-sizing: auto;
+			font-style: normal;
+		}
+
+		a {
+			color: var(--color-link);
+			text-decoration: underline;
+		}
+
+		a:visited {
+			color: var(--color-link-visited);
+		}
+
+		a:hover {
+			color: var(--color-link-hover);
+		}
+
+		a:focus-visible {
+			outline: 6px solid var(--color-focus);
+			outline-offset: 3px;
+		}
+
+		header, main, footer {
+			max-width: 70rem;
+			margin: 0 auto;
+			padding: 1.5rem;
+		}
+
+		header {
+			border-bottom: 2px solid var(--color-hr);
+		}
+
+		footer {
+			border-top: 2px solid var(--color-hr);
+			margin-top: 2rem;
+			padding-bottom: 2rem;
+		}
+
+		#main-content p { 
+			margin: 0;
+		}
+
+		h1,
+		h2,
+		h3,
+		p,
+		li {
+			line-height: 1.5;
+		}
+
+		p, li {
+			line-height: 1.5;
+			margin-block: 0 .5rem;
+		}
+
+		:where(a, button, input, textarea, select):focus-visible {
+			outline: 4px solid var(--color-focus);
+			outline-offset: 4px;
+		}
+
+		/* Skip links: visible on focus, keyboard-friendly, high contrast */
+		.skip-links {
+			position: absolute;
+			left: 8px;
+			top: 8px;
+			z-index: 1000;
+			padding: 0;
+			margin: 0;
+		}
+
+		.skip-links a {
+			position: absolute;
+			left: -9999px;
+			top: 0;
+			padding: 1rem 2rem;
+			background-color: var(--color-skip-bg);
+			color: var(--color-skip-text);
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.skip-links a:focus-visible,
+		.skip-links a:active {
+			position: static;
+			display: inline-block;
+			margin: .5rem;
+		}
+
+		nav ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+		}
+
+		nav li {
+			margin: 0;
+		}
+
+		nav a {
+			text-decoration: underline;
+		}
+
+		/* =====================
+		Accessible print styles
+		===================== */
+		
+		@media print {
+			/* Use a simple, high-contrast, printer-friendly palette */
+			
+		img.decorative,
+		.icon,
+		[aria-hidden="true"] img {
+			display: none !important;
+		}
+
+		* {
+			background: transparent !important;
+			box-shadow: none !important;
+		}
+
+		body {
+			background: #ffffff !important;
+			color: #000000 !important;
+			font-size: 12pt; /* comfortable print size */
+			line-height: 1.5;
+			}
+
+		/* Remove colors that don't print well and keep semantic cues */
+		a,
+		a:visited {
+		color: #000000;
+		text-decoration: underline;
+		}
+
+		/* Optionally show URLs after links for context on paper */
+		a[href]::after {
+		content: " (" attr(href) ")";
+		font-size: .9em;
+		}
+
+			/* Hide purely interactive / on-screen aids that don’t help on paper */
+		.skip-links,
+		nav[aria-label="Primary"] {
+		display: none !important;
+		}
+
+			/* Remove decorative borders / extra white space if you want tighter output */
+		header,
+		main,
+		footer {
+			max-width: 100%;
+			margin: 0;
+			padding: .5rem .75rem;
+			border: none;
+		}
+
+		section {
+		page-break-after: auto;
+		}
+		
+		section:last-of-type {
+			page-break-after: avoid;
+		}
+
+		/* Avoid page breaks inside key blocks when possible */
+		h1,
+		h2,
+		h3,
+		p,
+		ul,
+		li,
+		section,
+		header,
+		footer {
+			page-break-inside: avoid;
+		}
+
+		/* Ensure headings stand out clearly in print */
+		h1 {
+			font-size: 12pt;
+			margin: 0 0 .5rem;
+		}
+
+		h2 {
+			font-size: 12pt;
+			margin: 1rem 0 .4rem;
+		}
+
+		h3 {
+			font-size: 11pt;
+			margin: .8rem 0 .3rem;
+		}
+
+		p,
+		li {
+			font-size: 10pt;
+		}
+	}
+	</style>
+</head>
+
+<body>
+	<!-- Skip links: first focusable elements, link to main and key sections -->
+	<nav class="skip-links" aria-label="Skip links">
+		<a href="#main-content">Skip to introduction</a>
+		<a href="#section-summary-heading">Skip to Professional Summary</a>
+		<a href="#section-skills-heading">Skip to Skills</a>
+		<a href="#section-experience-heading">Skip to Experience</a>
+		<a href="#section-addtl-experience-heading">Skip to Additional Professional Experience</a>
+		<a href="#section-education-heading">Skip to Education</a>
+		<a href="#section-certification-heading">Skip to Certifications, Professional Development, and Affiliations</a>
+	</nav>
+
+	<header>
+
+		<nav aria-label="Primary">
+			<ul>
+				<li><a href="#main-content">Introduction</a></li>
+				<li><a href="#section-summary">Professional Summary</a></li>
+				<li><a href="#section-skills">Skills</a></li>
+				<li><a href="#section-experience">Experience</a></li>
+				<li><a href="#section-addtl-experience">Additional Professional Experience</a></li>
+				<li><a href="#section-education">Education</a></li>
+				<li><a href="#section-certification">Certifications, Professional Development, and Affiliations</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="main-content">
+		<h1>Doug Stringham</h1>
+		<p>Senior User Experience and Accessibility Design Lead • Greater Salt Lake City Metro</p>
+		<p>Accessibility strategy and systems • Advocate for inclusive and accessible experience</p>
+		<p><a href="tel:+18017356560">+1 (801) 735-6560</a> mobile • <a href="mailto:dstringham@gmail.com">dstringham@gmail.com</a> • <a href="https://www.linkedin.com/in/dstringham">LinkedIn</a> • <a href="http://intrpr.info/cv/accessibility">intrpr.info/cv/accessibility</a></p>
+
+		<!-- New section -->
+		<section id="section-summary" aria-labelledby="section-summary-heading">
+			<h2 id="section-summary-heading">Professional Summary</h2>
+			<p>User experience and accessibility leader who embeds inclusive design into product strategy and cross-functional delivery, with a history of leading design teams. Deep expertise in auditing message and content accessibility across digital, print, and multi-channel formats, including deaf/hard-of-hearing and captioned media user experiences. Authors VPATs and Section 508 declarations and translates accessibility standards into scalable practices that reduce delivery risk and build lasting organizational capability.</p>
+		</section>
+
+		<!-- New section -->
+		<section id="section-skills" aria-labelledby="section-skills-heading">
+			<h2 id="section-skills-heading">Skills</h2>
+			<ul>
+				<li><strong>Accessibility Standards, Testing, and Compliance</strong>: WCAG 2.1/2.2, Section 508, ADA Title II/III, PDF/UA, VPAT/ACR Authorship, Manual and Assistive-Technology Testing</li>
+				<li><strong>Content and Document Accessibility:</strong> Plain-Language Editing, PDF Tagging and Remediation, Multilingual Content Accessibility, Print Contrast and Legibility Review, Alt-Text and Structural Markup</li>
+				<li><strong>Alternate Format and Assistive Media:</strong> Captioning and Subtitling Standards, ASL-Primary Interface Design, Assistive Communication UX (VRS/CTS)</li>
+				<li><strong>UX and Visual Design (Digital and Print):</strong> Native OS Design Systems (Apple HIG, Android Material, bespoke React systems), Multi-Endpoint Hardware UX, Ethnographic and Usability Research, Cross-Format Print/Digital Design and Accessibility</li>
+				<li><strong>Leadership and Education:</strong> Design Team Leadership and Scaling, Cross-Functional Stakeholder Management, Curriculum Design and Instructional Development, Mentoring and Coaching</li>
+				<li><strong>Tools:</strong> Figma, Jira, Confluence</li>
+			</ul>
+		</section>
+
+		<!-- New section -->
+		<section id="section-experience" aria-labelledby="section-experience-heading">
+			<h2 id="section-experience-heading">Experience</h2>
+			<h3>Senior Product Designer → UX Manager (Accessibility Lead), Sorenson Communications<br>(2014–present)</h3>
+			<p>First design/accessibility hire across the org’s VRS and captioned telephony product portfolio for Deaf and hard-of-hearing users; 20+ hardware/software endpoints spanning mobile, desktop, embedded, and international markets.</p>
+			<ul>
+				<li>Authored and maintained VPATs for customer-facing products, auditing conformance against WCAG 2.0/2.1/2.2 across A/AA levels. Conducted as-needed accessibility conformance reviews of other product teams' designs, flagging and resolving WCAG/Section 508 gaps prior to launch.</li>
+				<li>Partnered with designers on other product teams to complete VPATs for their products, translating conformance requirements into actionable design guidance.</li>
+				<li>Conducted 150–200 hours of direct and remote ethnographic and qualitative research with Deaf and hard-of-hearing users, surfacing accessibility barriers invisible to standard usability testing.</li>
+				<li>Led multiple full-cycle redesigns across 20+ bespoke and standard platform endpoints, introducing specialized onboarding, contrast theme options, adjustable text sizing, simplified remote/D-pad navigation, and integrated captioning.</li>
+				<li>Designed the first dedicated interpreted-emergency-services mobile app for the UK market and the next-generation UK video relay app experience, growing UK users 10%+.</li>
+			</ul>
+
+			<h3>User Experience Designer, The Church of Jesus Christ of Latter-day Saints<br>(Oct 2013 – Jun 2014)</h3>
+			<ul>
+				<li>Delivered UX research, accessibility implementation, and visual design for information-dense web products documenting the Church’s history, from concept through production.</li>
+				<li>Advocated for design and accessibility thinking across portfolio stakeholders and product teams; mentored junior and peer UX designers.</li>
+			</ul>
+
+			<h3>Senior UX Architect and Designer, Close to My Heart<br>(Apr 2006 – Oct 2013)</h3>
+			<ul>
+				<li>Led design and the org’s first formal UX and accessibility function, including leading across print, digital, and video products for e-commerce and archival software products; managed design staff.</li>
+			</ul>
+
+			<h3>Curriculum Developer and Instructor, ASL and Deaf Studies Department, Utah Valley University<br>(Aug 1995 – present, concurrent)</h3>
+			<ul>
+				<li>Develop and teach in-person and online upper-division university curriculum in cross-cultural communication theory, interpreting studies, professional ethics, and decision-making frameworks for interpreting practitioners.</li>
+			</ul>
+		</section>
+		
+		<!-- New section -->
+		<section id="section-addtl-experience" aria-labelledby="section-addtl-experience-heading">
+			<h2 id="section-addtl-experience-heading">Additional Professional Experience</h2>
+			<ul>
+				<li>Senior Designer/Art Director, Hales Creative (national branding/identity agency; staff management)</li>
+				<li>Art Director, Home Financial Network (in-house creative services; fintech 1.0 web/mobile UI)</li>
+				<li>Interaction Designer, Crystal Canyon Interactive (national multimedia/interactive agency)</li>
+				<li>Designer, Covey Leadership Center/Franklin Covey (in-house corporate communications)</li>
+			</ul>
+		</section>
+		
+		<!-- New section -->
+		<section id="section-education" aria-labelledby="section-education-heading">
+			<h2 id="section-education-heading">Education</h2>
+			<ul>
+				<li>M.S., Instructional Psychology and Technology, Brigham Young University</li>
+				<li>BFA, Graphic Design, Brigham Young University</li>
+			</ul>
+		</section>
+		
+		<!-- New section -->
+		<section id="section-certification" aria-labelledby="section-certification-heading">
+			<h2 id="section-certification-heading">Certifications, Professional Development, and Affiliations</h2>
+			<ul>
+				<li>In progress: “Web Accessibility” and “Intro to Progressive Web Apps” (Google, via Udacity)</li>
+				<li>Pursuing: Certified Professional in Accessibility Core Competencies (CPACC), International Association of Accessibility Professionals (IAAP)</li>
+				<li>Pursuing: DHS Trusted Tester Process and Certification Program, Department of Homeland Security</li>
+				<li>Next: Web Accessibility Specialist (WAS), IAAP</li>
+				<li>Utah Inclusive Design and Digital Accessibility Meetup, Member (2019 – present)</li>
+				<li>Product Hive UT (formerly Product Design Association of Utah / IxDA Utah Chapter), Member (2012 – present)</li>
+				<li>Languages: English, American Sign Language (fluent); BANZSL (British, Australian, New Zealand) Sign Languages (conversational), Spanish (reading knowledge)</li>
+			</ul>
+		</section>		
+	</main>
+
+	<footer>
+		<p>&copy;2026 Doug Stringham</p>
+	</footer>
+</body>
+</html>
